@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,7 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    // Override point for customization after application launch.
+
+    DataEnv.eduUser = PlistManager.readEduUser()
+    DataEnv.calculateCurrentWeek()
+
+    window = UIWindow(frame: UIScreen.mainScreen().bounds)
+    window?.backgroundColor = UIColor.whiteColor()
+    let rootViewController = RootViewController()
+    let rootNavController = UINavigationController(rootViewController:rootViewController)
+    rootNavController.navigationBarHidden = true
+    window!.rootViewController = rootNavController
+    window!.makeKeyAndVisible()
+
     return true
   }
 

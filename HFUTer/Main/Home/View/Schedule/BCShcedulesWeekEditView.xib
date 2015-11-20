@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BCShcedulesWeekEditView" customModule="HFUTer2" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="ugQ-04-bNV" id="q2X-4c-UaS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="208"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ncn-f5-T44">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择上课周数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8G-N7-GWg">
+                            <rect key="frame" x="112" y="10" width="96" height="19.5"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inW-sF-KMc">
+                            <rect key="frame" x="266" y="5" width="46" height="30"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="9Rh-TW-9eR"/>
+                                <constraint firstAttribute="width" constant="46" id="ybb-L3-kAL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="完成"/>
+                            <connections>
+                                <action selector="onDoneButtonPress:" destination="-1" eventType="touchUpInside" id="2AI-S9-o8s"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="60C-U9-utx"/>
+                        <constraint firstAttribute="trailing" secondItem="inW-sF-KMc" secondAttribute="trailing" constant="8" id="CXM-kk-WWe"/>
+                        <constraint firstItem="u8G-N7-GWg" firstAttribute="centerY" secondItem="ncn-f5-T44" secondAttribute="centerY" id="HTG-Ik-jkx"/>
+                        <constraint firstItem="inW-sF-KMc" firstAttribute="centerY" secondItem="ncn-f5-T44" secondAttribute="centerY" id="ePf-vF-kuY"/>
+                        <constraint firstItem="u8G-N7-GWg" firstAttribute="centerX" secondItem="ncn-f5-T44" secondAttribute="centerX" id="v0I-4u-qNA"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ugQ-04-bNV">
+                    <rect key="frame" x="10" y="50" width="300" height="155"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="155" id="tpl-Mt-2Qp"/>
+                    </constraints>
+                    <inset key="scrollIndicatorInsets" minX="1" minY="0.0" maxX="1" maxY="0.0"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gI8-5J-F6g">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="SJN-be-Zao"/>
+                        <outlet property="delegate" destination="-1" id="19N-zC-KHb"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ugQ-04-bNV" firstAttribute="top" secondItem="ncn-f5-T44" secondAttribute="bottom" constant="10" id="4la-rh-O4j"/>
+                <constraint firstItem="ncn-f5-T44" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EWj-oh-osk"/>
+                <constraint firstAttribute="trailing" secondItem="ncn-f5-T44" secondAttribute="trailing" id="Qis-ud-6qD"/>
+                <constraint firstAttribute="trailing" secondItem="ugQ-04-bNV" secondAttribute="trailing" constant="10" id="Qwh-69-13K"/>
+                <constraint firstItem="ncn-f5-T44" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WMO-xi-IPT"/>
+                <constraint firstItem="ugQ-04-bNV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="WNF-Ua-nda"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="246" y="372"/>
+        </view>
+    </objects>
+</document>
