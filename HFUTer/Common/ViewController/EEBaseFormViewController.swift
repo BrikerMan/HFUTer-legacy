@@ -11,12 +11,17 @@ import Eureka
 
 class EEBaseFormViewController:FormViewController {
 
-  var navBar:EEBaseNavBar?
+  var navBar = EEBaseNavBar()
+  var navTitle = "" {
+    didSet {
+      navBar.titleLabel.text = navTitle
+    }
+  }
 
   var hideNavBar = false {
     didSet {
       if hideNavBar {
-        navBar?.hidden = true
+        navBar.hidden = true
       }
     }
   }
@@ -43,21 +48,25 @@ class EEBaseFormViewController:FormViewController {
 
 
   private func initUI() {
-    self.edgesForExtendedLayout = UIRectEdge.None
     self.automaticallyAdjustsScrollViewInsets = false
-    
     if !hideNavBar {
-      navBar = EEBaseNavBar()
-      self.view.addSubview(navBar!)
+      navBar.delegate = self
+      self.view.addSubview(navBar)
 
-      navBar?.snp_makeConstraints { (make) -> Void in
+      navBar.snp_makeConstraints { (make) -> Void in
         make.left.equalTo(self.view.snp_left)
         make.right.equalTo(self.view.snp_right)
         make.top.equalTo(self.view.snp_top)
         make.height.equalTo(64)
       }
     }
-
     self.tableView?.frame = CGRectMake(0, 64, self.view.frame.width, self.view.frame.height-64-49)
+  }
+
+}
+
+extension EEBaseFormViewController:EEBaseNavBarDelegate {
+  func baseNavBarDidPressOnLeftButton(navBar: EEBaseNavBar) {
+    self.navigationController?.popToRootViewControllerAnimated(true)
   }
 }

@@ -23,7 +23,7 @@ class BCLoginToEduViewController: EEBaseViewController {
   // MARK:- 生命周期
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.navBar?.hidden = true
+    self.navBar.hidden = true
   }
   
   // MARK:- 按钮动作

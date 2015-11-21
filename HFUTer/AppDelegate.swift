@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window!.rootViewController = rootNavController
     window!.makeKeyAndVisible()
 
+    window!.tintColor = Color.primaryTintColor
+
     return true
   }
 

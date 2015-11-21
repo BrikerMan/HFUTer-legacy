@@ -11,7 +11,7 @@ import DGRunkeeperSwitch
 
 protocol HomeNavBarViewDelegate {
   func homeNavBar(NavBar homeNavBar:HomeNavBarView,didSelecectedAtIndex index:Int)
-  func homeNavBar(NavBar homeNavBar:HomeNavBarView,didPressObSelcetWeekView isOpen:Bool)
+  func homeNavBarDidPressObSelcetWeekView(NavBar: HomeNavBarView)
 }
 
 class HomeNavBarView:EEXibView {
@@ -51,6 +51,10 @@ class HomeNavBarView:EEXibView {
 
   @objc private func runkeeperSwitchValueChanged() {
     delegate?.homeNavBar(NavBar: self, didSelecectedAtIndex: runkeeperSwitch.selectedIndex)
+  }
+
+  @IBAction func onShowSelectWeekViewButtonPress(sender: AnyObject) {
+    delegate?.homeNavBarDidPressObSelcetWeekView(self)
   }
 
 }

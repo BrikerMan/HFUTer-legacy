@@ -63,6 +63,8 @@
 		6B7BDB8B1BFF1350007CEAB9 /* BCLoginToEduViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB891BFF1350007CEAB9 /* BCLoginToEduViewController.swift */; };
 		6B7BDB8C1BFF1350007CEAB9 /* BCLoginToEduViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7BDB8A1BFF1350007CEAB9 /* BCLoginToEduViewController.xib */; };
 		6B7BDB8F1BFF196C007CEAB9 /* BCScheduleEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB8E1BFF196C007CEAB9 /* BCScheduleEditViewController.swift */; };
+		6BDC1F1E1BFF7450009DC139 /* BCColorChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDC1F1C1BFF7450009DC139 /* BCColorChooseView.swift */; };
+		6BDC1F1F1BFF7450009DC139 /* BCColorChooseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDC1F1D1BFF7450009DC139 /* BCColorChooseView.xib */; };
 		6BEDEB1C1BFED40A00CDB1B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDEB1B1BFED40A00CDB1B1 /* AppDelegate.swift */; };
 		6BEDEB1E1BFED40A00CDB1B1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDEB1D1BFED40A00CDB1B1 /* RootViewController.swift */; };
 		6BEDEB5D1BFED5D400CDB1B1 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDEB301BFED5D400CDB1B1 /* Functions.swift */; };
@@ -146,6 +148,8 @@
 		6B7BDB891BFF1350007CEAB9 /* BCLoginToEduViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCLoginToEduViewController.swift; sourceTree = "<group>"; };
 		6B7BDB8A1BFF1350007CEAB9 /* BCLoginToEduViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCLoginToEduViewController.xib; sourceTree = "<group>"; };
 		6B7BDB8E1BFF196C007CEAB9 /* BCScheduleEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCScheduleEditViewController.swift; sourceTree = "<group>"; };
+		6BDC1F1C1BFF7450009DC139 /* BCColorChooseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCColorChooseView.swift; sourceTree = "<group>"; };
+		6BDC1F1D1BFF7450009DC139 /* BCColorChooseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCColorChooseView.xib; sourceTree = "<group>"; };
 		6BEDEB181BFED40A00CDB1B1 /* HFUTer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HFUTer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BEDEB1B1BFED40A00CDB1B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BEDEB1D1BFED40A00CDB1B1 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -287,6 +291,8 @@
 		6B2EF55B1BFEE17B003373E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6BDC1F1C1BFF7450009DC139 /* BCColorChooseView.swift */,
+				6BDC1F1D1BFF7450009DC139 /* BCColorChooseView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -671,6 +677,7 @@
 				6BEDEB6A1BFED5D400CDB1B1 /* Assets.xcassets in Resources */,
 				6BEDEB6B1BFED5D400CDB1B1 /* LaunchScreen.storyboard in Resources */,
 				6B2EF5851BFEFF43003373E4 /* HomeNavBarView.xib in Resources */,
+				6BDC1F1F1BFF7450009DC139 /* BCColorChooseView.xib in Resources */,
 				6B2EF5641BFEEC56003373E4 /* HomeViewController.xib in Resources */,
 				6B59393F1BFF0BD500EC4F19 /* BCGradeViewTableViewHeader.xib in Resources */,
 				6B2EF5691BFEED9B003373E4 /* InformationViewController.xib in Resources */,
@@ -754,6 +761,7 @@
 				6B7BDB851BFF11ED007CEAB9 /* FMDatabaseVariadic.swift in Sources */,
 				6B2EF57D1BFEFA2D003373E4 /* EduUserModel.swift in Sources */,
 				6B2EF5631BFEEC56003373E4 /* HomeViewController.swift in Sources */,
+				6BDC1F1E1BFF7450009DC139 /* BCColorChooseView.swift in Sources */,
 				6B5939561BFF0BDC00EC4F19 /* ScheduleModel.swift in Sources */,
 				6BEDEB641BFED5D400CDB1B1 /* HDBaseFlatButton.swift in Sources */,
 				6B5939461BFF0BD500EC4F19 /* BCScheduleLeftCell.swift in Sources */,

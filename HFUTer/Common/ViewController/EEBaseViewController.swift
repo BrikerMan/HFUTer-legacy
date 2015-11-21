@@ -8,12 +8,12 @@ import SnapKit
 
 class EEBaseViewController:UIViewController {
 
-  var navBar:EEBaseNavBar?
+  var navBar = EEBaseNavBar()
 
   var hideNavBar = false {
     didSet {
       if hideNavBar {
-        navBar?.hidden = true
+        navBar.hidden = true
       }
     }
   }
@@ -31,6 +31,12 @@ class EEBaseViewController:UIViewController {
 
   func pushToViewController(vc:UIViewController) {
     vc.hidesBottomBarWhenPushed = true
+    if let vc = vc as? EEBaseViewController {
+      vc.navBar.navLeftButtonStyle = .Back
+    }
+    if let vc = vc as? EEBaseFormViewController {
+      vc.navBar.navLeftButtonStyle = .Back
+    }
     self.navigationController?.pushViewController(vc, animated: true)
   }
 
@@ -42,15 +48,21 @@ class EEBaseViewController:UIViewController {
   private func initUI() {
     self.automaticallyAdjustsScrollViewInsets = false
     if !hideNavBar {
-      navBar = EEBaseNavBar()
-      self.view.addSubview(navBar!)
+      navBar.delegate = self
+      self.view.addSubview(navBar)
 
-      navBar?.snp_makeConstraints { (make) -> Void in
+      navBar.snp_makeConstraints { (make) -> Void in
         make.left.equalTo(self.view.snp_left)
         make.right.equalTo(self.view.snp_right)
         make.top.equalTo(self.view.snp_top)
         make.height.equalTo(64)
       }
     }
+  }
+}
+
+extension EEBaseViewController:EEBaseNavBarDelegate {
+  func baseNavBarDidPressOnLeftButton(navBar: EEBaseNavBar) {
+    self.navigationController?.popToRootViewControllerAnimated(true)
   }
 }

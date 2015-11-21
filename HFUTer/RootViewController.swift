@@ -26,10 +26,10 @@ class RootViewController: UITabBarController {
     let infoNav = UINavigationController(rootViewController: infoVC)
     let personNav = UINavigationController(rootViewController: personVC)
 
-    homeNav.tabBarItem = UITabBarItem(title: "学习", image: nil, tag: 0)
+    homeNav.tabBarItem = UITabBarItem(title: "学习", image: UIImage(named:"tabbar_study"), selectedImage: UIImage(named:"tabbar_study_fill"))
     comNav.tabBarItem = UITabBarItem(title: "社区", image: nil, tag: 0)
-    infoNav.tabBarItem = UITabBarItem(title: "查询", image: nil, tag: 0)
-    personNav.tabBarItem = UITabBarItem(title: "关于", image: nil, tag: 0)
+    infoNav.tabBarItem = UITabBarItem(title: "查询", image: UIImage(named:"tabbar_search"), selectedImage: UIImage(named:"tabbar_search_fill"))
+    personNav.tabBarItem = UITabBarItem(title: "我的", image: UIImage(named:"tabbar_user"), selectedImage: UIImage(named:"tabbar_user_fill"))
 
 
     homeVC.hideNavBar = true
