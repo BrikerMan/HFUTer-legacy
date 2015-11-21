@@ -38,10 +38,11 @@ class HomeNavBarView:EEXibView {
     view!.addSubview(runkeeperSwitch)
 
     runkeeperSwitch.snp_makeConstraints { (make) -> Void in
-      make.width.equalTo(200)
-      make.height.equalTo(30)
+      make.width.equalTo(160)
+      make.height.equalTo(26)
       make.centerY.equalTo(self.titleLabel.snp_centerY)
-      make.left.equalTo(self.view!.snp_left).offset(15)
+//      make.left.equalTo(self.view!.snp_left).offset(15)
+      make.centerX.equalTo(self.snp_centerX)
     }
   }
 

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BCLeaveContectInfoView" customModule="HFUTer" customModuleProvider="target">
+            <connections>
+                <outlet property="contactInfoFiled" destination="32h-ua-afw" id="7Qb-Pa-xoz"/>
+                <outlet property="phoneNumberField" destination="6B4-Q4-OoZ" id="btP-KX-oMI"/>
+                <outlet property="sendButton" destination="sHi-pP-VIR" id="aVf-FK-wj7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="180"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iS-9n-bne">
+                    <rect key="frame" x="10" y="10" width="260" height="43"/>
+                    <animations/>
+                    <string key="text" base64-UTF8="YES">
+FuWmguaenOWPkeW4g+S6uueVmeS4i+S6huiBlOezu+aWueW8j++8jOS9oOWPr+S7peebtOaOpeiBlOez
+u1RB77yb5oiW6ICF5L2/55So5q2k5Yqf6IO95Y+R5biD6Ieq5bex55qE6IGU57O75pa55byP57uZ5a+5
+5pa544CC6K6p5a+55pa56IGU57O76Ieq5bex44CCA
+</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6B4-Q4-OoZ" customClass="BCTextField" customModule="HFUTer" customModuleProvider="target">
+                    <rect key="frame" x="10" y="63" width="260" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Qlm-x0-O9C"/>
+                    </constraints>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="备注信息" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="32h-ua-afw" customClass="BCTextField" customModule="HFUTer" customModuleProvider="target">
+                    <rect key="frame" x="10" y="103" width="260" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="2wN-h4-agN"/>
+                    </constraints>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHi-pP-VIR" customClass="BCBaseButton" customModule="HFUTer" customModuleProvider="target">
+                    <rect key="frame" x="90" y="143" width="100" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="Bvr-3d-nIp"/>
+                        <constraint firstAttribute="height" constant="30" id="UPm-9v-Wu4"/>
+                    </constraints>
+                    <state key="normal" title="发送">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onSendButtonPressed:" destination="-1" eventType="touchUpInside" id="dPn-qJ-lkf"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="6B4-Q4-OoZ" firstAttribute="top" secondItem="5iS-9n-bne" secondAttribute="bottom" constant="10" id="1hF-b1-ryJ"/>
+                <constraint firstAttribute="trailing" secondItem="5iS-9n-bne" secondAttribute="trailing" constant="10" id="5Ny-zl-lv8"/>
+                <constraint firstItem="6B4-Q4-OoZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="BmA-PY-d2O"/>
+                <constraint firstItem="5iS-9n-bne" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="D10-Wd-mXY"/>
+                <constraint firstAttribute="trailing" secondItem="32h-ua-afw" secondAttribute="trailing" constant="10" id="JWp-Kz-TDK"/>
+                <constraint firstAttribute="trailing" secondItem="6B4-Q4-OoZ" secondAttribute="trailing" constant="10" id="W3I-BO-jqP"/>
+                <constraint firstItem="sHi-pP-VIR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="XZW-db-Neq"/>
+                <constraint firstItem="sHi-pP-VIR" firstAttribute="top" secondItem="32h-ua-afw" secondAttribute="bottom" constant="10" id="c9r-aF-JmN"/>
+                <constraint firstItem="5iS-9n-bne" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="e8d-xL-hS9"/>
+                <constraint firstItem="32h-ua-afw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="fzf-rR-t9a"/>
+                <constraint firstItem="32h-ua-afw" firstAttribute="top" secondItem="6B4-Q4-OoZ" secondAttribute="bottom" constant="10" id="hfU-Qd-GTf"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="432" y="334.5"/>
+        </view>
+    </objects>
+</document>

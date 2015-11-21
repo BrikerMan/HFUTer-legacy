@@ -10,6 +10,12 @@ class EEBaseViewController:UIViewController {
 
   var navBar = EEBaseNavBar()
 
+  var navTitle = "" {
+    didSet {
+      navBar.titleLabel.text = navTitle
+    }
+  }
+
   var hideNavBar = false {
     didSet {
       if hideNavBar {

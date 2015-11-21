@@ -110,3 +110,7 @@ func getUrl(yard:String,urlFor:String) -> String {
     }
   }
 }
+
+func getComURL(api:String) -> String{
+  return communityServer + api
+}

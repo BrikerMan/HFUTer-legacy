@@ -63,6 +63,35 @@ class PlistManager {
     dataSource.writeToFile(filePath, atomically: true)
   }
 
+  class func readComUser() -> ComUser{
+    let filePath = PlistManager.getFilePath("comUser.plist")
+    let dataSource = NSDictionary(contentsOfFile: filePath)
+    let user = ComUser()
+    if let dataSource = dataSource {
+      if let username = dataSource.objectForKey("username") as? String,password = dataSource.objectForKey("password") as? String {
+        if username != "" && password != "" {
+          user.username = username
+          user.password = password
+          user.isLogin = true
+
+        }
+        if let avatar = dataSource.objectForKey("avatar") as? String {
+          user.avatar = avatar
+        }
+      }
+    }
+    return user
+  }
+
+  class func saveComUser(user:ComUser) {
+    let filePath = PlistManager.getFilePath("comUser.plist")
+    let dataSource:NSMutableDictionary = ["key":"value"]
+    dataSource.setValue(user.username, forKey: "username")
+    dataSource.setValue(user.password, forKey: "password")
+    dataSource.setValue(user.avatar, forKey: "avatar")
+    dataSource.writeToFile(filePath, atomically: true)
+  }
+
   class func saveTintColor(color:UIColor) {
     let filePath = self.getFilePath("setting.plist")
     let colorString = color.hexString
@@ -78,6 +107,7 @@ class PlistManager {
     }
     dataSourceNew.writeToFile(filePath, atomically: true)
   }
+
 
   class func readTintColor() {
     let filePath = self.getFilePath("setting.plist")

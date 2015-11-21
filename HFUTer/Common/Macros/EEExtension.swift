@@ -134,6 +134,14 @@ extension UIColor {
   convenience init(netHex:Int) {
     self.init(red:(netHex >> 16) & 0xff, green:(netHex >> 8) & 0xff, blue:netHex & 0xff)
   }
+
+  class func rgb(r:CGFloat,g:CGFloat,b:CGFloat) -> UIColor{
+    let red = r/255
+    let green = g/255
+    let blue = b/255
+    return UIColor(red: red, green: green, blue: blue, alpha: 1)
+  }
+
 }
 
 extension UIColor {
@@ -150,11 +158,20 @@ extension UIColor {
     NSScanner(string: hex).scanHexInt(&color)
     self.init(hex: Int(color), alpha: alpha)
   }
+
   var hexString: String? {
     return self.CGColor.hexString
   }
   var RGBa: (red: Int, green: Int, blue: Int, alpha: CGFloat)? {
     return self.CGColor.RGBa
+  }
+
+  func light() -> UIColor {
+    return self.colorWithAlphaComponent(colorAlphaComponent)
+  }
+
+  func ultraLight() -> UIColor {
+    return self.colorWithAlphaComponent(0.2)
   }
 }
 

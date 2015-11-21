@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="108" id="KGk-i7-Jjw" customClass="BCMyMassagesTableViewCell" customModule="HFUTer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="107.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WDM-Qz-3Te" customClass="EEImageView" customModule="HFUTer" customModuleProvider="target">
+                        <rect key="frame" x="10" y="10" width="40" height="40"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="ON6-7T-7pH"/>
+                            <constraint firstAttribute="width" constant="40" id="qmd-SD-3AT"/>
+                            <constraint firstAttribute="height" constant="40" id="siG-AO-M0g"/>
+                            <constraint firstAttribute="width" constant="50" id="vGZ-bD-QQu"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ON6-7T-7pH"/>
+                                <exclude reference="vGZ-bD-QQu"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4f-4b-83X">
+                        <rect key="frame" x="64" y="10" width="28" height="17"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IX5-ii-mnq">
+                        <rect key="frame" x="64" y="33" width="35.5" height="17"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你可以利用采用该协议的代码做任何事情，只需要继续继承 MIT 协议即可。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihR-MY-jcC">
+                        <rect key="frame" x="15" y="65" width="295" height="32.5"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="com-aF-wpm">
+                        <rect key="frame" x="15" y="106.5" width="305" height="0.5"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="AjV-3H-wwD"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="IX5-ii-mnq" firstAttribute="bottom" secondItem="WDM-Qz-3Te" secondAttribute="bottom" id="5RE-Cb-qHB"/>
+                    <constraint firstItem="B4f-4b-83X" firstAttribute="leading" secondItem="WDM-Qz-3Te" secondAttribute="trailing" constant="14" id="Cdl-ON-3Qn"/>
+                    <constraint firstAttribute="trailing" secondItem="ihR-MY-jcC" secondAttribute="trailing" constant="10" id="DQ4-7J-qgW"/>
+                    <constraint firstItem="WDM-Qz-3Te" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Gag-hL-v89"/>
+                    <constraint firstAttribute="bottom" secondItem="com-aF-wpm" secondAttribute="bottom" id="QLm-8t-lme"/>
+                    <constraint firstItem="com-aF-wpm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="RMA-mB-Cmw"/>
+                    <constraint firstAttribute="bottom" secondItem="ihR-MY-jcC" secondAttribute="bottom" constant="10" id="SOg-GL-baP"/>
+                    <constraint firstItem="B4f-4b-83X" firstAttribute="top" secondItem="WDM-Qz-3Te" secondAttribute="top" id="Swt-Ir-PhX"/>
+                    <constraint firstItem="ihR-MY-jcC" firstAttribute="top" secondItem="IX5-ii-mnq" secondAttribute="bottom" constant="15" id="hPd-tF-e2r"/>
+                    <constraint firstItem="ihR-MY-jcC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="jRv-zZ-VJq"/>
+                    <constraint firstItem="IX5-ii-mnq" firstAttribute="leading" secondItem="B4f-4b-83X" secondAttribute="leading" id="uYf-ZT-hKO"/>
+                    <constraint firstAttribute="trailing" secondItem="com-aF-wpm" secondAttribute="trailing" id="vlw-a1-zvS"/>
+                    <constraint firstItem="WDM-Qz-3Te" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="wfW-pH-oxT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="avatarView" destination="WDM-Qz-3Te" id="ZX6-fE-zIa"/>
+                <outlet property="massageLabel" destination="ihR-MY-jcC" id="naW-0q-acG"/>
+                <outlet property="nameLabel" destination="B4f-4b-83X" id="IhD-lb-YIx"/>
+                <outlet property="timeLabel" destination="IX5-ii-mnq" id="cqF-8r-UVr"/>
+            </connections>
+            <point key="canvasLocation" x="213" y="267"/>
+        </tableViewCell>
+    </objects>
+</document>

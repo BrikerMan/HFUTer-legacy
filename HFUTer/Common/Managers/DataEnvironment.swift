@@ -12,7 +12,14 @@ private let _SingletonASharedInstance = DataEnvironment()
 class DataEnvironment {
 
   var eduUser:EduUser!
-  var currentWeek = 0
+  var comUser = ComUser()
+  var currentWeek = 1 {
+    didSet{
+      if currentWeek <= 1 {
+        currentWeek = 1
+      }
+    }
+  }
 
   //单例
   class func sharedManager() -> DataEnvironment {
@@ -29,16 +36,64 @@ class DataEnvironment {
     if self.eduUser.hasGetToken {
       completion(sccess: true, error: nil)
     } else {
-//      BCLoginToEduRequest.login(DataEnv.eduUser,
-//        onLoginBlock: { () -> Void in
-//          self.eduUser.hasGetToken = true
-//          completion(sccess: true, error: nil)
-//        }, onWrongPassWordBlock: { () -> Void in
-//          completion(sccess: false, error: "登录过期，请重新登录")
-//        }) { () -> Void in
-//          completion(sccess: false, error: "网络异常，请稍后再试")
-//      }
+      BCLoginToEduRequest.login(DataEnv.eduUser,
+        onLoginBlock: { () -> Void in
+          completion(sccess: true, error: nil)
+        }, onWrongPassWordBlock: { () -> Void in
+          completion(sccess: false, error: "登录过期，请重新登录")
+        }) { () -> Void in
+          completion(sccess: false, error: "网络异常，请稍后再试")
+      }
     }
+  }
+
+  func saveCookie(cookie:String?) {
+    if let cookie = cookie {
+      if cookie != "" {
+        comUser.cookie = cookie
+        comUser.isLogin = true
+      }
+    } else {
+    }
+  }
+
+
+  func loginComUser() {
+    comUser = readComUser()
+    if comUser.isLogin {
+      BCCommunityUserLoginRequest.login(comUser.username, password: comUser.password,
+        onSuccessBlock: { (response) -> () in
+          self.comUser.isLogin = true
+          if let data = response["data"] as? NSDictionary{
+            if let link = data["image"] as? String {
+              self.comUser.avatar = link
+            }
+          }
+          self.saveComUser(self.comUser)
+        }, onFailedBlock: { (reason) -> () in
+          self.comUser.isLogin = false
+        }, onNetErrorBlock: { () -> () in
+          self.comUser.isLogin = false
+      })
+    }
+  }
+
+  func readComUser() -> ComUser{
+    return  PlistManager.readComUser()
+    //    self.comUser.username = user.username
+    //    self.comUser.password = user.password
+    //    self.comUser.avatar = user.avatar
+    //    self.comUser.isLogin = user.isLogin
+  }
+
+
+  func saveComUser(user:ComUser) {
+    PlistManager.saveComUser(user)
+    self.comUser.username = user.username
+    self.comUser.password = user.password
+    self.comUser.avatar = user.avatar
+    self.comUser.isLogin = true
+
   }
 
 

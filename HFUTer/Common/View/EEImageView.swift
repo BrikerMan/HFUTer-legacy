@@ -32,4 +32,26 @@ class EEImageView: UIImageView {
       self.yy_setImageWithURL(link, options: YYWebImageOptions.Progressive)
     }
   }
+
+
+  func loadThumbnail(url:String) {
+    let link = "http://7xlrpg.com1.z0.glb.clouddn.com/lost/" + url + "?imageView/2/w/200/format/jpg"
+    self.loadImageFromUrl(link)
+  }
+
+  func loadAvatar(picName:String?) {
+    if picName != nil && picName != "" {
+      let link = "http://7xlrpg.com1.z0.glb.clouddn.com/icon/" + picName!
+      self.loadImageFromUrl(link)
+//      self.loadImageFromUrl(link,image: UIImage(named: "avatar")!)
+    } else {
+      self.image = UIImage(named: "avatar")
+    }
+  }
+
+  func loadLostImageWithPicName(picaName:String) {
+    let link = "http://7xlrpg.com1.z0.glb.clouddn.com/lost/" + picaName
+    self.loadImageFromUrl(link)
+  }
+
 }

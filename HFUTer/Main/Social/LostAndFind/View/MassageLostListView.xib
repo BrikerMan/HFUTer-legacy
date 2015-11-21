@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MassageLostListView" customModule="HFUTer" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="sBJ-ds-LPE" id="clm-b5-XTA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sBJ-ds-LPE">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="sectionIndexBackgroundColor" red="0.3632273707" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="kKm-Tc-VSr"/>
+                        <outlet property="delegate" destination="-1" id="w62-kv-a8P"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="sBJ-ds-LPE" secondAttribute="bottom" id="72B-kN-U1D"/>
+                <constraint firstAttribute="trailing" secondItem="sBJ-ds-LPE" secondAttribute="trailing" id="Fja-ed-MpJ"/>
+                <constraint firstItem="sBJ-ds-LPE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="b77-YS-ynV"/>
+                <constraint firstItem="sBJ-ds-LPE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="coG-5I-VWL"/>
+            </constraints>
+            <point key="canvasLocation" x="353" y="340"/>
+        </view>
+    </objects>
+</document>

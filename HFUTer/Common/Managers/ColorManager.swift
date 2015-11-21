@@ -59,4 +59,39 @@ class ColorManager {
       return list[index]
     }
   }
+
+  /*
+  Color.parseColor("#e91e63"),
+  Color.parseColor("#9c27b0"),
+  Color.parseColor("#673ab7"),
+  Color.parseColor("#3f51b5"),
+  Color.parseColor("#5677fc"),
+  Color.parseColor("#03a9f4"),
+  Color.parseColor("#00bcd4"),
+  Color.parseColor("#009688"),
+  Color.parseColor("#259b24"),
+  Color.parseColor("#8bc34a"),
+  Color.parseColor("#ff5722"),
+  Color.parseColor("#795548"),
+  Color.parseColor("#607d8b"),
+  */
+
+  private let color1 = UIColor.rgb(56, g:171, b:249)
+  private let color2 = UIColor.rgb(224, g:237, b:196)
+  private let color3 = UIColor.rgb(159, g:93, b:94)
+  private let color4 = UIColor.rgb(34, g:208, b:211)
+  private let color5 = UIColor.rgb(255, g:142, b:45)
+  private let color6 = UIColor.rgb(249, g:155, b:211)
+  private let color7 = UIColor.rgb(250, g:205, b:50)
+
+
+
+  func getLoveWallColors(index:Int) -> UIColor{
+    let colorList = [color1,color2,color3,color4,color5,color6,color7,color7,color1,color2,color3,color4,color5,color6,color7,color7]
+    if index < colorList.count {
+      return colorList[index]
+    } else {
+      return primaryTintColor
+    }
+  }
 }

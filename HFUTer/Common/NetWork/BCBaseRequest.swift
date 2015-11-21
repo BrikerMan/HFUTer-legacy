@@ -78,12 +78,12 @@ class BCBaseRequest {
   }
 
 
-  class func getJsonFromServerRequest(url:String ,params:NSDictionary?, onFinishedBlock:((response:NSDictionary) -> Void)?, onFailedBlock:((reason:String?) -> Void)?,onNetErrorBlock:(() -> Void)?) {
+  class func getJsonFromCommunityServerRequest(url:String ,params:[String:AnyObject], onFinishedBlock:((response:NSDictionary) -> Void)?, onFailedBlock:((reason:String?) -> Void)?,onNetErrorBlock:(() -> Void)?) {
     log.request(url, param: params)
     let header = ["Cookie":"cook"]
     UIApplication.sharedApplication().networkActivityIndicatorVisible = true
 
-    request(.POST, url, parameters: params as? [String : AnyObject], encoding: ParameterEncoding.URL, headers: header)
+    request(.POST, url, parameters: params, encoding: ParameterEncoding.URL, headers: header)
       .responseJSON(completionHandler: { (response) -> Void in
         if let dic = response.result.value as? NSDictionary {
           if dic["statue"] as? Bool == true {

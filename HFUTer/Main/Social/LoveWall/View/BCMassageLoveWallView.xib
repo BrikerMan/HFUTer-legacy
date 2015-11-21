@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BCMassageLoveWallView" customModule="HFUTer" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="pLl-rV-cDB" id="QQI-mE-PiK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="160" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pLl-rV-cDB">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Wre-hX-d41"/>
+                        <outlet property="delegate" destination="-1" id="gez-D9-FSu"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="pLl-rV-cDB" secondAttribute="bottom" id="I6K-fV-5aB"/>
+                <constraint firstAttribute="trailing" secondItem="pLl-rV-cDB" secondAttribute="trailing" id="TUK-7W-NEF"/>
+                <constraint firstItem="pLl-rV-cDB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="aPn-g1-b5W"/>
+                <constraint firstItem="pLl-rV-cDB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qGa-dO-QE8"/>
+            </constraints>
+            <point key="canvasLocation" x="357" y="340"/>
+        </view>
+    </objects>
+</document>
