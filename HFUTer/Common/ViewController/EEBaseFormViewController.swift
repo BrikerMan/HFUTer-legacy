@@ -88,7 +88,7 @@ class EEBaseFormViewController:FormViewController {
       navBar.view?.backgroundColor = Color.primaryTintColor
       navBar.navRightButton.hidden = true
     }
-    self.tableView?.frame = CGRectMake(0, 64, ScreenWidth, ScreenHeight-64)
+    self.tableView?.frame = CGRectMake(0, 64, ScreenWidth, ScreenHeight-64-49)
   }
 }
 

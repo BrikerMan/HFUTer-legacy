@@ -22,6 +22,7 @@ class HomeNavBarView:EEXibView {
 
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var slideDownImage: UIImageView!
+  @IBOutlet weak var notLoginLabel: UILabel!
 
   override func initFromXib() {
     super.initFromXib()
@@ -41,13 +42,26 @@ class HomeNavBarView:EEXibView {
       make.width.equalTo(160)
       make.height.equalTo(26)
       make.centerY.equalTo(self.titleLabel.snp_centerY)
-//      make.left.equalTo(self.view!.snp_left).offset(15)
       make.centerX.equalTo(self.snp_centerX)
     }
   }
 
   func setSwitchToIndex(index:Int) {
     runkeeperSwitch.setSelectedIndex(index, animated: true)
+  }
+  
+  func initUserLogin(isLogin:Bool) {
+    if isLogin {
+      notLoginLabel.hidden = true
+      slideDownImage.hidden = false
+      titleLabel.hidden = false
+      runkeeperSwitch.hidden = false
+    } else {
+      notLoginLabel.hidden = false
+      slideDownImage.hidden = true
+      titleLabel.hidden = true
+      runkeeperSwitch.hidden = true
+    }
   }
 
   @objc private func runkeeperSwitchValueChanged() {

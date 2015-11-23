@@ -29,6 +29,7 @@ class DataEnvironment {
   func saveEduUser(user:EduUser) {
     self.eduUser = user
     self.eduUser.isLogin = true
+    self.eduUser.hasGetToken = true
     PlistManager.saveEduUser(self.eduUser)
   }
 
@@ -38,6 +39,7 @@ class DataEnvironment {
     } else {
       BCLoginToEduRequest.login(DataEnv.eduUser,
         onLoginBlock: { () -> Void in
+          self.eduUser.hasGetToken = true
           completion(sccess: true, error: nil)
         }, onWrongPassWordBlock: { () -> Void in
           completion(sccess: false, error: "登录过期，请重新登录")
@@ -56,7 +58,6 @@ class DataEnvironment {
     } else {
     }
   }
-
 
   func loginComUser() {
     comUser = readComUser()
@@ -82,7 +83,6 @@ class DataEnvironment {
     return  PlistManager.readComUser()
   }
 
-
   func saveComUser(user:ComUser) {
     PlistManager.saveComUser(user)
     self.comUser.username = user.username
@@ -92,7 +92,13 @@ class DataEnvironment {
 
   }
 
-
+  func handleLogOut() {
+    self.eduUser = EduUser()
+    PlistManager.deleleEduUser()
+    PlistManager.deleleEduUser()
+    DBManager.sharedManager().deleteGrades()
+    DBManager.sharedManager().deleteSchedules()
+  }
   func calculateCurrentWeek() {
     var from = NSTimeInterval()
     if self.eduUser.schoolYard == "HF" {

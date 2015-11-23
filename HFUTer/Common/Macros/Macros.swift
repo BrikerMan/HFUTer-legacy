@@ -44,6 +44,7 @@ let ScreenHeight                =       UIScreen.mainScreen().bounds.size.height
 
 
 let BCUserLoginNotification             = "HDUserLoginNotification"
+let BCUserLogOutNotification            = "BCUserLogOutNotification"
 let BCChangeTintColorNotification       = "BCChangeTintColorNotification"
 
 

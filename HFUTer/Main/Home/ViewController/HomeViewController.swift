@@ -9,42 +9,42 @@
 import UIKit
 
 class HomeViewController: EEBaseViewController {
-
+  
   @IBOutlet weak var scrollView: UIScrollView!
-
+  
   //主Views
-  private var homeNavbar:HomeNavBarView!
+  private var homeNavbar = HomeNavBarView()
   private var gradesView:BCGradesTableView!
   private var scheduleView:BCScheculeView!
-
+  
   private var selectWeekView:BCScheduleSelectView!
   private var selectWeekViewBackView:UIView!
-
+  private var eduUserNotLoginView:BCEduUserNotLoginView?
+  
   //数据
   private var scheduleList          = [ScheduleModel]()
   private var gradesBySemester      = [[GradeModel]]()
   private var currentSelectedModels = [ScheduleModel]()
-
+  
   //状态
   private var isGetScheduleListRequestGoing = false
   private var isGetGradesRequestGoing       = false
   private var isSelectWeekViewShowing       = false
-
+  private var isNotLoginViewShwoing         = false
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     initUI()
     if DataEnv.eduUser.isLogin {
       afterLogin(nil)
+    } else {
+      addEduUserNotLoginView()
     }
     NotifCenter.addObserver(self, selector: "afterLogin:", name: BCUserLoginNotification, object: nil)
+    NotifCenter.addObserver(self, selector: "afterLogOut:", name: BCUserLogOutNotification, object: nil)
   }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
-
+  
+  
   //MARK:- 网络请求
   private func beginGetScheduleList(runAfterBlock:(() -> Void)?) {
     if !isGetScheduleListRequestGoing {
@@ -63,7 +63,7 @@ class HomeViewController: EEBaseViewController {
       })
     }
   }
-
+  
   private func beginGetGradesRequest() {
     if !isGetGradesRequestGoing {
       isGetScheduleListRequestGoing = true
@@ -79,56 +79,56 @@ class HomeViewController: EEBaseViewController {
           Hud.showError(error)
           self.isGetScheduleListRequestGoing = false
       })
-
+      
     }
   }
-
+  
   //MARK:- 动画
   @objc private func showSelectWeekView(sender:AnyObject?) {
     if !isSelectWeekViewShowing {
       isSelectWeekViewShowing = true
-
+      
       selectWeekViewBackView = UIView()
       selectWeekViewBackView.backgroundColor = UIColor.blackColor()
       selectWeekViewBackView.alpha = 0
       self.view.addSubview(selectWeekViewBackView)
-
+      
       let tapGasuture = UITapGestureRecognizer(target: self, action: "hideSelectWeekView:")
       self.selectWeekViewBackView.addGestureRecognizer(tapGasuture)
-
+      
       selectWeekViewBackView.snp_makeConstraints(closure: { (make) -> Void in
         make.edges.equalTo(self.view).inset(UIEdgeInsetsMake(64, 0, 0, 0))
       })
-
+      
       selectWeekView = BCScheduleSelectView()
       selectWeekView.delegate = self
       self.view.addSubview(selectWeekView)
-      self.view.bringSubviewToFront(homeNavbar!)
-
+      self.view.bringSubviewToFront(homeNavbar)
+      
       selectWeekView.alpha = 0
       selectWeekView.snp_makeConstraints(closure: { (make) -> Void in
         make.height.equalTo(258)
         make.width.equalTo(100)
         make.right.equalTo(self.view.snp_right).offset(-5)
-        make.bottom.equalTo(self.homeNavbar!.snp_bottom)
+        make.bottom.equalTo(self.homeNavbar.snp_bottom)
       })
-
+      
       self.view.layoutIfNeeded()
-
+      
       UIView.animateWithDuration(0.3, delay: 0, options: .CurveEaseInOut , animations: { () -> Void in
         self.selectWeekView.alpha = 1
         self.selectWeekViewBackView.alpha = 0.3
         self.homeNavbar.slideDownImage.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI))
-
+        
         self.selectWeekView.snp_updateConstraints(closure: { (make) -> Void in
-          make.bottom.equalTo(self.homeNavbar!.snp_bottom).offset(258)
+          make.bottom.equalTo(self.homeNavbar.snp_bottom).offset(258)
         })
         self.view.layoutIfNeeded()
         }, completion: nil)
-
+      
     }
   }
-
+  
   @objc private func hideSelectWeekView(sender:AnyObject?) {
     if isSelectWeekViewShowing {
       UIView.animateWithDuration(0.3, delay: 0, options: .CurveEaseInOut , animations: { () -> Void in
@@ -136,7 +136,7 @@ class HomeViewController: EEBaseViewController {
         self.selectWeekViewBackView.alpha = 0
         self.homeNavbar.slideDownImage.transform = CGAffineTransformMakeRotation(CGFloat(0))
         self.selectWeekView.snp_updateConstraints(closure: { (make) -> Void in
-          make.bottom.equalTo(self.homeNavbar!.snp_bottom)
+          make.bottom.equalTo(self.homeNavbar.snp_bottom)
         })
         self.view.layoutIfNeeded()
         }, completion: {(finished) in
@@ -146,6 +146,7 @@ class HomeViewController: EEBaseViewController {
       })
     }
   }
+  
   //MARK:- 处理用户状态变化
   @objc private func afterLogin(notification:NSNotification?) {
     self.scheduleList = ScheduleModel.readScheduleModelForWeek(nil)
@@ -166,39 +167,67 @@ class HomeViewController: EEBaseViewController {
         self.gradesView.reloadGrades()
       }
     }
+    homeNavbar.initUserLogin(true)
+    hideEduUserNotLoginView()
   }
-
+  
+  @objc private func afterLogOut(notification:NSNotification?) {
+    self.addEduUserNotLoginView()
+  }
+  
+  private func addEduUserNotLoginView() {
+    if !isNotLoginViewShwoing {
+      isNotLoginViewShwoing = true
+      let noLoginView = BCEduUserNotLoginView()
+      self.view.addSubview(noLoginView)
+      
+      noLoginView.snp_makeConstraints(closure: { (make) -> Void in
+        make.edges.equalTo(self.view).inset(UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0))
+      })
+      
+      homeNavbar.initUserLogin(false)
+      eduUserNotLoginView = noLoginView
+    }
+  }
+  
+  private func hideEduUserNotLoginView() {
+    homeNavbar.initUserLogin(true)
+    if isNotLoginViewShwoing {
+      eduUserNotLoginView?.removeFromSuperview()
+      isNotLoginViewShwoing = false
+    }
+  }
+  
   func initUI() {
-    homeNavbar = HomeNavBarView()
     homeNavbar.delegate = self
     self.view.addSubview(homeNavbar)
-
+    
     homeNavbar.snp_makeConstraints { (make) -> Void in
       make.top.equalTo(self.view.snp_top)
       make.left.equalTo(self.view.snp_left)
       make.right.equalTo(self.view.snp_right)
       make.height.equalTo(64)
     }
-
+    
     self.scrollView.pagingEnabled = true
     self.scrollView.showsHorizontalScrollIndicator = false
     self.scrollView.contentSize = CGSizeMake(ScreenWidth * 2, scrollView.frame.size.height);
     self.scrollView.delegate = self
-
+    
     scheduleView = BCScheculeView()
     scheduleView.delegate = self
     self.scrollView.addSubview(scheduleView)
-
+    
     scheduleView.snp_makeConstraints(closure: { (make) -> Void in
       make.top.equalTo(self.scrollView.snp_top)
       make.left.equalTo(self.scrollView.snp_left)
       make.width.equalTo(self.scrollView.snp_width)
       make.height.equalTo(self.scrollView.snp_height)
     })
-
+    
     gradesView = BCGradesTableView()
     self.scrollView.addSubview(gradesView)
-
+    
     gradesView.snp_makeConstraints(closure: { (make) -> Void in
       make.top.equalTo(self.scrollView.snp_top)
       make.left.equalTo(self.scrollView.snp_left).offset(ScreenWidth)
@@ -241,11 +270,11 @@ extension HomeViewController:BCScheduleSelectViewDelegate {
 }
 
 extension HomeViewController:UIScrollViewDelegate {
-//  func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
-//    let page = Int((scrollView.contentOffset.x)/ScreenWidth)
-//    homeNavbar.setSwitchToIndex(page)
-//  }
-
+  //  func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
+  //    let page = Int((scrollView.contentOffset.x)/ScreenWidth)
+  //    homeNavbar.setSwitchToIndex(page)
+  //  }
+  
   func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
     let page = Int((scrollView.contentOffset.x)/ScreenWidth)
     homeNavbar.setSwitchToIndex(page)
@@ -256,7 +285,7 @@ extension HomeViewController:HomeNavBarViewDelegate {
   func homeNavBar(NavBar homeNavBar:HomeNavBarView,didSelecectedAtIndex index:Int) {
     self.scrollView.scrollRectToVisible(CGRectMake(ScreenWidth*CGFloat(index),0,scrollView.frame.width,scrollView.frame.height), animated: true)
   }
-
+  
   func homeNavBarDidPressObSelcetWeekView(NavBar: HomeNavBarView) {
     if isSelectWeekViewShowing {
       self.hideSelectWeekView(nil)

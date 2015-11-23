@@ -27,24 +27,30 @@ class BCLoginToEduViewController: EEBaseViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    navBar.hidden = true
     loginButton.layer.cornerRadius = 5
     cancelButton.layer.cornerRadius = 5
+    self.loginView.backgroundColor = Color.primaryTintColor
   }
   
   
   @IBAction func onLoginButtonPress(sender: AnyObject) {
     if usernameField.text != "" && passwordField.text != "" {
       startLoginRequest()
+    } else {
+      Hud.showError("请填写信息")
     }
+    self.view.endEditing(true)
   }
   
   @IBAction func onCancelButtonPress(sender: AnyObject) {
     super.pop()
+    self.dismissViewControllerAnimated(true, completion: nil)
   }
   
   @IBAction func onHelpButtonPressed(sender: AnyObject) {
-//    let vc = BCHelpViewController(nibName:"BCHelpViewController",bundle:nil)
-//    self.pushToViewController(vc)
+    //    let vc = BCHelpViewController(nibName:"BCHelpViewController",bundle:nil)
+    //    self.pushToViewController(vc)
   }
   
   func startLoginRequest() {
@@ -68,14 +74,14 @@ class BCLoginToEduViewController: EEBaseViewController {
           DataEnv.saveEduUser(user)
           self.isLoginRequestGoing = false
           self.getUserDetail(user)
-//          
-//          Answers.logLoginWithMethod(user.schoolYard,
-//            success: true,
-//            customAttributes: [:])
+          //
+          //          Answers.logLoginWithMethod(user.schoolYard,
+          //            success: true,
+          //            customAttributes: [:])
         }, onWrongPassWordBlock: { () -> Void in
-//          Answers.logLoginWithMethod(user.schoolYard,
-//            success: false,
-//            customAttributes: [:])
+          //          Answers.logLoginWithMethod(user.schoolYard,
+          //            success: false,
+          //            customAttributes: [:])
           Hud.showError("帐号或密码错误")
           self.isLoginRequestGoing = false
         }) { () -> Void in
@@ -84,20 +90,27 @@ class BCLoginToEduViewController: EEBaseViewController {
       }
     }
   }
-
-
+  
+  
   //TODO: 处理登录后的
   func getUserDetail(user: EduUser) {
     Hud.showLoadingWithMask("正在获取用户信息")
     BCGetUserDetailFromEduRequest.get(user, onSuccessGetBlock: { () -> Void in
       Hud.dismiss()
-      self.pop()
+      DataEnv.saveEduUser(user)
+      self.dismissViewControllerAnimated(true, completion: nil)
+      NotifCenter.postNotificationName(BCUserLoginNotification, object: nil)
+      
       }, onParseFailBlock: { () -> Void in
         Hud.dismiss()
-        self.pop()
+        self.dismissViewControllerAnimated(true, completion: nil)
+        NotifCenter.postNotificationName(BCUserLoginNotification, object: nil)
+        
       }) { () -> Void in
         Hud.dismiss()
-        self.pop()
+        self.dismissViewControllerAnimated(true, completion: nil)
+        NotifCenter.postNotificationName(BCUserLoginNotification, object: nil)
+        
     }
   }
   

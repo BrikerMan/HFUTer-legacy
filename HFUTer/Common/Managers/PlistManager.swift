@@ -91,6 +91,12 @@ class PlistManager {
     dataSource.setValue(user.avatar, forKey: "avatar")
     dataSource.writeToFile(filePath, atomically: true)
   }
+  
+  class func deleleComUser() {
+    let filePath = self.getFilePath("comUser.plist")
+    let dataSource:NSMutableArray = []
+    dataSource.writeToFile(filePath, atomically: true)
+  }
 
   class func saveTintColor(color:UIColor) {
     let filePath = self.getFilePath("setting.plist")

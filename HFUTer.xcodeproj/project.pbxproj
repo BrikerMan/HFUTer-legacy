@@ -36,6 +36,10 @@
 		6B561CC51C02FA4F004E6D4C /* NewsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B561CC31C02FA4F004E6D4C /* NewsListTableViewCell.swift */; };
 		6B561CC61C02FA4F004E6D4C /* NewsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B561CC41C02FA4F004E6D4C /* NewsListTableViewCell.xib */; };
 		6B561CC81C03017C004E6D4C /* InfoNewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B561CC71C03017C004E6D4C /* InfoNewsDetailViewController.swift */; };
+		6B561CCA1C03064B004E6D4C /* BCEduUserNotLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B561CC91C03064B004E6D4C /* BCEduUserNotLoginView.swift */; };
+		6B561CCC1C030657004E6D4C /* BCEduUserNotLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B561CCB1C030657004E6D4C /* BCEduUserNotLoginView.xib */; };
+		6B561CCE1C0317C2004E6D4C /* PersonDetailTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B561CCD1C0317C2004E6D4C /* PersonDetailTableCell.swift */; };
+		6B561CD11C03186C004E6D4C /* PersonDetailTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B561CD01C03186C004E6D4C /* PersonDetailTableCell.xib */; };
 		6B59393B1BFF0BD500EC4F19 /* BCGradesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5939271BFF0BD500EC4F19 /* BCGradesTableView.swift */; };
 		6B59393C1BFF0BD500EC4F19 /* BCGradesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5939281BFF0BD500EC4F19 /* BCGradesTableViewCell.swift */; };
 		6B59393D1BFF0BD500EC4F19 /* BCGradesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B5939291BFF0BD500EC4F19 /* BCGradesTableViewCell.xib */; };
@@ -170,6 +174,10 @@
 		6B561CC31C02FA4F004E6D4C /* NewsListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsListTableViewCell.swift; sourceTree = "<group>"; };
 		6B561CC41C02FA4F004E6D4C /* NewsListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsListTableViewCell.xib; sourceTree = "<group>"; };
 		6B561CC71C03017C004E6D4C /* InfoNewsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoNewsDetailViewController.swift; sourceTree = "<group>"; };
+		6B561CC91C03064B004E6D4C /* BCEduUserNotLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BCEduUserNotLoginView.swift; path = ../../../../../../../Documents/BCEduUserNotLoginView.swift; sourceTree = "<group>"; };
+		6B561CCB1C030657004E6D4C /* BCEduUserNotLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BCEduUserNotLoginView.xib; path = ../../../../../../../Documents/BCEduUserNotLoginView.xib; sourceTree = "<group>"; };
+		6B561CCD1C0317C2004E6D4C /* PersonDetailTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonDetailTableCell.swift; path = ../../../../../../../Documents/PersonDetailTableCell.swift; sourceTree = "<group>"; };
+		6B561CD01C03186C004E6D4C /* PersonDetailTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PersonDetailTableCell.xib; path = ../../../../../../../Documents/PersonDetailTableCell.xib; sourceTree = "<group>"; };
 		6B5939271BFF0BD500EC4F19 /* BCGradesTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCGradesTableView.swift; sourceTree = "<group>"; };
 		6B5939281BFF0BD500EC4F19 /* BCGradesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCGradesTableViewCell.swift; sourceTree = "<group>"; };
 		6B5939291BFF0BD500EC4F19 /* BCGradesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCGradesTableViewCell.xib; sourceTree = "<group>"; };
@@ -410,6 +418,8 @@
 			children = (
 				6BDC1F1C1BFF7450009DC139 /* BCColorChooseView.swift */,
 				6BDC1F1D1BFF7450009DC139 /* BCColorChooseView.xib */,
+				6B561CCD1C0317C2004E6D4C /* PersonDetailTableCell.swift */,
+				6B561CD01C03186C004E6D4C /* PersonDetailTableCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -772,6 +782,8 @@
 			children = (
 				6BEC10F91C002819008EFE73 /* BCBaseButton.swift */,
 				6BEC10FA1C002819008EFE73 /* BCTextField.swift */,
+				6B561CC91C03064B004E6D4C /* BCEduUserNotLoginView.swift */,
+				6B561CCB1C030657004E6D4C /* BCEduUserNotLoginView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1057,6 +1069,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BEC110F1C003352008EFE73 /* BCSendLoveWallViewController.xib in Resources */,
+				6B561CCC1C030657004E6D4C /* BCEduUserNotLoginView.xib in Resources */,
+				6B561CD11C03186C004E6D4C /* PersonDetailTableCell.xib in Resources */,
 				6B5939451BFF0BD500EC4F19 /* BCScheduleHeaderCell.xib in Resources */,
 				6B59393D1BFF0BD500EC4F19 /* BCGradesTableViewCell.xib in Resources */,
 				6BDD5AA31C00675400B26B9C /* BCCommunitLoginViewController.xib in Resources */,
@@ -1189,6 +1203,7 @@
 				6BEC10EB1C0027DA008EFE73 /* BCLeaveContectInfoView.swift in Sources */,
 				6B561CA11C02E32C004E6D4C /* InformationHomeCollectionViewCell.swift in Sources */,
 				6B5939461BFF0BD500EC4F19 /* BCScheduleLeftCell.swift in Sources */,
+				6B561CCE1C0317C2004E6D4C /* PersonDetailTableCell.swift in Sources */,
 				6B561CC81C03017C004E6D4C /* InfoNewsDetailViewController.swift in Sources */,
 				6B2EF56B1BFEEDC8003373E4 /* EEBaseNavBar.swift in Sources */,
 				6B2EF5811BFEFB19003373E4 /* ColorManager.swift in Sources */,
@@ -1208,6 +1223,7 @@
 				6B7BDB6D1BFF0F57007CEAB9 /* BCBaseRequest.swift in Sources */,
 				6B7BDB821BFF11ED007CEAB9 /* GTMBase64.m in Sources */,
 				6B59394A1BFF0BD500EC4F19 /* BCShcedulesWeekEditView.swift in Sources */,
+				6B561CCA1C03064B004E6D4C /* BCEduUserNotLoginView.swift in Sources */,
 				6B561CB71C02F45F004E6D4C /* InfoNewsCategoriesViewController.swift in Sources */,
 				6B7BDB6F1BFF0F74007CEAB9 /* BCLog.swift in Sources */,
 				6B561CC11C02FA49004E6D4C /* NewsDetailModel.swift in Sources */,

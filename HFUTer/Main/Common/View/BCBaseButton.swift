@@ -14,7 +14,6 @@ class BCBaseButton: UIButton {
     self.layer.cornerRadius = 3
     self.layer.borderColor = UIColor ( red: 0.6, green: 0.6, blue: 0.6, alpha: 1.0 ).CGColor
     self.layer.borderWidth = 1
-    self.titleLabel?.textColor = UIColor ( red: 0.1506, green: 0.1506, blue: 0.1506, alpha: 1.0 )
   }
   
   func updateTintColor() {

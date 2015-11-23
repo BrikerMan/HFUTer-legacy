@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeNavBarView" customModule="HFUTer" customModuleProvider="target">
             <connections>
+                <outlet property="notLoginLabel" destination="ZAo-Jc-kIl" id="Bv8-he-puE"/>
                 <outlet property="slideDownImage" destination="onl-3p-6jl" id="lQ9-79-xzP"/>
                 <outlet property="titleLabel" destination="odF-qV-ot5" id="njt-cT-PG4"/>
             </connections>
@@ -42,14 +43,23 @@
                         <action selector="onShowSelectWeekViewButtonPress:" destination="-1" eventType="touchUpInside" id="ULA-HO-rjK"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAo-Jc-kIl">
+                    <rect key="frame" x="134.5" y="32" width="51" height="20.5"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <animations/>
             <color key="backgroundColor" red="0.58431372550000005" green="0.43529411759999997" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="onl-3p-6jl" firstAttribute="leading" secondItem="odF-qV-ot5" secondAttribute="trailing" constant="5" id="2mK-ep-n9V"/>
                 <constraint firstItem="odF-qV-ot5" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="10" id="I3w-LG-5eB"/>
+                <constraint firstItem="ZAo-Jc-kIl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ROY-PL-4nv"/>
                 <constraint firstItem="onl-3p-6jl" firstAttribute="centerY" secondItem="odF-qV-ot5" secondAttribute="centerY" id="Vv7-hX-Joz"/>
                 <constraint firstItem="luE-Ya-C6I" firstAttribute="centerY" secondItem="odF-qV-ot5" secondAttribute="centerY" id="gxC-he-ARL"/>
+                <constraint firstItem="ZAo-Jc-kIl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="10" id="qmv-bB-Xjj"/>
                 <constraint firstAttribute="trailing" secondItem="luE-Ya-C6I" secondAttribute="trailing" constant="10" id="scq-bL-0Uo"/>
                 <constraint firstAttribute="trailing" secondItem="onl-3p-6jl" secondAttribute="trailing" constant="10" id="tWQ-Lv-yNB"/>
             </constraints>
