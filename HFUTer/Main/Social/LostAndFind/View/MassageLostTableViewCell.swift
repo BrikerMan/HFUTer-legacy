@@ -56,9 +56,6 @@ class MassageLostTableViewCell: UITableViewCell {
     avatarView.layer.cornerRadius = avatarView.frame.size.height/2
     mainView.layer.cornerRadius = 5
     imagesViewList = [imageView1,imageView2,imageView3]
-    seperatorView.snp_updateConstraints { (make) -> Void in
-      make.height.equalTo(0.5)
-    }
 
     contactButton.setFAText(prefixText: "", icon: .FAEnvelopeO , postfixText: " 联系", size: 14, forState: UIControlState.Normal)
 

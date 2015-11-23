@@ -13,21 +13,28 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-
+  var app:UIApplication!
+  var rootVC: RootViewController!
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
-    DataEnv.eduUser = PlistManager.readEduUser()
-    DataEnv.calculateCurrentWeek()
-
+    //初始化
     window = UIWindow(frame: UIScreen.mainScreen().bounds)
+    app    = application
+    rootVC = RootViewController()
+
+    
+    DataEnv.eduUser = PlistManager.readEduUser()
+    DataEnv.loginComUser()
+    DataEnv.calculateCurrentWeek()
+    PlistManager.readTintColor()
+
+
     window?.backgroundColor = UIColor.whiteColor()
-    let rootViewController = RootViewController()
+    let rootViewController = rootVC
     let rootNavController = UINavigationController(rootViewController:rootViewController)
     rootNavController.navigationBarHidden = true
     window!.rootViewController = rootNavController
     window!.makeKeyAndVisible()
-
     window!.tintColor = Color.primaryTintColor
 
     return true

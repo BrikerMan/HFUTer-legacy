@@ -9,14 +9,20 @@
 import Foundation
 import UIKit
 
-//func userBlongToRolesThen(roles:[DataEnvironmentUserRoles]) -> Bool{
-//  if roles.contains(DataEnv.userRole) {
-//    return true
-//  }
-//  return false
-//}
 
 
+func runAfterLoginToCommunity(block:()->()) {
+  if DataEnv.eduUser.isLogin {
+    if DataEnv.comUser.isLogin {
+      block()
+    } else {
+      RootVC.showLoginToCommunityVC()
+    }
+  } else {
+    Hud.showMassage("请先登录教务系统")
+    RootVC.showLoginToSchoolVC()
+  }
+}
 
 
 //检查表值

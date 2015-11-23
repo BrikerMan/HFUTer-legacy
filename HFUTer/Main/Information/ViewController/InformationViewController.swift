@@ -9,27 +9,61 @@
 import UIKit
 
 class InformationViewController: EEBaseViewController {
+  
+  @IBOutlet weak var collectiomView: UICollectionView!
+  
+  private let cellTitleAndImageList = [("新闻",""),("兼职信息",""),("教学班",""),("收费",""),("图书","")]
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    self.collectiomView.backgroundColor = UIColor.groupTableViewBackgroundColor()
+    let nib = UINib(nibName: "InformationHomeCollectionViewCell", bundle: nil)
+    collectiomView.registerNib(nib, forCellWithReuseIdentifier: "InformationHomeCollectionViewCell")
+  }
+  
+}
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+//MARK: - CollectionViewDataSource
+extension InformationViewController:UICollectionViewDataSource {
+  func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return 5
+  }
+  
+  func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    let cell = collectiomView.dequeueReusableCellWithReuseIdentifier("InformationHomeCollectionViewCell", forIndexPath: indexPath) as! InformationHomeCollectionViewCell
+    cell.setTitleAndImage(cellTitleAndImageList[indexPath.row].0, image: cellTitleAndImageList[indexPath.row].1)
+    return cell
+  }
+}
 
-        // Do any additional setup after loading the view.
+//MARK: - CollectionViewDelegateFlowLayout
+extension InformationViewController:UICollectionViewDelegateFlowLayout {
+  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    let width = (ScreenWidth - 3)/2
+    return CGSizeMake(width, width-50)
+  }
+  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+    return UIEdgeInsetsMake(1, 1, 1, 1)
+  }
+  
+  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+    return 1
+  }
+  
+  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+    return 1
+  }
+}
+
+//MARK: - CollectionViewDelegate
+extension InformationViewController:UICollectionViewDelegate {
+  func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    switch indexPath.row {
+    case 0:
+      let vc = InfoNewsCategoriesViewController()
+      self.pushToViewController(vc)
+    default:
+      break
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  }
 }

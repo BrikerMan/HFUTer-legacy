@@ -80,10 +80,6 @@ class DataEnvironment {
 
   func readComUser() -> ComUser{
     return  PlistManager.readComUser()
-    //    self.comUser.username = user.username
-    //    self.comUser.password = user.password
-    //    self.comUser.avatar = user.avatar
-    //    self.comUser.isLogin = user.isLogin
   }
 
 

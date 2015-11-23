@@ -31,11 +31,12 @@ class BCLoveWallDetailViewController: EEBaseViewController {
     tableView.registerNib(nib2, forCellReuseIdentifier: "BCLoveWallDetailTableViewCell")
 
     self.view.backgroundColor = Color.primaryLightColor
-    tableView.backgroundColor = UIColor.clearColor()
+    tableView.backgroundColor = Color.getLoveWallColors(model.color).ultraLight()
     
     replyTextView.layer.cornerRadius = 5
     self.getCommentList()
     self.bottomView.alpha = 0
+    animateStart()
   }
   
   func animateStart() {

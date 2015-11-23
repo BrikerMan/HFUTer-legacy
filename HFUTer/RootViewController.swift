@@ -34,12 +34,21 @@ class RootViewController: UITabBarController {
 
     homeVC.hideNavBar = true
 
-
     viewControllers = [homeNav, comNav, infoNav, personNav]
 
     for nav in [homeNav, comNav, infoNav, personNav] {
       nav.navigationBarHidden = true
     }
+  }
+
+  func showLoginToCommunityVC() {
+    let vc = BCCommunitLoginViewController(nibName:"BCCommunitLoginViewController",bundle:nil)
+    self.navigationController?.pushViewController(vc, animated: true)
+  }
+
+  func showLoginToSchoolVC() {
+    let vc = BCLoginToEduViewController(nibName:"BCLoginToEduViewController",bundle:nil)
+    self.navigationController?.pushViewController(vc, animated: true)
   }
 
 }

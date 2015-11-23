@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FontAwesome_swift
 
 enum EEBaseNavBarLeftButtonStyle {
   case None
@@ -15,6 +16,7 @@ enum EEBaseNavBarLeftButtonStyle {
 
 protocol EEBaseNavBarDelegate {
   func baseNavBarDidPressOnLeftButton(navBar:EEBaseNavBar)
+  func baseNavBarDidPressOnRightButton(navBar:EEBaseNavBar)
 }
 
 class EEBaseNavBar: EEXibView {
@@ -36,7 +38,8 @@ class EEBaseNavBar: EEXibView {
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var navLeftButton: UIButton!
   @IBOutlet weak var navLeftImage: UIImageView!
-
+  @IBOutlet weak var navRightButton: UIButton!
+  @IBOutlet weak var navRightImage: UIImageView!
 
   override func initFromXib() {
     super.initFromXib()
@@ -49,10 +52,25 @@ class EEBaseNavBar: EEXibView {
       navLeftButton.hidden = false
       navLeftImage.hidden  = false
     }
+    
+    navRightButton.hidden = true
+    navRightImage.hidden  = true
 
+  }
+  
+  func showNavRightButtonWithIcon(iconname:String) {
+    navRightButton.hidden = false
+    navRightImage.hidden  = false
+    navRightImage.image = UIImage(named: iconname)
+    
   }
 
   @IBAction func onNavLeftButtonPressed(sender: AnyObject) {
     delegate?.baseNavBarDidPressOnLeftButton(self)
   }
+
+  @IBAction func onNavRightButtonPressed(sender: AnyObject) {
+    delegate?.baseNavBarDidPressOnRightButton(self)
+  }
+
 }

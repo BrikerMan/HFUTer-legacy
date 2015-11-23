@@ -49,16 +49,14 @@ u1RB77yb5oiW6ICF5L2/55So5q2k5Yqf6IO95Y+R5biD6Ieq5bex55qE6IGU57O75pa55byP57uZ5a+5
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHi-pP-VIR" customClass="BCBaseButton" customModule="HFUTer" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHi-pP-VIR">
                     <rect key="frame" x="90" y="143" width="100" height="30"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="Bvr-3d-nIp"/>
                         <constraint firstAttribute="height" constant="30" id="UPm-9v-Wu4"/>
                     </constraints>
-                    <state key="normal" title="发送">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
+                    <state key="normal" title="发送"/>
                     <connections>
                         <action selector="onSendButtonPressed:" destination="-1" eventType="touchUpInside" id="dPn-qJ-lkf"/>
                     </connections>

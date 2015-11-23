@@ -27,6 +27,10 @@ let NotifCenter =  NSNotificationCenter.defaultCenter()
 
 typealias log = BClog
 
+
+let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+let RootVC      = appDelegate.rootVC
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //UI
 

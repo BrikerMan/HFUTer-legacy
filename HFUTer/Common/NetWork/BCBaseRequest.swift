@@ -80,14 +80,14 @@ class BCBaseRequest {
 
   class func getJsonFromCommunityServerRequest(url:String ,params:[String:AnyObject], onFinishedBlock:((response:NSDictionary) -> Void)?, onFailedBlock:((reason:String?) -> Void)?,onNetErrorBlock:(() -> Void)?) {
     log.request(url, param: params)
-    let header = ["Cookie":"cook"]
+    let header = ["Cookie":DataEnv.comUser.cookie]
     UIApplication.sharedApplication().networkActivityIndicatorVisible = true
 
     request(.POST, url, parameters: params, encoding: ParameterEncoding.URL, headers: header)
       .responseJSON(completionHandler: { (response) -> Void in
         if let dic = response.result.value as? NSDictionary {
           if dic["statue"] as? Bool == true {
-            //            Da.saveCookie(response.response?.allHeaderFields["Set-Cookie"] as? String)
+            DataEnv.saveCookie(response.response?.allHeaderFields["Set-Cookie"] as? String)
             onFinishedBlock?(response:dic)
           } else {
             onFailedBlock?(reason:dic["info"] as? String)

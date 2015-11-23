@@ -7,21 +7,23 @@
 //
 
 import UIKit
+import Font_Awesome_Swift
 
 class BCMassageLoveTableViewCell: UITableViewCell {
   
-
+  
   @IBOutlet weak var nameLabel: UILabel!
   @IBOutlet weak var mainView: UIView!
   @IBOutlet weak var avatarView: EEImageView!
   @IBOutlet weak var timeLabel: UILabel!
   @IBOutlet weak var contentLabel: UILabel!
   @IBOutlet weak var colorfulBackView: UIView!
+  @IBOutlet weak var colorfulBaclView2: UIView!
   @IBOutlet weak var likeCount: UILabel!
   @IBOutlet weak var commentCount: UILabel!
-  @IBOutlet weak var likeImage: UIImageView!
-//  @IBOutlet weak var button1: BCImageButtonView!
-//  @IBOutlet weak var button2: BCImageButtonView!
+  
+  //  @IBOutlet weak var button1: BCImageButtonView!
+  //  @IBOutlet weak var button2: BCImageButtonView!
   
   private var index = 0
   
@@ -32,8 +34,8 @@ class BCMassageLoveTableViewCell: UITableViewCell {
     self.mainView.backgroundColor = UIColor.whiteColor()
     mainView.layer.cornerRadius = 5
     avatarView.layer.cornerRadius = avatarView.frame.size.height/2
-//    button1.setupIconAndTitle("loveWall-like", title: "赞",index:self.index )
-//    button2.setupIconAndTitle("loveWall-comment", title: "评论",index:self.index)
+    //    button1.setupIconAndTitle("loveWall-like", title: "赞",index:self.index )
+    //    button2.setupIconAndTitle("loveWall-comment", title: "评论",index:self.index)
   }
   
   override func setSelected(selected: Bool, animated: Bool) {
@@ -53,17 +55,18 @@ class BCMassageLoveTableViewCell: UITableViewCell {
     
     timeLabel.text =  Utilities.getTimeString(model.date)
     contentLabel.text = model.content
-
-    likeCount.text = "\(model.goodCount)"
-    commentCount.text = "\(model.commentCount)"
+    
+    commentCount.setFAText(prefixText: "", icon: .FACommentsO , postfixText: " \(model.commentCount)", size: 12)
     
     if model.good {
-      likeImage.image = UIImage(named: "loveWall-like-fill")
+      likeCount.setFAText(prefixText: "", icon: .FAHeart , postfixText: " \(model.goodCount)", size: 12)
     } else {
-      likeImage.image = UIImage(named: "loveWall-like")
+      likeCount.setFAText(prefixText: "", icon: .FAHeartO , postfixText: " \(model.goodCount)", size: 12)
+      
     }
     
-    colorfulBackView.backgroundColor = Color.getLoveWallColors(model.color)
+    (colorfulBackView.backgroundColor,colorfulBaclView2.backgroundColor) =
+      (Color.getLoveWallColors(model.color),Color.getLoveWallColors(model.color))
   }
   
   

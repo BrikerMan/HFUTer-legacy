@@ -15,7 +15,7 @@ class EEImageView: UIImageView {
     super.init(frame: frame)
     initialImageView()
   }
-
+  
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     initialImageView()
@@ -28,30 +28,32 @@ class EEImageView: UIImageView {
   }
   
   func loadImageFromUrl(url:String?) {
+    UIApplication.sharedApplication().networkActivityIndicatorVisible = true
     if let url = url, link = NSURL(string: url) {
-      self.yy_setImageWithURL(link, options: YYWebImageOptions.Progressive)
+      self.yy_setImageWithURL(link, placeholder: UIImage(named: "avatar"), options: YYWebImageOptions.ProgressiveBlur, completion: { (image, link, from, stage, error) -> Void in
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+      })
     }
   }
-
-
+  
+  
   func loadThumbnail(url:String) {
     let link = "http://7xlrpg.com1.z0.glb.clouddn.com/lost/" + url + "?imageView/2/w/200/format/jpg"
     self.loadImageFromUrl(link)
   }
-
+  
   func loadAvatar(picName:String?) {
     if picName != nil && picName != "" {
       let link = "http://7xlrpg.com1.z0.glb.clouddn.com/icon/" + picName!
       self.loadImageFromUrl(link)
-//      self.loadImageFromUrl(link,image: UIImage(named: "avatar")!)
     } else {
       self.image = UIImage(named: "avatar")
     }
   }
-
+  
   func loadLostImageWithPicName(picaName:String) {
     let link = "http://7xlrpg.com1.z0.glb.clouddn.com/lost/" + picaName
     self.loadImageFromUrl(link)
   }
-
+  
 }

@@ -27,7 +27,7 @@ class MassageLostListView: EEXibView {
     let nib = UINib(nibName: "MassageLostTableViewCell", bundle: nil)
     tableView.registerNib(nib, forCellReuseIdentifier: "MassageLostTableViewCell")
     tableView.backgroundColor = UIColor.clearColor()
-    
+    self.view?.backgroundColor = UIColor.clearColor()
     self.tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: { () -> Void in
       self.delegate?.MassageLostListRefresh()
     })

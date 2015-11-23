@@ -1,66 +1,104 @@
 //
-//  BCLoginToEduViewController.swift
-//  HFUTer2
+//  BCLoginViewController.swift
+//  HFUTer
 //
-//  Created by Eliyar Eziz on 15/11/8.
-//  Copyright © 2015年 Eliyar Eziz. All rights reserved.
+//  Created by Eliyar Eziz on 15/9/9.
+//  Copyright (c) 2015年 Eliyar Eziz. All rights reserved.
 //
 
 import UIKit
+//import Crashlytics
 
 class BCLoginToEduViewController: EEBaseViewController {
   
-  var loginBlock:(()->())?
-  
-  //IB Referece
   @IBOutlet weak var usernameField: UITextField!
   @IBOutlet weak var passwordField: UITextField!
   @IBOutlet weak var schoolYardChoose: UISegmentedControl!
+  @IBOutlet weak var loginButton: UIButton!
+  @IBOutlet weak var cancelButton: UIButton!
   
-  //状态表示
+  @IBOutlet weak var logoImage: UIImageView!
+  @IBOutlet weak var loginView: UIView!
+  
   private var isLoginRequestGoing = false
+  private var isViewSlided = false
   
-  // MARK:- 生命周期
+  //  private var hud:WSProgressHUD!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.navBar.hidden = true
+    loginButton.layer.cornerRadius = 5
+    cancelButton.layer.cornerRadius = 5
   }
   
-  // MARK:- 按钮动作
-  @IBAction func loginButtonPressed(sender: AnyObject) {
+  
+  @IBAction func onLoginButtonPress(sender: AnyObject) {
+    if usernameField.text != "" && passwordField.text != "" {
+      startLoginRequest()
+    }
+  }
+  
+  @IBAction func onCancelButtonPress(sender: AnyObject) {
+    super.pop()
+  }
+  
+  @IBAction func onHelpButtonPressed(sender: AnyObject) {
+//    let vc = BCHelpViewController(nibName:"BCHelpViewController",bundle:nil)
+//    self.pushToViewController(vc)
+  }
+  
+  func startLoginRequest() {
     if !isLoginRequestGoing {
+      Hud.showLoadingWithMask("正在登录")
       isLoginRequestGoing = true
-      beganLoginRequest()
+      let user = EduUser()
+      user.username = usernameField.text!
+      user.password = passwordField.text!
+      if schoolYardChoose.selectedSegmentIndex == 0 {
+        user.schoolYard = "HF"
+      } else {
+        user.schoolYard = "XC"
+      }
+      
+      BCLoginToEduRequest.login(user,
+        onLoginBlock: { () -> Void in
+          Hud.dismiss()
+          user.isLogin = true
+          user.showWeekEnd = false
+          DataEnv.saveEduUser(user)
+          self.isLoginRequestGoing = false
+          self.getUserDetail(user)
+//          
+//          Answers.logLoginWithMethod(user.schoolYard,
+//            success: true,
+//            customAttributes: [:])
+        }, onWrongPassWordBlock: { () -> Void in
+//          Answers.logLoginWithMethod(user.schoolYard,
+//            success: false,
+//            customAttributes: [:])
+          Hud.showError("帐号或密码错误")
+          self.isLoginRequestGoing = false
+        }) { () -> Void in
+          Hud.showError("网络错误")
+          self.isLoginRequestGoing = false
+      }
     }
   }
-  
-  
-  // MARK:- 网络请求
-  private func beganLoginRequest() {
-    let user           = EduUser()
-    user.username      = usernameField.text!
-    user.password      = passwordField.text!
-    if schoolYardChoose.selectedSegmentIndex == 0 {
-      user.schoolYard = "HF"
-    } else {
-      user.schoolYard = "XC"
-    }
-    
-    Hud.showLoadingWithMask("正在登录")
-    BCLoginToEduRequest.login(user,
-      onLoginBlock: { () -> Void in
-        user.hasGetToken = true
-        DataEnv.saveEduUser(user)
+
+
+  //TODO: 处理登录后的
+  func getUserDetail(user: EduUser) {
+    Hud.showLoadingWithMask("正在获取用户信息")
+    BCGetUserDetailFromEduRequest.get(user, onSuccessGetBlock: { () -> Void in
+      Hud.dismiss()
+      self.pop()
+      }, onParseFailBlock: { () -> Void in
         Hud.dismiss()
         self.pop()
-        self.dismissViewControllerAnimated(true, completion: nil)
-        self.loginBlock?()
-        NSNotificationCenter.defaultCenter().postNotificationName(BCUserLoginNotification, object: nil, userInfo: nil)
-        self.isLoginRequestGoing = false
-      }, onWrongPassWordBlock: { () -> Void in
-        self.isLoginRequestGoing = false
-      }, onFailedBlock: { () -> Void in
-        self.isLoginRequestGoing = false
-    })
+      }) { () -> Void in
+        Hud.dismiss()
+        self.pop()
+    }
   }
+  
 }

@@ -9,6 +9,8 @@
             <connections>
                 <outlet property="navLeftButton" destination="AYW-zk-0fb" id="F3X-pq-cae"/>
                 <outlet property="navLeftImage" destination="M2w-aK-Q5Q" id="Le7-Zv-8AT"/>
+                <outlet property="navRightButton" destination="K1b-e1-Ud0" id="tlv-0O-q7U"/>
+                <outlet property="navRightImage" destination="paG-r6-9r6" id="ue6-hP-zRE"/>
                 <outlet property="titleLabel" destination="yRd-WL-5sX" id="OdW-na-ujo"/>
             </connections>
         </placeholder>
@@ -25,7 +27,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navbar_back" translatesAutoresizingMaskIntoConstraints="NO" id="M2w-aK-Q5Q">
-                    <rect key="frame" x="15" y="29.5" width="25" height="25"/>
+                    <rect key="frame" x="10" y="29" width="25" height="25"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="25" id="WFu-Q2-Ube"/>
@@ -44,14 +46,40 @@
                         <action selector="onNavLeftButtonPressed:" destination="-1" eventType="touchUpInside" id="OZR-Tj-P7J"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1b-e1-Ud0">
+                    <rect key="frame" x="270" y="27.5" width="50" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="SMj-0p-QKA"/>
+                        <constraint firstAttribute="height" constant="30" id="iTY-T3-9BJ"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onNavRightButtonPressed:" destination="-1" eventType="touchUpInside" id="dX3-kK-cpU"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navbar_add" translatesAutoresizingMaskIntoConstraints="NO" id="paG-r6-9r6">
+                    <rect key="frame" x="285" y="30" width="25" height="25"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="hzZ-dt-RMp"/>
+                        <constraint firstAttribute="width" constant="25" id="n0V-7h-kDf"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <animations/>
             <color key="backgroundColor" red="0.58431372550000005" green="0.43529411759999997" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="paG-r6-9r6" firstAttribute="centerY" secondItem="yRd-WL-5sX" secondAttribute="centerY" id="5W3-Cx-6xh"/>
                 <constraint firstItem="yRd-WL-5sX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9MQ-a2-OvA"/>
+                <constraint firstItem="K1b-e1-Ud0" firstAttribute="centerY" secondItem="yRd-WL-5sX" secondAttribute="centerY" id="JIP-hx-mbE"/>
                 <constraint firstItem="yRd-WL-5sX" firstAttribute="centerY" secondItem="M2w-aK-Q5Q" secondAttribute="centerY" id="Jc2-Um-dwD"/>
+                <constraint firstAttribute="trailing" secondItem="K1b-e1-Ud0" secondAttribute="trailing" id="b98-Jq-Bpe"/>
+                <constraint firstAttribute="trailing" secondItem="paG-r6-9r6" secondAttribute="trailing" constant="10" id="bIx-Vo-vO4"/>
                 <constraint firstItem="yRd-WL-5sX" firstAttribute="centerY" secondItem="AYW-zk-0fb" secondAttribute="centerY" id="bmi-Zw-XeT"/>
-                <constraint firstItem="M2w-aK-Q5Q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="hty-PC-usQ"/>
+                <constraint firstItem="M2w-aK-Q5Q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="hty-PC-usQ"/>
                 <constraint firstItem="yRd-WL-5sX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="10" id="n7S-0c-y8e"/>
                 <constraint firstItem="AYW-zk-0fb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="zhH-x7-UU2"/>
             </constraints>
@@ -61,6 +89,7 @@
         </view>
     </objects>
     <resources>
+        <image name="navbar_add" width="25" height="25"/>
         <image name="navbar_back" width="25" height="25"/>
     </resources>
 </document>

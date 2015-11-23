@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B1100DE1C00697600468A06 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1100DD1C00697600468A06 /* DataManager.swift */; };
 		6B2EF5631BFEEC56003373E4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EF5611BFEEC56003373E4 /* HomeViewController.swift */; };
 		6B2EF5641BFEEC56003373E4 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B2EF5621BFEEC56003373E4 /* HomeViewController.xib */; };
 		6B2EF5681BFEED9B003373E4 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EF5661BFEED9B003373E4 /* InformationViewController.swift */; };
@@ -22,6 +23,19 @@
 		6B2EF5811BFEFB19003373E4 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EF5801BFEFB19003373E4 /* ColorManager.swift */; };
 		6B2EF5831BFEFF2F003373E4 /* HomeNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EF5821BFEFF2F003373E4 /* HomeNavBarView.swift */; };
 		6B2EF5851BFEFF43003373E4 /* HomeNavBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B2EF5841BFEFF43003373E4 /* HomeNavBarView.xib */; };
+		6B561C9C1C02BC97004E6D4C /* EEBaseImagesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B561C9B1C02BC97004E6D4C /* EEBaseImagesListController.swift */; };
+		6B561CA11C02E32C004E6D4C /* InformationHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B561C9F1C02E32C004E6D4C /* InformationHomeCollectionViewCell.swift */; };
+		6B561CA21C02E32C004E6D4C /* InformationHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B561CA01C02E32C004E6D4C /* InformationHomeCollectionViewCell.xib */; };
+		6B561CB71C02F45F004E6D4C /* InfoNewsCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B561CB51C02F45F004E6D4C /* InfoNewsCategoriesViewController.swift */; };
+		6B561CB81C02F45F004E6D4C /* InfoNewsCategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B561CB61C02F45F004E6D4C /* InfoNewsCategoriesViewController.xib */; };
+		6B561CBA1C02F62F004E6D4C /* NewsCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B561CB91C02F62F004E6D4C /* NewsCategories.swift */; };
+		6B561CBD1C02F8D8004E6D4C /* InfoNewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B561CBB1C02F8D8004E6D4C /* InfoNewsListViewController.swift */; };
+		6B561CBE1C02F8D8004E6D4C /* InfoNewsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B561CBC1C02F8D8004E6D4C /* InfoNewsListViewController.xib */; };
+		6B561CC11C02FA49004E6D4C /* NewsDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B561CBF1C02FA49004E6D4C /* NewsDetailModel.swift */; };
+		6B561CC21C02FA49004E6D4C /* NewsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B561CC01C02FA49004E6D4C /* NewsListModel.swift */; };
+		6B561CC51C02FA4F004E6D4C /* NewsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B561CC31C02FA4F004E6D4C /* NewsListTableViewCell.swift */; };
+		6B561CC61C02FA4F004E6D4C /* NewsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B561CC41C02FA4F004E6D4C /* NewsListTableViewCell.xib */; };
+		6B561CC81C03017C004E6D4C /* InfoNewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B561CC71C03017C004E6D4C /* InfoNewsDetailViewController.swift */; };
 		6B59393B1BFF0BD500EC4F19 /* BCGradesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5939271BFF0BD500EC4F19 /* BCGradesTableView.swift */; };
 		6B59393C1BFF0BD500EC4F19 /* BCGradesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5939281BFF0BD500EC4F19 /* BCGradesTableViewCell.swift */; };
 		6B59393D1BFF0BD500EC4F19 /* BCGradesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B5939291BFF0BD500EC4F19 /* BCGradesTableViewCell.xib */; };
@@ -74,6 +88,12 @@
 		6B9211191C0025650093BB1F /* BCCommunityUserLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9211181C0025650093BB1F /* BCCommunityUserLoginRequest.swift */; };
 		6BDC1F1E1BFF7450009DC139 /* BCColorChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDC1F1C1BFF7450009DC139 /* BCColorChooseView.swift */; };
 		6BDC1F1F1BFF7450009DC139 /* BCColorChooseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDC1F1D1BFF7450009DC139 /* BCColorChooseView.xib */; };
+		6BDD5A9C1C00674E00B26B9C /* BCCommunityUserRegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD5A9A1C00674E00B26B9C /* BCCommunityUserRegisterRequest.swift */; };
+		6BDD5A9D1C00674E00B26B9C /* BCGetUserDetailFromEduRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD5A9B1C00674E00B26B9C /* BCGetUserDetailFromEduRequest.swift */; };
+		6BDD5AA21C00675400B26B9C /* BCCommunitLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD5A9E1C00675400B26B9C /* BCCommunitLoginViewController.swift */; };
+		6BDD5AA31C00675400B26B9C /* BCCommunitLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDD5A9F1C00675400B26B9C /* BCCommunitLoginViewController.xib */; };
+		6BDD5AA41C00675400B26B9C /* BCCommunityRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD5AA01C00675400B26B9C /* BCCommunityRegisterViewController.swift */; };
+		6BDD5AA51C00675500B26B9C /* BCCommunityRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDD5AA11C00675400B26B9C /* BCCommunityRegisterViewController.xib */; };
 		6BEC10EB1C0027DA008EFE73 /* BCLeaveContectInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC10DF1C0027DA008EFE73 /* BCLeaveContectInfoView.swift */; };
 		6BEC10EC1C0027DA008EFE73 /* BCLeaveContectInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BEC10E01C0027DA008EFE73 /* BCLeaveContectInfoView.xib */; };
 		6BEC10ED1C0027DA008EFE73 /* BCMyMassagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC10E11C0027DA008EFE73 /* BCMyMassagesTableViewCell.swift */; };
@@ -120,6 +140,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B1100DD1C00697600468A06 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		6B2EF54D1BFEE0D2003373E4 /* HFUTer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HFUTer-Bridging-Header.h"; sourceTree = "<group>"; };
 		6B2EF5611BFEEC56003373E4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6B2EF5621BFEEC56003373E4 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -136,6 +157,19 @@
 		6B2EF5801BFEFB19003373E4 /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		6B2EF5821BFEFF2F003373E4 /* HomeNavBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavBarView.swift; sourceTree = "<group>"; };
 		6B2EF5841BFEFF43003373E4 /* HomeNavBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeNavBarView.xib; sourceTree = "<group>"; };
+		6B561C9B1C02BC97004E6D4C /* EEBaseImagesListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EEBaseImagesListController.swift; sourceTree = "<group>"; };
+		6B561C9F1C02E32C004E6D4C /* InformationHomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationHomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		6B561CA01C02E32C004E6D4C /* InformationHomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationHomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		6B561CB51C02F45F004E6D4C /* InfoNewsCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoNewsCategoriesViewController.swift; sourceTree = "<group>"; };
+		6B561CB61C02F45F004E6D4C /* InfoNewsCategoriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoNewsCategoriesViewController.xib; sourceTree = "<group>"; };
+		6B561CB91C02F62F004E6D4C /* NewsCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCategories.swift; sourceTree = "<group>"; };
+		6B561CBB1C02F8D8004E6D4C /* InfoNewsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoNewsListViewController.swift; sourceTree = "<group>"; };
+		6B561CBC1C02F8D8004E6D4C /* InfoNewsListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoNewsListViewController.xib; sourceTree = "<group>"; };
+		6B561CBF1C02FA49004E6D4C /* NewsDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailModel.swift; sourceTree = "<group>"; };
+		6B561CC01C02FA49004E6D4C /* NewsListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsListModel.swift; sourceTree = "<group>"; };
+		6B561CC31C02FA4F004E6D4C /* NewsListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsListTableViewCell.swift; sourceTree = "<group>"; };
+		6B561CC41C02FA4F004E6D4C /* NewsListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsListTableViewCell.xib; sourceTree = "<group>"; };
+		6B561CC71C03017C004E6D4C /* InfoNewsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoNewsDetailViewController.swift; sourceTree = "<group>"; };
 		6B5939271BFF0BD500EC4F19 /* BCGradesTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCGradesTableView.swift; sourceTree = "<group>"; };
 		6B5939281BFF0BD500EC4F19 /* BCGradesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCGradesTableViewCell.swift; sourceTree = "<group>"; };
 		6B5939291BFF0BD500EC4F19 /* BCGradesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCGradesTableViewCell.xib; sourceTree = "<group>"; };
@@ -194,6 +228,12 @@
 		6B9211181C0025650093BB1F /* BCCommunityUserLoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCCommunityUserLoginRequest.swift; sourceTree = "<group>"; };
 		6BDC1F1C1BFF7450009DC139 /* BCColorChooseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCColorChooseView.swift; sourceTree = "<group>"; };
 		6BDC1F1D1BFF7450009DC139 /* BCColorChooseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCColorChooseView.xib; sourceTree = "<group>"; };
+		6BDD5A9A1C00674E00B26B9C /* BCCommunityUserRegisterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCCommunityUserRegisterRequest.swift; sourceTree = "<group>"; };
+		6BDD5A9B1C00674E00B26B9C /* BCGetUserDetailFromEduRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCGetUserDetailFromEduRequest.swift; sourceTree = "<group>"; };
+		6BDD5A9E1C00675400B26B9C /* BCCommunitLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCCommunitLoginViewController.swift; sourceTree = "<group>"; };
+		6BDD5A9F1C00675400B26B9C /* BCCommunitLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCCommunitLoginViewController.xib; sourceTree = "<group>"; };
+		6BDD5AA01C00675400B26B9C /* BCCommunityRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCCommunityRegisterViewController.swift; sourceTree = "<group>"; };
+		6BDD5AA11C00675400B26B9C /* BCCommunityRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCCommunityRegisterViewController.xib; sourceTree = "<group>"; };
 		6BEC10DF1C0027DA008EFE73 /* BCLeaveContectInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCLeaveContectInfoView.swift; sourceTree = "<group>"; };
 		6BEC10E01C0027DA008EFE73 /* BCLeaveContectInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCLeaveContectInfoView.xib; sourceTree = "<group>"; };
 		6BEC10E11C0027DA008EFE73 /* BCMyMassagesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCMyMassagesTableViewCell.swift; sourceTree = "<group>"; };
@@ -302,6 +342,9 @@
 		6B2EF5541BFEE17B003373E4 /* Information */ = {
 			isa = PBXGroup;
 			children = (
+				6B561CA31C02F39E004E6D4C /* Sub */,
+				6B561C9D1C02E2FF004E6D4C /* Model */,
+				6B561C9E1C02E2FF004E6D4C /* View */,
 				6B2EF5651BFEED86003373E4 /* ViewController */,
 			);
 			path = Information;
@@ -335,6 +378,10 @@
 		6B2EF5581BFEE17B003373E4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6BDD5A9E1C00675400B26B9C /* BCCommunitLoginViewController.swift */,
+				6BDD5A9F1C00675400B26B9C /* BCCommunitLoginViewController.xib */,
+				6BDD5AA01C00675400B26B9C /* BCCommunityRegisterViewController.swift */,
+				6BDD5AA11C00675400B26B9C /* BCCommunityRegisterViewController.xib */,
 				6B7BDB891BFF1350007CEAB9 /* BCLoginToEduViewController.swift */,
 				6B7BDB8A1BFF1350007CEAB9 /* BCLoginToEduViewController.xib */,
 			);
@@ -392,6 +439,175 @@
 			children = (
 				6B2EF5661BFEED9B003373E4 /* InformationViewController.swift */,
 				6B2EF5671BFEED9B003373E4 /* InformationViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6B561C9D1C02E2FF004E6D4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6B561C9E1C02E2FF004E6D4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B561C9F1C02E32C004E6D4C /* InformationHomeCollectionViewCell.swift */,
+				6B561CA01C02E32C004E6D4C /* InformationHomeCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B561CA31C02F39E004E6D4C /* Sub */ = {
+			isa = PBXGroup;
+			children = (
+				6B561CA41C02F39E004E6D4C /* Books */,
+				6B561CA51C02F39E004E6D4C /* ClassDetail */,
+				6B561CA91C02F39E004E6D4C /* CourseFee */,
+				6B561CAD1C02F39E004E6D4C /* Jobs */,
+				6B561CB11C02F39E004E6D4C /* News */,
+			);
+			path = Sub;
+			sourceTree = "<group>";
+		};
+		6B561CA41C02F39E004E6D4C /* Books */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Books;
+			sourceTree = "<group>";
+		};
+		6B561CA51C02F39E004E6D4C /* ClassDetail */ = {
+			isa = PBXGroup;
+			children = (
+				6B561CA61C02F39E004E6D4C /* Model */,
+				6B561CA71C02F39E004E6D4C /* View */,
+				6B561CA81C02F39E004E6D4C /* ViewController */,
+			);
+			path = ClassDetail;
+			sourceTree = "<group>";
+		};
+		6B561CA61C02F39E004E6D4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6B561CA71C02F39E004E6D4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B561CA81C02F39E004E6D4C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6B561CA91C02F39E004E6D4C /* CourseFee */ = {
+			isa = PBXGroup;
+			children = (
+				6B561CAA1C02F39E004E6D4C /* Model */,
+				6B561CAB1C02F39E004E6D4C /* View */,
+				6B561CAC1C02F39E004E6D4C /* ViewController */,
+			);
+			path = CourseFee;
+			sourceTree = "<group>";
+		};
+		6B561CAA1C02F39E004E6D4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6B561CAB1C02F39E004E6D4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B561CAC1C02F39E004E6D4C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6B561CAD1C02F39E004E6D4C /* Jobs */ = {
+			isa = PBXGroup;
+			children = (
+				6B561CAE1C02F39E004E6D4C /* Model */,
+				6B561CAF1C02F39E004E6D4C /* View */,
+				6B561CB01C02F39E004E6D4C /* ViewController */,
+			);
+			path = Jobs;
+			sourceTree = "<group>";
+		};
+		6B561CAE1C02F39E004E6D4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6B561CAF1C02F39E004E6D4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B561CB01C02F39E004E6D4C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6B561CB11C02F39E004E6D4C /* News */ = {
+			isa = PBXGroup;
+			children = (
+				6B561CB21C02F39E004E6D4C /* Model */,
+				6B561CB31C02F39E004E6D4C /* View */,
+				6B561CB41C02F39E004E6D4C /* ViewController */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		6B561CB21C02F39E004E6D4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6B561CBF1C02FA49004E6D4C /* NewsDetailModel.swift */,
+				6B561CC01C02FA49004E6D4C /* NewsListModel.swift */,
+				6B561CB91C02F62F004E6D4C /* NewsCategories.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6B561CB31C02F39E004E6D4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B561CC31C02FA4F004E6D4C /* NewsListTableViewCell.swift */,
+				6B561CC41C02FA4F004E6D4C /* NewsListTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B561CB41C02F39E004E6D4C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6B561CB51C02F45F004E6D4C /* InfoNewsCategoriesViewController.swift */,
+				6B561CB61C02F45F004E6D4C /* InfoNewsCategoriesViewController.xib */,
+				6B561CBB1C02F8D8004E6D4C /* InfoNewsListViewController.swift */,
+				6B561CBC1C02F8D8004E6D4C /* InfoNewsListViewController.xib */,
+				6B561CC71C03017C004E6D4C /* InfoNewsDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -468,6 +684,8 @@
 		6B7BDB861BFF1347007CEAB9 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				6BDD5A9A1C00674E00B26B9C /* BCCommunityUserRegisterRequest.swift */,
+				6BDD5A9B1C00674E00B26B9C /* BCGetUserDetailFromEduRequest.swift */,
 				6B7BDB871BFF1347007CEAB9 /* BCLoginToEduRequest.swift */,
 				6B9211181C0025650093BB1F /* BCCommunityUserLoginRequest.swift */,
 			);
@@ -664,6 +882,7 @@
 				6B2EF5801BFEFB19003373E4 /* ColorManager.swift */,
 				6B2EF5781BFEFA0B003373E4 /* PlistManager.swift */,
 				6B2EF57A1BFEFA16003373E4 /* DBManager.swift */,
+				6B1100DD1C00697600468A06 /* DataManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -715,6 +934,7 @@
 				6BEDEB3F1BFED5D400CDB1B1 /* EEBaseFormViewController.swift */,
 				6BEDEB411BFED5D400CDB1B1 /* EEImageCropViewController.swift */,
 				6BEDEB421BFED5D400CDB1B1 /* EurekaCustomImageRow.swift */,
+				6B561C9B1C02BC97004E6D4C /* EEBaseImagesListController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -839,6 +1059,7 @@
 				6BEC110F1C003352008EFE73 /* BCSendLoveWallViewController.xib in Resources */,
 				6B5939451BFF0BD500EC4F19 /* BCScheduleHeaderCell.xib in Resources */,
 				6B59393D1BFF0BD500EC4F19 /* BCGradesTableViewCell.xib in Resources */,
+				6BDD5AA31C00675400B26B9C /* BCCommunitLoginViewController.xib in Resources */,
 				6B59394D1BFF0BD500EC4F19 /* BCShcedulesWeekEditViewCell.xib in Resources */,
 				6B5939491BFF0BD500EC4F19 /* BCScheduleSelectView.xib in Resources */,
 				6B5939411BFF0BD500EC4F19 /* BCScheculeView.xib in Resources */,
@@ -847,11 +1068,15 @@
 				6B7BDB8C1BFF1350007CEAB9 /* BCLoginToEduViewController.xib in Resources */,
 				6BEC10F01C0027DA008EFE73 /* MassageLostListView.xib in Resources */,
 				6B5939431BFF0BD500EC4F19 /* BCScheduleBodyCell.xib in Resources */,
+				6B561CA21C02E32C004E6D4C /* InformationHomeCollectionViewCell.xib in Resources */,
 				6BEDEB6A1BFED5D400CDB1B1 /* Assets.xcassets in Resources */,
 				6BEC10F21C0027DA008EFE73 /* MassageLostTableViewCell.xib in Resources */,
+				6B561CB81C02F45F004E6D4C /* InfoNewsCategoriesViewController.xib in Resources */,
 				6BEC11131C003352008EFE73 /* BCLoveWallDetailTableViewCell.xib in Resources */,
 				6BEDEB6B1BFED5D400CDB1B1 /* LaunchScreen.storyboard in Resources */,
 				6BEC10F61C0027DA008EFE73 /* MassageMyPublishListTableViewCell.xib in Resources */,
+				6BDD5AA51C00675500B26B9C /* BCCommunityRegisterViewController.xib in Resources */,
+				6B561CC61C02FA4F004E6D4C /* NewsListTableViewCell.xib in Resources */,
 				6B2EF5851BFEFF43003373E4 /* HomeNavBarView.xib in Resources */,
 				6BDC1F1F1BFF7450009DC139 /* BCColorChooseView.xib in Resources */,
 				6B2EF5641BFEEC56003373E4 /* HomeViewController.xib in Resources */,
@@ -865,6 +1090,7 @@
 				6BEC10F41C0027DA008EFE73 /* MassageMoreActionView.xib in Resources */,
 				6B9211121C00240F0093BB1F /* CommunityViewController.xib in Resources */,
 				6B2EF56D1BFEEDD7003373E4 /* EEBaseNavBar.xib in Resources */,
+				6B561CBE1C02F8D8004E6D4C /* InfoNewsListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -923,6 +1149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BDD5A9C1C00674E00B26B9C /* BCCommunityUserRegisterRequest.swift in Sources */,
+				6BDD5AA21C00675400B26B9C /* BCCommunitLoginViewController.swift in Sources */,
 				6BEC11141C003352008EFE73 /* BCMassageLoveTableViewCell.swift in Sources */,
 				6BEDEB631BFED5D400CDB1B1 /* EEXibView.swift in Sources */,
 				6B9210FB1C001F760093BB1F /* JSONND+DictionaryLiteralConvertible.swift in Sources */,
@@ -934,28 +1162,37 @@
 				6B7BDB811BFF11ED007CEAB9 /* Encryptions.m in Sources */,
 				6B59393B1BFF0BD500EC4F19 /* BCGradesTableView.swift in Sources */,
 				6B9211111C00240F0093BB1F /* CommunityViewController.swift in Sources */,
+				6B561CC51C02FA4F004E6D4C /* NewsListTableViewCell.swift in Sources */,
 				6B7BDB8F1BFF196C007CEAB9 /* BCScheduleEditViewController.swift in Sources */,
 				6B7BDB841BFF11ED007CEAB9 /* FMDatabaseAdditionsVariadic.swift in Sources */,
 				6BEDEB5E1BFED5D400CDB1B1 /* Macros.swift in Sources */,
+				6B561CC21C02FA49004E6D4C /* NewsListModel.swift in Sources */,
 				6B7BDB831BFF11ED007CEAB9 /* MD5Encryption.m in Sources */,
 				6BEC11111C003352008EFE73 /* BCMassageLoveWallModel.swift in Sources */,
+				6B561C9C1C02BC97004E6D4C /* EEBaseImagesListController.swift in Sources */,
 				6B7BDB7F1BFF11ED007CEAB9 /* Base64Util.m in Sources */,
 				6BEDEB1E1BFED40A00CDB1B1 /* RootViewController.swift in Sources */,
 				6BEDEB691BFED5D400CDB1B1 /* EurekaCustomImageRow.swift in Sources */,
 				6B7BDB851BFF11ED007CEAB9 /* FMDatabaseVariadic.swift in Sources */,
 				6BEC10FB1C002819008EFE73 /* BCBaseButton.swift in Sources */,
+				6BDD5A9D1C00674E00B26B9C /* BCGetUserDetailFromEduRequest.swift in Sources */,
 				6B2EF57D1BFEFA2D003373E4 /* EduUserModel.swift in Sources */,
 				6B2EF5631BFEEC56003373E4 /* HomeViewController.swift in Sources */,
+				6B1100DE1C00697600468A06 /* DataManager.swift in Sources */,
 				6BDC1F1E1BFF7450009DC139 /* BCColorChooseView.swift in Sources */,
+				6B561CBA1C02F62F004E6D4C /* NewsCategories.swift in Sources */,
 				6BEC10ED1C0027DA008EFE73 /* BCMyMassagesTableViewCell.swift in Sources */,
 				6B5939561BFF0BDC00EC4F19 /* ScheduleModel.swift in Sources */,
 				6BEC110C1C003352008EFE73 /* BCLoveWallDetailViewController.swift in Sources */,
 				6BEC110E1C003352008EFE73 /* BCSendLoveWallViewController.swift in Sources */,
 				6BEDEB641BFED5D400CDB1B1 /* HDBaseFlatButton.swift in Sources */,
 				6BEC10EB1C0027DA008EFE73 /* BCLeaveContectInfoView.swift in Sources */,
+				6B561CA11C02E32C004E6D4C /* InformationHomeCollectionViewCell.swift in Sources */,
 				6B5939461BFF0BD500EC4F19 /* BCScheduleLeftCell.swift in Sources */,
+				6B561CC81C03017C004E6D4C /* InfoNewsDetailViewController.swift in Sources */,
 				6B2EF56B1BFEEDC8003373E4 /* EEBaseNavBar.swift in Sources */,
 				6B2EF5811BFEFB19003373E4 /* ColorManager.swift in Sources */,
+				6BDD5AA41C00675400B26B9C /* BCCommunityRegisterViewController.swift in Sources */,
 				6B59395C1BFF0BE200EC4F19 /* BCGetSceduleRequest.swift in Sources */,
 				6B9211141C00240F0093BB1F /* BCMassageMyPublishModel.swift in Sources */,
 				6BEDEB681BFED5D400CDB1B1 /* EEImageCropViewController.swift in Sources */,
@@ -971,7 +1208,9 @@
 				6B7BDB6D1BFF0F57007CEAB9 /* BCBaseRequest.swift in Sources */,
 				6B7BDB821BFF11ED007CEAB9 /* GTMBase64.m in Sources */,
 				6B59394A1BFF0BD500EC4F19 /* BCShcedulesWeekEditView.swift in Sources */,
+				6B561CB71C02F45F004E6D4C /* InfoNewsCategoriesViewController.swift in Sources */,
 				6B7BDB6F1BFF0F74007CEAB9 /* BCLog.swift in Sources */,
+				6B561CC11C02FA49004E6D4C /* NewsDetailModel.swift in Sources */,
 				6BEDEB671BFED5D400CDB1B1 /* EEBaseViewController.swift in Sources */,
 				6BEC10EF1C0027DA008EFE73 /* MassageLostListView.swift in Sources */,
 				6B9211151C00240F0093BB1F /* BCMyMassageModel.swift in Sources */,
@@ -988,6 +1227,7 @@
 				6BEDEB1C1BFED40A00CDB1B1 /* AppDelegate.swift in Sources */,
 				6B9210FC1C001F760093BB1F /* JSONND.swift in Sources */,
 				6BEDEB661BFED5D400CDB1B1 /* EEBaseFormViewController.swift in Sources */,
+				6B561CBD1C02F8D8004E6D4C /* InfoNewsListViewController.swift in Sources */,
 				6B2EF57F1BFEFAC8003373E4 /* EEExtension.swift in Sources */,
 				6B5939481BFF0BD500EC4F19 /* BCScheduleSelectView.swift in Sources */,
 				6BEDEB611BFED5D400CDB1B1 /* EEHudView.swift in Sources */,

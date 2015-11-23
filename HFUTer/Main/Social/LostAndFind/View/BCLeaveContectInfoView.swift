@@ -16,13 +16,16 @@ class BCLeaveContectInfoView: EEXibView {
 
   @IBOutlet weak var phoneNumberField: BCTextField!
   @IBOutlet weak var contactInfoFiled: BCTextField!
-  @IBOutlet weak var sendButton: BCBaseButton!
+  @IBOutlet weak var sendButton: UIButton!
 
   var delegate:BCLeaveContectInfoViewDelegate?
   
   override func initFromXib() {
     super.initFromXib()
     self.view?.layer.cornerRadius = 5
+    self.sendButton.layer.cornerRadius = 3
+    self.sendButton.layer.borderWidth  = 1
+    self.sendButton.layer.borderColor  = Color.primaryTintColor.light().CGColor
     phoneNumberField.updateTintColor()
     contactInfoFiled.updateTintColor()
   }
@@ -30,7 +33,7 @@ class BCLeaveContectInfoView: EEXibView {
   func changeTintColor() {
     phoneNumberField.updateTintColor()
     contactInfoFiled.updateTintColor()
-    sendButton.updateTintColor()
+//    sendButton.updateTintColor()
   }
   
   func clearText() {

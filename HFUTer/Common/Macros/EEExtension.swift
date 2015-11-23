@@ -141,6 +141,12 @@ extension UIColor {
     let blue = b/255
     return UIColor(red: red, green: green, blue: blue, alpha: 1)
   }
+  
+  class func parseColor(hex:String) -> UIColor {
+    let color = UIColor(hexString: hex, alpha: 1.0)
+    return color
+  }
+  
 
 }
 

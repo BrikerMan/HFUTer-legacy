@@ -30,7 +30,7 @@ target 'HFUTer' do
 
   #调试
   pod 'Reveal-iOS-SDK', :configurations => ['Debug']
-
+  pod 'FontAwesome.swift'
 
 
 
