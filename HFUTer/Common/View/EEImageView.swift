@@ -30,7 +30,7 @@ class EEImageView: UIImageView {
   func loadImageFromUrl(url:String?) {
     UIApplication.sharedApplication().networkActivityIndicatorVisible = true
     if let url = url, link = NSURL(string: url) {
-      self.yy_setImageWithURL(link, placeholder: UIImage(named: "avatar"), options: YYWebImageOptions.ProgressiveBlur, completion: { (image, link, from, stage, error) -> Void in
+      self.yy_setImageWithURL(link, placeholder: nil, options: YYWebImageOptions.ProgressiveBlur, completion: { (image, link, from, stage, error) -> Void in
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
       })
     }

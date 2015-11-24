@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import Fabric
+import Answers
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,16 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     //初始化
+    
+    Fabric.with([Answers.self])
+    
     window = UIWindow(frame: UIScreen.mainScreen().bounds)
     app    = application
     rootVC = RootViewController()
 
-    
     DataEnv.eduUser = PlistManager.readEduUser()
     DataEnv.loginComUser()
     DataEnv.calculateCurrentWeek()
     PlistManager.readTintColor()
-
 
     window?.backgroundColor = UIColor.whiteColor()
     let rootViewController = rootVC

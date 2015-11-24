@@ -60,6 +60,7 @@ class EEBaseViewController:UIViewController {
   }
   
   func pop() {
+    Hud.dismiss()
     self.navigationController?.popViewControllerAnimated(true)
   }
   

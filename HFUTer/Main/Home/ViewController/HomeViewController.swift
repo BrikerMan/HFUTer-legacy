@@ -40,6 +40,7 @@ class HomeViewController: EEBaseViewController {
     } else {
       addEduUserNotLoginView()
     }
+    fixUI()
     NotifCenter.addObserver(self, selector: "afterLogin:", name: BCUserLoginNotification, object: nil)
     NotifCenter.addObserver(self, selector: "afterLogOut:", name: BCUserLogOutNotification, object: nil)
   }
@@ -198,7 +199,11 @@ class HomeViewController: EEBaseViewController {
     }
   }
   
-  func initUI() {
+  override func onTintColorChanged() {
+    self.homeNavbar.view?.backgroundColor = Color.primaryTintColor
+  }
+  
+  private func initUI() {
     homeNavbar.delegate = self
     self.view.addSubview(homeNavbar)
     
@@ -234,6 +239,10 @@ class HomeViewController: EEBaseViewController {
       make.width.equalTo(self.scrollView.snp_width)
       make.height.equalTo(self.scrollView.snp_height)
     })
+  }
+  
+  private func fixUI() {
+    self.homeNavbar.view?.backgroundColor = Color.primaryTintColor
   }
 }
 

@@ -21,6 +21,6 @@ class InformationHomeCollectionViewCell: UICollectionViewCell {
   
   func setTitleAndImage(title:String,image:String) {
     titleLabel.text = title
-    
+    imageView.image = UIImage(named: image)
   }
 }

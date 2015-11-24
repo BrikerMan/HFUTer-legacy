@@ -13,26 +13,29 @@ target 'HFUTer' do
   pod 'SnapKit'                           ##AutoLayout
   pod 'Font-Awesome-Swift'
   pod 'DGRunkeeperSwitch'
-
+  
   #Controller
   pod 'HMSegmentedControl'
   pod 'JSQMessagesViewController'
   pod 'SwipeBack', '~> 1.1'               #全能滑动返回
-
+  
   #网络
   pod 'Alamofire'
-
+  
   #数据
   pod 'YYModel'                           ##Dic or Json -> Model
   pod 'FMDB', :git => 'https://github.com/ccgus/fmdb.git', :branch => 'swiftFramework'                             #sqlite封装
   pod 'Qiniu', :git => 'https://github.com/qiniu/objc-sdk.git', :branch => 'master'
   pod 'Kanna'
-
+  
   #调试
   pod 'Reveal-iOS-SDK', :configurations => ['Debug']
   pod 'FontAwesome.swift'
-
-
+  
+  ## Fabric服务安装
+  pod 'Fabric'
+  pod 'Answers'
+#  pod 'Crashlytics'
 
   
 end

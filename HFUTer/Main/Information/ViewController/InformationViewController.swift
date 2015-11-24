@@ -12,10 +12,11 @@ class InformationViewController: EEBaseViewController {
   
   @IBOutlet weak var collectiomView: UICollectionView!
   
-  private let cellTitleAndImageList = [("新闻",""),("兼职信息",""),("教学班",""),("收费",""),("图书","")]
+  private let cellTitleAndImageList = [("校园新闻","info_news"),("兼职信息","info_jobs"),("教学班查询","info_class"),("收费查询","info_fee"),("借阅查询","info_books")]
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    navTitle = "查询"
     self.collectiomView.backgroundColor = UIColor.groupTableViewBackgroundColor()
     let nib = UINib(nibName: "InformationHomeCollectionViewCell", bundle: nil)
     collectiomView.registerNib(nib, forCellWithReuseIdentifier: "InformationHomeCollectionViewCell")
