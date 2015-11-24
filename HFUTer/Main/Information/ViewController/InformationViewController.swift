@@ -63,6 +63,9 @@ extension InformationViewController:UICollectionViewDelegate {
     case 0:
       let vc = InfoNewsCategoriesViewController()
       self.pushToViewController(vc)
+    case 1:
+      let vc = InfoJobsViewController()
+      self.pushToViewController(vc)
     default:
       break
     }

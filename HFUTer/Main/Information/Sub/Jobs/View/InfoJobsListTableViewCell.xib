@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="InfoJobsListTableViewCell" customModule="HFUTer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="食堂兼职人员" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coe-Fp-w2U">
+                        <rect key="frame" x="10" y="8" width="84" height="17"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="校区：新校区" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czW-eS-Vu0">
+                        <rect key="frame" x="10" y="33" width="72" height="14.5"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="报名人数：2/2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Net-z3-5Ue">
+                        <rect key="frame" x="10" y="55.5" width="79" height="14.5"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发布时间：2015-11-11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zti-Lw-a1d">
+                        <rect key="frame" x="138" y="33" width="122" height="14.5"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="性别限制：不限" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0y-u2-HjE">
+                        <rect key="frame" x="138" y="55" width="84" height="14.5"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="coe-Fp-w2U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="34f-hi-mdw"/>
+                    <constraint firstItem="Y0y-u2-HjE" firstAttribute="top" secondItem="Net-z3-5Ue" secondAttribute="top" id="3vi-Hb-s2J"/>
+                    <constraint firstItem="czW-eS-Vu0" firstAttribute="top" secondItem="coe-Fp-w2U" secondAttribute="bottom" constant="8" id="9Vs-gH-kZW"/>
+                    <constraint firstItem="Net-z3-5Ue" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="FYY-qA-xmq"/>
+                    <constraint firstItem="Zti-Lw-a1d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="130" id="MNp-B9-Y19"/>
+                    <constraint firstItem="czW-eS-Vu0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="MXd-XN-n5U"/>
+                    <constraint firstItem="Y0y-u2-HjE" firstAttribute="leading" secondItem="Zti-Lw-a1d" secondAttribute="leading" id="UOx-3T-e75"/>
+                    <constraint firstItem="coe-Fp-w2U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="fOS-cM-B8T"/>
+                    <constraint firstItem="Zti-Lw-a1d" firstAttribute="top" secondItem="czW-eS-Vu0" secondAttribute="top" id="mH2-9e-lUo"/>
+                    <constraint firstItem="Net-z3-5Ue" firstAttribute="top" secondItem="czW-eS-Vu0" secondAttribute="bottom" constant="8" id="poG-EK-2dA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="limit" destination="Y0y-u2-HjE" id="niL-lH-cTd"/>
+                <outlet property="peopleName" destination="Net-z3-5Ue" id="aix-Wt-7Nx"/>
+                <outlet property="schoolYard" destination="czW-eS-Vu0" id="Cbj-8R-MEt"/>
+                <outlet property="time" destination="Zti-Lw-a1d" id="HSC-wG-oT3"/>
+                <outlet property="titleLabel" destination="coe-Fp-w2U" id="oSz-dX-oBM"/>
+            </connections>
+            <point key="canvasLocation" x="245" y="315"/>
+        </tableViewCell>
+    </objects>
+</document>

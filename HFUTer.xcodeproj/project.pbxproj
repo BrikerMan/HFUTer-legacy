@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6B1100DE1C00697600468A06 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1100DD1C00697600468A06 /* DataManager.swift */; };
+		6B135C2A1C04070D0062097E /* InfoJobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B135C281C04070D0062097E /* InfoJobsViewController.swift */; };
+		6B135C2B1C04070D0062097E /* InfoJobsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B135C291C04070D0062097E /* InfoJobsViewController.xib */; };
+		6B135C2E1C04092F0062097E /* InfoGetJobListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B135C2D1C04092F0062097E /* InfoGetJobListRequest.swift */; };
+		6B135C301C04121C0062097E /* InfoJobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B135C2F1C04121C0062097E /* InfoJobModel.swift */; };
 		6B2EF5631BFEEC56003373E4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EF5611BFEEC56003373E4 /* HomeViewController.swift */; };
 		6B2EF5641BFEEC56003373E4 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B2EF5621BFEEC56003373E4 /* HomeViewController.xib */; };
 		6B2EF5681BFEED9B003373E4 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EF5661BFEED9B003373E4 /* InformationViewController.swift */; };
@@ -90,6 +94,10 @@
 		6B9211151C00240F0093BB1F /* BCMyMassageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B92110B1C00240F0093BB1F /* BCMyMassageModel.swift */; };
 		6B9211171C0024FE0093BB1F /* ComUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9211161C0024FE0093BB1F /* ComUserModel.swift */; };
 		6B9211191C0025650093BB1F /* BCCommunityUserLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9211181C0025650093BB1F /* BCCommunityUserLoginRequest.swift */; };
+		6BBE31761C043EDC0001B2E4 /* InfoJobsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE31741C043EDC0001B2E4 /* InfoJobsListTableViewCell.swift */; };
+		6BBE31771C043EDC0001B2E4 /* InfoJobsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BBE31751C043EDC0001B2E4 /* InfoJobsListTableViewCell.xib */; };
+		6BD1EBE61C0448F000FF9B78 /* InfoJobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1EBE41C0448F000FF9B78 /* InfoJobDetailViewController.swift */; };
+		6BD1EBE71C0448F000FF9B78 /* InfoJobDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD1EBE51C0448F000FF9B78 /* InfoJobDetailViewController.xib */; };
 		6BDC1F1E1BFF7450009DC139 /* BCColorChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDC1F1C1BFF7450009DC139 /* BCColorChooseView.swift */; };
 		6BDC1F1F1BFF7450009DC139 /* BCColorChooseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDC1F1D1BFF7450009DC139 /* BCColorChooseView.xib */; };
 		6BDD5A9C1C00674E00B26B9C /* BCCommunityUserRegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD5A9A1C00674E00B26B9C /* BCCommunityUserRegisterRequest.swift */; };
@@ -145,6 +153,10 @@
 
 /* Begin PBXFileReference section */
 		6B1100DD1C00697600468A06 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		6B135C281C04070D0062097E /* InfoJobsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoJobsViewController.swift; sourceTree = "<group>"; };
+		6B135C291C04070D0062097E /* InfoJobsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoJobsViewController.xib; sourceTree = "<group>"; };
+		6B135C2D1C04092F0062097E /* InfoGetJobListRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoGetJobListRequest.swift; sourceTree = "<group>"; };
+		6B135C2F1C04121C0062097E /* InfoJobModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoJobModel.swift; sourceTree = "<group>"; };
 		6B2EF54D1BFEE0D2003373E4 /* HFUTer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HFUTer-Bridging-Header.h"; sourceTree = "<group>"; };
 		6B2EF5611BFEEC56003373E4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6B2EF5621BFEEC56003373E4 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -234,6 +246,10 @@
 		6B92110B1C00240F0093BB1F /* BCMyMassageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCMyMassageModel.swift; sourceTree = "<group>"; };
 		6B9211161C0024FE0093BB1F /* ComUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComUserModel.swift; sourceTree = "<group>"; };
 		6B9211181C0025650093BB1F /* BCCommunityUserLoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCCommunityUserLoginRequest.swift; sourceTree = "<group>"; };
+		6BBE31741C043EDC0001B2E4 /* InfoJobsListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoJobsListTableViewCell.swift; sourceTree = "<group>"; };
+		6BBE31751C043EDC0001B2E4 /* InfoJobsListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoJobsListTableViewCell.xib; sourceTree = "<group>"; };
+		6BD1EBE41C0448F000FF9B78 /* InfoJobDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoJobDetailViewController.swift; sourceTree = "<group>"; };
+		6BD1EBE51C0448F000FF9B78 /* InfoJobDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoJobDetailViewController.xib; sourceTree = "<group>"; };
 		6BDC1F1C1BFF7450009DC139 /* BCColorChooseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCColorChooseView.swift; sourceTree = "<group>"; };
 		6BDC1F1D1BFF7450009DC139 /* BCColorChooseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCColorChooseView.xib; sourceTree = "<group>"; };
 		6BDD5A9A1C00674E00B26B9C /* BCCommunityUserRegisterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCCommunityUserRegisterRequest.swift; sourceTree = "<group>"; };
@@ -303,6 +319,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B135C2C1C0408F20062097E /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				6B135C2D1C04092F0062097E /* InfoGetJobListRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		6B2EF5501BFEE17B003373E4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -553,6 +577,7 @@
 		6B561CAD1C02F39E004E6D4C /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
+				6B135C2C1C0408F20062097E /* Request */,
 				6B561CAE1C02F39E004E6D4C /* Model */,
 				6B561CAF1C02F39E004E6D4C /* View */,
 				6B561CB01C02F39E004E6D4C /* ViewController */,
@@ -563,6 +588,7 @@
 		6B561CAE1C02F39E004E6D4C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6B135C2F1C04121C0062097E /* InfoJobModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -570,6 +596,8 @@
 		6B561CAF1C02F39E004E6D4C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6BBE31741C043EDC0001B2E4 /* InfoJobsListTableViewCell.swift */,
+				6BBE31751C043EDC0001B2E4 /* InfoJobsListTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -577,6 +605,10 @@
 		6B561CB01C02F39E004E6D4C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6B135C281C04070D0062097E /* InfoJobsViewController.swift */,
+				6B135C291C04070D0062097E /* InfoJobsViewController.xib */,
+				6BD1EBE41C0448F000FF9B78 /* InfoJobDetailViewController.swift */,
+				6BD1EBE51C0448F000FF9B78 /* InfoJobDetailViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1087,11 +1119,13 @@
 				6B561CA21C02E32C004E6D4C /* InformationHomeCollectionViewCell.xib in Resources */,
 				6BEDEB6A1BFED5D400CDB1B1 /* Assets.xcassets in Resources */,
 				6BEC10F21C0027DA008EFE73 /* MassageLostTableViewCell.xib in Resources */,
+				6BD1EBE71C0448F000FF9B78 /* InfoJobDetailViewController.xib in Resources */,
 				6B561CB81C02F45F004E6D4C /* InfoNewsCategoriesViewController.xib in Resources */,
 				6BEC11131C003352008EFE73 /* BCLoveWallDetailTableViewCell.xib in Resources */,
 				6BEDEB6B1BFED5D400CDB1B1 /* LaunchScreen.storyboard in Resources */,
 				6BEC10F61C0027DA008EFE73 /* MassageMyPublishListTableViewCell.xib in Resources */,
 				6BDD5AA51C00675500B26B9C /* BCCommunityRegisterViewController.xib in Resources */,
+				6BBE31771C043EDC0001B2E4 /* InfoJobsListTableViewCell.xib in Resources */,
 				6B561CC61C02FA4F004E6D4C /* NewsListTableViewCell.xib in Resources */,
 				6B2EF5851BFEFF43003373E4 /* HomeNavBarView.xib in Resources */,
 				6BDC1F1F1BFF7450009DC139 /* BCColorChooseView.xib in Resources */,
@@ -1106,6 +1140,7 @@
 				6BEC10F41C0027DA008EFE73 /* MassageMoreActionView.xib in Resources */,
 				6B9211121C00240F0093BB1F /* CommunityViewController.xib in Resources */,
 				6B2EF56D1BFEEDD7003373E4 /* EEBaseNavBar.xib in Resources */,
+				6B135C2B1C04070D0062097E /* InfoJobsViewController.xib in Resources */,
 				6B561CBE1C02F8D8004E6D4C /* InfoNewsListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1189,7 +1224,9 @@
 				6BEC10FC1C002819008EFE73 /* BCTextField.swift in Sources */,
 				6BEDEB601BFED5D400CDB1B1 /* Utilities.swift in Sources */,
 				6B7BDB811BFF11ED007CEAB9 /* Encryptions.m in Sources */,
+				6BD1EBE61C0448F000FF9B78 /* InfoJobDetailViewController.swift in Sources */,
 				6B59393B1BFF0BD500EC4F19 /* BCGradesTableView.swift in Sources */,
+				6B135C301C04121C0062097E /* InfoJobModel.swift in Sources */,
 				6B9211111C00240F0093BB1F /* CommunityViewController.swift in Sources */,
 				6B561CC51C02FA4F004E6D4C /* NewsListTableViewCell.swift in Sources */,
 				6B7BDB8F1BFF196C007CEAB9 /* BCScheduleEditViewController.swift in Sources */,
@@ -1210,6 +1247,7 @@
 				6B1100DE1C00697600468A06 /* DataManager.swift in Sources */,
 				6BDC1F1E1BFF7450009DC139 /* BCColorChooseView.swift in Sources */,
 				6B561CBA1C02F62F004E6D4C /* NewsCategories.swift in Sources */,
+				6B135C2A1C04070D0062097E /* InfoJobsViewController.swift in Sources */,
 				6BEC10ED1C0027DA008EFE73 /* BCMyMassagesTableViewCell.swift in Sources */,
 				6B5939561BFF0BDC00EC4F19 /* ScheduleModel.swift in Sources */,
 				6BEC110C1C003352008EFE73 /* BCLoveWallDetailViewController.swift in Sources */,
@@ -1239,6 +1277,7 @@
 				6B7BDB821BFF11ED007CEAB9 /* GTMBase64.m in Sources */,
 				6B59394A1BFF0BD500EC4F19 /* BCShcedulesWeekEditView.swift in Sources */,
 				6B561CCA1C03064B004E6D4C /* BCEduUserNotLoginView.swift in Sources */,
+				6BBE31761C043EDC0001B2E4 /* InfoJobsListTableViewCell.swift in Sources */,
 				6B561CB71C02F45F004E6D4C /* InfoNewsCategoriesViewController.swift in Sources */,
 				6B7BDB6F1BFF0F74007CEAB9 /* BCLog.swift in Sources */,
 				6B561CC11C02FA49004E6D4C /* NewsDetailModel.swift in Sources */,
@@ -1271,6 +1310,7 @@
 				6B5939531BFF0BDC00EC4F19 /* Calculator.swift in Sources */,
 				6B9210FA1C001F760093BB1F /* JSONND+ArrayLiteralConvertible.swift in Sources */,
 				6BEC10F31C0027DA008EFE73 /* MassageMoreActionView.swift in Sources */,
+				6B135C2E1C04092F0062097E /* InfoGetJobListRequest.swift in Sources */,
 				6BEC11161C003352008EFE73 /* BCMassageLoveWallView.swift in Sources */,
 				6B7BDB881BFF1347007CEAB9 /* BCLoginToEduRequest.swift in Sources */,
 				6B5939421BFF0BD500EC4F19 /* BCScheduleBodyCell.swift in Sources */,
