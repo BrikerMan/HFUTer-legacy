@@ -66,6 +66,11 @@ extension InformationViewController:UICollectionViewDelegate {
     case 1:
       let vc = InfoJobsViewController()
       self.pushToViewController(vc)
+    case 2:
+      runAfterLoginToEdu({ () -> () in
+        let vc = InfoCourseListViewController()
+        self.pushToViewController(vc)
+      })
     case 3:
       runAfterLoginToEdu({ () -> () in
         let vc = InfoCourseFeeViewController()

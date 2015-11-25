@@ -10,7 +10,6 @@ import UIKit
 
 let communityServer = "http://hfut.cn-hangzhou.aliapp.com/"
 
-
 let NetErrorWarning = "网络错误，请稍候再试"
 
 
@@ -55,3 +54,9 @@ let BCChangeTintColorNotification       = "BCChangeTintColorNotification"
 let AVGoodListClassName                 = "good_list"
 let AVGoodOrderListClaasName            = "order_list"
 let AVClientListClassName               = "client_list"
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+let XUEQIDAIMA = "027"
