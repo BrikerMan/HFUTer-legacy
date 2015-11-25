@@ -99,16 +99,19 @@ class BCLoginToEduViewController: EEBaseViewController {
       Hud.dismiss()
       DataEnv.saveEduUser(user)
       self.dismissViewControllerAnimated(true, completion: nil)
+      self.pop()
       NotifCenter.postNotificationName(BCUserLoginNotification, object: nil)
       
       }, onParseFailBlock: { () -> Void in
         Hud.dismiss()
         self.dismissViewControllerAnimated(true, completion: nil)
+        self.pop()
         NotifCenter.postNotificationName(BCUserLoginNotification, object: nil)
         
       }) { () -> Void in
         Hud.dismiss()
         self.dismissViewControllerAnimated(true, completion: nil)
+        self.pop()
         NotifCenter.postNotificationName(BCUserLoginNotification, object: nil)
         
     }

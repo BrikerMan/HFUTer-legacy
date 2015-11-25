@@ -70,6 +70,14 @@
 		6B5939571BFF0BDC00EC4F19 /* SemesterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5939521BFF0BDC00EC4F19 /* SemesterModel.swift */; };
 		6B59395B1BFF0BE200EC4F19 /* BCGetGradesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5939591BFF0BE200EC4F19 /* BCGetGradesRequest.swift */; };
 		6B59395C1BFF0BE200EC4F19 /* BCGetSceduleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59395A1BFF0BE200EC4F19 /* BCGetSceduleRequest.swift */; };
+		6B5F875C1C05578500C80E59 /* InfoCourseFeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5F875A1C05578500C80E59 /* InfoCourseFeeViewController.swift */; };
+		6B5F875D1C05578500C80E59 /* InfoCourseFeeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B5F875B1C05578500C80E59 /* InfoCourseFeeViewController.xib */; };
+		6B5F87621C05585500C80E59 /* BCCourseFeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5F875E1C05585500C80E59 /* BCCourseFeeTableViewCell.swift */; };
+		6B5F87631C05585500C80E59 /* BCCourseFeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B5F875F1C05585500C80E59 /* BCCourseFeeTableViewCell.xib */; };
+		6B5F87641C05585500C80E59 /* BCCourseFeeTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5F87601C05585500C80E59 /* BCCourseFeeTableViewHeader.swift */; };
+		6B5F87651C05585500C80E59 /* BCCourseFeeTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B5F87611C05585500C80E59 /* BCCourseFeeTableViewHeader.xib */; };
+		6B5F87681C055A3600C80E59 /* BCGetCourseFeeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5F87671C055A3600C80E59 /* BCGetCourseFeeRequest.swift */; };
+		6B5F876A1C055A8E00C80E59 /* CourseFeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5F87691C055A8E00C80E59 /* CourseFeeModel.swift */; };
 		6B7BDB6D1BFF0F57007CEAB9 /* BCBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB6C1BFF0F57007CEAB9 /* BCBaseRequest.swift */; };
 		6B7BDB6F1BFF0F74007CEAB9 /* BCLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB6E1BFF0F74007CEAB9 /* BCLog.swift */; };
 		6B7BDB7F1BFF11ED007CEAB9 /* Base64Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB721BFF11ED007CEAB9 /* Base64Util.m */; };
@@ -216,6 +224,14 @@
 		6B5939521BFF0BDC00EC4F19 /* SemesterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemesterModel.swift; sourceTree = "<group>"; };
 		6B5939591BFF0BE200EC4F19 /* BCGetGradesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCGetGradesRequest.swift; sourceTree = "<group>"; };
 		6B59395A1BFF0BE200EC4F19 /* BCGetSceduleRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCGetSceduleRequest.swift; sourceTree = "<group>"; };
+		6B5F875A1C05578500C80E59 /* InfoCourseFeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCourseFeeViewController.swift; sourceTree = "<group>"; };
+		6B5F875B1C05578500C80E59 /* InfoCourseFeeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoCourseFeeViewController.xib; sourceTree = "<group>"; };
+		6B5F875E1C05585500C80E59 /* BCCourseFeeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCCourseFeeTableViewCell.swift; sourceTree = "<group>"; };
+		6B5F875F1C05585500C80E59 /* BCCourseFeeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCCourseFeeTableViewCell.xib; sourceTree = "<group>"; };
+		6B5F87601C05585500C80E59 /* BCCourseFeeTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCCourseFeeTableViewHeader.swift; sourceTree = "<group>"; };
+		6B5F87611C05585500C80E59 /* BCCourseFeeTableViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCCourseFeeTableViewHeader.xib; sourceTree = "<group>"; };
+		6B5F87671C055A3600C80E59 /* BCGetCourseFeeRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCGetCourseFeeRequest.swift; sourceTree = "<group>"; };
+		6B5F87691C055A8E00C80E59 /* CourseFeeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseFeeModel.swift; sourceTree = "<group>"; };
 		6B7BDB6C1BFF0F57007CEAB9 /* BCBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCBaseRequest.swift; sourceTree = "<group>"; };
 		6B7BDB6E1BFF0F74007CEAB9 /* BCLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCLog.swift; sourceTree = "<group>"; };
 		6B7BDB711BFF11ED007CEAB9 /* Base64Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Util.h; sourceTree = "<group>"; };
@@ -546,6 +562,7 @@
 		6B561CA91C02F39E004E6D4C /* CourseFee */ = {
 			isa = PBXGroup;
 			children = (
+				6B5F87661C0558C900C80E59 /* Request */,
 				6B561CAA1C02F39E004E6D4C /* Model */,
 				6B561CAB1C02F39E004E6D4C /* View */,
 				6B561CAC1C02F39E004E6D4C /* ViewController */,
@@ -556,6 +573,7 @@
 		6B561CAA1C02F39E004E6D4C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6B5F87691C055A8E00C80E59 /* CourseFeeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -563,6 +581,10 @@
 		6B561CAB1C02F39E004E6D4C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6B5F875E1C05585500C80E59 /* BCCourseFeeTableViewCell.swift */,
+				6B5F875F1C05585500C80E59 /* BCCourseFeeTableViewCell.xib */,
+				6B5F87601C05585500C80E59 /* BCCourseFeeTableViewHeader.swift */,
+				6B5F87611C05585500C80E59 /* BCCourseFeeTableViewHeader.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -570,6 +592,8 @@
 		6B561CAC1C02F39E004E6D4C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6B5F875A1C05578500C80E59 /* InfoCourseFeeViewController.swift */,
+				6B5F875B1C05578500C80E59 /* InfoCourseFeeViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -692,6 +716,14 @@
 			children = (
 				6B5939591BFF0BE200EC4F19 /* BCGetGradesRequest.swift */,
 				6B59395A1BFF0BE200EC4F19 /* BCGetSceduleRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		6B5F87661C0558C900C80E59 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				6B5F87671C055A3600C80E59 /* BCGetCourseFeeRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -1104,6 +1136,7 @@
 			files = (
 				6BEC110F1C003352008EFE73 /* BCSendLoveWallViewController.xib in Resources */,
 				6B561CCC1C030657004E6D4C /* BCEduUserNotLoginView.xib in Resources */,
+				6B5F87631C05585500C80E59 /* BCCourseFeeTableViewCell.xib in Resources */,
 				6B561CD11C03186C004E6D4C /* PersonDetailTableCell.xib in Resources */,
 				6B5939451BFF0BD500EC4F19 /* BCScheduleHeaderCell.xib in Resources */,
 				6B59393D1BFF0BD500EC4F19 /* BCGradesTableViewCell.xib in Resources */,
@@ -1121,11 +1154,13 @@
 				6BEC10F21C0027DA008EFE73 /* MassageLostTableViewCell.xib in Resources */,
 				6BD1EBE71C0448F000FF9B78 /* InfoJobDetailViewController.xib in Resources */,
 				6B561CB81C02F45F004E6D4C /* InfoNewsCategoriesViewController.xib in Resources */,
+				6B5F875D1C05578500C80E59 /* InfoCourseFeeViewController.xib in Resources */,
 				6BEC11131C003352008EFE73 /* BCLoveWallDetailTableViewCell.xib in Resources */,
 				6BEDEB6B1BFED5D400CDB1B1 /* LaunchScreen.storyboard in Resources */,
 				6BEC10F61C0027DA008EFE73 /* MassageMyPublishListTableViewCell.xib in Resources */,
 				6BDD5AA51C00675500B26B9C /* BCCommunityRegisterViewController.xib in Resources */,
 				6BBE31771C043EDC0001B2E4 /* InfoJobsListTableViewCell.xib in Resources */,
+				6B5F87651C05585500C80E59 /* BCCourseFeeTableViewHeader.xib in Resources */,
 				6B561CC61C02FA4F004E6D4C /* NewsListTableViewCell.xib in Resources */,
 				6B2EF5851BFEFF43003373E4 /* HomeNavBarView.xib in Resources */,
 				6BDC1F1F1BFF7450009DC139 /* BCColorChooseView.xib in Resources */,
@@ -1239,6 +1274,7 @@
 				6B7BDB7F1BFF11ED007CEAB9 /* Base64Util.m in Sources */,
 				6BEDEB1E1BFED40A00CDB1B1 /* RootViewController.swift in Sources */,
 				6BEDEB691BFED5D400CDB1B1 /* EurekaCustomImageRow.swift in Sources */,
+				6B5F87641C05585500C80E59 /* BCCourseFeeTableViewHeader.swift in Sources */,
 				6B7BDB851BFF11ED007CEAB9 /* FMDatabaseVariadic.swift in Sources */,
 				6BEC10FB1C002819008EFE73 /* BCBaseButton.swift in Sources */,
 				6BDD5A9D1C00674E00B26B9C /* BCGetUserDetailFromEduRequest.swift in Sources */,
@@ -1255,6 +1291,7 @@
 				6BEDEB641BFED5D400CDB1B1 /* HDBaseFlatButton.swift in Sources */,
 				6BEC10EB1C0027DA008EFE73 /* BCLeaveContectInfoView.swift in Sources */,
 				6B561CA11C02E32C004E6D4C /* InformationHomeCollectionViewCell.swift in Sources */,
+				6B5F87621C05585500C80E59 /* BCCourseFeeTableViewCell.swift in Sources */,
 				6B5939461BFF0BD500EC4F19 /* BCScheduleLeftCell.swift in Sources */,
 				6B561CCE1C0317C2004E6D4C /* PersonDetailTableCell.swift in Sources */,
 				6B561CC81C03017C004E6D4C /* InfoNewsDetailViewController.swift in Sources */,
@@ -1278,6 +1315,7 @@
 				6B59394A1BFF0BD500EC4F19 /* BCShcedulesWeekEditView.swift in Sources */,
 				6B561CCA1C03064B004E6D4C /* BCEduUserNotLoginView.swift in Sources */,
 				6BBE31761C043EDC0001B2E4 /* InfoJobsListTableViewCell.swift in Sources */,
+				6B5F876A1C055A8E00C80E59 /* CourseFeeModel.swift in Sources */,
 				6B561CB71C02F45F004E6D4C /* InfoNewsCategoriesViewController.swift in Sources */,
 				6B7BDB6F1BFF0F74007CEAB9 /* BCLog.swift in Sources */,
 				6B561CC11C02FA49004E6D4C /* NewsDetailModel.swift in Sources */,
@@ -1289,6 +1327,7 @@
 				6BEDEB651BFED5D400CDB1B1 /* HDBaseFlatTextField.swift in Sources */,
 				6BEC11101C003352008EFE73 /* BCMassageCommentModel.swift in Sources */,
 				6BEC10F11C0027DA008EFE73 /* MassageLostTableViewCell.swift in Sources */,
+				6B5F87681C055A3600C80E59 /* BCGetCourseFeeRequest.swift in Sources */,
 				6B7BDB8B1BFF1350007CEAB9 /* BCLoginToEduViewController.swift in Sources */,
 				6B9211131C00240F0093BB1F /* BCLostAndFoundModel.swift in Sources */,
 				6B5939401BFF0BD500EC4F19 /* BCScheculeView.swift in Sources */,
@@ -1301,6 +1340,7 @@
 				6B2EF57F1BFEFAC8003373E4 /* EEExtension.swift in Sources */,
 				6B5939481BFF0BD500EC4F19 /* BCScheduleSelectView.swift in Sources */,
 				6BEDEB611BFED5D400CDB1B1 /* EEHudView.swift in Sources */,
+				6B5F875C1C05578500C80E59 /* InfoCourseFeeViewController.swift in Sources */,
 				6B5939541BFF0BDC00EC4F19 /* GradesModel.swift in Sources */,
 				6BEDEB5D1BFED5D400CDB1B1 /* Functions.swift in Sources */,
 				6B5939571BFF0BDC00EC4F19 /* SemesterModel.swift in Sources */,

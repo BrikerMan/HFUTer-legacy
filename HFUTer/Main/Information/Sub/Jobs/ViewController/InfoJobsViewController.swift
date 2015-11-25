@@ -19,6 +19,8 @@ class InfoJobsViewController: EEBaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    navTitle = "兼职列表"
+    
     let nib = UINib(nibName: "InfoJobsListTableViewCell", bundle: nil)
     tableView.registerNib(nib, forCellReuseIdentifier: "InfoJobsListTableViewCell")
     

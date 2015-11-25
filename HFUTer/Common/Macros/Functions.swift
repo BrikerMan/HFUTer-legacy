@@ -10,6 +10,15 @@ import Foundation
 import UIKit
 
 
+func runAfterLoginToEdu(block:()->()) {
+  if DataEnv.eduUser.isLogin {
+    block()
+  } else {
+    Hud.showMassage("请先登录教务系统")
+    RootVC.showLoginToSchoolVC()
+  }
+}
+
 
 func runAfterLoginToCommunity(block:()->()) {
   if DataEnv.eduUser.isLogin {
