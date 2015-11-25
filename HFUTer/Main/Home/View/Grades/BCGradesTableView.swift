@@ -16,8 +16,12 @@ class BCGradesTableView: UIView {
     
     tableView.rowHeight = 50
     tableView.allowsSelection = false
-    let nib = UINib(nibName: "BCGradesTableViewCell", bundle: nil)
-    tableView.registerNib(nib, forCellReuseIdentifier: "BCGradesTableViewCell")
+    
+    let nib1 = UINib(nibName: "BCGradesHeaderCell", bundle: nil)
+    tableView.registerNib(nib1, forCellReuseIdentifier: "BCGradesHeaderCell")
+    
+    let nib2 = UINib(nibName: "BCGradesTableViewCell", bundle: nil)
+    tableView.registerNib(nib2, forCellReuseIdentifier: "BCGradesTableViewCell")
     return tableView
   }()
   
@@ -45,10 +49,10 @@ class BCGradesTableView: UIView {
     
     tableView.dataSource = self
     tableView.delegate = self
-
+    
     self.addSubview(tableView)
     
-    }
+  }
   
   func reloadGrades() {
     self.isSetUpData = true
@@ -68,7 +72,7 @@ private typealias tableViewDataSourse = BCGradesTableView
 extension tableViewDataSourse:UITableViewDataSource {
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     if isSetUpData {
-      return gradesBySemester.count
+      return gradesBySemester.count + 1
     } else {
       return 0
     }
@@ -76,51 +80,48 @@ extension tableViewDataSourse:UITableViewDataSource {
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     if isSetUpData {
-      return gradesBySemester[section].count
+      if section == 0 {
+        return 1
+      } else {
+        return gradesBySemester[section - 1].count
+      }
     } else {
       return 0
     }
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("BCGradesTableViewCell", forIndexPath: indexPath) as! BCGradesTableViewCell
-    cell.setupWithModel(gradesBySemester[indexPath.section][indexPath.row])
-    return cell
+    if indexPath.section == 0 {
+      let cell = tableView.dequeueReusableCellWithIdentifier("BCGradesHeaderCell", forIndexPath: indexPath) as! BCGradesHeaderCell
+      cell.setAllGrades(GradeModel.calculateAllGPA())
+      return cell
+    } else {
+      let cell = tableView.dequeueReusableCellWithIdentifier("BCGradesTableViewCell", forIndexPath: indexPath) as! BCGradesTableViewCell
+      cell.setupWithModel(gradesBySemester[indexPath.section-1][indexPath.row])
+      return cell
+    }
+
   }
   
   func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    let header = BCGradeViewTableViewHeader()
-    header.setupWithSemester(semesterList[section])
-    headerViewList.append(header)
-    return header
+    if section == 0 {
+      return nil
+    } else {
+      let header = BCGradeViewTableViewHeader()
+      header.setupWithSemester(semesterList[section-1])
+      headerViewList.append(header)
+      return header
+    }
   }
   
   func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    if section == 0 { return 10 }
     return 54
   }
 }
 
 private typealias tableViewDelegate = BCGradesTableView
 extension tableViewDelegate:UITableViewDelegate {
-  func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-    cell.alpha = 0
-    UIView.animateWithDuration(1.0) { () -> Void in
-      cell.alpha = 1
-    }
-  }
   
-  func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-    view.alpha = 0
-    UIView.animateWithDuration(1.0) { () -> Void in
-      view.alpha = 1
-    }
-  }
-  
-  func tableView(tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
-    view.alpha = 0
-    UIView.animateWithDuration(1.0) { () -> Void in
-      view.alpha = 1
-    }
-  }
 }
 

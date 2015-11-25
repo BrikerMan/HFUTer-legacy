@@ -17,7 +17,7 @@ class BCScheduleEditViewController:EEBaseFormViewController {
   var dismissBlock:(()->())?
 
   private var scheduleWeeks = [Int]()
-  private var memo:ScheduleMemoModel!
+  private var memo = ScheduleMemoModel()
 
   private var weekChooseViewBackView:UIView?
   private var weekChooseView:BCShcedulesWeekEditView?
@@ -26,16 +26,16 @@ class BCScheduleEditViewController:EEBaseFormViewController {
   //MARK:- 生命周期
   override func viewDidLoad() {
     super.viewDidLoad()
-//    self.showNavRightButtonWithTitle("保存")
 
     self.view.backgroundColor = UIColor.whiteColor()
     if let model = model {
-//      navTitle = "编辑课程"
+      navTitle = "编辑课程"
       self.scheduleWeeks = model.weeks
       memo = ScheduleMemoModel.readMemo(model.id)
     } else {
-//      navTitle = "添加课程"
+      navTitle = "添加课程"
     }
+    self.showNavRightButtonWithIcon("navbar_save")
     initialForm()
   }
 
@@ -77,12 +77,16 @@ class BCScheduleEditViewController:EEBaseFormViewController {
     }
   }
 
-//  override func onNavRightButtonPressedAction() {
-//    saveSchedule()
-//    saveMemo()
-//    self.dismissBlock?()
-//    self.pop()
-//  }
+  override func onRightNavButtonPress() {
+    if scheduleWeeks.count == 0 {
+      Hud.showMassage("请选择课程周")
+      return
+    }
+    saveSchedule()
+    saveMemo()
+    self.dismissBlock?()
+    self.pop()
+  }
 
   //MARK:- 动画
   func showChooseWeekView() {
@@ -158,19 +162,19 @@ class BCScheduleEditViewController:EEBaseFormViewController {
     form +++ Section("基础信息") {
       $0.header = nil
       }
-      <<< NameRow("name") {
+      <<< TextRow("name") {
         $0.title = "名称"
         $0.placeholder = "课程名字"
         $0.value = self.model?.name
       }
 
-      <<< NameRow("place") {
+      <<< TextRow("place") {
         $0.title = "教室"
         $0.placeholder = "教室名字"
         $0.value = self.model?.place
       }
 
-      <<< NameRow("teacher") {
+      <<< TextRow("teacher") {
         $0.title = "老师"
         $0.placeholder = "(未填写)"
         $0.value =  {
@@ -194,7 +198,7 @@ class BCScheduleEditViewController:EEBaseFormViewController {
         $0.value = ScheduleModel.classTimeToString(self.model?.hour)
       }
       <<< ButtonRow("weeks") {
-        $0.title = $0.tag
+        $0.title = "选择课程周"
         $0.onCellSelection(self.buttonTapped)
     }
 

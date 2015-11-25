@@ -76,6 +76,8 @@ extension InformationViewController:UICollectionViewDelegate {
         let vc = InfoCourseFeeViewController()
         self.pushToViewController(vc)
       })
+    case 4:
+      Hud.showMassage("暂未开放")
     default:
       break
     }

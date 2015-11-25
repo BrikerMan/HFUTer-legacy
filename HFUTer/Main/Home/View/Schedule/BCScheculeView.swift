@@ -29,6 +29,7 @@ class BCScheculeView: EEXibView {
   
   private var week   = 0
   private var dayCount:CGFloat = 5
+  private var leftCellWidth:CGFloat = 35
   //MARK:- 生命周期
   override func initFromXib() {
     super.initFromXib()
@@ -64,6 +65,9 @@ class BCScheculeView: EEXibView {
     }
   }
   
+  func changeTintColor() {
+    collectionView.backgroundColor = Color.primaryTintColor.colorWithAlphaComponent(0.1)
+  }
   
   //MARK:- 初始化
   
@@ -84,11 +88,13 @@ class BCScheculeView: EEXibView {
 private typealias collectionViewLayout = BCScheculeView
 extension collectionViewLayout:UICollectionViewDelegateFlowLayout {
   func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-    let width:CGFloat = (indexPath.row == 0) ? 30 :(ScreenWidth-30-1)/dayCount
+    let width:CGFloat = (indexPath.row == 0) ? leftCellWidth :(ScreenWidth-leftCellWidth-1)/dayCount
     if indexPath.section == 0 {
-      return CGSizeMake(width, 30)
+      return CGSizeMake(width, leftCellWidth)
     } else if indexPath.section == 6 {
-      return CGSizeMake(UIScreen.mainScreen().bounds.size.width, 100)
+      if indexPath.row == 0 { return CGSizeMake(leftCellWidth,100)}
+      else { return CGSizeMake(ScreenWidth - leftCellWidth - 2,100) }
+      
     } else {
       return CGSizeMake(width, 100)
     }
@@ -115,7 +121,7 @@ extension collectionViewDataSource:UICollectionViewDataSource {
   
   func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     if section == 6 {
-      return 1
+      return 2
     }
     return Int(dayCount) + 1
   }
@@ -130,12 +136,17 @@ extension collectionViewDataSource:UICollectionViewDataSource {
       cell.timeNameLabel.text = timeNamesList[indexPath.section]
       return cell
     } else {
-      let cell = collectionView.dequeueReusableCellWithReuseIdentifier("bodyCell", forIndexPath: indexPath) as! BCScheduleBodyCell
-      let models:[ScheduleModel]? = scheduleDictForShow["\(indexPath.section)-\(indexPath.row)"]
-      cell.setupCellModels(models)
-      return cell
+      if indexPath.section == 6 {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("leftCell", forIndexPath: indexPath) as! BCScheduleLeftCell
+        cell.timeNameLabel.text = DBManager.sharedManager().readUnScheduledClasses()
+        return cell
+      } else {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("bodyCell", forIndexPath: indexPath) as! BCScheduleBodyCell
+        let models:[ScheduleModel]? = scheduleDictForShow["\(indexPath.section)-\(indexPath.row)"]
+        cell.setupCellModels(models)
+        return cell
+      }
     }
-    
   }
 }
 

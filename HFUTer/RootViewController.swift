@@ -18,6 +18,7 @@ class RootViewController: UITabBarController {
   override func viewDidLoad() {
     super.viewDidLoad()
     initUI()
+    NotifCenter.addObserver(self, selector: "onTintColorChanged", name: BCChangeTintColorNotification, object: nil)
   }
 
   private func initUI() {
@@ -49,6 +50,10 @@ class RootViewController: UITabBarController {
   func showLoginToSchoolVC() {
     let vc = BCLoginToEduViewController(nibName:"BCLoginToEduViewController",bundle:nil)
     self.navigationController?.pushViewController(vc, animated: true)
+  }
+  
+  func onTintColorChanged() {
+    appDelegate.window?.tintColor = Color.primaryTintColor
   }
 
 }

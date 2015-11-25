@@ -36,6 +36,11 @@ class PersonViewController: EEBaseFormViewController {
     self.tableView?.reloadData()
   }
   
+  override func onTintColorChanged() {
+    super.onTintColorChanged()
+    self.tableView?.reloadData()
+  }
+  
   private func showColorChooseView() {
     if !isColorChooseViewShowing {
       isColorChooseViewShowing = true
@@ -95,6 +100,8 @@ class PersonViewController: EEBaseFormViewController {
   }
   
   private func initFormViews() {
+    
+    
     form +++
       Section()
       
@@ -124,7 +131,7 @@ class PersonViewController: EEBaseFormViewController {
       +++ Section("设置")
       
       <<< SwitchRow() {
-        $0.title = "接受推送"
+        $0.title = "接受推送 - 暂不可用"
         $0.value = true
         }.cellSetup { cell, row in
           cell.imageView?.image = UIImage(named: "person_login")
@@ -132,20 +139,20 @@ class PersonViewController: EEBaseFormViewController {
       
       <<< ButtonRow() { (row: ButtonRow) -> Void in
         row.title = "主题颜色选择"
-        row.presentationMode = .PresentModally(controllerProvider: ControllerProvider.Callback {
-          return BCLoginToEduViewController()
-          }, completionCallback: { vc in vc.dismissViewControllerAnimated(true, completion: nil) })
         row.onCellSelection({ (cell, row) -> () in
           self.showColorChooseView()
         })
         }.cellSetup { cell, row in
           cell.imageView?.image = UIImage(named: "person_theme")
+          cell.textLabel?.textAlignment = .Left
+          cell.textLabel?.textColor = nil
+          cell.accessoryType = .DisclosureIndicator
       }
       
       
       +++ Section("研究生专用，禁止自动加载课表和成绩")
       <<< SwitchRow() {
-        $0.title = "禁止自动加载"
+        $0.title = "禁止自动加载 - 暂不可用"
         $0.value = true
         }.cellSetup { cell, row in
           cell.imageView?.image = UIImage(named: "person_autoload")
@@ -154,7 +161,7 @@ class PersonViewController: EEBaseFormViewController {
       +++ Section()
       
       <<< ButtonRow() {
-        $0.title = "帮助"
+        $0.title = "帮助 - 暂不可用"
         $0.presentationMode = .PresentModally(controllerProvider: ControllerProvider.Callback {
           return BCLoginToEduViewController()
           }, completionCallback: { vc in vc.dismissViewControllerAnimated(true, completion: nil) })
@@ -163,7 +170,7 @@ class PersonViewController: EEBaseFormViewController {
       }
       
       <<< ButtonRow() {
-        $0.title = "关于我们"
+        $0.title = "关于我们 - 暂不可用"
         $0.presentationMode = .PresentModally(controllerProvider: ControllerProvider.Callback {
           return BCLoginToEduViewController()
           }, completionCallback: { vc in vc.dismissViewControllerAnimated(true, completion: nil) })
@@ -172,7 +179,7 @@ class PersonViewController: EEBaseFormViewController {
       }
       
       <<< ButtonRow() {
-        $0.title = "隐私条款"
+        $0.title = "隐私条款 - 暂不可用"
         $0.presentationMode = .PresentModally(controllerProvider: ControllerProvider.Callback {
           return BCLoginToEduViewController()
           }, completionCallback: { vc in vc.dismissViewControllerAnimated(true, completion: nil) })

@@ -161,7 +161,7 @@ class HomeViewController: EEBaseViewController {
         }
       })
     } else {
-      self.scheduleView.showCurrentWeeksSchedule(nil)
+      self.scheduleView.showCurrentWeeksSchedule(DataEnv.currentWeek)
       if self.gradesBySemester.count == 1 && self.gradesBySemester[0].count == 0 {
         self.beginGetGradesRequest()
       } else {
@@ -201,6 +201,9 @@ class HomeViewController: EEBaseViewController {
   
   override func onTintColorChanged() {
     self.homeNavbar.view?.backgroundColor = Color.primaryTintColor
+    homeNavbar.runkeeperSwitch.selectedTitleColor = Color.primaryTintColor
+    gradesView.changeTintColor()
+    scheduleView.changeTintColor()
   }
   
   private func initUI() {
@@ -242,34 +245,60 @@ class HomeViewController: EEBaseViewController {
   }
   
   private func fixUI() {
+    homeNavbar.titleLabel.text = "第\(DataEnv.currentWeek)周"
+    homeNavbar.runkeeperSwitch.selectedTitleColor = Color.primaryTintColor
     self.homeNavbar.view?.backgroundColor = Color.primaryTintColor
   }
 }
 
+//MARK:- ActionViewDelegate
+extension HomeViewController:UIActionSheetDelegate {
+  func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
+    let vc = BCScheduleEditViewController()
+    vc.model = currentSelectedModels[buttonIndex]
+    vc.dismissBlock = {
+      self.scheduleView.showCurrentWeeksSchedule(nil)
+    }
+    self.pushToViewController(vc)
+  }
+}
+
+
+
+//MARK:- BCScheculeViewDelegate
 extension HomeViewController:BCScheculeViewDelegate {
   func didSelecctedAtCell(indexPath: NSIndexPath,models:[ScheduleModel]?) {
     if let models = models {
       if models.count > 1 {
+        //如果多个课程则显示选择按钮
         self.currentSelectedModels = models
         let actionSheet = UIActionSheet()
+        actionSheet.delegate = self
         for model in models {
           actionSheet.addButtonWithTitle(model.name)
         }
         actionSheet.showInView(self.view)
       } else {
+        //编辑现有课程
         let vc = BCScheduleEditViewController()
         vc.model = models[0]
-        //        vc.isNavRightButtonChangeToBack = true
         vc.dismissBlock = {
           self.scheduleView.showCurrentWeeksSchedule(nil)
         }
         self.pushToViewController(vc)
       }
+    } else {
+      //创建新课程
+      let vc = BCScheduleEditViewController()
+      vc.dismissBlock = {
+        self.scheduleView.showCurrentWeeksSchedule(nil)
+      }
+      self.pushToViewController(vc)
     }
   }
 }
 
-
+//MARK:- BCScheduleSelectViewDelegate
 extension HomeViewController:BCScheduleSelectViewDelegate {
   func didSelectedOnWeek(week:Int) {
     self.hideSelectWeekView(nil)
@@ -278,18 +307,15 @@ extension HomeViewController:BCScheduleSelectViewDelegate {
   }
 }
 
+//MARK:- UIScrollViewDelegate
 extension HomeViewController:UIScrollViewDelegate {
-  //  func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
-  //    let page = Int((scrollView.contentOffset.x)/ScreenWidth)
-  //    homeNavbar.setSwitchToIndex(page)
-  //  }
-  
   func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-    let page = Int((scrollView.contentOffset.x)/ScreenWidth)
+    let page = Int((scrollView.contentOffset.x+ScreenWidth/2)/ScreenWidth)
     homeNavbar.setSwitchToIndex(page)
   }
 }
 
+//MARK:- HomeNavBarViewDelegate
 extension HomeViewController:HomeNavBarViewDelegate {
   func homeNavBar(NavBar homeNavBar:HomeNavBarView,didSelecectedAtIndex index:Int) {
     self.scrollView.scrollRectToVisible(CGRectMake(ScreenWidth*CGFloat(index),0,scrollView.frame.width,scrollView.frame.height), animated: true)

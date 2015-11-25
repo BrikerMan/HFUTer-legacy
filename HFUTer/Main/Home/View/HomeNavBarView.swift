@@ -15,29 +15,30 @@ protocol HomeNavBarViewDelegate {
 }
 
 class HomeNavBarView:EEXibView {
-
+  
   var delegate:HomeNavBarViewDelegate?
-
-  private var runkeeperSwitch:DGRunkeeperSwitch!
-
+  
+  var runkeeperSwitch:DGRunkeeperSwitch!
+  private var isTriggerByScrollView = false
+  
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var slideDownImage: UIImageView!
   @IBOutlet weak var notLoginLabel: UILabel!
-
+  
   override func initFromXib() {
     super.initFromXib()
     self.view?.backgroundColor = Color.primaryTintColor
-
+    
     runkeeperSwitch = DGRunkeeperSwitch(leftTitle: "课程表", rightTitle: "成绩")
-    runkeeperSwitch.layer.cornerRadius = 15
+    runkeeperSwitch.layer.cornerRadius = 26/2
     runkeeperSwitch.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.298731161347518)
     runkeeperSwitch.selectedBackgroundColor = .whiteColor()
     runkeeperSwitch.titleColor = .whiteColor()
-    runkeeperSwitch.selectedTitleColor = self.view?.backgroundColor ?? UIColor(red: 239.0/255.0, green: 95.0/255.0, blue: 49.0/255.0, alpha: 1.0)
+    runkeeperSwitch.selectedTitleColor = Color.primaryTintColor
     runkeeperSwitch.titleFont = UIFont(name: "HelveticaNeue-Medium", size: 13.0)
     runkeeperSwitch.addTarget(self, action: "runkeeperSwitchValueChanged", forControlEvents: UIControlEvents.ValueChanged)
     view!.addSubview(runkeeperSwitch)
-
+    
     runkeeperSwitch.snp_makeConstraints { (make) -> Void in
       make.width.equalTo(160)
       make.height.equalTo(26)
@@ -45,8 +46,9 @@ class HomeNavBarView:EEXibView {
       make.centerX.equalTo(self.snp_centerX)
     }
   }
-
+  
   func setSwitchToIndex(index:Int) {
+    isTriggerByScrollView = true
     runkeeperSwitch.setSelectedIndex(index, animated: true)
   }
   
@@ -62,14 +64,19 @@ class HomeNavBarView:EEXibView {
       titleLabel.hidden = true
       runkeeperSwitch.hidden = true
     }
-  }
 
+  }
+  
   @objc private func runkeeperSwitchValueChanged() {
-    delegate?.homeNavBar(NavBar: self, didSelecectedAtIndex: runkeeperSwitch.selectedIndex)
+    if !isTriggerByScrollView {
+      delegate?.homeNavBar(NavBar: self, didSelecectedAtIndex: runkeeperSwitch.selectedIndex)
+    } else {
+      isTriggerByScrollView = false
+    }
   }
-
+  
   @IBAction func onShowSelectWeekViewButtonPress(sender: AnyObject) {
     delegate?.homeNavBarDidPressObSelcetWeekView(self)
   }
-
+  
 }

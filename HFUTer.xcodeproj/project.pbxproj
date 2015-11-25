@@ -22,6 +22,8 @@
 		6B218CCC1C05962500939900 /* InfoCourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B218CCA1C05962500939900 /* InfoCourseDetailViewController.swift */; };
 		6B218CCD1C05962500939900 /* InfoCourseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B218CCB1C05962500939900 /* InfoCourseDetailViewController.xib */; };
 		6B218CCF1C05977600939900 /* BCGetClassDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B218CCE1C05977600939900 /* BCGetClassDetailRequest.swift */; };
+		6B218CD21C059F2A00939900 /* BCGradesHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B218CD01C059F2A00939900 /* BCGradesHeaderCell.swift */; };
+		6B218CD31C059F2A00939900 /* BCGradesHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B218CD11C059F2A00939900 /* BCGradesHeaderCell.xib */; };
 		6B2EF5631BFEEC56003373E4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EF5611BFEEC56003373E4 /* HomeViewController.swift */; };
 		6B2EF5641BFEEC56003373E4 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B2EF5621BFEEC56003373E4 /* HomeViewController.xib */; };
 		6B2EF5681BFEED9B003373E4 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EF5661BFEED9B003373E4 /* InformationViewController.swift */; };
@@ -185,6 +187,8 @@
 		6B218CCA1C05962500939900 /* InfoCourseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCourseDetailViewController.swift; sourceTree = "<group>"; };
 		6B218CCB1C05962500939900 /* InfoCourseDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoCourseDetailViewController.xib; sourceTree = "<group>"; };
 		6B218CCE1C05977600939900 /* BCGetClassDetailRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCGetClassDetailRequest.swift; sourceTree = "<group>"; };
+		6B218CD01C059F2A00939900 /* BCGradesHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCGradesHeaderCell.swift; sourceTree = "<group>"; };
+		6B218CD11C059F2A00939900 /* BCGradesHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCGradesHeaderCell.xib; sourceTree = "<group>"; };
 		6B2EF54D1BFEE0D2003373E4 /* HFUTer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HFUTer-Bridging-Header.h"; sourceTree = "<group>"; };
 		6B2EF5611BFEEC56003373E4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6B2EF5621BFEEC56003373E4 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -724,6 +728,8 @@
 				6B5939291BFF0BD500EC4F19 /* BCGradesTableViewCell.xib */,
 				6B59392A1BFF0BD500EC4F19 /* BCGradeViewTableViewHeader.swift */,
 				6B59392B1BFF0BD500EC4F19 /* BCGradeViewTableViewHeader.xib */,
+				6B218CD01C059F2A00939900 /* BCGradesHeaderCell.swift */,
+				6B218CD11C059F2A00939900 /* BCGradesHeaderCell.xib */,
 			);
 			path = Grades;
 			sourceTree = "<group>";
@@ -1177,6 +1183,7 @@
 				6B5F87631C05585500C80E59 /* BCCourseFeeTableViewCell.xib in Resources */,
 				6B561CD11C03186C004E6D4C /* PersonDetailTableCell.xib in Resources */,
 				6B5939451BFF0BD500EC4F19 /* BCScheduleHeaderCell.xib in Resources */,
+				6B218CD31C059F2A00939900 /* BCGradesHeaderCell.xib in Resources */,
 				6B59393D1BFF0BD500EC4F19 /* BCGradesTableViewCell.xib in Resources */,
 				6BDD5AA31C00675400B26B9C /* BCCommunitLoginViewController.xib in Resources */,
 				6B59394D1BFF0BD500EC4F19 /* BCShcedulesWeekEditViewCell.xib in Resources */,
@@ -1390,6 +1397,7 @@
 				6BEDEB611BFED5D400CDB1B1 /* EEHudView.swift in Sources */,
 				6B5F875C1C05578500C80E59 /* InfoCourseFeeViewController.swift in Sources */,
 				6B5939541BFF0BDC00EC4F19 /* GradesModel.swift in Sources */,
+				6B218CD21C059F2A00939900 /* BCGradesHeaderCell.swift in Sources */,
 				6BEDEB5D1BFED5D400CDB1B1 /* Functions.swift in Sources */,
 				6B5939571BFF0BDC00EC4F19 /* SemesterModel.swift in Sources */,
 				6B2EF5681BFEED9B003373E4 /* InformationViewController.swift in Sources */,
