@@ -17,12 +17,14 @@ class InfoCourseDetailViewController: EEBaseViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     navTitle = "教学班详情"
+    
+    let footer = UIView()
+    tableView.tableFooterView = footer
     
     let nib = UINib(nibName: "BCClassDetailTableViewCell", bundle: nil)
     tableView.registerNib(nib, forCellReuseIdentifier: "BCClassDetailTableViewCell")
-    tableView.hidden = true
+    tableView.backgroundColor = UIColor.groupTableViewBackgroundColor()
     
     getCourseDetailRequest()
   }
@@ -48,7 +50,6 @@ class InfoCourseDetailViewController: EEBaseViewController {
         Hud.showError(NetErrorWarning)
     }
   }
-  
 }
 
 
@@ -62,7 +63,6 @@ extension InfoCourseDetailViewController:UITableViewDataSource {
     cell.setupWithModel(studentList[indexPath.row])
     return cell
   }
-  
 }
 
 extension InfoCourseDetailViewController:UITableViewDelegate {

@@ -18,6 +18,11 @@ class InfoNewsCategoriesViewController: EEBaseViewController {
     super.viewDidLoad()
     navTitle = "新闻列表"
     newsCategories = NewsCategories.get()
+    
+    let footer = UIView()
+    tableView.tableFooterView = footer
+    
+    tableView.backgroundColor = UIColor.groupTableViewBackgroundColor()
     tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
   }
   

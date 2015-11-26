@@ -17,8 +17,12 @@ class InfoCourseListViewController: EEBaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     navTitle = "教学班列表"
+    
+    let footer = UIView()
+    tableView.tableFooterView = footer
+    
     tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "tableViewCell")
-    tableView.hidden = true
+    tableView.backgroundColor = UIColor.groupTableViewBackgroundColor()
     beginGetClassListRquest()
   }
 

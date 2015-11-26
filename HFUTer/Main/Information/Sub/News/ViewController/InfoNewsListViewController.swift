@@ -21,6 +21,8 @@ class InfoNewsListViewController: EEBaseViewController {
     super.viewDidLoad()
     let nib = UINib(nibName: "NewsListTableViewCell", bundle: nil)
     tableView.registerNib(nib, forCellReuseIdentifier: "NewsListTableViewCell")
+    let footer = UIView()
+    tableView.tableFooterView = footer
     getNewsListRequest()
   }
   

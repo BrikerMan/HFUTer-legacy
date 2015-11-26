@@ -90,6 +90,8 @@
 		6B5F87651C05585500C80E59 /* BCCourseFeeTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B5F87611C05585500C80E59 /* BCCourseFeeTableViewHeader.xib */; };
 		6B5F87681C055A3600C80E59 /* BCGetCourseFeeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5F87671C055A3600C80E59 /* BCGetCourseFeeRequest.swift */; };
 		6B5F876A1C055A8E00C80E59 /* CourseFeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5F87691C055A8E00C80E59 /* CourseFeeModel.swift */; };
+		6B649B5C1C0604130028E454 /* PersonChooseThemeColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B649B5A1C0604130028E454 /* PersonChooseThemeColorViewController.swift */; };
+		6B649B5D1C0604130028E454 /* PersonChooseThemeColorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B649B5B1C0604130028E454 /* PersonChooseThemeColorViewController.xib */; };
 		6B7BDB6D1BFF0F57007CEAB9 /* BCBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB6C1BFF0F57007CEAB9 /* BCBaseRequest.swift */; };
 		6B7BDB6F1BFF0F74007CEAB9 /* BCLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB6E1BFF0F74007CEAB9 /* BCLog.swift */; };
 		6B7BDB7F1BFF11ED007CEAB9 /* Base64Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB721BFF11ED007CEAB9 /* Base64Util.m */; };
@@ -103,6 +105,7 @@
 		6B7BDB8B1BFF1350007CEAB9 /* BCLoginToEduViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB891BFF1350007CEAB9 /* BCLoginToEduViewController.swift */; };
 		6B7BDB8C1BFF1350007CEAB9 /* BCLoginToEduViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7BDB8A1BFF1350007CEAB9 /* BCLoginToEduViewController.xib */; };
 		6B7BDB8F1BFF196C007CEAB9 /* BCScheduleEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB8E1BFF196C007CEAB9 /* BCScheduleEditViewController.swift */; };
+		6B8F64511C06A733008D081C /* CustomEurekaCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8F64501C06A733008D081C /* CustomEurekaCells.swift */; };
 		6B9210FA1C001F760093BB1F /* JSONND+ArrayLiteralConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9210F61C001F760093BB1F /* JSONND+ArrayLiteralConvertible.swift */; };
 		6B9210FB1C001F760093BB1F /* JSONND+DictionaryLiteralConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9210F71C001F760093BB1F /* JSONND+DictionaryLiteralConvertible.swift */; };
 		6B9210FC1C001F760093BB1F /* JSONND.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9210F81C001F760093BB1F /* JSONND.swift */; };
@@ -256,6 +259,8 @@
 		6B5F87611C05585500C80E59 /* BCCourseFeeTableViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCCourseFeeTableViewHeader.xib; sourceTree = "<group>"; };
 		6B5F87671C055A3600C80E59 /* BCGetCourseFeeRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCGetCourseFeeRequest.swift; sourceTree = "<group>"; };
 		6B5F87691C055A8E00C80E59 /* CourseFeeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseFeeModel.swift; sourceTree = "<group>"; };
+		6B649B5A1C0604130028E454 /* PersonChooseThemeColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonChooseThemeColorViewController.swift; sourceTree = "<group>"; };
+		6B649B5B1C0604130028E454 /* PersonChooseThemeColorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonChooseThemeColorViewController.xib; sourceTree = "<group>"; };
 		6B7BDB6C1BFF0F57007CEAB9 /* BCBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCBaseRequest.swift; sourceTree = "<group>"; };
 		6B7BDB6E1BFF0F74007CEAB9 /* BCLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCLog.swift; sourceTree = "<group>"; };
 		6B7BDB711BFF11ED007CEAB9 /* Base64Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Util.h; sourceTree = "<group>"; };
@@ -275,6 +280,7 @@
 		6B7BDB891BFF1350007CEAB9 /* BCLoginToEduViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCLoginToEduViewController.swift; sourceTree = "<group>"; };
 		6B7BDB8A1BFF1350007CEAB9 /* BCLoginToEduViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCLoginToEduViewController.xib; sourceTree = "<group>"; };
 		6B7BDB8E1BFF196C007CEAB9 /* BCScheduleEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCScheduleEditViewController.swift; sourceTree = "<group>"; };
+		6B8F64501C06A733008D081C /* CustomEurekaCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomEurekaCells.swift; sourceTree = "<group>"; };
 		6B9210F61C001F760093BB1F /* JSONND+ArrayLiteralConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONND+ArrayLiteralConvertible.swift"; sourceTree = "<group>"; };
 		6B9210F71C001F760093BB1F /* JSONND+DictionaryLiteralConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONND+DictionaryLiteralConvertible.swift"; sourceTree = "<group>"; };
 		6B9210F81C001F760093BB1F /* JSONND.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONND.swift; sourceTree = "<group>"; };
@@ -501,6 +507,8 @@
 			isa = PBXGroup;
 			children = (
 				6B2EF5741BFEF093003373E4 /* PersonViewController.swift */,
+				6B649B5A1C0604130028E454 /* PersonChooseThemeColorViewController.swift */,
+				6B649B5B1C0604130028E454 /* PersonChooseThemeColorViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -892,6 +900,7 @@
 				6BEC10FA1C002819008EFE73 /* BCTextField.swift */,
 				6B561CC91C03064B004E6D4C /* BCEduUserNotLoginView.swift */,
 				6B561CCB1C030657004E6D4C /* BCEduUserNotLoginView.xib */,
+				6B8F64501C06A733008D081C /* CustomEurekaCells.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1196,6 +1205,7 @@
 				6B5939431BFF0BD500EC4F19 /* BCScheduleBodyCell.xib in Resources */,
 				6B561CA21C02E32C004E6D4C /* InformationHomeCollectionViewCell.xib in Resources */,
 				6BEDEB6A1BFED5D400CDB1B1 /* Assets.xcassets in Resources */,
+				6B649B5D1C0604130028E454 /* PersonChooseThemeColorViewController.xib in Resources */,
 				6BEC10F21C0027DA008EFE73 /* MassageLostTableViewCell.xib in Resources */,
 				6BD1EBE71C0448F000FF9B78 /* InfoJobDetailViewController.xib in Resources */,
 				6B561CB81C02F45F004E6D4C /* InfoNewsCategoriesViewController.xib in Resources */,
@@ -1305,6 +1315,7 @@
 				6B59393E1BFF0BD500EC4F19 /* BCGradeViewTableViewHeader.swift in Sources */,
 				6B2EF5751BFEF093003373E4 /* PersonViewController.swift in Sources */,
 				6BEC10FC1C002819008EFE73 /* BCTextField.swift in Sources */,
+				6B8F64511C06A733008D081C /* CustomEurekaCells.swift in Sources */,
 				6BEDEB601BFED5D400CDB1B1 /* Utilities.swift in Sources */,
 				6B7BDB811BFF11ED007CEAB9 /* Encryptions.m in Sources */,
 				6BD1EBE61C0448F000FF9B78 /* InfoJobDetailViewController.swift in Sources */,
@@ -1361,6 +1372,7 @@
 				6B5939441BFF0BD500EC4F19 /* BCScheduleHeaderCell.swift in Sources */,
 				6B5939551BFF0BDC00EC4F19 /* ScheduleMemoModel.swift in Sources */,
 				6B2EF5771BFEF8D6003373E4 /* DataEnvironment.swift in Sources */,
+				6B649B5C1C0604130028E454 /* PersonChooseThemeColorViewController.swift in Sources */,
 				6B59393C1BFF0BD500EC4F19 /* BCGradesTableViewCell.swift in Sources */,
 				6B218CBD1C0590FD00939900 /* InfoCourseListViewController.swift in Sources */,
 				6B7BDB6D1BFF0F57007CEAB9 /* BCBaseRequest.swift in Sources */,

@@ -27,6 +27,9 @@ class InfoJobsViewController: EEBaseViewController {
     tableView.rowHeight = 80
     tableView.backgroundColor = UIColor.groupTableViewBackgroundColor()
     
+    let footer = UIView()
+    tableView.tableFooterView = footer
+    
     tableView.mj_header = MJRefreshHeader(refreshingBlock: { () -> Void in
       if !self.isRequestGoing {
         self.page = 1

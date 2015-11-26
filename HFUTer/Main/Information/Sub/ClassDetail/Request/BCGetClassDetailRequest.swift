@@ -34,10 +34,9 @@ class BCGetClassDetailRequest {
     
     let enc = CFStringConvertEncodingToNSStringEncoding(0x0632)
     if let htmlString:String = NSString(data:data!, encoding: enc) as? String{
-      
+
       if let doc = HTML(html: htmlString, encoding: NSUTF8StringEncoding) {
         
-        //        var isFirst = true
         for node in doc.xpath("//table[1]//tr//td[2]") {
           let newString = node.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
           idList.append(newString)
@@ -47,16 +46,15 @@ class BCGetClassDetailRequest {
           let newString = node.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
           nameList.append(newString)
         }
-        
       }
     }
     
-    if nameList.count > 2 {
-      for i in 2..<nameList.count {
+    if nameList.count > 1 {
+      for i in 1..<nameList.count {
         let model = StudentModel()
         model.name = nameList[i]
         model.id = idList[i]
-        model.serial = "\(i-1)"
+        model.serial = "\(i)"
         modelList.append(model)
       }
     }

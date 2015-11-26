@@ -86,7 +86,7 @@ class EEBaseViewController:UIViewController {
 
 extension EEBaseViewController:EEBaseNavBarDelegate {
   func baseNavBarDidPressOnLeftButton(navBar: EEBaseNavBar) {
-    self.navigationController?.popViewControllerAnimated(true)
+    self.pop()
   }
   
   func baseNavBarDidPressOnRightButton(navBar: EEBaseNavBar) {

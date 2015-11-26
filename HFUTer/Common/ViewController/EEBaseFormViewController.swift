@@ -68,6 +68,7 @@ class EEBaseFormViewController:FormViewController {
   }
   
   func pop() {
+    Hud.dismiss()
     self.navigationController?.popViewControllerAnimated(true)
   }
   
@@ -94,7 +95,7 @@ class EEBaseFormViewController:FormViewController {
 
 extension EEBaseFormViewController:EEBaseNavBarDelegate {
   func baseNavBarDidPressOnLeftButton(navBar: EEBaseNavBar) {
-    self.navigationController?.popViewControllerAnimated(true)
+    self.pop()
   }
   
   func baseNavBarDidPressOnRightButton(navBar: EEBaseNavBar) {

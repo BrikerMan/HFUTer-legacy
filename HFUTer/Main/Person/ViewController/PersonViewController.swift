@@ -42,54 +42,8 @@ class PersonViewController: EEBaseFormViewController {
   }
   
   private func showColorChooseView() {
-    if !isColorChooseViewShowing {
-      isColorChooseViewShowing = true
-      
-      colorChooseViewBack = UIView()
-      colorChooseViewBack.backgroundColor = UIColor.blackColor()
-      colorChooseViewBack.alpha = 0
-      self.view.addSubview(colorChooseViewBack)
-      
-      let tapGasture = UITapGestureRecognizer(target: self, action: "hideColorChooseView")
-      self.colorChooseViewBack.addGestureRecognizer(tapGasture)
-      
-      colorChooseViewBack.snp_makeConstraints(closure: { (make) -> Void in
-        make.edges.equalTo(self.view).inset(UIEdgeInsetsMake(64, 0, 0, 0))
-      })
-      
-      colorChooseView = BCColorChooseView()
-      colorChooseView.dismissBlock = {
-        self.hideColorChooseView()
-      }
-      self.view.addSubview(colorChooseView)
-      
-      colorChooseView.snp_makeConstraints(closure: { (make) -> Void in
-        make.width.equalTo(ScreenWidth-20)
-        make.height.equalTo(280)
-        make.center.equalTo(self.view.snp_center)
-      })
-      
-      colorChooseView.transform = CGAffineTransformMakeScale(0.01, 0.01)
-      self.view.layoutIfNeeded()
-      
-      UIView.animateWithDuration(0.3, animations: { () -> Void in
-        self.colorChooseView.transform = CGAffineTransformMakeScale(1, 1)
-        self.colorChooseViewBack.alpha = 0.3
-      })
-    }
-  }
-  
-  @objc private func hideColorChooseView() {
-    if isColorChooseViewShowing {
-      UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
-        self.colorChooseView.transform = CGAffineTransformMakeScale(0.01, 0.01)
-        self.colorChooseViewBack.alpha = 0
-        }, completion: { (finished) -> Void in
-          self.isColorChooseViewShowing = false
-          self.colorChooseView.removeFromSuperview()
-          self.colorChooseViewBack.removeFromSuperview()
-      })
-    }
+    let vc = PersonChooseThemeColorViewController()
+    self.pushToViewController(vc)
   }
   
   private func handeLogOut() {
@@ -100,7 +54,6 @@ class PersonViewController: EEBaseFormViewController {
   }
   
   private func initFormViews() {
-    
     
     form +++
       Section()
@@ -139,16 +92,20 @@ class PersonViewController: EEBaseFormViewController {
       
       <<< ButtonRow() { (row: ButtonRow) -> Void in
         row.title = "主题颜色选择"
-        row.onCellSelection({ (cell, row) -> () in
-          self.showColorChooseView()
-        })
+        row.presentationMode = .Show(controllerProvider: ControllerProvider.Callback {
+          let vc = PersonChooseThemeColorViewController()
+          vc.navBar.navLeftButtonStyle = .Back
+          vc.navTitle = "主题色选择"
+          vc.hidesBottomBarWhenPushed = true
+          vc.colorChoosedBlock = {(colorDic) in
+            Color.primaryTintColor = colorDic.color
+          }
+          return vc
+          }, completionCallback: { vc in vc.dismissViewControllerAnimated(true, completion: nil) })
         }.cellSetup { cell, row in
           cell.imageView?.image = UIImage(named: "person_theme")
-          cell.textLabel?.textAlignment = .Left
-          cell.textLabel?.textColor = nil
-          cell.accessoryType = .DisclosureIndicator
       }
-      
+
       
       +++ Section("研究生专用，禁止自动加载课表和成绩")
       <<< SwitchRow() {

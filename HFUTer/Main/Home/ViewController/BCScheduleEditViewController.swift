@@ -197,6 +197,7 @@ class BCScheduleEditViewController:EEBaseFormViewController {
         $0.options = ["1-2节", "3-4节", "5-6节", "7-8节", "9-11节"]
         $0.value = ScheduleModel.classTimeToString(self.model?.hour)
       }
+      
       <<< ButtonRow("weeks") {
         $0.title = "选择课程周"
         $0.onCellSelection(self.buttonTapped)
