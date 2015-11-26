@@ -272,9 +272,43 @@ class CommunityViewController: EEBaseViewController {
   }
 }
 
-//MARK:- ActionViewDelegate
+//MARK:UIAlertViewDelegate
+extension CommunityViewController:UIAlertViewDelegate {
+  func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+    print(buttonIndex)
+    if buttonIndex == 0 {
+      let vc = CommunitySendFindMassageToLosterViewController()
+      self.pushToViewController(vc)
+    } else {
+      let vc = CommunitySendMassageToPublicController()
+      self.pushToViewController(vc)
+    }
+  }
+}
+
+
+//MARK:- 动作列表ViewDelegate
 extension CommunityViewController:MassageMoreActionViewDelegate {
   func didSelectAtIndex(index:Int) {
+    runAfterLoginToCommunity { () -> () in
+      switch index {
+      case 0:
+        let vc = CommunitySendMassageToPublicController()
+        vc.isLost = true
+        self.pushToViewController(vc)
+      case 1:
+        let alertView = UIAlertView()
+        alertView.title = "请选择发布渠道"
+        alertView.message = "若手中有失主的学号信息，请选择直接发送消息至失主，提高找回概率。若没有失主此信息，则选择发不到广场等待认领。"
+        alertView.addButtonWithTitle("直接发送")
+        alertView.addButtonWithTitle("发布广场")
+        alertView.tag = 1
+        alertView.delegate = self
+        alertView.show()
+      default:
+        break
+      }
+    }
     //    runAfterLoginToCommunity { () -> () in
     //      if index == 0 {
     //        let sb = UIStoryboard(name: "MassageStroyBoard", bundle: nil)

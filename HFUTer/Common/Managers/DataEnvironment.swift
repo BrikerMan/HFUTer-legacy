@@ -89,7 +89,6 @@ class DataEnvironment {
     self.comUser.password = user.password
     self.comUser.avatar = user.avatar
     self.comUser.isLogin = true
-
   }
 
   func handleLogOut() {

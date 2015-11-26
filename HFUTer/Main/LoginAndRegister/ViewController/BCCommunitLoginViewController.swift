@@ -33,14 +33,13 @@ class BCCommunitLoginViewController: EEBaseViewController {
       onSuccessBlock: { (response) -> () in
         if let data = response["data"] as? NSDictionary, let avatar = data["image"] as? String{
           user.avatar = avatar
-
         }
         DataEnv.saveComUser(user)
+        APService.setTags(["push"], alias: DataEnv.eduUser.username, callbackSelector: nil, object: nil)
         Hud.showMassage("登录成功")
         self.pop()
       }, onFailedBlock: { (reason) -> () in
         Hud.showError(reason)
-        
       }) { () -> () in
         Hud.showMassage("网络错误，请稍后再试")
     }

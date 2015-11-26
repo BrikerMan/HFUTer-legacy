@@ -17,9 +17,9 @@ class EduUser {
   var hasGetToken = false       /// 本次启动是否获取到了Token
 
   //详细信息
-  var name = "获取失败，请重试"
-  var gender = "获取失败，请重试"
-  var academy = "获取失败，请重试"
-  var major = "获取失败，请重试"
-  var className = "获取失败，请重试"
+  var name      = "获取失败"
+  var gender    = "获取失败"
+  var academy   = "获取失败"
+  var major     = "获取失败"
+  var className = "获取失败"
 }

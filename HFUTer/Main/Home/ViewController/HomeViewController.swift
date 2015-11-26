@@ -322,10 +322,12 @@ extension HomeViewController:HomeNavBarViewDelegate {
   }
   
   func homeNavBarDidPressObSelcetWeekView(NavBar: HomeNavBarView) {
-    if isSelectWeekViewShowing {
-      self.hideSelectWeekView(nil)
-    } else {
-      self.showSelectWeekView(nil)
+    if DataEnv.eduUser.isLogin {
+      if isSelectWeekViewShowing {
+        self.hideSelectWeekView(nil)
+      } else {
+        self.showSelectWeekView(nil)
+      }
     }
   }
 }

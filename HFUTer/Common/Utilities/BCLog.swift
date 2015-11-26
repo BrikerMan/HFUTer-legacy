@@ -27,12 +27,12 @@ class BClog {
     print(str)
   }
 
-  static func request(url:String,param:NSDictionary?) {
+  static func request(url:String,param:NSDictionary?,header:NSDictionary?) {
     let date = NSDate(timeIntervalSinceNow: 0)
     let formatter = NSDateFormatter()
     formatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
     let dataString = formatter.stringFromDate(date)
-    let str = "[\(dataString)] " + "REQUEST:" + url + "\nParam:\(param)"
+    let str = "=====================\(dataString)=====================\n" + "REQUEST:" + url + "\nHeader:\(header)" + "\nParam:\(param)"
     print(str)
   }
 }

@@ -109,9 +109,6 @@ class MassageLostTableViewCell: UITableViewCell {
     }
     
     if model.pic.count == 0 {
-      imagesView.snp_updateConstraints(closure: { (make) -> Void in
-        make.height.equalTo(0)
-      })
       imagesView.hidden = true
       self.layoutIfNeeded()
     } else {

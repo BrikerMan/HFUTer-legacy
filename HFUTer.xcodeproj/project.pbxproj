@@ -39,6 +39,10 @@
 		6B2EF5811BFEFB19003373E4 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EF5801BFEFB19003373E4 /* ColorManager.swift */; };
 		6B2EF5831BFEFF2F003373E4 /* HomeNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EF5821BFEFF2F003373E4 /* HomeNavBarView.swift */; };
 		6B2EF5851BFEFF43003373E4 /* HomeNavBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B2EF5841BFEFF43003373E4 /* HomeNavBarView.xib */; };
+		6B39F14F1C06DA0C00A29D10 /* CommunitySendFindMassageToLosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B39F14E1C06DA0C00A29D10 /* CommunitySendFindMassageToLosterViewController.swift */; };
+		6B39F1521C06EB5000A29D10 /* CommunitySendMassageToPublicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B39F1511C06EB5000A29D10 /* CommunitySendMassageToPublicController.swift */; };
+		6B39F1541C06F22600A29D10 /* CommunityChooseImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B39F1531C06F22600A29D10 /* CommunityChooseImageCell.swift */; };
+		6B39F1561C06F23100A29D10 /* CommunityChooseImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B39F1551C06F23100A29D10 /* CommunityChooseImageCell.xib */; };
 		6B561C9C1C02BC97004E6D4C /* EEBaseImagesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B561C9B1C02BC97004E6D4C /* EEBaseImagesListController.swift */; };
 		6B561CA11C02E32C004E6D4C /* InformationHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B561C9F1C02E32C004E6D4C /* InformationHomeCollectionViewCell.swift */; };
 		6B561CA21C02E32C004E6D4C /* InformationHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B561CA01C02E32C004E6D4C /* InformationHomeCollectionViewCell.xib */; };
@@ -106,6 +110,17 @@
 		6B7BDB8C1BFF1350007CEAB9 /* BCLoginToEduViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7BDB8A1BFF1350007CEAB9 /* BCLoginToEduViewController.xib */; };
 		6B7BDB8F1BFF196C007CEAB9 /* BCScheduleEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB8E1BFF196C007CEAB9 /* BCScheduleEditViewController.swift */; };
 		6B8F64511C06A733008D081C /* CustomEurekaCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8F64501C06A733008D081C /* CustomEurekaCells.swift */; };
+		6B8F64551C06AC7C008D081C /* libPushSDK-1.8.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8F64541C06AC7C008D081C /* libPushSDK-1.8.5.a */; };
+		6B8F64571C06AC8E008D081C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8F64561C06AC8E008D081C /* CFNetwork.framework */; };
+		6B8F64591C06AC95008D081C /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8F64581C06AC95008D081C /* CoreFoundation.framework */; };
+		6B8F645B1C06AC9C008D081C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8F645A1C06AC9C008D081C /* CoreTelephony.framework */; };
+		6B8F645D1C06ACA4008D081C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8F645C1C06ACA4008D081C /* SystemConfiguration.framework */; };
+		6B8F645F1C06ACAB008D081C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8F645E1C06ACAB008D081C /* CoreGraphics.framework */; };
+		6B8F64611C06ACB3008D081C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8F64601C06ACB3008D081C /* Foundation.framework */; };
+		6B8F64631C06ACBC008D081C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8F64621C06ACBC008D081C /* UIKit.framework */; };
+		6B8F64651C06ACC5008D081C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8F64641C06ACC5008D081C /* Security.framework */; };
+		6B8F64671C06ACD0008D081C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8F64661C06ACCF008D081C /* libz.tbd */; };
+		6B8F64691C06AD80008D081C /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B8F64681C06AD80008D081C /* PushConfig.plist */; };
 		6B9210FA1C001F760093BB1F /* JSONND+ArrayLiteralConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9210F61C001F760093BB1F /* JSONND+ArrayLiteralConvertible.swift */; };
 		6B9210FB1C001F760093BB1F /* JSONND+DictionaryLiteralConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9210F71C001F760093BB1F /* JSONND+DictionaryLiteralConvertible.swift */; };
 		6B9210FC1C001F760093BB1F /* JSONND.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9210F81C001F760093BB1F /* JSONND.swift */; };
@@ -119,6 +134,9 @@
 		6B9211191C0025650093BB1F /* BCCommunityUserLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9211181C0025650093BB1F /* BCCommunityUserLoginRequest.swift */; };
 		6BBE31761C043EDC0001B2E4 /* InfoJobsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE31741C043EDC0001B2E4 /* InfoJobsListTableViewCell.swift */; };
 		6BBE31771C043EDC0001B2E4 /* InfoJobsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BBE31751C043EDC0001B2E4 /* InfoJobsListTableViewCell.xib */; };
+		6BC129801C06BBD100DF3BF9 /* CommunityPublishLostMassageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1297E1C06BBD100DF3BF9 /* CommunityPublishLostMassageViewController.swift */; };
+		6BC129811C06BBD100DF3BF9 /* CommunityPublishLostMassageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1297F1C06BBD100DF3BF9 /* CommunityPublishLostMassageViewController.xib */; };
+		6BC129841C06BD9F00DF3BF9 /* BCGetQiNiuTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC129831C06BD9F00DF3BF9 /* BCGetQiNiuTokenRequest.swift */; };
 		6BD1EBE61C0448F000FF9B78 /* InfoJobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1EBE41C0448F000FF9B78 /* InfoJobDetailViewController.swift */; };
 		6BD1EBE71C0448F000FF9B78 /* InfoJobDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD1EBE51C0448F000FF9B78 /* InfoJobDetailViewController.xib */; };
 		6BDC1F1E1BFF7450009DC139 /* BCColorChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDC1F1C1BFF7450009DC139 /* BCColorChooseView.swift */; };
@@ -208,6 +226,10 @@
 		6B2EF5801BFEFB19003373E4 /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		6B2EF5821BFEFF2F003373E4 /* HomeNavBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavBarView.swift; sourceTree = "<group>"; };
 		6B2EF5841BFEFF43003373E4 /* HomeNavBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeNavBarView.xib; sourceTree = "<group>"; };
+		6B39F14E1C06DA0C00A29D10 /* CommunitySendFindMassageToLosterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunitySendFindMassageToLosterViewController.swift; sourceTree = "<group>"; };
+		6B39F1511C06EB5000A29D10 /* CommunitySendMassageToPublicController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunitySendMassageToPublicController.swift; sourceTree = "<group>"; };
+		6B39F1531C06F22600A29D10 /* CommunityChooseImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityChooseImageCell.swift; sourceTree = "<group>"; };
+		6B39F1551C06F23100A29D10 /* CommunityChooseImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommunityChooseImageCell.xib; sourceTree = "<group>"; };
 		6B561C9B1C02BC97004E6D4C /* EEBaseImagesListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EEBaseImagesListController.swift; sourceTree = "<group>"; };
 		6B561C9F1C02E32C004E6D4C /* InformationHomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		6B561CA01C02E32C004E6D4C /* InformationHomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationHomeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -281,6 +303,18 @@
 		6B7BDB8A1BFF1350007CEAB9 /* BCLoginToEduViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCLoginToEduViewController.xib; sourceTree = "<group>"; };
 		6B7BDB8E1BFF196C007CEAB9 /* BCScheduleEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCScheduleEditViewController.swift; sourceTree = "<group>"; };
 		6B8F64501C06A733008D081C /* CustomEurekaCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomEurekaCells.swift; sourceTree = "<group>"; };
+		6B8F64531C06AC7C008D081C /* APService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APService.h; sourceTree = "<group>"; };
+		6B8F64541C06AC7C008D081C /* libPushSDK-1.8.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libPushSDK-1.8.5.a"; sourceTree = "<group>"; };
+		6B8F64561C06AC8E008D081C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		6B8F64581C06AC95008D081C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		6B8F645A1C06AC9C008D081C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		6B8F645C1C06ACA4008D081C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6B8F645E1C06ACAB008D081C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6B8F64601C06ACB3008D081C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6B8F64621C06ACBC008D081C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6B8F64641C06ACC5008D081C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6B8F64661C06ACCF008D081C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		6B8F64681C06AD80008D081C /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
 		6B9210F61C001F760093BB1F /* JSONND+ArrayLiteralConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONND+ArrayLiteralConvertible.swift"; sourceTree = "<group>"; };
 		6B9210F71C001F760093BB1F /* JSONND+DictionaryLiteralConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONND+DictionaryLiteralConvertible.swift"; sourceTree = "<group>"; };
 		6B9210F81C001F760093BB1F /* JSONND.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONND.swift; sourceTree = "<group>"; };
@@ -294,6 +328,9 @@
 		6B9211181C0025650093BB1F /* BCCommunityUserLoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCCommunityUserLoginRequest.swift; sourceTree = "<group>"; };
 		6BBE31741C043EDC0001B2E4 /* InfoJobsListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoJobsListTableViewCell.swift; sourceTree = "<group>"; };
 		6BBE31751C043EDC0001B2E4 /* InfoJobsListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoJobsListTableViewCell.xib; sourceTree = "<group>"; };
+		6BC1297E1C06BBD100DF3BF9 /* CommunityPublishLostMassageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityPublishLostMassageViewController.swift; sourceTree = "<group>"; };
+		6BC1297F1C06BBD100DF3BF9 /* CommunityPublishLostMassageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommunityPublishLostMassageViewController.xib; sourceTree = "<group>"; };
+		6BC129831C06BD9F00DF3BF9 /* BCGetQiNiuTokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCGetQiNiuTokenRequest.swift; sourceTree = "<group>"; };
 		6BD1EBE41C0448F000FF9B78 /* InfoJobDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoJobDetailViewController.swift; sourceTree = "<group>"; };
 		6BD1EBE51C0448F000FF9B78 /* InfoJobDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoJobDetailViewController.xib; sourceTree = "<group>"; };
 		6BDC1F1C1BFF7450009DC139 /* BCColorChooseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCColorChooseView.swift; sourceTree = "<group>"; };
@@ -358,7 +395,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B8F64671C06ACD0008D081C /* libz.tbd in Frameworks */,
+				6B8F64651C06ACC5008D081C /* Security.framework in Frameworks */,
+				6B8F64631C06ACBC008D081C /* UIKit.framework in Frameworks */,
+				6B8F64611C06ACB3008D081C /* Foundation.framework in Frameworks */,
+				6B8F645F1C06ACAB008D081C /* CoreGraphics.framework in Frameworks */,
+				6B8F645D1C06ACA4008D081C /* SystemConfiguration.framework in Frameworks */,
+				6B8F645B1C06AC9C008D081C /* CoreTelephony.framework in Frameworks */,
+				6B8F64591C06AC95008D081C /* CoreFoundation.framework in Frameworks */,
+				6B8F64571C06AC8E008D081C /* CFNetwork.framework in Frameworks */,
 				8F7A5701879712DABC01A885 /* Pods_HFUTer.framework in Frameworks */,
+				6B8F64551C06AC7C008D081C /* libPushSDK-1.8.5.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -818,6 +865,15 @@
 			path = Request;
 			sourceTree = "<group>";
 		};
+		6B8F64521C06AC7C008D081C /* JPush-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6B8F64531C06AC7C008D081C /* APService.h */,
+				6B8F64541C06AC7C008D081C /* libPushSDK-1.8.5.a */,
+			);
+			path = "JPush-iOS";
+			sourceTree = "<group>";
+		};
 		6B9210F51C001F760093BB1F /* JSONND */ = {
 			isa = PBXGroup;
 			children = (
@@ -842,6 +898,10 @@
 		6B9211071C00240F0093BB1F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6BC1297E1C06BBD100DF3BF9 /* CommunityPublishLostMassageViewController.swift */,
+				6B39F14E1C06DA0C00A29D10 /* CommunitySendFindMassageToLosterViewController.swift */,
+				6B39F1511C06EB5000A29D10 /* CommunitySendMassageToPublicController.swift */,
+				6BC1297F1C06BBD100DF3BF9 /* CommunityPublishLostMassageViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -871,6 +931,8 @@
 				6BEC10E81C0027DA008EFE73 /* MassageMoreActionView.xib */,
 				6BEC10E91C0027DA008EFE73 /* MassageMyPublishListTableViewCell.swift */,
 				6BEC10EA1C0027DA008EFE73 /* MassageMyPublishListTableViewCell.xib */,
+				6B39F1531C06F22600A29D10 /* CommunityChooseImageCell.swift */,
+				6B39F1551C06F23100A29D10 /* CommunityChooseImageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -885,9 +947,18 @@
 			path = LoveWall;
 			sourceTree = "<group>";
 		};
+		6BC129821C06BD9500DF3BF9 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				6BC129831C06BD9F00DF3BF9 /* BCGetQiNiuTokenRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		6BEC10F71C002819008EFE73 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6BC129821C06BD9500DF3BF9 /* Request */,
 				6BEC10F81C002819008EFE73 /* View */,
 			);
 			path = Common;
@@ -973,6 +1044,7 @@
 		6BEDEB2D1BFED5D400CDB1B1 /* 3rdPart */ = {
 			isa = PBXGroup;
 			children = (
+				6B8F64521C06AC7C008D081C /* JPush-iOS */,
 				6B9210F51C001F760093BB1F /* JSONND */,
 				6B7BDB701BFF11ED007CEAB9 /* Encryption */,
 				6B7BDB7C1BFF11ED007CEAB9 /* FMDB */,
@@ -1093,6 +1165,7 @@
 		6BEDEB5B1BFED5D400CDB1B1 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				6B8F64681C06AD80008D081C /* PushConfig.plist */,
 				6BEDEB271BFED40A00CDB1B1 /* Info.plist */,
 				6BEDEB5C1BFED5D400CDB1B1 /* Frameworks */,
 				6B2EF54D1BFEE0D2003373E4 /* HFUTer-Bridging-Header.h */,
@@ -1110,6 +1183,15 @@
 		909B77CCFD155C83FF2BC800 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B8F64661C06ACCF008D081C /* libz.tbd */,
+				6B8F64641C06ACC5008D081C /* Security.framework */,
+				6B8F64621C06ACBC008D081C /* UIKit.framework */,
+				6B8F64601C06ACB3008D081C /* Foundation.framework */,
+				6B8F645E1C06ACAB008D081C /* CoreGraphics.framework */,
+				6B8F645C1C06ACA4008D081C /* SystemConfiguration.framework */,
+				6B8F645A1C06AC9C008D081C /* CoreTelephony.framework */,
+				6B8F64581C06AC95008D081C /* CoreFoundation.framework */,
+				6B8F64561C06AC8E008D081C /* CFNetwork.framework */,
 				F1AE05215A85D2C970E8C4C3 /* Pods_HFUTer.framework */,
 			);
 			name = Frameworks;
@@ -1203,11 +1285,13 @@
 				6B7BDB8C1BFF1350007CEAB9 /* BCLoginToEduViewController.xib in Resources */,
 				6BEC10F01C0027DA008EFE73 /* MassageLostListView.xib in Resources */,
 				6B5939431BFF0BD500EC4F19 /* BCScheduleBodyCell.xib in Resources */,
+				6B8F64691C06AD80008D081C /* PushConfig.plist in Resources */,
 				6B561CA21C02E32C004E6D4C /* InformationHomeCollectionViewCell.xib in Resources */,
 				6BEDEB6A1BFED5D400CDB1B1 /* Assets.xcassets in Resources */,
 				6B649B5D1C0604130028E454 /* PersonChooseThemeColorViewController.xib in Resources */,
 				6BEC10F21C0027DA008EFE73 /* MassageLostTableViewCell.xib in Resources */,
 				6BD1EBE71C0448F000FF9B78 /* InfoJobDetailViewController.xib in Resources */,
+				6BC129811C06BBD100DF3BF9 /* CommunityPublishLostMassageViewController.xib in Resources */,
 				6B561CB81C02F45F004E6D4C /* InfoNewsCategoriesViewController.xib in Resources */,
 				6B218CCD1C05962500939900 /* InfoCourseDetailViewController.xib in Resources */,
 				6B5F875D1C05578500C80E59 /* InfoCourseFeeViewController.xib in Resources */,
@@ -1224,6 +1308,7 @@
 				6BDC1F1F1BFF7450009DC139 /* BCColorChooseView.xib in Resources */,
 				6B2EF5641BFEEC56003373E4 /* HomeViewController.xib in Resources */,
 				6B59393F1BFF0BD500EC4F19 /* BCGradeViewTableViewHeader.xib in Resources */,
+				6B39F1561C06F23100A29D10 /* CommunityChooseImageCell.xib in Resources */,
 				6B2EF5691BFEED9B003373E4 /* InformationViewController.xib in Resources */,
 				6BEC110D1C003352008EFE73 /* BCLoveWallDetailViewController.xib in Resources */,
 				6BEC10EC1C0027DA008EFE73 /* BCLeaveContectInfoView.xib in Resources */,
@@ -1312,6 +1397,7 @@
 				6BEDEB631BFED5D400CDB1B1 /* EEXibView.swift in Sources */,
 				6B9210FB1C001F760093BB1F /* JSONND+DictionaryLiteralConvertible.swift in Sources */,
 				6B2EF5831BFEFF2F003373E4 /* HomeNavBarView.swift in Sources */,
+				6B39F1541C06F22600A29D10 /* CommunityChooseImageCell.swift in Sources */,
 				6B59393E1BFF0BD500EC4F19 /* BCGradeViewTableViewHeader.swift in Sources */,
 				6B2EF5751BFEF093003373E4 /* PersonViewController.swift in Sources */,
 				6BEC10FC1C002819008EFE73 /* BCTextField.swift in Sources */,
@@ -1380,6 +1466,7 @@
 				6B7BDB821BFF11ED007CEAB9 /* GTMBase64.m in Sources */,
 				6B59394A1BFF0BD500EC4F19 /* BCShcedulesWeekEditView.swift in Sources */,
 				6B561CCA1C03064B004E6D4C /* BCEduUserNotLoginView.swift in Sources */,
+				6BC129841C06BD9F00DF3BF9 /* BCGetQiNiuTokenRequest.swift in Sources */,
 				6BBE31761C043EDC0001B2E4 /* InfoJobsListTableViewCell.swift in Sources */,
 				6B5F876A1C055A8E00C80E59 /* CourseFeeModel.swift in Sources */,
 				6B561CB71C02F45F004E6D4C /* InfoNewsCategoriesViewController.swift in Sources */,
@@ -1407,12 +1494,14 @@
 				6B2EF57F1BFEFAC8003373E4 /* EEExtension.swift in Sources */,
 				6B5939481BFF0BD500EC4F19 /* BCScheduleSelectView.swift in Sources */,
 				6BEDEB611BFED5D400CDB1B1 /* EEHudView.swift in Sources */,
+				6B39F14F1C06DA0C00A29D10 /* CommunitySendFindMassageToLosterViewController.swift in Sources */,
 				6B5F875C1C05578500C80E59 /* InfoCourseFeeViewController.swift in Sources */,
 				6B5939541BFF0BDC00EC4F19 /* GradesModel.swift in Sources */,
 				6B218CD21C059F2A00939900 /* BCGradesHeaderCell.swift in Sources */,
 				6BEDEB5D1BFED5D400CDB1B1 /* Functions.swift in Sources */,
 				6B5939571BFF0BDC00EC4F19 /* SemesterModel.swift in Sources */,
 				6B2EF5681BFEED9B003373E4 /* InformationViewController.swift in Sources */,
+				6BC129801C06BBD100DF3BF9 /* CommunityPublishLostMassageViewController.swift in Sources */,
 				6B2EF57B1BFEFA16003373E4 /* DBManager.swift in Sources */,
 				6B59394C1BFF0BD500EC4F19 /* BCShcedulesWeekEditViewCell.swift in Sources */,
 				6B5939531BFF0BDC00EC4F19 /* Calculator.swift in Sources */,
@@ -1420,6 +1509,7 @@
 				6BEC10F31C0027DA008EFE73 /* MassageMoreActionView.swift in Sources */,
 				6B135C2E1C04092F0062097E /* InfoGetJobListRequest.swift in Sources */,
 				6BEC11161C003352008EFE73 /* BCMassageLoveWallView.swift in Sources */,
+				6B39F1521C06EB5000A29D10 /* CommunitySendMassageToPublicController.swift in Sources */,
 				6B7BDB881BFF1347007CEAB9 /* BCLoginToEduRequest.swift in Sources */,
 				6B5939421BFF0BD500EC4F19 /* BCScheduleBodyCell.swift in Sources */,
 			);
@@ -1522,10 +1612,15 @@
 				INFOPLIST_FILE = HFUTer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HFUTer/3rdPart/JPush-iOS",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.eliyar.hfuter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HFUTer/SupportFiles/HFUTer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/HFUTer/3rdPart/JPush-iOS";
 			};
 			name = Debug;
 		};
@@ -1540,9 +1635,14 @@
 				INFOPLIST_FILE = HFUTer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HFUTer/3rdPart/JPush-iOS",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.eliyar.hfuter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HFUTer/SupportFiles/HFUTer-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/HFUTer/3rdPart/JPush-iOS";
 			};
 			name = Release;
 		};

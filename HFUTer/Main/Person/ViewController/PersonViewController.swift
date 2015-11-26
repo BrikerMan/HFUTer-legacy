@@ -24,6 +24,7 @@ class PersonViewController: EEBaseFormViewController {
     if DataEnv.eduUser.isLogin {
       form.setValues(["isLogin":"edu"])
     }
+    self.tableView?.sectionFooterHeight = 0.1
   }
   
   override func didReceiveMemoryWarning() {

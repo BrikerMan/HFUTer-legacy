@@ -13,7 +13,7 @@ let communityServer = "http://hfut.cn-hangzhou.aliapp.com/"
 let NetErrorWarning = "网络错误，请稍候再试"
 
 
-let colorAlphaComponent:CGFloat  = 0.7
+let colorAlphaComponent:CGFloat  = 0.8
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Managers
 
