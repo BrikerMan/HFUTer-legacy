@@ -61,19 +61,19 @@ extension InformationViewController:UICollectionViewDelegate {
   func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
     switch indexPath.row {
     case 0:
-      let vc = InfoNewsCategoriesViewController()
+      let vc = InfoNewsCategoriesViewController(nib: "InfoNewsCategoriesViewController")
       self.pushToViewController(vc)
     case 1:
-      let vc = InfoJobsViewController()
+      let vc = InfoJobsViewController(nib: "InfoJobsViewController")
       self.pushToViewController(vc)
     case 2:
       runAfterLoginToEdu({ () -> () in
-        let vc = InfoCourseListViewController()
+        let vc = InfoCourseListViewController(nib:"InfoCourseListViewController")
         self.pushToViewController(vc)
       })
     case 3:
       runAfterLoginToEdu({ () -> () in
-        let vc = InfoCourseFeeViewController()
+        let vc = InfoCourseFeeViewController(nib:"InfoCourseFeeViewController")
         self.pushToViewController(vc)
       })
     case 4:

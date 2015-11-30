@@ -7,14 +7,25 @@
 //
 
 import UIKit
+import SnapKit
+import RKNotificationHub
 
 class RootViewController: UITabBarController {
 
   private var homeVC = HomeViewController()
-  private var communityVC = CommunityViewController()
-  private var infoVC = InformationViewController()
+  private var communityVC = CommunityViewController(nib: "CommunityViewController")
+  private var infoVC = InformationViewController(nib: "InformationViewController")
   private var personVC = PersonViewController()
-
+  
+  private var homeNav:UINavigationController!
+  private var comNav:UINavigationController!
+  private var infoNav:UINavigationController!
+  private var personNav:UINavigationController!
+  
+  //Hud 管理页面
+  private var hudView = UIView()
+  private var badge:RKNotificationHub!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     initUI()
@@ -22,10 +33,10 @@ class RootViewController: UITabBarController {
   }
 
   private func initUI() {
-    let homeNav = UINavigationController(rootViewController: homeVC)
-    let comNav  = UINavigationController(rootViewController: communityVC)
-    let infoNav = UINavigationController(rootViewController: infoVC)
-    let personNav = UINavigationController(rootViewController: personVC)
+    homeNav = UINavigationController(rootViewController: homeVC)
+    comNav  = UINavigationController(rootViewController: communityVC)
+    infoNav = UINavigationController(rootViewController: infoVC)
+    personNav = UINavigationController(rootViewController: personVC)
 
     homeNav.tabBarItem = UITabBarItem(title: "学习", image: UIImage(named:"tabbar_study"), selectedImage: UIImage(named:"tabbar_study_fill"))
     comNav.tabBarItem = UITabBarItem(title: "社区", image: UIImage(named:"tabbar_community"), selectedImage: UIImage(named:"tabbar_community_fill"))
@@ -39,6 +50,21 @@ class RootViewController: UITabBarController {
     for nav in [homeNav, comNav, infoNav, personNav] {
       nav.navigationBarHidden = true
     }
+    
+    self.view.addSubview(hudView)
+    hudView.userInteractionEnabled = false
+    hudView.snp_makeConstraints { (make) -> Void in
+      make.bottom.equalTo(self.view.snp_bottom)
+      make.height.equalTo(49)
+      make.width.equalTo(ScreenWidth/4)
+      make.right.equalTo(self.view.snp_right).offset(-ScreenWidth/4)
+    }
+    
+    let width = ScreenWidth/4
+    
+    badge = RKNotificationHub(view: hudView)
+    badge.setCircleColor(UIColor.flatRedColor(), labelColor: UIColor.whiteColor())
+    badge.setCircleAtFrame(CGRectMake(width/2+5,0, 20, 20))
   }
 
   func showLoginToCommunityVC() {
@@ -53,6 +79,11 @@ class RootViewController: UITabBarController {
   
   func onTintColorChanged() {
     appDelegate.window?.tintColor = Color.primaryTintColor
+  }
+  
+  func addRedBundle() {
+    badge.increment()
+    badge.pop()
   }
 
 }

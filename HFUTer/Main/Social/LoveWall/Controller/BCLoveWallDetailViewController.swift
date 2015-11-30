@@ -95,7 +95,7 @@ class BCLoveWallDetailViewController: EEBaseViewController {
     BCBaseRequest.getJsonFromCommunityServerRequest(url, params: params,
       onFinishedBlock: { (response) -> Void in
         self.model.good = true
-        self.model.goodCount += 1
+        self.model.favoriteCount += 1
         self.tableView.reloadData()
       }, onFailedBlock: { (reason) -> Void in
         Hud.showError(reason)

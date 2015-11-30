@@ -46,7 +46,7 @@ class InfoCourseListViewController: EEBaseViewController {
 extension InfoCourseListViewController:UITableViewDelegate {
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
-    let vc = InfoCourseDetailViewController()
+    let vc = InfoCourseDetailViewController(nib: "InfoCourseDetailViewController")
     vc.model = self.classList[indexPath.row]
     self.pushToViewController(vc)
   }

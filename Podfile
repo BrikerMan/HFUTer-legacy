@@ -27,7 +27,7 @@ target 'HFUTer' do
   pod 'YYModel'                           ##Dic or Json -> Model
   pod 'FMDB',   :git => 'https://github.com/ccgus/fmdb.git', :branch => 'swiftFramework'                             #sqlite封装
   pod 'Qiniu'
-#  :git => 'https://github.com/qiniu/objc-sdk.git', :branch => 'master'
+  #  :git => 'https://github.com/qiniu/objc-sdk.git', :branch => 'master'
   pod 'Kanna'
   
   #调试
@@ -35,13 +35,11 @@ target 'HFUTer' do
   
   ## Fabric服务安装
   pod 'Fabric'
-#  pod 'Answers'
+  #  pod 'Answers'
   pod 'Crashlytics'
   
   #测试库
   pod 'FontAwesome.swift'
   pod 'ChameleonFramework/Swift'
-  
-
 end
 

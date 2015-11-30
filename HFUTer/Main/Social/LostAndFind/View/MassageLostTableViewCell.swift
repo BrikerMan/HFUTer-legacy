@@ -51,8 +51,9 @@ class MassageLostTableViewCell: UITableViewCell {
   }
   
   private func fixUI() {
-    self.backgroundColor = Color.primaryTintColor.ultraLight()
-    self.contentView.backgroundColor = UIColor.clearColor()
+    self.backgroundColor                = UIColor.clearColor()
+    self.contentView.backgroundColor    = UIColor.clearColor()
+    self.backColorView.backgroundColor  = Color.secondaryTintColor
     avatarView.layer.cornerRadius = avatarView.frame.size.height/2
     mainView.layer.cornerRadius = 5
     imagesViewList = [imageView1,imageView2,imageView3]

@@ -40,7 +40,7 @@ class EEXibView: UIView {
     
   }
   
-  func funcChangeTintColor(notification:NSNotification?) {
+  func changeTintColor(notification:NSNotification?) {
     
   }
 }

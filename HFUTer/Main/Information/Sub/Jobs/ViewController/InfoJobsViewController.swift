@@ -73,7 +73,7 @@ class InfoJobsViewController: EEBaseViewController {
 extension InfoJobsViewController:UITableViewDelegate {
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
-    let vc = InfoJobDetailViewController()
+    let vc = InfoJobDetailViewController(nib: "InfoJobDetailViewController")
     vc.model = modelList[indexPath.row]
     self.pushToViewController(vc)
   }

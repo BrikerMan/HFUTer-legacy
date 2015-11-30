@@ -20,12 +20,15 @@ class ColorManager {
   //主色调
   var primaryTintColor      = UIColor ( red: 0.886, green: 0.231, blue: 0.2693, alpha: 1.0 ) {
     didSet {
+      let colorArray =  NSArray(ofColorsWithColorScheme: ColorScheme.Analogous, usingColor: primaryTintColor, withFlatScheme: true)
+      secondaryTintColor    = colorArray[0] as! UIColor
       NSNotificationCenter.defaultCenter().postNotificationName(BCChangeTintColorNotification, object: nil, userInfo: nil)
       PlistManager.saveTintColor(primaryTintColor)
     }
   }
   
-  var secondaryTintColor    = UIColor ( red: 0.2824, green: 0.2118, blue: 0.149, alpha: 1.0 )
+  var colorArray =  NSArray(ofColorsWithColorScheme: ColorScheme.Analogous, usingColor: UIColor ( red: 0.886, green: 0.231, blue: 0.2693, alpha: 1.0 ), withFlatScheme: true)
+  var secondaryTintColor    = UIColor ( red: 0.886, green: 0.231, blue: 0.2693, alpha: 1.0 )
   
   var primaryDarkColor      = UIColor ( red: 0.2, green: 0.2, blue: 0.2, alpha: 1.0 )
   var secondaryDarkColor    = UIColor ( red: 0.4, green: 0.4, blue: 0.4, alpha: 1.0 )
@@ -56,6 +59,12 @@ class ColorManager {
   ]
   
   var colorDicForKeys = [String:UIColor]()
+  
+  init() {
+    primaryTintColor      = UIColor ( red: 0.886, green: 0.231, blue: 0.2693, alpha: 1.0 )
+    colorArray            = NSArray(ofColorsWithColorScheme: ColorScheme.Analogous, usingColor: primaryTintColor, withFlatScheme: true)
+    secondaryTintColor    = colorArray[0] as! UIColor
+  }
   
   func getRandomFlatColorForCode(code:String) -> UIColor {
     if let color = colorDicForKeys[code] {
@@ -88,6 +97,11 @@ class ColorManager {
   
   
   func getLoveWallColors(index:Int) -> UIColor{
+    if index == 0 {
+      return FlatSkyBlue()
+    } else if index == 1 {
+      return FlatPink()
+    }
     return primaryTintColor
   }
 }

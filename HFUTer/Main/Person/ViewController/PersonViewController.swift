@@ -43,7 +43,7 @@ class PersonViewController: EEBaseFormViewController {
   }
   
   private func showColorChooseView() {
-    let vc = PersonChooseThemeColorViewController()
+    let vc = PersonChooseThemeColorViewController(nib: "PersonChooseThemeColorViewController")
     self.pushToViewController(vc)
   }
   
@@ -72,7 +72,7 @@ class PersonViewController: EEBaseFormViewController {
         $0.hidden = "$isLogin != 'notLogin'"
         
         $0.presentationMode = .PresentModally(controllerProvider: ControllerProvider.Callback {
-          return BCLoginToEduViewController()
+          return BCLoginToEduViewController(nib: "BCLoginToEduViewController")
           }, completionCallback: { vc in vc.dismissViewControllerAnimated(true, completion: nil) })
         }.cellSetup { cell, row in
           cell.imageView?.image = UIImage(named: "person_login")
@@ -94,7 +94,7 @@ class PersonViewController: EEBaseFormViewController {
       <<< ButtonRow() { (row: ButtonRow) -> Void in
         row.title = "主题颜色选择"
         row.presentationMode = .Show(controllerProvider: ControllerProvider.Callback {
-          let vc = PersonChooseThemeColorViewController()
+          let vc = PersonChooseThemeColorViewController(nib: "PersonChooseThemeColorViewController")
           vc.navBar.navLeftButtonStyle = .Back
           vc.navTitle = "主题色选择"
           vc.hidesBottomBarWhenPushed = true
@@ -121,7 +121,7 @@ class PersonViewController: EEBaseFormViewController {
       <<< ButtonRow() {
         $0.title = "帮助 - 暂不可用"
         $0.presentationMode = .PresentModally(controllerProvider: ControllerProvider.Callback {
-          return BCLoginToEduViewController()
+          return BCLoginToEduViewController(nib: "BCLoginToEduViewController")
           }, completionCallback: { vc in vc.dismissViewControllerAnimated(true, completion: nil) })
         }.cellSetup { cell, row in
           cell.imageView?.image = UIImage(named: "person_help")
@@ -130,7 +130,7 @@ class PersonViewController: EEBaseFormViewController {
       <<< ButtonRow() {
         $0.title = "关于我们 - 暂不可用"
         $0.presentationMode = .PresentModally(controllerProvider: ControllerProvider.Callback {
-          return BCLoginToEduViewController()
+          return BCLoginToEduViewController(nib: "BCLoginToEduViewController")
           }, completionCallback: { vc in vc.dismissViewControllerAnimated(true, completion: nil) })
         }.cellSetup { cell, row in
           cell.imageView?.image = UIImage(named: "person_about")

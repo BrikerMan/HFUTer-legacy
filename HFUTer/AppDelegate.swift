@@ -14,28 +14,31 @@ import BRYXBanner
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+  
   var window: UIWindow?
   var app:UIApplication!
   var rootVC: RootViewController!
-
+  
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
+    
     //初始化第三方SDK
-    Fabric.with([Answers.self,Crashlytics.self])
+    Fabric.with([Crashlytics.self])
+    
     APService.registerForRemoteNotificationTypes(2, categories: nil)
     APService.setupWithOption(launchOptions)
     
     window = UIWindow(frame: UIScreen.mainScreen().bounds)
     app    = application
     rootVC = RootViewController()
-
+    
+    if isFisrtLaunchOfThisVersion {
+      self.handleFirstLaunch()
+    }
+    
     //初始化数据环境
-    DataEnv.eduUser = PlistManager.readEduUser()
     DataEnv.loginComUser()
-    DataEnv.calculateCurrentWeek()
-    PlistManager.readTintColor()
-
+    PlistManager.shared().readTintColor()
+    
     window?.backgroundColor = UIColor.whiteColor()
     let rootViewController = rootVC
     let rootNavController = UINavigationController(rootViewController:rootViewController)
@@ -60,10 +63,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
     APService.handleRemoteNotification(userInfo)
     print(userInfo)
+    RootVC.addRedBundle()
     if let aps = userInfo["aps"] {
       let banner = Banner(title:nil, subtitle: aps["alert"] as? String, image: nil, backgroundColor: UIColor(red:42.8/255.0, green:162.6/255.0, blue:35.3/255.0, alpha:1.0))
       banner.dismissesOnTap = true
       banner.show(duration: 3.0)
+    }
+  }
+  
+  func handleFirstLaunch() {
+    let dataPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+    if let enumerator = NSFileManager.defaultManager().enumeratorAtPath(dataPath) {
+      while let fileName = enumerator.nextObject() as? String {
+        do {
+          try NSFileManager.defaultManager().removeItemAtPath("\(dataPath)/\(fileName)")
+        }
+        catch let e as NSError {
+          print(e)
+        }
+        catch {
+          print("error")
+        }
+      }
     }
   }
 }

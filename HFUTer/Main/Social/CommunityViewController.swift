@@ -10,8 +10,6 @@ import UIKit
 
 class CommunityViewController: EEBaseViewController {
   
-  var selectedLoveWallCell:BCMassageLoveTableViewCell!
-  
   @IBOutlet weak var scrollView: UIScrollView!
   
   private var loveWallView:BCMassageLoveWallView!
@@ -239,6 +237,11 @@ class CommunityViewController: EEBaseViewController {
     }
   }
   
+  override func onTintColorChanged() {
+    super.onTintColorChanged()
+    lostView.changeTintColor(nil)
+  }
+  
   //MARK:- 初始化UI
   func initScrollView() {
     self.scrollView.pagingEnabled = true
@@ -309,40 +312,6 @@ extension CommunityViewController:MassageMoreActionViewDelegate {
         break
       }
     }
-    //    runAfterLoginToCommunity { () -> () in
-    //      if index == 0 {
-    //        let sb = UIStoryboard(name: "MassageStroyBoard", bundle: nil)
-    //        let vc = sb.instantiateViewControllerWithIdentifier("BCSendMassageToPublicVC") as! BCSendMassageToPublicVC
-    //        vc.popBackBlock = {
-    //          self.startLoadingData()
-    //        }
-    //        vc.navTitle = "发布失物信息"
-    //        vc.shouldAddTapGastureRecognizerToView = true
-    //        self.pushToViewController(vc)
-    //      } else if index == 1 {
-    //        let alertView = UIAlertView()
-    //        alertView.title = "请选择发布渠道"
-    //        alertView.message = "若手中有失主的学号信息，请选择直接发送消息至失主，提高找回概率。若没有失主此信息，则选择发不到广场等待认领。"
-    //        alertView.addButtonWithTitle("直接发送")
-    //        alertView.addButtonWithTitle("发布广场")
-    //        alertView.tag = 1
-    //        alertView.delegate = self
-    //        alertView.show()
-    //      } else if index == 2 {
-    //        let sb = UIStoryboard(name: "MassageStroyBoard", bundle: nil)
-    //        let vc = sb.instantiateViewControllerWithIdentifier("BCMyPublishListViewController") as! BCMyPublishListViewController
-    //        vc.navTitle = "发布失物信息"
-    //        vc.shouldAddTapGastureRecognizerToView = true
-    //        self.pushToViewController(vc)
-    //      } else if index == 3 {
-    //        ROOTVC.hideRedIcon()
-    //        let vc = BCMassageListViewController(nibName:"BCMassageListViewController",bundle:nil)
-    //        self.pushToViewController(vc)
-    //      } else if index == 4 {
-    //        let vc = BCSendLoveWallViewController(nibName:"BCSendLoveWallViewController",bundle:nil)
-    //        self.pushToViewController(vc)
-    //      }
-    //    }
     self.showOrHideActionList()
   }
 }
@@ -368,14 +337,15 @@ extension CommunityViewController:BCMassageLoveWallViewDelegate {
   }
   
   func LoveWallViewSelectedAtCell(index: Int) {
-    self.selectedLoveWallCell = self.loveWallView.selectedCell
-    let vc = BCLoveWallDetailViewController(nibName:"BCLoveWallDetailViewController",bundle:nil)
-    vc.model = self.loveWallModels[index]
-    self.pushToViewController(vc)
+    runAfterLoginToCommunity { () -> () in
+      let vc = BCLoveWallDetailViewController(nibName:"BCLoveWallDetailViewController",bundle:nil)
+      vc.model = self.loveWallModels[index]
+      self.pushToViewController(vc)
+    }
   }
   func LoveWallViewLikeButtonPressed(index:Int) {
     self.loveWallModels[index].good = !self.loveWallModels[index].good
-    self.loveWallModels[index].goodCount += 1
+    self.loveWallModels[index].favoriteCount += 1
     self.loveWallView.iniModelList(self.loveWallModels)
     //    self.likeLoveWallRequest(index)
   }

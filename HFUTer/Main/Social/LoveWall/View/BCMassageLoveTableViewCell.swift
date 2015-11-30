@@ -21,6 +21,7 @@ class BCMassageLoveTableViewCell: UITableViewCell {
   @IBOutlet weak var colorfulBaclView2: UIView!
   @IBOutlet weak var likeCount: UILabel!
   @IBOutlet weak var commentCount: UILabel!
+  @IBOutlet weak var genderImageView: UIImageView!
   
   //  @IBOutlet weak var button1: BCImageButtonView!
   //  @IBOutlet weak var button2: BCImageButtonView!
@@ -59,14 +60,19 @@ class BCMassageLoveTableViewCell: UITableViewCell {
     commentCount.setFAText(prefixText: "", icon: .FACommentsO , postfixText: " \(model.commentCount)", size: 12)
     
     if model.good {
-      likeCount.setFAText(prefixText: "", icon: .FAHeart , postfixText: " \(model.goodCount)", size: 12)
+      likeCount.setFAText(prefixText: "", icon: .FAHeart , postfixText: " \(model.favoriteCount)", size: 12)
     } else {
-      likeCount.setFAText(prefixText: "", icon: .FAHeartO , postfixText: " \(model.goodCount)", size: 12)
+      likeCount.setFAText(prefixText: "", icon: .FAHeartO , postfixText: " \(model.favoriteCount)", size: 12)
       
     }
     
     (colorfulBackView.backgroundColor,colorfulBaclView2.backgroundColor) =
-      (Color.getLoveWallColors(model.color),Color.getLoveWallColors(model.color))
+      (Color.secondaryTintColor,Color.secondaryTintColor)
+    if model.color == 0 {
+      genderImageView.image = UIImage(named: "com_male_icon")
+    } else {
+      genderImageView.image = UIImage(named: "com_female_icon")
+    }
   }
   
   

@@ -14,7 +14,7 @@ class BCMassageLoveWallModel:JSONNDModel {
   var date:Int64 = 0
   var name = ""
   var good = false
-  var goodCount = 0
+  var favoriteCount = 0
   var commentCount = 0
   var color = 0
 }

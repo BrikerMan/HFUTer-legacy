@@ -25,7 +25,6 @@
 		6B218CD21C059F2A00939900 /* BCGradesHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B218CD01C059F2A00939900 /* BCGradesHeaderCell.swift */; };
 		6B218CD31C059F2A00939900 /* BCGradesHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B218CD11C059F2A00939900 /* BCGradesHeaderCell.xib */; };
 		6B2EF5631BFEEC56003373E4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EF5611BFEEC56003373E4 /* HomeViewController.swift */; };
-		6B2EF5641BFEEC56003373E4 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B2EF5621BFEEC56003373E4 /* HomeViewController.xib */; };
 		6B2EF5681BFEED9B003373E4 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EF5661BFEED9B003373E4 /* InformationViewController.swift */; };
 		6B2EF5691BFEED9B003373E4 /* InformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B2EF5671BFEED9B003373E4 /* InformationViewController.xib */; };
 		6B2EF56B1BFEEDC8003373E4 /* EEBaseNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EF56A1BFEEDC8003373E4 /* EEBaseNavBar.swift */; };
@@ -212,7 +211,6 @@
 		6B218CD11C059F2A00939900 /* BCGradesHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCGradesHeaderCell.xib; sourceTree = "<group>"; };
 		6B2EF54D1BFEE0D2003373E4 /* HFUTer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HFUTer-Bridging-Header.h"; sourceTree = "<group>"; };
 		6B2EF5611BFEEC56003373E4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		6B2EF5621BFEEC56003373E4 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		6B2EF5661BFEED9B003373E4 /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		6B2EF5671BFEED9B003373E4 /* InformationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationViewController.xib; sourceTree = "<group>"; };
 		6B2EF56A1BFEEDC8003373E4 /* EEBaseNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EEBaseNavBar.swift; sourceTree = "<group>"; };
@@ -468,7 +466,6 @@
 			children = (
 				6B2EF5611BFEEC56003373E4 /* HomeViewController.swift */,
 				6B7BDB8E1BFF196C007CEAB9 /* BCScheduleEditViewController.swift */,
-				6B2EF5621BFEEC56003373E4 /* HomeViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1219,7 +1216,7 @@
 				6BEDEB161BFED40A00CDB1B1 /* Resources */,
 				F3297A3126BD34D42FA3FD84 /* Embed Pods Frameworks */,
 				7F2DC4E353EF274160A746A0 /* Copy Pods Resources */,
-				6BD83BB51C03FA5500FD0721 /* ShellScript */,
+				6BEFE3111C09FF9D003CF84D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1306,7 +1303,6 @@
 				6B561CC61C02FA4F004E6D4C /* NewsListTableViewCell.xib in Resources */,
 				6B2EF5851BFEFF43003373E4 /* HomeNavBarView.xib in Resources */,
 				6BDC1F1F1BFF7450009DC139 /* BCColorChooseView.xib in Resources */,
-				6B2EF5641BFEEC56003373E4 /* HomeViewController.xib in Resources */,
 				6B59393F1BFF0BD500EC4F19 /* BCGradeViewTableViewHeader.xib in Resources */,
 				6B39F1561C06F23100A29D10 /* CommunityChooseImageCell.xib in Resources */,
 				6B2EF5691BFEED9B003373E4 /* InformationViewController.xib in Resources */,
@@ -1326,7 +1322,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6BD83BB51C03FA5500FD0721 /* ShellScript */ = {
+		6BEFE3111C09FF9D003CF84D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1608,6 +1604,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HFUTer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

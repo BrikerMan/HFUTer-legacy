@@ -9,6 +9,18 @@
 import Foundation
 import UIKit
 
+//检查首次启动
+func isAppFirstLaunchedForVersion(forVersion:String)->Bool{
+  let defaults = NSUserDefaults.standardUserDefaults()
+  if let _ = defaults.stringForKey("isAppAlreadyLaunchedOnce\(forVersion)"){
+    print("App already launched")
+    return false
+  }else{
+    defaults.setBool(true, forKey: "isAppAlreadyLaunchedOnce\(forVersion)")
+    print("App launched first time")
+    return true
+  }
+}
 
 func runAfterLoginToEdu(block:()->()) {
   if DataEnv.eduUser.isLogin {
@@ -18,7 +30,6 @@ func runAfterLoginToEdu(block:()->()) {
     RootVC.showLoginToSchoolVC()
   }
 }
-
 
 func runAfterLoginToCommunity(block:()->()) {
   if DataEnv.eduUser.isLogin {
@@ -32,7 +43,6 @@ func runAfterLoginToCommunity(block:()->()) {
     RootVC.showLoginToSchoolVC()
   }
 }
-
 
 //检查表值
 func isEurekaValueForKeyExist(values:[String: Any?],rowName:String) -> Bool {

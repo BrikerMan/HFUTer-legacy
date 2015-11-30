@@ -11,8 +11,8 @@ private let _SingletonASharedInstance = DataEnvironment()
 
 class DataEnvironment {
 
-  var eduUser:EduUser!
-  var comUser = ComUser()
+  var eduUser:EduUser
+  var comUser:ComUser
   var currentWeek = 1 {
     didSet{
       if currentWeek <= 1 {
@@ -24,6 +24,13 @@ class DataEnvironment {
   //单例
   class func sharedManager() -> DataEnvironment {
     return _SingletonASharedInstance
+  }
+  
+  
+  init() {
+    eduUser = PlistManager.shared().readEduUser()
+    comUser = PlistManager.shared().readComUser()
+    self.calculateCurrentWeek()
   }
 
   func saveEduUser(user:EduUser) {
@@ -60,7 +67,6 @@ class DataEnvironment {
   }
 
   func loginComUser() {
-    comUser = readComUser()
     if comUser.isLogin {
       BCCommunityUserLoginRequest.login(comUser.username, password: comUser.password,
         onSuccessBlock: { (response) -> () in
@@ -80,7 +86,7 @@ class DataEnvironment {
   }
 
   func readComUser() -> ComUser{
-    return  PlistManager.readComUser()
+    return  PlistManager.shared().readComUser()
   }
 
   func saveComUser(user:ComUser) {

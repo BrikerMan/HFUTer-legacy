@@ -54,6 +54,15 @@ class MassageLostListView: EEXibView {
       self.tableView.mj_footer.endRefreshingWithNoMoreData()
     }
   }
+  
+  override func changeTintColor(notification: NSNotification?) {
+    super.changeTintColor(notification)
+    if let cells = tableView.visibleCells as? [MassageLostTableViewCell] {
+      for cell in cells {
+        cell.backColorView.backgroundColor  = Color.secondaryTintColor
+      }
+    }
+  }
 }
 
 private typealias massageLostTableViewCellDelegate = MassageLostListView

@@ -10,9 +10,9 @@ import UIKit
 
 class HomeViewController: EEBaseViewController {
   
-  @IBOutlet weak var scrollView: UIScrollView!
   
   //主Views
+  private var scrollView = UIScrollView()
   private var homeNavbar = HomeNavBarView()
   private var gradesView:BCGradesTableView!
   private var scheduleView:BCScheculeView!
@@ -217,10 +217,18 @@ class HomeViewController: EEBaseViewController {
       make.height.equalTo(64)
     }
     
+    
     self.scrollView.pagingEnabled = true
     self.scrollView.showsHorizontalScrollIndicator = false
     self.scrollView.contentSize = CGSizeMake(ScreenWidth * 2, scrollView.frame.size.height);
     self.scrollView.delegate = self
+    
+    self.view.addSubview(scrollView)
+    
+    scrollView.snp_makeConstraints { (make) -> Void in
+      make.edges.equalTo(self.view).inset(UIEdgeInsetsMake(64, 0, 49, 0))
+    }
+    
     
     scheduleView = BCScheculeView()
     scheduleView.delegate = self

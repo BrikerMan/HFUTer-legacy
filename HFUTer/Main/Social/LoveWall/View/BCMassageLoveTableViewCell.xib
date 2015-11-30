@@ -109,6 +109,14 @@
                                             </mask>
                                         </variation>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="com_female_icon" translatesAutoresizingMaskIntoConstraints="NO" id="KUo-UB-QVl">
+                                        <rect key="frame" x="90.5" y="12" width="15" height="15"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="15" id="kga-wl-y0E"/>
+                                            <constraint firstAttribute="height" constant="15" id="xF8-NE-CKM"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.89803921568627454" green="0.19607843137254902" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
@@ -120,6 +128,8 @@
                                     <constraint firstItem="ovo-jq-OBk" firstAttribute="centerY" secondItem="50c-wr-ymr" secondAttribute="centerY" id="PRW-6O-JSO"/>
                                     <constraint firstAttribute="trailing" secondItem="kJt-C1-pdt" secondAttribute="trailing" constant="8" id="Wdh-fX-0yu"/>
                                     <constraint firstItem="HMA-wL-wng" firstAttribute="top" secondItem="ovo-jq-OBk" secondAttribute="top" id="Xd8-M2-RSj"/>
+                                    <constraint firstItem="KUo-UB-QVl" firstAttribute="centerY" secondItem="HMA-wL-wng" secondAttribute="centerY" id="YSv-Bw-Wd7"/>
+                                    <constraint firstItem="KUo-UB-QVl" firstAttribute="leading" secondItem="HMA-wL-wng" secondAttribute="trailing" constant="5" id="et5-v1-fH1"/>
                                     <constraint firstItem="kJt-C1-pdt" firstAttribute="top" secondItem="ovo-jq-OBk" secondAttribute="top" id="hGX-m9-O9w"/>
                                     <constraint firstItem="viA-Im-m5q" firstAttribute="centerY" secondItem="ovo-jq-OBk" secondAttribute="centerY" id="lc6-3t-JpH"/>
                                     <constraint firstItem="kJt-C1-pdt" firstAttribute="leading" secondItem="viA-Im-m5q" secondAttribute="trailing" constant="5" id="owF-eW-9sF"/>
@@ -161,6 +171,7 @@
                 <outlet property="colorfulBaclView2" destination="50c-wr-ymr" id="Unz-fj-UxB"/>
                 <outlet property="commentCount" destination="viA-Im-m5q" id="tZC-lf-BEe"/>
                 <outlet property="contentLabel" destination="xZF-i4-nlb" id="wRX-2B-Laa"/>
+                <outlet property="genderImageView" destination="KUo-UB-QVl" id="Qmv-iA-krb"/>
                 <outlet property="likeCount" destination="kJt-C1-pdt" id="smn-p6-5ND"/>
                 <outlet property="mainView" destination="5Md-dg-J5V" id="qp5-Qc-VB1"/>
                 <outlet property="nameLabel" destination="HMA-wL-wng" id="LwZ-XG-vZF"/>
@@ -169,4 +180,7 @@
             <point key="canvasLocation" x="240" y="282.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="com_female_icon" width="15" height="15"/>
+    </resources>
 </document>

@@ -9,21 +9,59 @@
 import Foundation
 import UIKit
 
+private let _SingletonASharedInstance = PlistManager()
+
+
 class PlistManager {
+  
+  private var filePath:String
+  
+  private init() {
+    let mypaths:NSArray = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+    filePath = mypaths.objectAtIndex(0) as! String
+  }
+  
+  class func shared() -> PlistManager{
+    return _SingletonASharedInstance
+  }
+  
+  func readPlistFile(fileName:String) -> NSDictionary?{
+    let filePath = self.filePath + "/" + fileName
+    let dataSource = NSDictionary(contentsOfFile: filePath)
+    return dataSource
+  }
+  
+  func readEduUser() -> EduUser{
+    let dataSource = readPlistFile("user.plist")
+    let user = EduUser()
+    user.username     = dataSource?.objectForKey("username")    as? String ?? "000"
+    user.password     = dataSource?.objectForKey("password")    as? String ?? ""
+    user.schoolYard   = dataSource?.objectForKey("schoolYard")  as? String ?? ""
+    user.showWeekEnd  = dataSource?.objectForKey("showWeekEnd") as? Bool   ?? false
+    user.name         = dataSource?.objectForKey("name")        as? String ?? "请登录"
+    user.gender       = dataSource?.objectForKey("gender")      as? String ?? ""
+    user.academy      = dataSource?.objectForKey("academy")     as? String ?? ""
+    user.major        = dataSource?.objectForKey("major")       as? String ?? ""
+    user.className    = dataSource?.objectForKey("className")   as? String ?? ""
+    if user.username != "000" {
+      user.isLogin = true
+    }
+    return user
+  }
+  
   class func getFilePath(filename: String) -> String {
     let mypaths:NSArray = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
     let mydocpath:String = mypaths.objectAtIndex(0) as! String
-
+    
     let filepath = (mydocpath as NSString).stringByAppendingPathComponent(filename)
     return filepath
   }
-
-
+  
   class func readEduUser() -> EduUser{
     let filePath = self.getFilePath("user.plist")
     let dataSource = NSDictionary(contentsOfFile: filePath)
     let user = EduUser()
-
+    
     if let dataSource = dataSource {
       user.username     = dataSource.objectForKey("username")    as? String ?? "000"
       user.password     = dataSource.objectForKey("password")    as? String ?? ""
@@ -38,10 +76,10 @@ class PlistManager {
         user.isLogin = true
       }
     }
-
+    
     return user
   }
-
+  
   class func saveEduUser(user:EduUser) {
     let filePath = self.getFilePath("user.plist")
     let dataSource:NSMutableDictionary = ["key":"value"]
@@ -56,14 +94,14 @@ class PlistManager {
     dataSource.setValue(user.className, forKey: "className")
     dataSource.writeToFile(filePath, atomically: true)
   }
-
+  
   class func deleleEduUser() {
     let filePath = self.getFilePath("user.plist")
     let dataSource:NSMutableArray = []
     dataSource.writeToFile(filePath, atomically: true)
   }
-
-  class func readComUser() -> ComUser{
+  
+  func readComUser() -> ComUser{
     let filePath = PlistManager.getFilePath("comUser.plist")
     let dataSource = NSDictionary(contentsOfFile: filePath)
     let user = ComUser()
@@ -73,7 +111,7 @@ class PlistManager {
           user.username = username
           user.password = password
           user.isLogin = true
-
+          
         }
         if let avatar = dataSource.objectForKey("avatar") as? String {
           user.avatar = avatar
@@ -82,7 +120,7 @@ class PlistManager {
     }
     return user
   }
-
+  
   class func saveComUser(user:ComUser) {
     let filePath = PlistManager.getFilePath("comUser.plist")
     let dataSource:NSMutableDictionary = ["key":"value"]
@@ -97,14 +135,14 @@ class PlistManager {
     let dataSource:NSMutableArray = []
     dataSource.writeToFile(filePath, atomically: true)
   }
-
+  
   class func saveTintColor(color:UIColor) {
     let filePath = self.getFilePath("setting.plist")
     let colorString = color.hexString
-
+    
     let dataSource = NSMutableDictionary(contentsOfFile: filePath)
     var dataSourceNew:NSMutableDictionary = ["key":"value"]
-
+    
     if let dataSource = dataSource {
       dataSourceNew = dataSource
       dataSourceNew.setValue(colorString, forKey: "tintColor")
@@ -113,18 +151,17 @@ class PlistManager {
     }
     dataSourceNew.writeToFile(filePath, atomically: true)
   }
-
-
-  class func readTintColor() {
-    let filePath = self.getFilePath("setting.plist")
-    let dataSource = NSDictionary(contentsOfFile: filePath)
+  
+  
+  func readTintColor() {
+    let dataSource = readPlistFile("setting.plist")
     var tintColor = UIColor(hexString: "#F86366", alpha: 1.0)
-
+    
     if let dataSource = dataSource {
       let colorString = (dataSource.objectForKey("tintColor") as! String)
       tintColor = UIColor(hexString: colorString, alpha: 1.0)
     }
-
+    
     Color.primaryTintColor = tintColor
   }
 }

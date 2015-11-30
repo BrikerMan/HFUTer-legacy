@@ -45,7 +45,7 @@ extension InfoNewsCategoriesViewController:UITableViewDataSource {
 extension InfoNewsCategoriesViewController:UITableViewDelegate {
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
-    let vc = InfoNewsListViewController()
+    let vc = InfoNewsListViewController(nib: "InfoNewsListViewController")
     vc.setupNewsCategoryModel(newsCategories[indexPath.row])
     self.pushToViewController(vc)
   }

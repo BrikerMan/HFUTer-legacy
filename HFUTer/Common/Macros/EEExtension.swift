@@ -33,6 +33,17 @@ extension String {
     }
     return 0
   }
+  
+  func indexOf(substring: String) -> Int? {
+    let maxIndex = self.characters.count - substring.characters.count
+    for index in 0...maxIndex {
+      let rangeSubstring = self.startIndex.advancedBy(index)..<self.startIndex.advancedBy(index + substring.characters.count)
+      if self.substringWithRange(rangeSubstring) == substring {
+        return index
+      }
+    }
+    return nil
+  }
 
   subscript(r:Range<Int>) -> String {
     get {
@@ -45,6 +56,15 @@ extension String {
     }
   }
 
+  func removeStringFromIndex(index:Int) -> String?{
+    if index < self.characters.count {
+      let newsCharacters = self[index..<self.characters.count]
+      return newsCharacters
+    } else {
+      return nil
+    }
+  }
+  
   func seperateBy(char:Character) -> [String] {
     var result = [String]()
     var index = 0
