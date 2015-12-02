@@ -59,7 +59,7 @@ class BCMassageLoveTableViewCell: UITableViewCell {
     
     commentCount.setFAText(prefixText: "", icon: .FACommentsO , postfixText: " \(model.commentCount)", size: 12)
     
-    if model.good {
+    if model.favorite {
       likeCount.setFAText(prefixText: "", icon: .FAHeart , postfixText: " \(model.favoriteCount)", size: 12)
     } else {
       likeCount.setFAText(prefixText: "", icon: .FAHeartO , postfixText: " \(model.favoriteCount)", size: 12)

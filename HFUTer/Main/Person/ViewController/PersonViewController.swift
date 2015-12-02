@@ -119,27 +119,36 @@ class PersonViewController: EEBaseFormViewController {
       +++ Section()
       
       <<< ButtonRow() {
-        $0.title = "帮助 - 暂不可用"
-        $0.presentationMode = .PresentModally(controllerProvider: ControllerProvider.Callback {
-          return BCLoginToEduViewController(nib: "BCLoginToEduViewController")
+        $0.title = "帮助 "
+        $0.presentationMode = .Show(controllerProvider: ControllerProvider.Callback {
+          let vc = PersonHelpViewController(nib: "PersonHelpViewController")
+          vc.style = .Help
+                    vc.hidesBottomBarWhenPushed = true
+          return vc
           }, completionCallback: { vc in vc.dismissViewControllerAnimated(true, completion: nil) })
         }.cellSetup { cell, row in
           cell.imageView?.image = UIImage(named: "person_help")
       }
       
       <<< ButtonRow() {
-        $0.title = "关于我们 - 暂不可用"
-        $0.presentationMode = .PresentModally(controllerProvider: ControllerProvider.Callback {
-          return BCLoginToEduViewController(nib: "BCLoginToEduViewController")
+        $0.title = "关于我们"
+        $0.presentationMode = .Show(controllerProvider: ControllerProvider.Callback {
+          let vc = PersonHelpViewController(nib: "PersonHelpViewController")
+          vc.style = .AboutUs
+          vc.hidesBottomBarWhenPushed = true
+          return vc
           }, completionCallback: { vc in vc.dismissViewControllerAnimated(true, completion: nil) })
         }.cellSetup { cell, row in
           cell.imageView?.image = UIImage(named: "person_about")
       }
       
       <<< ButtonRow() {
-        $0.title = "隐私条款 - 暂不可用"
-        $0.presentationMode = .PresentModally(controllerProvider: ControllerProvider.Callback {
-          return BCLoginToEduViewController()
+        $0.title = "隐私条款"
+        $0.presentationMode = .Show(controllerProvider: ControllerProvider.Callback {
+          let vc = PersonHelpViewController(nib: "PersonHelpViewController")
+          vc.style = .PrivacyPoicy
+                    vc.hidesBottomBarWhenPushed = true
+          return vc
           }, completionCallback: { vc in vc.dismissViewControllerAnimated(true, completion: nil) })
         }.cellSetup { cell, row in
           cell.imageView?.image = UIImage(named: "person_legal")

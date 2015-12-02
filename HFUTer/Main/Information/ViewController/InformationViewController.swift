@@ -77,7 +77,9 @@ extension InformationViewController:UICollectionViewDelegate {
         self.pushToViewController(vc)
       })
     case 4:
-      Hud.showMassage("暂未开放")
+      Hud.showError("暂未开放")
+//      let vc = InfoBookListViewController(nib: "InfoBookListViewController")
+//      self.pushToViewController(vc)
     default:
       break
     }

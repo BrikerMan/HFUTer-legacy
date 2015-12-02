@@ -14,7 +14,7 @@ let NetErrorWarning = "网络错误，请稍候再试"
 
 
 
-
+let GB2312Encoding = CFStringConvertEncodingToNSStringEncoding(0x0632)
 let colorAlphaComponent:CGFloat  = 0.8
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Managers

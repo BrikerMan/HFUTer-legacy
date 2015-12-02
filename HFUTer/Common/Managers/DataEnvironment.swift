@@ -99,11 +99,13 @@ class DataEnvironment {
 
   func handleLogOut() {
     self.eduUser = EduUser()
+    self.comUser = ComUser()
     PlistManager.deleleEduUser()
-    PlistManager.deleleEduUser()
+    PlistManager.deleleComUser()
     DBManager.sharedManager().deleteGrades()
     DBManager.sharedManager().deleteSchedules()
   }
+  
   func calculateCurrentWeek() {
     var from = NSTimeInterval()
     if self.eduUser.schoolYard == "HF" {

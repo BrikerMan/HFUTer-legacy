@@ -70,7 +70,9 @@ class CommunityViewController: EEBaseViewController {
         self.lostView.initModelList(self.lostAndFindList)
       }, onFailedBlock: { (reason) -> Void in
         Hud.showError(reason)
+        self.lostView.endLoadMoreRefreshing(true)
       }, onNetErrorBlock: {() -> Void in
+        self.lostView.endLoadMoreRefreshing(true)
         Hud.showMassage(NetErrorWarning)
     })
   }
@@ -97,8 +99,10 @@ class CommunityViewController: EEBaseViewController {
         self.loveWallView.iniModelList(self.loveWallModels)
       }, onFailedBlock: { (reason) -> Void in
         Hud.showError(reason)
+        self.loveWallView.endLoadMoreRefreshing(true)
       }) { () -> () in
         Hud.showMassage("网络错误，请稍候再试")
+        self.loveWallView.endLoadMoreRefreshing(true)
     }
     
   }
@@ -144,7 +148,7 @@ class CommunityViewController: EEBaseViewController {
   //  }
   
   
-  //MARK:- 动画
+//MARK:- 动画
   @objc private func showOrHideActionList() {
     if !isShowingActionView {
       isShowingActionView = true
@@ -242,7 +246,7 @@ class CommunityViewController: EEBaseViewController {
     lostView.changeTintColor(nil)
   }
   
-  //MARK:- 初始化UI
+//MARK:- 初始化UI
   func initScrollView() {
     self.scrollView.pagingEnabled = true
     self.scrollView.showsHorizontalScrollIndicator = false
@@ -275,7 +279,7 @@ class CommunityViewController: EEBaseViewController {
   }
 }
 
-//MARK:UIAlertViewDelegate
+//MARK:- UIAlertViewDelegate
 extension CommunityViewController:UIAlertViewDelegate {
   func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
     print(buttonIndex)
@@ -331,6 +335,7 @@ extension CommunityViewController:BCMassageLoveWallViewDelegate {
     loveWallListPage = 0
     getLoveWallDataRequest()
   }
+  
   func LoveWallViewLoadMore() {
     loveWallListPage += 1
     getLoveWallDataRequest()
@@ -344,7 +349,7 @@ extension CommunityViewController:BCMassageLoveWallViewDelegate {
     }
   }
   func LoveWallViewLikeButtonPressed(index:Int) {
-    self.loveWallModels[index].good = !self.loveWallModels[index].good
+    self.loveWallModels[index].favorite = !self.loveWallModels[index].favorite
     self.loveWallModels[index].favoriteCount += 1
     self.loveWallView.iniModelList(self.loveWallModels)
     //    self.likeLoveWallRequest(index)

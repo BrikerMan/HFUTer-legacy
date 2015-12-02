@@ -22,6 +22,7 @@ target 'HFUTer' do
   
   #网络
   pod 'Alamofire'                         ## 牛逼的网络请求库
+  pod 'KMPlaceholderTextView'
   
   #数据
   pod 'YYModel'                           ##Dic or Json -> Model

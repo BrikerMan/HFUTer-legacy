@@ -12,9 +12,9 @@ class BCLoveWallDetailViewController: EEBaseViewController {
   
   @IBOutlet weak var tableView:UITableView!
   @IBOutlet weak var replyViewHeight: NSLayoutConstraint!
-  @IBOutlet weak var replyTextView: UITextView!
   @IBOutlet weak var bottomView: UIView!
-  @IBOutlet weak var replyButton: UIButton!
+  @IBOutlet weak var likeButton: UIButton!
+  @IBOutlet weak var commentButton: UIButton!
   
   var isFinishedPushAnimation = false
   
@@ -29,25 +29,24 @@ class BCLoveWallDetailViewController: EEBaseViewController {
     let nib2 = UINib(nibName: "BCLoveWallDetailTableViewCell", bundle: nil)
     tableView.registerNib(nib1, forCellReuseIdentifier: "BCMassageLoveTableViewCell")
     tableView.registerNib(nib2, forCellReuseIdentifier: "BCLoveWallDetailTableViewCell")
-
-    self.view.backgroundColor = Color.primaryLightColor
-    tableView.backgroundColor = Color.getLoveWallColors(model.color).ultraLight()
     
-    replyTextView.layer.cornerRadius = 5
+    self.view.backgroundColor = UIColor.whiteColor()
+    tableView.backgroundColor = Color.primaryTintColor.ultraLight()
+    bottomView.backgroundColor = Color.primaryTintColor.ultraLight()
+    bottomView.alpha = 0
+    
+    commentButton.setFAText(prefixText: "", icon: .FACommentsO, postfixText: " 评论", size: 15, forState: UIControlState.Normal)
+    likeButton.setFAText(prefixText: "", icon: .FAHeartO, postfixText: " 赞", size: 15, forState: UIControlState.Normal)
     self.getCommentList()
-    self.bottomView.alpha = 0
+
     animateStart()
   }
   
   func animateStart() {
     self.isFinishedPushAnimation = true
     self.tableView.reloadData()
-    
     //BottomView
-    let bottomOrigin = self.bottomView.frame
-    bottomView.frame = CGRectMake(bottomView.frame.origin.x, bottomView.frame.origin.y + bottomView.frame.size.height, bottomView.frame.size.width, bottomView.frame.size.height)
     UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
-      self.bottomView.frame = bottomOrigin
       self.bottomView.alpha = 1
       }, completion: nil)
     
@@ -80,11 +79,11 @@ class BCLoveWallDetailViewController: EEBaseViewController {
   }
   
   @IBAction func onReplyButtonpPressed(sender: AnyObject) {
-    if replyTextView.text.characters.count < 5 {
-      Hud.showMassage("请输入超过5个字符的评论")
-      return
-    }
-    self.sendCommentList(replyTextView.text)
+//    if replyTextView.text.characters.count < 5 {
+//      Hud.showMassage("请输入超过5个字符的评论")
+//      return
+//    }
+//    self.sendCommentList(replyTextView.text)
   }
   
   @IBAction func onLikeButtonPressed(sender: AnyObject) {
@@ -94,7 +93,7 @@ class BCLoveWallDetailViewController: EEBaseViewController {
     ]
     BCBaseRequest.getJsonFromCommunityServerRequest(url, params: params,
       onFinishedBlock: { (response) -> Void in
-        self.model.good = true
+        self.model.favorite = true
         self.model.favoriteCount += 1
         self.tableView.reloadData()
       }, onFailedBlock: { (reason) -> Void in
@@ -104,22 +103,16 @@ class BCLoveWallDetailViewController: EEBaseViewController {
         
     }
   }
-
   
-  private func sendCommentList(comment:String) {
+  
+  private func sendCommentList(params:[String : AnyObject]) {
     Hud.showLoading("正在发表评论")
     let url = "http://hfut.cn-hangzhou.aliapp.com/api/confession/comment"
-    let params = [
-      "content":comment,
-      "id":model.id,
-      "anonymous":false
-    ]
-    
-    BCBaseRequest.getJsonFromCommunityServerRequest(url, params: params as! [String : AnyObject],
+
+    BCBaseRequest.getJsonFromCommunityServerRequest(url, params: params,
       onFinishedBlock: { (response) -> Void in
         self.commentList.removeAll()
         self.getCommentList()
-        self.replyTextView.text = ""
         Hud.dismiss()
       }, onFailedBlock: { (reason) -> Void in
         Hud.showError(reason)
@@ -134,6 +127,22 @@ class BCLoveWallDetailViewController: EEBaseViewController {
 }
 
 
+extension BCLoveWallDetailViewController:BCReplyCommentControllerDelegate {
+  func replyCommentControllerDidReply(commend: String, anonymously: Bool, to: Int) {
+    var params:[String:AnyObject] = [
+      "content":commend,
+      "id":model.id,
+      "anonymous":anonymously,
+    ]
+    if to != 0  {
+      params["at"] = [to]
+    }
+    
+    self.sendCommentList(params)
+  }
+}
+
+//MARK:- UITableViewDataSource
 extension BCLoveWallDetailViewController:UITableViewDataSource {
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 2
@@ -155,6 +164,7 @@ extension BCLoveWallDetailViewController:UITableViewDataSource {
     if indexPath.section == 0 {
       let cell = tableView.dequeueReusableCellWithIdentifier("BCMassageLoveTableViewCell", forIndexPath: indexPath) as! BCMassageLoveTableViewCell
       firstCell = cell
+      cell.selectionStyle = .None
       if !isFinishedPushAnimation {
         cell.hidden = true
       }
@@ -168,7 +178,23 @@ extension BCLoveWallDetailViewController:UITableViewDataSource {
   }
 }
 
+//MARK:- UITableViewDelegate
 extension BCLoveWallDetailViewController:UITableViewDelegate {
+  
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    if indexPath.section == 0 {
+      tableView.deselectRowAtIndexPath(indexPath, animated: false)
+    } else {
+      tableView.deselectRowAtIndexPath(indexPath, animated: true)
+      let vc = BCReplyCommentController(nib: "BCReplyCommentController")
+      vc.delegate = self
+      if self.commentList[indexPath.row].id != 0 {
+        vc.to = self.commentList[indexPath.row].id
+      }
+      self.presentViewController(vc, animated: true, completion: nil)
+    }
+  }
+  
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     if indexPath.section == 0 {
       return BCMassageLoveTableViewCell.getHeightForModel(self.model)

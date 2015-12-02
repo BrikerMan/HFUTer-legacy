@@ -53,6 +53,7 @@ class MassageLostListView: EEXibView {
     } else {
       self.tableView.mj_footer.endRefreshingWithNoMoreData()
     }
+    self.tableView.mj_header.endRefreshing()
   }
   
   override func changeTintColor(notification: NSNotification?) {
