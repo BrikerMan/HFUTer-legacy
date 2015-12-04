@@ -25,7 +25,7 @@ class BCMassageLoveWallView: EEXibView {
   var selectedCell = BCMassageLoveTableViewCell()
   var delegate:BCMassageLoveWallViewDelegate?
   
-  private var modelList = [BCMassageLoveWallModel]()
+  private var modelList = [EECommunityLoveWallModel]()
   override func initFromXib() {
     super.initFromXib()
     self.tableView.backgroundColor = UIColor.clearColor()
@@ -43,7 +43,7 @@ class BCMassageLoveWallView: EEXibView {
     
   }
   
-  func iniModelList(modelList:[BCMassageLoveWallModel]) {
+  func iniModelList(modelList:[EECommunityLoveWallModel]) {
     self.tableView.mj_header.endRefreshing()
     self.modelList = modelList
     self.tableView.reloadData()

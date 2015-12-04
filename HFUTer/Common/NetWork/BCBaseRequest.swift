@@ -118,6 +118,7 @@ class BCBaseRequest {
     request(.POST, url, parameters: params, encoding: ParameterEncoding.URL, headers: header)
       .responseJSON(completionHandler: { (response) -> Void in
         if let dic = response.result.value as? NSDictionary {
+          print(response.result.value)
           if dic["statue"] as? Bool == true {
             DataEnv.saveCookie(response.response?.allHeaderFields["Set-Cookie"] as? String)
             onFinishedBlock?(response:dic)

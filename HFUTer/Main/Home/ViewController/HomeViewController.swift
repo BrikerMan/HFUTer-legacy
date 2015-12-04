@@ -326,7 +326,7 @@ extension HomeViewController:UIScrollViewDelegate {
 //MARK:- HomeNavBarViewDelegate
 extension HomeViewController:HomeNavBarViewDelegate {
   func homeNavBar(NavBar homeNavBar:HomeNavBarView,didSelecectedAtIndex index:Int) {
-    self.scrollView.scrollRectToVisible(CGRectMake(ScreenWidth*CGFloat(index),0,scrollView.frame.width,scrollView.frame.height), animated: true)
+    self.scrollView.setContentOffset(CGPointMake(ScreenWidth*CGFloat(index), 0), animated: true)
   }
   
   func homeNavBarDidPressObSelcetWeekView(NavBar: HomeNavBarView) {

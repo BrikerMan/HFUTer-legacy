@@ -28,7 +28,7 @@ class CommunityViewController: EEBaseViewController {
   private var loveWallListPage = 0
   
   private var lostAndFindList = [BCLostAndFoundModel]()
-  private var loveWallModels = [BCMassageLoveWallModel]()
+  private var loveWallModels = [EECommunityLoveWallModel]()
   private var choosedIndex = 0
   
   //MARK:- 生命周期
@@ -78,33 +78,19 @@ class CommunityViewController: EEBaseViewController {
   }
   
   private func getLoveWallDataRequest() {
-    let url = getComURL("api/confession/list")
-    let params = [
-      "pageIndex":loveWallListPage
-    ]
-    BCBaseRequest.getJsonFromCommunityServerRequest(url, params: params,
-      onFinishedBlock: { (response) -> Void in
-        let json = JSONND.init(dictionary:response as! [String : AnyObject])
-        if let array = json["data"].array {
-          for json in array {
-            let model = BCMassageLoveWallModel(JSONNDObject: json)
-            self.loveWallModels.append(model)
-          }
-          if array.count == 0 {
-            self.loveWallView.endLoadMoreRefreshing(false)
-          } else {
-            self.loveWallView.endLoadMoreRefreshing(true)
-          }
-        }
+    EECommunityLoveWallModel.getModelsFromNetWorkForPage(loveWallListPage) { (error, models) -> () in
+      if let models = models {
+        self.loveWallModels.appendContentsOf(models)
         self.loveWallView.iniModelList(self.loveWallModels)
-      }, onFailedBlock: { (reason) -> Void in
-        Hud.showError(reason)
-        self.loveWallView.endLoadMoreRefreshing(true)
-      }) { () -> () in
-        Hud.showMassage("网络错误，请稍候再试")
-        self.loveWallView.endLoadMoreRefreshing(true)
+        if models.count == 0 {
+          self.loveWallView.endLoadMoreRefreshing(false)
+        } else {
+          self.loveWallView.endLoadMoreRefreshing(true)
+        }
+      } else {
+        Hud.showError(error)
+      }
     }
-    
   }
   
   private func sendMassageToLoster(phone:String,info:String) {
@@ -148,7 +134,7 @@ class CommunityViewController: EEBaseViewController {
   //  }
   
   
-//MARK:- 动画
+  //MARK:- 动画
   @objc private func showOrHideActionList() {
     if !isShowingActionView {
       isShowingActionView = true
@@ -246,14 +232,14 @@ class CommunityViewController: EEBaseViewController {
     lostView.changeTintColor(nil)
   }
   
-//MARK:- 初始化UI
+  //MARK:- 初始化UI
   func initScrollView() {
     self.scrollView.pagingEnabled = true
     self.scrollView.showsHorizontalScrollIndicator = false
     self.scrollView.contentSize = CGSizeMake(ScreenWidth * 2, scrollView.frame.size.height);
     self.scrollView.delegate = self
     
-    self.scrollView.backgroundColor = Color.primaryTintColor.ultraLight()
+    self.scrollView.backgroundColor =  Color.getGradientColor()
     
     lostView = MassageLostListView()
     self.scrollView.addSubview(lostView)
@@ -312,9 +298,13 @@ extension CommunityViewController:MassageMoreActionViewDelegate {
         alertView.tag = 1
         alertView.delegate = self
         alertView.show()
+      case 2:
+        let vc = EEMyPublishedListController(nib: "EEMyPublishedListController")
+        self.pushToViewController(vc)
       default:
         break
       }
+      
     }
     self.showOrHideActionList()
   }

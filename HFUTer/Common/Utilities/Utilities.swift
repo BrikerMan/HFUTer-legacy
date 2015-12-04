@@ -21,6 +21,43 @@ class Utilities {
     return frame.size.height
   }
 
+  class func getTimeStringFromTimeStamp(stm:Int) -> String {
+    let timeInterval:NSTimeInterval = Double(stm)
+    let time = NSDate().timeIntervalSince1970
+    let formatter = NSDateFormatter()
+    let date = NSDate(timeIntervalSince1970: timeInterval)
+    formatter.dateFormat = "yyyy年M月d日"
+    let todayStr = formatter.stringFromDate(NSDate())
+    let todayStamp = formatter.dateFromString(todayStr)!.timeIntervalSince1970
+    
+    let sec =  Int(time - timeInterval)
+    if sec < 60 {
+      return "\(sec)秒前"
+    }
+    
+    let min:Int = Int(sec/60)
+    if min < 60 {
+      return "\(min)分钟前"
+    }
+    
+    let hour:Int = Int(min/60)
+    
+    //判断是否是今天昨天
+    if timeInterval > todayStamp {
+      formatter.dateFormat = "HH:MM"
+    } else if timeInterval > todayStamp - 86400 {
+      formatter.dateFormat = "昨天 HH:MM"
+    } else if hour < 24 * 365 {
+      formatter.dateFormat = "M-d HH:MM"
+    } else {
+      formatter.dateFormat = "yyyy-M-d HH:MM"
+    }
+    
+    let dateStr = formatter.stringFromDate(date)
+    return dateStr
+  }
+  
+  
   class func getTimeString(stm:Int64) -> String {
     let timeInterval:NSTimeInterval = Double(stm/1000)
     let time = NSDate().timeIntervalSince1970

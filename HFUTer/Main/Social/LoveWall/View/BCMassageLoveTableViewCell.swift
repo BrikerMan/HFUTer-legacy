@@ -45,7 +45,7 @@ class BCMassageLoveTableViewCell: UITableViewCell {
     // Configure the view for the selected state
   }
   
-  func setupWithModel(model:BCMassageLoveWallModel,index:Int) {
+  func setupWithModel(model:EECommunityLoveWallModel,index:Int) {
     self.index = index
     avatarView.loadAvatar(model.image)
     if model.name == "" {
@@ -54,8 +54,12 @@ class BCMassageLoveTableViewCell: UITableViewCell {
       nameLabel.text = model.name
     }
     
-    timeLabel.text =  Utilities.getTimeString(model.date)
+    timeLabel.text =  Utilities.getTimeStringFromTimeStamp(model.date_int)
+    
+
     contentLabel.text = model.content
+    
+    
     
     commentCount.setFAText(prefixText: "", icon: .FACommentsO , postfixText: " \(model.commentCount)", size: 12)
     
@@ -76,7 +80,7 @@ class BCMassageLoveTableViewCell: UITableViewCell {
   }
   
   
-  class func getHeightForModel(model:BCMassageLoveWallModel) -> CGFloat{
+  class func getHeightForModel(model:EECommunityLoveWallModel) -> CGFloat{
     let contentHeight = Utilities.getLabelHeightWithFontSize(model.content, font: UIFont.systemFontOfSize(16), width: ScreenWidth-50)
     return contentHeight + 101.0
   }

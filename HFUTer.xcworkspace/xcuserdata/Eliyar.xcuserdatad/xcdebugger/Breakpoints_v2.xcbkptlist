@@ -37,5 +37,100 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HFUTer/Main/Home/ViewController/HomeViewController.swift"
+            timestampString = "470747865.821101"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "328"
+            endingLineNumber = "328"
+            landmarkName = "homeNavBar(NavBar:didSelecectedAtIndex:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HFUTer.HomeViewController.homeNavBar (HFUTer.HomeViewController)(NavBar : HFUTer.HomeNavBarView, didSelecectedAtIndex : Swift.Int) -&gt; ()"
+                  moduleName = "HFUTer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Eliyar/Desktop/HFUTer/HFUTer/HFUTer/Main/Home/ViewController/HomeViewController.swift"
+                  timestampString = "470833741.30679"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "329"
+                  endingLineNumber = "329"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "protocol witness for HFUTer.HomeNavBarViewDelegate.homeNavBar &lt;A where A: HFUTer.HomeNavBarViewDelegate&gt; (A)(NavBar : HFUTer.HomeNavBarView, didSelecectedAtIndex : Swift.Int) -&gt; () in conformance HFUTer.HomeViewController : HFUTer.HomeNavBarViewDelegate in HFUTer"
+                  moduleName = "HFUTer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Eliyar/Desktop/HFUTer/HFUTer/HFUTer/Main/Home/ViewController/HomeViewController.swift"
+                  timestampString = "470833741.307027"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "328"
+                  endingLineNumber = "328"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "dynamic HFUTer.HomeViewController.homeNavBar (HFUTer.HomeViewController)(NavBar : HFUTer.HomeNavBarView, didSelecectedAtIndex : Swift.Int) -&gt; ()"
+                  moduleName = "HFUTer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Eliyar/Desktop/HFUTer/HFUTer/HFUTer/Main/Home/ViewController/HomeViewController.swift"
+                  timestampString = "470833741.307216"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "328"
+                  endingLineNumber = "328"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HFUTer/Main/Social/LoveWall/Model/EECommunityLoveCommentModel.swift"
+            timestampString = "470825145.126332"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "getModelsFromNetWorkForPage(_:model_id:onFinishedBlock:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HFUTer/Main/Social/LoveWall/View/EEMyPublishedLostListTableViewCell.swift"
+            timestampString = "470833741.001337"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "setupWithModel(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

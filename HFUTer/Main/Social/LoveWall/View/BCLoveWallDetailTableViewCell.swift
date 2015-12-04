@@ -26,7 +26,7 @@ class BCLoveWallDetailTableViewCell: UITableViewCell {
     
   }
   
-  func setupWithModel(model:BCMassageCommentModel) {
+  func setupWithModel(model:EECommunityLoveCommentModel) {
     self.avatarView.loadAvatar(model.image)
     if model.name == "" {
       self.nameLabel.text = "匿名"
@@ -34,12 +34,16 @@ class BCLoveWallDetailTableViewCell: UITableViewCell {
       self.nameLabel.text = model.name
     }
     
-    self.timeLabel.text = Utilities.getTimeString(model.date)
-    self.contentLabel.text = model.content
+    self.timeLabel.text = Utilities.getTimeStringFromTimeStamp(model.date_int)
+    if model.at.count != 0 {
+      self.contentLabel.text = "@" + model.at[0].name + " " + model.content
+    } else {
+      self.contentLabel.text = model.content
+    }
   }
   
   
-  static func getHightForModel(model:BCMassageCommentModel) -> CGFloat{
+  static func getHightForModel(model:EECommunityLoveCommentModel) -> CGFloat{
     let height = Utilities.getLabelHeightWithFontSize(model.content, font: UIFont.systemFontOfSize(14), width: ScreenWidth-100)
     return 80 + height
   }

@@ -96,6 +96,12 @@ class ColorManager {
   */
   
   
+  func getGradientColor() -> UIColor {
+    let frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight)
+    let color = GradientColor(.Radial, frame, [Color.primaryTintColor.ultraLight(),UIColor.whiteColor()])
+    return color
+  }
+  
   func getLoveWallColors(index:Int) -> UIColor{
     if index == 0 {
       return FlatSkyBlue()

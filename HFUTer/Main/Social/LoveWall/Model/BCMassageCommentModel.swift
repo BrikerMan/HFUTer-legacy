@@ -13,4 +13,5 @@ class BCMassageCommentModel:JSONNDModel {
   var image = ""
   var date:Int64 = 0
   var name = ""
+  var uid  = 0
 }

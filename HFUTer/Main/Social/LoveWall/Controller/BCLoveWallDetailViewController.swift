@@ -18,9 +18,9 @@ class BCLoveWallDetailViewController: EEBaseViewController {
   
   var isFinishedPushAnimation = false
   
-  var model:BCMassageLoveWallModel!
+  var model:EECommunityLoveWallModel!
   var firstCell:BCMassageLoveTableViewCell?
-  private var commentList = [BCMassageCommentModel]()
+  private var commentList = [EECommunityLoveCommentModel]()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -31,18 +31,18 @@ class BCLoveWallDetailViewController: EEBaseViewController {
     tableView.registerNib(nib2, forCellReuseIdentifier: "BCLoveWallDetailTableViewCell")
     
     self.view.backgroundColor = UIColor.whiteColor()
-    tableView.backgroundColor = Color.primaryTintColor.ultraLight()
-    bottomView.backgroundColor = Color.primaryTintColor.ultraLight()
+    tableView.backgroundColor = Color.getGradientColor()
+    bottomView.backgroundColor = UIColor.clearColor()
     bottomView.alpha = 0
     
     commentButton.setFAText(prefixText: "", icon: .FACommentsO, postfixText: " 评论", size: 15, forState: UIControlState.Normal)
     likeButton.setFAText(prefixText: "", icon: .FAHeartO, postfixText: " 赞", size: 15, forState: UIControlState.Normal)
     self.getCommentList()
-
+    
     animateStart()
   }
   
-  func animateStart() {
+  private func animateStart() {
     self.isFinishedPushAnimation = true
     self.tableView.reloadData()
     //BottomView
@@ -54,36 +54,21 @@ class BCLoveWallDetailViewController: EEBaseViewController {
   
   private func getCommentList() {
     Hud.showLoading("正在加载评论")
-    let url = "http://hfut.cn-hangzhou.aliapp.com/api/confession/commentList"
-    let params = [
-      "pageIndex":0,
-      "id":model.id
-    ]
-    
-    BCBaseRequest.getJsonFromCommunityServerRequest(url, params: params,
-      onFinishedBlock: { (response) -> Void in
-        let json = JSONND.init(dictionary:response as! [String : AnyObject])
-        if let array = json["data"].array {
-          for json in array {
-            let model = BCMassageCommentModel(JSONNDObject: json)
-            self.commentList.append(model)
-          }
-        }
-        Hud.dismiss()
+    EECommunityLoveCommentModel.getModelsFromNetWorkForPage(0, model_id: model.id) { (error, models) -> () in
+      if let models = models {
+        self.commentList.appendContentsOf(models)
         self.tableView.reloadData()
-      }, onFailedBlock: { (reason) -> Void in
-        Hud.showError(reason)
-      }) { () -> Void in
-        Hud.showError("网络错误，请稍候尝试")
+        Hud.dismiss()
+      } else {
+        Hud.showError(error)
+      }
     }
   }
   
   @IBAction func onReplyButtonpPressed(sender: AnyObject) {
-//    if replyTextView.text.characters.count < 5 {
-//      Hud.showMassage("请输入超过5个字符的评论")
-//      return
-//    }
-//    self.sendCommentList(replyTextView.text)
+    let vc = BCReplyCommentController(nib: "BCReplyCommentController")
+    vc.delegate = self
+    self.presentViewController(vc, animated: true, completion: nil)
   }
   
   @IBAction func onLikeButtonPressed(sender: AnyObject) {
@@ -108,7 +93,7 @@ class BCLoveWallDetailViewController: EEBaseViewController {
   private func sendCommentList(params:[String : AnyObject]) {
     Hud.showLoading("正在发表评论")
     let url = "http://hfut.cn-hangzhou.aliapp.com/api/confession/comment"
-
+    
     BCBaseRequest.getJsonFromCommunityServerRequest(url, params: params,
       onFinishedBlock: { (response) -> Void in
         self.commentList.removeAll()
@@ -135,7 +120,10 @@ extension BCLoveWallDetailViewController:BCReplyCommentControllerDelegate {
       "anonymous":anonymously,
     ]
     if to != 0  {
-      params["at"] = [to]
+      if let json = try? NSJSONSerialization.dataWithJSONObject([to], options: NSJSONWritingOptions.init(rawValue: 0)) {
+        let jsonString = NSString(data: json, encoding: NSUTF8StringEncoding)
+        params["at"] = jsonString
+      }
     }
     
     self.sendCommentList(params)
@@ -188,9 +176,7 @@ extension BCLoveWallDetailViewController:UITableViewDelegate {
       tableView.deselectRowAtIndexPath(indexPath, animated: true)
       let vc = BCReplyCommentController(nib: "BCReplyCommentController")
       vc.delegate = self
-      if self.commentList[indexPath.row].id != 0 {
-        vc.to = self.commentList[indexPath.row].id
-      }
+      vc.to = self.commentList[indexPath.row].uid
       self.presentViewController(vc, animated: true, completion: nil)
     }
   }

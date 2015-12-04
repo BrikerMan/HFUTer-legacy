@@ -23,11 +23,11 @@ class BCMyMassagesTableViewCell: UITableViewCell {
     avatarView.layer.cornerRadius = avatarView.frame.size.height/2
   }
   
-  func setupWithModel(model:BCMyMassageModel,index:Int) {
-    avatarView.loadAvatar(model.sImage)
+  func setupWithModel(model:EECommunityLoveWallModel,index:Int) {
+    avatarView.loadAvatar(model.image)
     nameLabel.text = model.name
-    timeLabel.text = Utilities.getTimeString(model.date)
-    massageLabel.text = model.message
+    timeLabel.text = Utilities.getTimeStringFromTimeStamp(model.date_int)
+    massageLabel.text = model.content
   }
   
   static func getHeightForModel(model:BCMyMassageModel) -> CGFloat{
