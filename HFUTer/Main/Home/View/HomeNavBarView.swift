@@ -35,7 +35,7 @@ class HomeNavBarView:EEXibView {
     runkeeperSwitch.selectedBackgroundColor = .whiteColor()
     runkeeperSwitch.titleColor = .whiteColor()
     runkeeperSwitch.selectedTitleColor = Color.primaryTintColor
-    runkeeperSwitch.titleFont = UIFont(name: "HelveticaNeue-Medium", size: 13.0)
+    runkeeperSwitch.titleFont = UIFont.systemFontOfSize(13)
     runkeeperSwitch.addTarget(self, action: "runkeeperSwitchValueChanged", forControlEvents: UIControlEvents.ValueChanged)
     view!.addSubview(runkeeperSwitch)
     

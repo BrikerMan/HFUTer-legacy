@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DGRunkeeperSwitch
 
 class CommunityViewController: EEBaseViewController {
   
@@ -14,6 +15,8 @@ class CommunityViewController: EEBaseViewController {
   
   private var loveWallView:BCMassageLoveWallView!
   private var lostView:MassageLostListView!
+  
+  private var runkeeperSwitch = DGRunkeeperSwitch()
   
   // 隐藏View
   private var actionListView:MassageMoreActionView!
@@ -35,8 +38,8 @@ class CommunityViewController: EEBaseViewController {
   //MARK:- 生命周期
   override func viewDidLoad() {
     super.viewDidLoad()
-    navTitle = "社区"
     initScrollView()
+    initNavBar()
     loveWallView.startLoadingAnimation()
     lostView.startLoadingAnimation()
     showNavRightButtonWithIcon("navbar_add")
@@ -118,22 +121,6 @@ class CommunityViewController: EEBaseViewController {
         Hud.showMassage(NetErrorWarning)
     }
   }
-  
-  //  func likeLoveWallRequest(index:Int) {
-  //    let url = "http://hfut.cn-hangzhou.aliapp.com/api/confession/good"
-  //    let params = [
-  //      "id":self.loveWallModels[index].id
-  //    ]
-  //    BCBaseRequest.getJsonFromServerRequest(url, params: params,
-  //      onFinishedBlock: { (response) -> Void in
-  //
-  //      }, onFailedBlock: { (reason) -> Void in
-  //
-  //      }) { () -> Void in
-  //
-  //    }
-  //  }
-  
   
   //MARK:- 动画
   @objc private func showOrHideActionList() {
@@ -228,6 +215,12 @@ class CommunityViewController: EEBaseViewController {
     }
   }
   
+  @objc private func runkeeperSwitchValueChanged() {
+    let index = runkeeperSwitch.selectedIndex
+    self.scrollView.setContentOffset(CGPointMake(ScreenWidth*CGFloat(index), 0), animated: true)
+    self.currentShowingPage = index
+  }
+  
   override func onTintColorChanged() {
     super.onTintColorChanged()
     lostView.changeTintColor(nil)
@@ -263,6 +256,26 @@ class CommunityViewController: EEBaseViewController {
       make.width.equalTo(self.scrollView.snp_width)
       make.height.equalTo(self.scrollView.snp_height)
     })
+  }
+  
+  func initNavBar() {
+    runkeeperSwitch = DGRunkeeperSwitch(leftTitle: "失物招领", rightTitle: "表白墙")
+    runkeeperSwitch.layer.cornerRadius = 26/2
+    runkeeperSwitch.backgroundColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 0.298731161347518)
+    runkeeperSwitch.selectedBackgroundColor = .whiteColor()
+    runkeeperSwitch.titleColor = .whiteColor()
+    runkeeperSwitch.selectedTitleColor = Color.primaryTintColor
+    runkeeperSwitch.titleFont = UIFont.systemFontOfSize(13)
+    runkeeperSwitch.addTarget(self, action: "runkeeperSwitchValueChanged", forControlEvents: UIControlEvents.ValueChanged)
+    self.navBar.addSubview(runkeeperSwitch)
+    self.navBar.titleLabel.hidden = true
+    
+    runkeeperSwitch.snp_makeConstraints { (make) -> Void in
+      make.width.equalTo(160)
+      make.height.equalTo(26)
+      make.centerY.equalTo(self.navBar.titleLabel.snp_centerY)
+      make.centerX.equalTo(self.navBar.snp_centerX)
+    }
   }
 }
 
@@ -396,5 +409,7 @@ extension CommunityViewController:MassageLostListViewDelegate {
 extension CommunityViewController:UIScrollViewDelegate {
   func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
     self.currentShowingPage = Int((scrollView.contentOffset.x)/ScreenWidth)
+    let page = Int((scrollView.contentOffset.x+ScreenWidth/2)/ScreenWidth)
+    runkeeperSwitch.setSelectedIndex(page, animated: true)
   }
 }

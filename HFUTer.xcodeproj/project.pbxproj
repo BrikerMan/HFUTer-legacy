@@ -26,8 +26,6 @@
 		6B218CCF1C05977600939900 /* BCGetClassDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B218CCE1C05977600939900 /* BCGetClassDetailRequest.swift */; };
 		6B218CD21C059F2A00939900 /* BCGradesHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B218CD01C059F2A00939900 /* BCGradesHeaderCell.swift */; };
 		6B218CD31C059F2A00939900 /* BCGradesHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B218CD11C059F2A00939900 /* BCGradesHeaderCell.xib */; };
-		6B2C2CC61C1053E5001DFDEB /* EEMyPublishedLostListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2C2CC41C1053E5001DFDEB /* EEMyPublishedLostListTableViewCell.swift */; };
-		6B2C2CC71C1053E5001DFDEB /* EEMyPublishedLostListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B2C2CC51C1053E5001DFDEB /* EEMyPublishedLostListTableViewCell.xib */; };
 		6B2EF5631BFEEC56003373E4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EF5611BFEEC56003373E4 /* HomeViewController.swift */; };
 		6B2EF5681BFEED9B003373E4 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EF5661BFEED9B003373E4 /* InformationViewController.swift */; };
 		6B2EF5691BFEED9B003373E4 /* InformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B2EF5671BFEED9B003373E4 /* InformationViewController.xib */; };
@@ -111,6 +109,10 @@
 		6B61EB361C11865D00C475BF /* EEMyLoveWallListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B61EB341C11865D00C475BF /* EEMyLoveWallListController.xib */; };
 		6B649B5C1C0604130028E454 /* PersonChooseThemeColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B649B5A1C0604130028E454 /* PersonChooseThemeColorViewController.swift */; };
 		6B649B5D1C0604130028E454 /* PersonChooseThemeColorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B649B5B1C0604130028E454 /* PersonChooseThemeColorViewController.xib */; };
+		6B6942651C15294C00FB71CE /* EEMyPublishedLostListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6942631C15294C00FB71CE /* EEMyPublishedLostListTableViewCell.swift */; };
+		6B6942661C15294C00FB71CE /* EEMyPublishedLostListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B6942641C15294C00FB71CE /* EEMyPublishedLostListTableViewCell.xib */; };
+		6B6942691C15297F00FB71CE /* EEMyLoveWallListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6942671C15297F00FB71CE /* EEMyLoveWallListCell.swift */; };
+		6B69426A1C15297F00FB71CE /* EEMyLoveWallListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B6942681C15297F00FB71CE /* EEMyLoveWallListCell.xib */; };
 		6B7BDB6D1BFF0F57007CEAB9 /* BCBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB6C1BFF0F57007CEAB9 /* BCBaseRequest.swift */; };
 		6B7BDB6F1BFF0F74007CEAB9 /* BCLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB6E1BFF0F74007CEAB9 /* BCLog.swift */; };
 		6B7BDB7F1BFF11ED007CEAB9 /* Base64Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB721BFF11ED007CEAB9 /* Base64Util.m */; };
@@ -179,8 +181,6 @@
 		6BEC10FC1C002819008EFE73 /* BCTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC10FA1C002819008EFE73 /* BCTextField.swift */; };
 		6BEC110C1C003352008EFE73 /* BCLoveWallDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC10FE1C003352008EFE73 /* BCLoveWallDetailViewController.swift */; };
 		6BEC110D1C003352008EFE73 /* BCLoveWallDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BEC10FF1C003352008EFE73 /* BCLoveWallDetailViewController.xib */; };
-		6BEC110E1C003352008EFE73 /* BCSendLoveWallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC11001C003352008EFE73 /* BCSendLoveWallViewController.swift */; };
-		6BEC110F1C003352008EFE73 /* BCSendLoveWallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BEC11011C003352008EFE73 /* BCSendLoveWallViewController.xib */; };
 		6BEC11101C003352008EFE73 /* BCMassageCommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC11031C003352008EFE73 /* BCMassageCommentModel.swift */; };
 		6BEC11111C003352008EFE73 /* BCMassageLoveWallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC11041C003352008EFE73 /* BCMassageLoveWallModel.swift */; };
 		6BEC11121C003352008EFE73 /* BCLoveWallDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC11061C003352008EFE73 /* BCLoveWallDetailTableViewCell.swift */; };
@@ -228,8 +228,6 @@
 		6B218CCE1C05977600939900 /* BCGetClassDetailRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCGetClassDetailRequest.swift; sourceTree = "<group>"; };
 		6B218CD01C059F2A00939900 /* BCGradesHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCGradesHeaderCell.swift; sourceTree = "<group>"; };
 		6B218CD11C059F2A00939900 /* BCGradesHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCGradesHeaderCell.xib; sourceTree = "<group>"; };
-		6B2C2CC41C1053E5001DFDEB /* EEMyPublishedLostListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EEMyPublishedLostListTableViewCell.swift; sourceTree = "<group>"; };
-		6B2C2CC51C1053E5001DFDEB /* EEMyPublishedLostListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EEMyPublishedLostListTableViewCell.xib; sourceTree = "<group>"; };
 		6B2EF54D1BFEE0D2003373E4 /* HFUTer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HFUTer-Bridging-Header.h"; sourceTree = "<group>"; };
 		6B2EF5611BFEEC56003373E4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6B2EF5661BFEED9B003373E4 /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
@@ -314,6 +312,10 @@
 		6B61EB341C11865D00C475BF /* EEMyLoveWallListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EEMyLoveWallListController.xib; sourceTree = "<group>"; };
 		6B649B5A1C0604130028E454 /* PersonChooseThemeColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonChooseThemeColorViewController.swift; sourceTree = "<group>"; };
 		6B649B5B1C0604130028E454 /* PersonChooseThemeColorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonChooseThemeColorViewController.xib; sourceTree = "<group>"; };
+		6B6942631C15294C00FB71CE /* EEMyPublishedLostListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EEMyPublishedLostListTableViewCell.swift; sourceTree = "<group>"; };
+		6B6942641C15294C00FB71CE /* EEMyPublishedLostListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EEMyPublishedLostListTableViewCell.xib; sourceTree = "<group>"; };
+		6B6942671C15297F00FB71CE /* EEMyLoveWallListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EEMyLoveWallListCell.swift; sourceTree = "<group>"; };
+		6B6942681C15297F00FB71CE /* EEMyLoveWallListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EEMyLoveWallListCell.xib; sourceTree = "<group>"; };
 		6B7BDB6C1BFF0F57007CEAB9 /* BCBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCBaseRequest.swift; sourceTree = "<group>"; };
 		6B7BDB6E1BFF0F74007CEAB9 /* BCLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCLog.swift; sourceTree = "<group>"; };
 		6B7BDB711BFF11ED007CEAB9 /* Base64Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Util.h; sourceTree = "<group>"; };
@@ -389,8 +391,6 @@
 		6BEC10FA1C002819008EFE73 /* BCTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCTextField.swift; sourceTree = "<group>"; };
 		6BEC10FE1C003352008EFE73 /* BCLoveWallDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCLoveWallDetailViewController.swift; sourceTree = "<group>"; };
 		6BEC10FF1C003352008EFE73 /* BCLoveWallDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCLoveWallDetailViewController.xib; sourceTree = "<group>"; };
-		6BEC11001C003352008EFE73 /* BCSendLoveWallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCSendLoveWallViewController.swift; sourceTree = "<group>"; };
-		6BEC11011C003352008EFE73 /* BCSendLoveWallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCSendLoveWallViewController.xib; sourceTree = "<group>"; };
 		6BEC11031C003352008EFE73 /* BCMassageCommentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCMassageCommentModel.swift; sourceTree = "<group>"; };
 		6BEC11041C003352008EFE73 /* BCMassageLoveWallModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCMassageLoveWallModel.swift; sourceTree = "<group>"; };
 		6BEC11061C003352008EFE73 /* BCLoveWallDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCLoveWallDetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -996,6 +996,8 @@
 		6B92110C1C00240F0093BB1F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6B6942631C15294C00FB71CE /* EEMyPublishedLostListTableViewCell.swift */,
+				6B6942641C15294C00FB71CE /* EEMyPublishedLostListTableViewCell.xib */,
 				6BEC10DF1C0027DA008EFE73 /* BCLeaveContectInfoView.swift */,
 				6BEC10E01C0027DA008EFE73 /* BCLeaveContectInfoView.xib */,
 				6BEC10E11C0027DA008EFE73 /* BCMyMassagesTableViewCell.swift */,
@@ -1060,8 +1062,6 @@
 				6B4B97841C0DAD8900D08585 /* BCReplyCommentController.xib */,
 				6BEC10FE1C003352008EFE73 /* BCLoveWallDetailViewController.swift */,
 				6BEC10FF1C003352008EFE73 /* BCLoveWallDetailViewController.xib */,
-				6BEC11001C003352008EFE73 /* BCSendLoveWallViewController.swift */,
-				6BEC11011C003352008EFE73 /* BCSendLoveWallViewController.xib */,
 				6B4B9ECE1C1152BA00E38B5C /* EESendLoveWallController.swift */,
 				6B61EB331C11865D00C475BF /* EEMyLoveWallListController.swift */,
 				6B61EB341C11865D00C475BF /* EEMyLoveWallListController.xib */,
@@ -1090,8 +1090,8 @@
 				6BEC11091C003352008EFE73 /* BCMassageLoveTableViewCell.xib */,
 				6BEC110A1C003352008EFE73 /* BCMassageLoveWallView.swift */,
 				6BEC110B1C003352008EFE73 /* BCMassageLoveWallView.xib */,
-				6B2C2CC41C1053E5001DFDEB /* EEMyPublishedLostListTableViewCell.swift */,
-				6B2C2CC51C1053E5001DFDEB /* EEMyPublishedLostListTableViewCell.xib */,
+				6B6942671C15297F00FB71CE /* EEMyLoveWallListCell.swift */,
+				6B6942681C15297F00FB71CE /* EEMyLoveWallListCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1357,7 +1357,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BEC110F1C003352008EFE73 /* BCSendLoveWallViewController.xib in Resources */,
 				6B561CCC1C030657004E6D4C /* BCEduUserNotLoginView.xib in Resources */,
 				6B5F87631C05585500C80E59 /* BCCourseFeeTableViewCell.xib in Resources */,
 				6B61EB361C11865D00C475BF /* EEMyLoveWallListController.xib in Resources */,
@@ -1384,6 +1383,7 @@
 				6BA9B90B1C0C4078003B7741 /* PersonHelpViewController.xib in Resources */,
 				6B561CB81C02F45F004E6D4C /* InfoNewsCategoriesViewController.xib in Resources */,
 				6B218CCD1C05962500939900 /* InfoCourseDetailViewController.xib in Resources */,
+				6B69426A1C15297F00FB71CE /* EEMyLoveWallListCell.xib in Resources */,
 				6B5F875D1C05578500C80E59 /* InfoCourseFeeViewController.xib in Resources */,
 				6BEC11131C003352008EFE73 /* BCLoveWallDetailTableViewCell.xib in Resources */,
 				6B218CBE1C0590FD00939900 /* InfoCourseListViewController.xib in Resources */,
@@ -1405,8 +1405,8 @@
 				6B5939471BFF0BD500EC4F19 /* BCScheduleLeftCell.xib in Resources */,
 				6BEC10EE1C0027DA008EFE73 /* BCMyMassagesTableViewCell.xib in Resources */,
 				6B59394B1BFF0BD500EC4F19 /* BCShcedulesWeekEditView.xib in Resources */,
-				6B2C2CC71C1053E5001DFDEB /* EEMyPublishedLostListTableViewCell.xib in Resources */,
 				6BEC10F41C0027DA008EFE73 /* MassageMoreActionView.xib in Resources */,
+				6B6942661C15294C00FB71CE /* EEMyPublishedLostListTableViewCell.xib in Resources */,
 				6B9211121C00240F0093BB1F /* CommunityViewController.xib in Resources */,
 				6B2EF56D1BFEEDD7003373E4 /* EEBaseNavBar.xib in Resources */,
 				6B135C2B1C04070D0062097E /* InfoJobsViewController.xib in Resources */,
@@ -1513,7 +1513,6 @@
 				6BEC11111C003352008EFE73 /* BCMassageLoveWallModel.swift in Sources */,
 				6B218CC91C0595F800939900 /* StudentModel.swift in Sources */,
 				6B561C9C1C02BC97004E6D4C /* EEBaseImagesListController.swift in Sources */,
-				6B2C2CC61C1053E5001DFDEB /* EEMyPublishedLostListTableViewCell.swift in Sources */,
 				6B7BDB7F1BFF11ED007CEAB9 /* Base64Util.m in Sources */,
 				6B4A1AB01C0D6B50006BD90C /* InfoBookListViewController.swift in Sources */,
 				6B2110391C102A410003A2C0 /* CommunityUserModel.swift in Sources */,
@@ -1532,7 +1531,6 @@
 				6BEC10ED1C0027DA008EFE73 /* BCMyMassagesTableViewCell.swift in Sources */,
 				6B5939561BFF0BDC00EC4F19 /* ScheduleModel.swift in Sources */,
 				6BEC110C1C003352008EFE73 /* BCLoveWallDetailViewController.swift in Sources */,
-				6BEC110E1C003352008EFE73 /* BCSendLoveWallViewController.swift in Sources */,
 				6BEDEB641BFED5D400CDB1B1 /* HDBaseFlatButton.swift in Sources */,
 				6BEC10EB1C0027DA008EFE73 /* BCLeaveContectInfoView.swift in Sources */,
 				6B561CA11C02E32C004E6D4C /* InformationHomeCollectionViewCell.swift in Sources */,
@@ -1554,6 +1552,7 @@
 				6B9211191C0025650093BB1F /* BCCommunityUserLoginRequest.swift in Sources */,
 				6B4B97811C0D99E400D08585 /* BCReplyCommentController.swift in Sources */,
 				6BEC11121C003352008EFE73 /* BCLoveWallDetailTableViewCell.swift in Sources */,
+				6B6942651C15294C00FB71CE /* EEMyPublishedLostListTableViewCell.swift in Sources */,
 				6B5939441BFF0BD500EC4F19 /* BCScheduleHeaderCell.swift in Sources */,
 				6B5939551BFF0BDC00EC4F19 /* ScheduleMemoModel.swift in Sources */,
 				6B2EF5771BFEF8D6003373E4 /* DataEnvironment.swift in Sources */,
@@ -1612,6 +1611,7 @@
 				6BEC10F31C0027DA008EFE73 /* MassageMoreActionView.swift in Sources */,
 				6BA9B90A1C0C4078003B7741 /* PersonHelpViewController.swift in Sources */,
 				6B135C2E1C04092F0062097E /* InfoGetJobListRequest.swift in Sources */,
+				6B6942691C15297F00FB71CE /* EEMyLoveWallListCell.swift in Sources */,
 				6BEC11161C003352008EFE73 /* BCMassageLoveWallView.swift in Sources */,
 				6B39F1521C06EB5000A29D10 /* CommunitySendMassageToPublicController.swift in Sources */,
 				6B7BDB881BFF1347007CEAB9 /* BCLoginToEduRequest.swift in Sources */,

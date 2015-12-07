@@ -67,7 +67,6 @@ class BCMassageLoveTableViewCell: UITableViewCell {
       likeCount.setFAText(prefixText: "", icon: .FAHeart , postfixText: " \(model.favoriteCount)", size: 12)
     } else {
       likeCount.setFAText(prefixText: "", icon: .FAHeartO , postfixText: " \(model.favoriteCount)", size: 12)
-      
     }
     
     (colorfulBackView.backgroundColor,colorfulBaclView2.backgroundColor) =

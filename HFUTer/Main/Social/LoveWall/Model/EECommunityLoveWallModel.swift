@@ -21,6 +21,23 @@ class EECommunityLoveWallModel:NSObject {
   var favorite      = false
   
   
+  func deleteModel(onFinishedBlock:((succes:Bool,error:String?)->())?) {
+    let url = getComURL("api/confession/delete")
+    let params = [
+      "id":self.id
+    ]
+    BCBaseRequest.getJsonFromCommunityServerRequest(url, params: params,
+      onFinishedBlock: { (response) -> Void in
+        onFinishedBlock?(succes:true,error:nil)
+      },onFailedBlock: { (reason) -> Void in
+        onFinishedBlock?(succes:false,error:reason)
+      }) { () -> Void in
+        onFinishedBlock?(succes:false,error:NetErrorWarning)
+    }
+  }
+  
+  
+  //MARK:- 获取数据的类方法
   class func getModelsFromNetWorkForMineListForPage(page:Int,onFinishedBlock:((error:String?,models:[EECommunityLoveWallModel]?)->())?) {
     let url = getComURL("api/confession/myConfessionList")
     self.getModelsFromNetWorkFromURL(url, page: page) { (error, models) -> () in
