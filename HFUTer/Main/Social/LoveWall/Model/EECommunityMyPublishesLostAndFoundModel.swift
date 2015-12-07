@@ -13,7 +13,25 @@ class EECommunityMyPublishesLostAndFoundModel:NSObject {
   var content = ""
   var date_int = 0
   var pic = [String]()
-  var status = 0
+  var statue = 0
+  
+  //标记为结束
+  func markAsFinished(onFinishedBlock:((error:String?,model:EECommunityMyPublishesLostAndFoundModel?)->())?) {
+    let url =  getComURL("api/lostFound/markFinish")
+    let params = [
+      "id":self.id
+    ]
+    
+    BCBaseRequest.getJsonFromCommunityServerRequest(url, params: params,
+      onFinishedBlock: { (response) -> Void in
+        self.statue = 1
+        onFinishedBlock?(error:nil,model:self)
+      }, onFailedBlock: { (reason) -> Void in
+        onFinishedBlock?(error:reason,model:nil)
+      }) { () -> Void in
+        onFinishedBlock?(error:NetErrorWarning,model:nil)
+    }
+  }
   
   class func getModelsFromNetWorkForPage(page:Int,onFinishedBlock:((error:String?,models:[EECommunityMyPublishesLostAndFoundModel]?)->())?) {
     let url = getComURL("api/user/lostFoundList")
@@ -33,9 +51,9 @@ class EECommunityMyPublishesLostAndFoundModel:NSObject {
           onFinishedBlock?(error:nil,models:models)
         }
       }, onFailedBlock: { (reason) -> Void in
-        print(reason)
+        onFinishedBlock?(error:reason,models:nil)
       }) { () -> Void in
-        
+        onFinishedBlock?(error:NetErrorWarning,models:nil)
     }
   }
 }

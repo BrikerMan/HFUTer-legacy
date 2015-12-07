@@ -30,8 +30,8 @@ class BCLoveWallDetailViewController: EEBaseViewController {
     tableView.registerNib(nib1, forCellReuseIdentifier: "BCMassageLoveTableViewCell")
     tableView.registerNib(nib2, forCellReuseIdentifier: "BCLoveWallDetailTableViewCell")
     
-    self.view.backgroundColor = UIColor.whiteColor()
-    tableView.backgroundColor = Color.getGradientColor()
+    self.view.backgroundColor = Color.getGradientColor()
+    tableView.backgroundColor = UIColor.clearColor()
     bottomView.backgroundColor = UIColor.clearColor()
     bottomView.alpha = 0
     

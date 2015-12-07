@@ -32,7 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t89-MH-MVd">
-                                <rect key="frame" x="0.0" y="55" width="304" height="1"/>
+                                <rect key="frame" x="0.0" y="59" width="304" height="1"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -40,9 +40,12 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opH-9o-1bp">
-                                <rect key="frame" x="8" y="56.5" width="288" height="30"/>
+                                <rect key="frame" x="8" y="60.5" width="288" height="30"/>
                                 <animations/>
                                 <state key="normal" title="结束"/>
+                                <connections>
+                                    <action selector="onActionButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7U9-l8-Gjc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -58,8 +61,16 @@
                             <constraint firstItem="opH-9o-1bp" firstAttribute="leading" secondItem="fTi-qi-6u5" secondAttribute="leading" constant="8" id="KrK-Dq-rEZ"/>
                             <constraint firstItem="5xk-6Z-38E" firstAttribute="top" secondItem="fTi-qi-6u5" secondAttribute="top" constant="8" id="XEL-OB-gXR"/>
                             <constraint firstItem="sxY-2g-Rxk" firstAttribute="leading" secondItem="fTi-qi-6u5" secondAttribute="leading" constant="8" id="boG-N7-5vW"/>
+                            <constraint firstAttribute="bottom" secondItem="opH-9o-1bp" secondAttribute="bottom" id="k2e-8I-OPe"/>
                             <constraint firstItem="opH-9o-1bp" firstAttribute="top" secondItem="t89-MH-MVd" secondAttribute="bottom" id="m9K-oA-mXh"/>
+                            <constraint firstItem="opH-9o-1bp" firstAttribute="top" secondItem="t89-MH-MVd" secondAttribute="bottom" id="mBw-ao-hGc"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="901-4T-eRV"/>
+                                <exclude reference="m9K-oA-mXh"/>
+                            </mask>
+                        </variation>
                     </view>
                 </subviews>
                 <animations/>

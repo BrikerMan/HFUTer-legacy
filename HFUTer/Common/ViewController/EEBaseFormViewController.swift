@@ -27,6 +27,8 @@ class EEBaseFormViewController:FormViewController {
     }
   }
   
+  var beforePopBlock:(()->())?
+  
   //生命周期
   deinit {
     NotifCenter.removeObserver(self, name: BCChangeTintColorNotification, object: nil)
@@ -69,6 +71,7 @@ class EEBaseFormViewController:FormViewController {
   
   func pop() {
     Hud.dismiss()
+    beforePopBlock?()
     self.navigationController?.popViewControllerAnimated(true)
   }
   

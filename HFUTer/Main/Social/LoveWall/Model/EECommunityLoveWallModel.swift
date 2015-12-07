@@ -21,9 +21,26 @@ class EECommunityLoveWallModel:NSObject {
   var favorite      = false
   
   
+  class func getModelsFromNetWorkForMineListForPage(page:Int,onFinishedBlock:((error:String?,models:[EECommunityLoveWallModel]?)->())?) {
+    let url = getComURL("api/confession/myConfessionList")
+    self.getModelsFromNetWorkFromURL(url, page: page) { (error, models) -> () in
+      onFinishedBlock?(error: error, models: models)
+    }
+  }
   
   class func getModelsFromNetWorkForPage(page:Int,onFinishedBlock:((error:String?,models:[EECommunityLoveWallModel]?)->())?) {
     let url = getComURL("api/confession/list")
+    self.getModelsFromNetWorkFromURL(url, page: page) { (error, models) -> () in
+      onFinishedBlock?(error: error, models: models)
+    }
+  }
+  
+  /**
+   获取不同类型的url的列表，因为model一致，用统一方法
+   
+   - parameter url:            路径
+   */
+  class func getModelsFromNetWorkFromURL(url:String,page:Int,onFinishedBlock:((error:String?,models:[EECommunityLoveWallModel]?)->())?) {
     let params = [
       "pageIndex":page
     ]

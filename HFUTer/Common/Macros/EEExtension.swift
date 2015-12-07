@@ -197,7 +197,7 @@ extension UIColor {
   }
 
   func ultraLight() -> UIColor {
-    return self.colorWithAlphaComponent(0.2)
+    return self.lightenByPercentage(20)
   }
 }
 

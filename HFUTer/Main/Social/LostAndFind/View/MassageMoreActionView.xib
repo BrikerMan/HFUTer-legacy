@@ -25,20 +25,6 @@
                         <action selector="onILostThingsButtonPress:" destination="-1" eventType="touchUpInside" id="nx5-3h-GhG"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m29-ML-jKd">
-                    <rect key="frame" x="0.0" y="40" width="120" height="40"/>
-                    <animations/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="nZa-iH-nRK"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="我捡了东西">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="onIFoundThingsButtonPress:" destination="-1" eventType="touchUpInside" id="lLl-Kr-jut"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDt-Ch-COq">
                     <rect key="frame" x="0.0" y="80" width="120" height="40"/>
                     <animations/>
@@ -79,6 +65,20 @@
                     </state>
                     <connections>
                         <action selector="onLoveWallButtonPressed:" destination="-1" eventType="touchUpInside" id="irv-Xg-FRY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m29-ML-jKd">
+                    <rect key="frame" x="0.0" y="40" width="120" height="40"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="nZa-iH-nRK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="我捡了东西">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onIFoundThingsButtonPress:" destination="-1" eventType="touchUpInside" id="lLl-Kr-jut"/>
                     </connections>
                 </button>
             </subviews>

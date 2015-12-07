@@ -20,7 +20,6 @@ class EEMyPublishedListController: EEBaseViewController {
     self.view.layoutIfNeeded()
     self.view.backgroundColor = Color.getGradientColor()
     self.tableView.backgroundColor = UIColor.clearColor()
-//      Color.primaryTintColor.ultraLight()
     let nib = UINib(nibName: "EEMyPublishedLostListTableViewCell", bundle: nil)
     tableView.registerNib(nib, forCellReuseIdentifier: "EEMyPublishedLostListTableViewCell")
     
@@ -36,7 +35,19 @@ class EEMyPublishedListController: EEBaseViewController {
     }
   }
   
-  
+  private func markAsFinished(index:Int) {
+    let model = models[index]
+    Hud.showLoading("正在标记结束")
+    model.markAsFinished { (error, model) -> () in
+      if let model = model {
+        self.models[index] = model
+        self.tableView.reloadData()
+        Hud.dismiss()
+      } else {
+        Hud.showError(error)
+      }
+    }
+  }
 }
 
 
@@ -48,12 +59,16 @@ extension EEMyPublishedListController:UITableViewDataSource {
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("EEMyPublishedLostListTableViewCell", forIndexPath: indexPath) as! EEMyPublishedLostListTableViewCell
-    cell.setupWithModel(models[indexPath.row])
+    cell.setupWithModel(models[indexPath.row],index:indexPath.row)
+    cell.clickedBlock = { (index) in
+      self.markAsFinished(index)
+    }
     return cell
-    return UITableViewCell()
   }
 }
 
 extension EEMyPublishedListController:UITableViewDelegate {
-  
+  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    return EEMyPublishedLostListTableViewCell.heightForModel(models[indexPath.row])
+  }
 }

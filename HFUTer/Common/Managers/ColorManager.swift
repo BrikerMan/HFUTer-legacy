@@ -98,7 +98,7 @@ class ColorManager {
   
   func getGradientColor() -> UIColor {
     let frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight)
-    let color = GradientColor(.Radial, frame, [Color.primaryTintColor.ultraLight(),UIColor.whiteColor()])
+    let color = GradientColor(.Radial, frame, [UIColor.whiteColor(),Color.primaryTintColor.ultraLight()])
     return color
   }
   

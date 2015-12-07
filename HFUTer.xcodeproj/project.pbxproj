@@ -52,6 +52,9 @@
 		6B4B97811C0D99E400D08585 /* BCReplyCommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B97801C0D99E400D08585 /* BCReplyCommentController.swift */; };
 		6B4B97831C0DA88E00D08585 /* EETextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B97821C0DA88E00D08585 /* EETextView.swift */; };
 		6B4B97851C0DAD8900D08585 /* BCReplyCommentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4B97841C0DAD8900D08585 /* BCReplyCommentController.xib */; };
+		6B4B9ECC1C11515900E38B5C /* EEMyPublishedListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B4B9ECA1C11515900E38B5C /* EEMyPublishedListController.xib */; };
+		6B4B9ECD1C11515900E38B5C /* EEMyPublishedListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B9ECB1C11515900E38B5C /* EEMyPublishedListController.swift */; };
+		6B4B9ECF1C1152BA00E38B5C /* EESendLoveWallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B9ECE1C1152BA00E38B5C /* EESendLoveWallController.swift */; };
 		6B561C9C1C02BC97004E6D4C /* EEBaseImagesListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B561C9B1C02BC97004E6D4C /* EEBaseImagesListController.swift */; };
 		6B561CA11C02E32C004E6D4C /* InformationHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B561C9F1C02E32C004E6D4C /* InformationHomeCollectionViewCell.swift */; };
 		6B561CA21C02E32C004E6D4C /* InformationHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B561CA01C02E32C004E6D4C /* InformationHomeCollectionViewCell.xib */; };
@@ -69,8 +72,6 @@
 		6B561CCC1C030657004E6D4C /* BCEduUserNotLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B561CCB1C030657004E6D4C /* BCEduUserNotLoginView.xib */; };
 		6B561CCE1C0317C2004E6D4C /* PersonDetailTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B561CCD1C0317C2004E6D4C /* PersonDetailTableCell.swift */; };
 		6B561CD11C03186C004E6D4C /* PersonDetailTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B561CD01C03186C004E6D4C /* PersonDetailTableCell.xib */; };
-		6B56DBEF1C1041AC007EB835 /* EEMyPublishedListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B56DBED1C1041AC007EB835 /* EEMyPublishedListController.swift */; };
-		6B56DBF01C1041AC007EB835 /* EEMyPublishedListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B56DBEE1C1041AC007EB835 /* EEMyPublishedListController.xib */; };
 		6B56DBF21C1044E0007EB835 /* EECommunityMyPublishesLostAndFoundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B56DBF11C1044E0007EB835 /* EECommunityMyPublishesLostAndFoundModel.swift */; };
 		6B59393B1BFF0BD500EC4F19 /* BCGradesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5939271BFF0BD500EC4F19 /* BCGradesTableView.swift */; };
 		6B59393C1BFF0BD500EC4F19 /* BCGradesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5939281BFF0BD500EC4F19 /* BCGradesTableViewCell.swift */; };
@@ -106,6 +107,8 @@
 		6B5F87651C05585500C80E59 /* BCCourseFeeTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B5F87611C05585500C80E59 /* BCCourseFeeTableViewHeader.xib */; };
 		6B5F87681C055A3600C80E59 /* BCGetCourseFeeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5F87671C055A3600C80E59 /* BCGetCourseFeeRequest.swift */; };
 		6B5F876A1C055A8E00C80E59 /* CourseFeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5F87691C055A8E00C80E59 /* CourseFeeModel.swift */; };
+		6B61EB351C11865D00C475BF /* EEMyLoveWallListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B61EB331C11865D00C475BF /* EEMyLoveWallListController.swift */; };
+		6B61EB361C11865D00C475BF /* EEMyLoveWallListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B61EB341C11865D00C475BF /* EEMyLoveWallListController.xib */; };
 		6B649B5C1C0604130028E454 /* PersonChooseThemeColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B649B5A1C0604130028E454 /* PersonChooseThemeColorViewController.swift */; };
 		6B649B5D1C0604130028E454 /* PersonChooseThemeColorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B649B5B1C0604130028E454 /* PersonChooseThemeColorViewController.xib */; };
 		6B7BDB6D1BFF0F57007CEAB9 /* BCBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB6C1BFF0F57007CEAB9 /* BCBaseRequest.swift */; };
@@ -149,8 +152,6 @@
 		6BA9B90B1C0C4078003B7741 /* PersonHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BA9B9091C0C4078003B7741 /* PersonHelpViewController.xib */; };
 		6BBE31761C043EDC0001B2E4 /* InfoJobsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE31741C043EDC0001B2E4 /* InfoJobsListTableViewCell.swift */; };
 		6BBE31771C043EDC0001B2E4 /* InfoJobsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BBE31751C043EDC0001B2E4 /* InfoJobsListTableViewCell.xib */; };
-		6BC129801C06BBD100DF3BF9 /* CommunityPublishLostMassageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1297E1C06BBD100DF3BF9 /* CommunityPublishLostMassageViewController.swift */; };
-		6BC129811C06BBD100DF3BF9 /* CommunityPublishLostMassageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC1297F1C06BBD100DF3BF9 /* CommunityPublishLostMassageViewController.xib */; };
 		6BC129841C06BD9F00DF3BF9 /* BCGetQiNiuTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC129831C06BD9F00DF3BF9 /* BCGetQiNiuTokenRequest.swift */; };
 		6BD1EBE61C0448F000FF9B78 /* InfoJobDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1EBE41C0448F000FF9B78 /* InfoJobDetailViewController.swift */; };
 		6BD1EBE71C0448F000FF9B78 /* InfoJobDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BD1EBE51C0448F000FF9B78 /* InfoJobDetailViewController.xib */; };
@@ -254,6 +255,9 @@
 		6B4B97801C0D99E400D08585 /* BCReplyCommentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCReplyCommentController.swift; sourceTree = "<group>"; };
 		6B4B97821C0DA88E00D08585 /* EETextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EETextView.swift; sourceTree = "<group>"; };
 		6B4B97841C0DAD8900D08585 /* BCReplyCommentController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCReplyCommentController.xib; sourceTree = "<group>"; };
+		6B4B9ECA1C11515900E38B5C /* EEMyPublishedListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EEMyPublishedListController.xib; sourceTree = "<group>"; };
+		6B4B9ECB1C11515900E38B5C /* EEMyPublishedListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EEMyPublishedListController.swift; sourceTree = "<group>"; };
+		6B4B9ECE1C1152BA00E38B5C /* EESendLoveWallController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EESendLoveWallController.swift; sourceTree = "<group>"; };
 		6B561C9B1C02BC97004E6D4C /* EEBaseImagesListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EEBaseImagesListController.swift; sourceTree = "<group>"; };
 		6B561C9F1C02E32C004E6D4C /* InformationHomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		6B561CA01C02E32C004E6D4C /* InformationHomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformationHomeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -271,8 +275,6 @@
 		6B561CCB1C030657004E6D4C /* BCEduUserNotLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BCEduUserNotLoginView.xib; path = ../../../../../../../Documents/BCEduUserNotLoginView.xib; sourceTree = "<group>"; };
 		6B561CCD1C0317C2004E6D4C /* PersonDetailTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonDetailTableCell.swift; path = ../../../../../../../Documents/PersonDetailTableCell.swift; sourceTree = "<group>"; };
 		6B561CD01C03186C004E6D4C /* PersonDetailTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PersonDetailTableCell.xib; path = ../../../../../../../Documents/PersonDetailTableCell.xib; sourceTree = "<group>"; };
-		6B56DBED1C1041AC007EB835 /* EEMyPublishedListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EEMyPublishedListController.swift; sourceTree = "<group>"; };
-		6B56DBEE1C1041AC007EB835 /* EEMyPublishedListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EEMyPublishedListController.xib; sourceTree = "<group>"; };
 		6B56DBF11C1044E0007EB835 /* EECommunityMyPublishesLostAndFoundModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EECommunityMyPublishesLostAndFoundModel.swift; sourceTree = "<group>"; };
 		6B5939271BFF0BD500EC4F19 /* BCGradesTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCGradesTableView.swift; sourceTree = "<group>"; };
 		6B5939281BFF0BD500EC4F19 /* BCGradesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCGradesTableViewCell.swift; sourceTree = "<group>"; };
@@ -308,6 +310,8 @@
 		6B5F87611C05585500C80E59 /* BCCourseFeeTableViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCCourseFeeTableViewHeader.xib; sourceTree = "<group>"; };
 		6B5F87671C055A3600C80E59 /* BCGetCourseFeeRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCGetCourseFeeRequest.swift; sourceTree = "<group>"; };
 		6B5F87691C055A8E00C80E59 /* CourseFeeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseFeeModel.swift; sourceTree = "<group>"; };
+		6B61EB331C11865D00C475BF /* EEMyLoveWallListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EEMyLoveWallListController.swift; sourceTree = "<group>"; };
+		6B61EB341C11865D00C475BF /* EEMyLoveWallListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EEMyLoveWallListController.xib; sourceTree = "<group>"; };
 		6B649B5A1C0604130028E454 /* PersonChooseThemeColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonChooseThemeColorViewController.swift; sourceTree = "<group>"; };
 		6B649B5B1C0604130028E454 /* PersonChooseThemeColorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonChooseThemeColorViewController.xib; sourceTree = "<group>"; };
 		6B7BDB6C1BFF0F57007CEAB9 /* BCBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCBaseRequest.swift; sourceTree = "<group>"; };
@@ -358,8 +362,6 @@
 		6BA9B9091C0C4078003B7741 /* PersonHelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonHelpViewController.xib; sourceTree = "<group>"; };
 		6BBE31741C043EDC0001B2E4 /* InfoJobsListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoJobsListTableViewCell.swift; sourceTree = "<group>"; };
 		6BBE31751C043EDC0001B2E4 /* InfoJobsListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoJobsListTableViewCell.xib; sourceTree = "<group>"; };
-		6BC1297E1C06BBD100DF3BF9 /* CommunityPublishLostMassageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityPublishLostMassageViewController.swift; sourceTree = "<group>"; };
-		6BC1297F1C06BBD100DF3BF9 /* CommunityPublishLostMassageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommunityPublishLostMassageViewController.xib; sourceTree = "<group>"; };
 		6BC129831C06BD9F00DF3BF9 /* BCGetQiNiuTokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCGetQiNiuTokenRequest.swift; sourceTree = "<group>"; };
 		6BD1EBE41C0448F000FF9B78 /* InfoJobDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoJobDetailViewController.swift; sourceTree = "<group>"; };
 		6BD1EBE51C0448F000FF9B78 /* InfoJobDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoJobDetailViewController.xib; sourceTree = "<group>"; };
@@ -973,10 +975,10 @@
 		6B9211071C00240F0093BB1F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6BC1297E1C06BBD100DF3BF9 /* CommunityPublishLostMassageViewController.swift */,
+				6B4B9ECA1C11515900E38B5C /* EEMyPublishedListController.xib */,
+				6B4B9ECB1C11515900E38B5C /* EEMyPublishedListController.swift */,
 				6B39F14E1C06DA0C00A29D10 /* CommunitySendFindMassageToLosterViewController.swift */,
 				6B39F1511C06EB5000A29D10 /* CommunitySendMassageToPublicController.swift */,
-				6BC1297F1C06BBD100DF3BF9 /* CommunityPublishLostMassageViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1060,8 +1062,9 @@
 				6BEC10FF1C003352008EFE73 /* BCLoveWallDetailViewController.xib */,
 				6BEC11001C003352008EFE73 /* BCSendLoveWallViewController.swift */,
 				6BEC11011C003352008EFE73 /* BCSendLoveWallViewController.xib */,
-				6B56DBED1C1041AC007EB835 /* EEMyPublishedListController.swift */,
-				6B56DBEE1C1041AC007EB835 /* EEMyPublishedListController.xib */,
+				6B4B9ECE1C1152BA00E38B5C /* EESendLoveWallController.swift */,
+				6B61EB331C11865D00C475BF /* EEMyLoveWallListController.swift */,
+				6B61EB341C11865D00C475BF /* EEMyLoveWallListController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1357,6 +1360,7 @@
 				6BEC110F1C003352008EFE73 /* BCSendLoveWallViewController.xib in Resources */,
 				6B561CCC1C030657004E6D4C /* BCEduUserNotLoginView.xib in Resources */,
 				6B5F87631C05585500C80E59 /* BCCourseFeeTableViewCell.xib in Resources */,
+				6B61EB361C11865D00C475BF /* EEMyLoveWallListController.xib in Resources */,
 				6B561CD11C03186C004E6D4C /* PersonDetailTableCell.xib in Resources */,
 				6B5939451BFF0BD500EC4F19 /* BCScheduleHeaderCell.xib in Resources */,
 				6B218CD31C059F2A00939900 /* BCGradesHeaderCell.xib in Resources */,
@@ -1378,7 +1382,6 @@
 				6BEC10F21C0027DA008EFE73 /* MassageLostTableViewCell.xib in Resources */,
 				6BD1EBE71C0448F000FF9B78 /* InfoJobDetailViewController.xib in Resources */,
 				6BA9B90B1C0C4078003B7741 /* PersonHelpViewController.xib in Resources */,
-				6BC129811C06BBD100DF3BF9 /* CommunityPublishLostMassageViewController.xib in Resources */,
 				6B561CB81C02F45F004E6D4C /* InfoNewsCategoriesViewController.xib in Resources */,
 				6B218CCD1C05962500939900 /* InfoCourseDetailViewController.xib in Resources */,
 				6B5F875D1C05578500C80E59 /* InfoCourseFeeViewController.xib in Resources */,
@@ -1402,12 +1405,12 @@
 				6B5939471BFF0BD500EC4F19 /* BCScheduleLeftCell.xib in Resources */,
 				6BEC10EE1C0027DA008EFE73 /* BCMyMassagesTableViewCell.xib in Resources */,
 				6B59394B1BFF0BD500EC4F19 /* BCShcedulesWeekEditView.xib in Resources */,
-				6B56DBF01C1041AC007EB835 /* EEMyPublishedListController.xib in Resources */,
 				6B2C2CC71C1053E5001DFDEB /* EEMyPublishedLostListTableViewCell.xib in Resources */,
 				6BEC10F41C0027DA008EFE73 /* MassageMoreActionView.xib in Resources */,
 				6B9211121C00240F0093BB1F /* CommunityViewController.xib in Resources */,
 				6B2EF56D1BFEEDD7003373E4 /* EEBaseNavBar.xib in Resources */,
 				6B135C2B1C04070D0062097E /* InfoJobsViewController.xib in Resources */,
+				6B4B9ECC1C11515900E38B5C /* EEMyPublishedListController.xib in Resources */,
 				6B561CBE1C02F8D8004E6D4C /* InfoNewsListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1493,9 +1496,11 @@
 				6B8F64511C06A733008D081C /* CustomEurekaCells.swift in Sources */,
 				6BEDEB601BFED5D400CDB1B1 /* Utilities.swift in Sources */,
 				6B7BDB811BFF11ED007CEAB9 /* Encryptions.m in Sources */,
+				6B61EB351C11865D00C475BF /* EEMyLoveWallListController.swift in Sources */,
 				6BD1EBE61C0448F000FF9B78 /* InfoJobDetailViewController.swift in Sources */,
 				6BA084441C100D2300E97137 /* EECommunityLoveWallModel.swift in Sources */,
 				6B59393B1BFF0BD500EC4F19 /* BCGradesTableView.swift in Sources */,
+				6B4B9ECD1C11515900E38B5C /* EEMyPublishedListController.swift in Sources */,
 				6B135C301C04121C0062097E /* InfoJobModel.swift in Sources */,
 				6B218CCF1C05977600939900 /* BCGetClassDetailRequest.swift in Sources */,
 				6B9211111C00240F0093BB1F /* CommunityViewController.swift in Sources */,
@@ -1578,6 +1583,7 @@
 				6B5F87681C055A3600C80E59 /* BCGetCourseFeeRequest.swift in Sources */,
 				6B7BDB8B1BFF1350007CEAB9 /* BCLoginToEduViewController.swift in Sources */,
 				6B4B97831C0DA88E00D08585 /* EETextView.swift in Sources */,
+				6B4B9ECF1C1152BA00E38B5C /* EESendLoveWallController.swift in Sources */,
 				6B9211131C00240F0093BB1F /* BCLostAndFoundModel.swift in Sources */,
 				6B5939401BFF0BD500EC4F19 /* BCScheculeView.swift in Sources */,
 				6B59395B1BFF0BE200EC4F19 /* BCGetGradesRequest.swift in Sources */,
@@ -1599,7 +1605,6 @@
 				6B5939571BFF0BDC00EC4F19 /* SemesterModel.swift in Sources */,
 				6B2EF5681BFEED9B003373E4 /* InformationViewController.swift in Sources */,
 				6B4A1AB31C0D6B8C006BD90C /* InfoGetBooksListRequest.swift in Sources */,
-				6BC129801C06BBD100DF3BF9 /* CommunityPublishLostMassageViewController.swift in Sources */,
 				6B2EF57B1BFEFA16003373E4 /* DBManager.swift in Sources */,
 				6B59394C1BFF0BD500EC4F19 /* BCShcedulesWeekEditViewCell.swift in Sources */,
 				6B5939531BFF0BDC00EC4F19 /* Calculator.swift in Sources */,
@@ -1608,7 +1613,6 @@
 				6BA9B90A1C0C4078003B7741 /* PersonHelpViewController.swift in Sources */,
 				6B135C2E1C04092F0062097E /* InfoGetJobListRequest.swift in Sources */,
 				6BEC11161C003352008EFE73 /* BCMassageLoveWallView.swift in Sources */,
-				6B56DBEF1C1041AC007EB835 /* EEMyPublishedListController.swift in Sources */,
 				6B39F1521C06EB5000A29D10 /* CommunitySendMassageToPublicController.swift in Sources */,
 				6B7BDB881BFF1347007CEAB9 /* BCLoginToEduRequest.swift in Sources */,
 				6B5939421BFF0BD500EC4F19 /* BCScheduleBodyCell.swift in Sources */,

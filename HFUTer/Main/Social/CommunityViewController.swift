@@ -30,6 +30,7 @@ class CommunityViewController: EEBaseViewController {
   private var lostAndFindList = [BCLostAndFoundModel]()
   private var loveWallModels = [EECommunityLoveWallModel]()
   private var choosedIndex = 0
+  private var currentShowingPage = 0
   
   //MARK:- 生命周期
   override func viewDidLoad() {
@@ -149,7 +150,7 @@ class CommunityViewController: EEBaseViewController {
       
       actionListViewBackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "showOrHideActionList"))
       
-      actionListView = MassageMoreActionView()
+      actionListView = MassageMoreActionView(forStyle: currentShowingPage)
       actionListView.delegate = self
       actionListView.alpha = 0
       self.view.addSubview(actionListView)
@@ -157,14 +158,14 @@ class CommunityViewController: EEBaseViewController {
         make.bottom.equalTo(self.navBar.snp_bottom)
         make.right.equalTo(self.view.snp_right).offset(-5)
         make.width.equalTo(120)
-        make.height.equalTo(200)
+        make.height.equalTo(actionListView.height)
       })
       self.view.bringSubviewToFront(navBar)
       self.view.layoutIfNeeded()
       
       UIView.animateWithDuration(0.3, animations: { () -> Void in
         self.actionListView.snp_updateConstraints(closure: { (make) -> Void in
-          make.bottom.equalTo(self.navBar.snp_bottom).offset(205)
+          make.bottom.equalTo(self.navBar.snp_bottom).offset(self.actionListView.height+5)
         })
         self.actionListView.alpha = 1
         self.view.layoutIfNeeded()
@@ -284,27 +285,39 @@ extension CommunityViewController:UIAlertViewDelegate {
 extension CommunityViewController:MassageMoreActionViewDelegate {
   func didSelectAtIndex(index:Int) {
     runAfterLoginToCommunity { () -> () in
-      switch index {
-      case 0:
-        let vc = CommunitySendMassageToPublicController()
-        vc.isLost = true
-        self.pushToViewController(vc)
-      case 1:
-        let alertView = UIAlertView()
-        alertView.title = "请选择发布渠道"
-        alertView.message = "若手中有失主的学号信息，请选择直接发送消息至失主，提高找回概率。若没有失主此信息，则选择发不到广场等待认领。"
-        alertView.addButtonWithTitle("直接发送")
-        alertView.addButtonWithTitle("发布广场")
-        alertView.tag = 1
-        alertView.delegate = self
-        alertView.show()
-      case 2:
-        let vc = EEMyPublishedListController(nib: "EEMyPublishedListController")
-        self.pushToViewController(vc)
-      default:
-        break
+      if self.currentShowingPage == 0 {
+        switch index {
+        case 0:
+          let vc = CommunitySendMassageToPublicController()
+          vc.isLost = true
+          self.pushToViewController(vc)
+        case 1:
+          let alertView = UIAlertView()
+          alertView.title = "请选择发布渠道"
+          alertView.message = "若手中有失主的学号信息，请选择直接发送消息至失主，提高找回概率。若没有失主此信息，则选择发不到广场等待认领。"
+          alertView.addButtonWithTitle("直接发送")
+          alertView.addButtonWithTitle("发布广场")
+          alertView.tag = 1
+          alertView.delegate = self
+          alertView.show()
+        case 2:
+          let vc = EEMyPublishedListController(nib: "EEMyPublishedListController")
+          self.pushToViewController(vc)
+        default:
+          break
+        }
+      } else {
+        switch index {
+        case 0:
+          let vc = EESendLoveWallController()
+          self.pushToViewController(vc)
+        case 1:
+          let vc = EEMyLoveWallListController(nib: "EEMyLoveWallListController")
+          self.pushToViewController(vc)
+        default:
+          break
+        }
       }
-      
     }
     self.showOrHideActionList()
   }
@@ -382,8 +395,6 @@ extension CommunityViewController:MassageLostListViewDelegate {
 //MARK:- UIScrollViewDelegate
 extension CommunityViewController:UIScrollViewDelegate {
   func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-    let page = UInt((scrollView.contentOffset.x)/ScreenWidth)
-    //    segmentController.setSelectedSegmentIndex(page, animated: true)
-    
+    self.currentShowingPage = Int((scrollView.contentOffset.x)/ScreenWidth)
   }
 }

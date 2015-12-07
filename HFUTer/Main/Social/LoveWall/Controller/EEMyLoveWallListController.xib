@@ -5,9 +5,8 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EEMyPublishedListController" customModule="HFUTer" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EEMyLoveWallListController" customModule="HFUTer" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="8TQ-s4-TNK" id="QiG-3K-NPG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,25 +15,21 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8TQ-s4-TNK">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vY1-xw-Zf3">
                     <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                     <animations/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="ncN-og-no2"/>
-                        <outlet property="delegate" destination="-1" id="GY0-Wc-z0m"/>
-                    </connections>
                 </tableView>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="8TQ-s4-TNK" secondAttribute="trailing" id="I8v-2e-pXB"/>
-                <constraint firstAttribute="bottom" secondItem="8TQ-s4-TNK" secondAttribute="bottom" id="Sqp-e9-74g"/>
-                <constraint firstItem="8TQ-s4-TNK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="c6C-84-VnA"/>
-                <constraint firstItem="8TQ-s4-TNK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lvp-cF-pNi"/>
+                <constraint firstItem="vY1-xw-Zf3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="C0v-03-qB9"/>
+                <constraint firstItem="vY1-xw-Zf3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Unf-8O-qy5"/>
+                <constraint firstAttribute="bottom" secondItem="vY1-xw-Zf3" secondAttribute="bottom" id="evC-3K-wyn"/>
+                <constraint firstAttribute="trailing" secondItem="vY1-xw-Zf3" secondAttribute="trailing" id="mAL-Jf-2Ae"/>
             </constraints>
-            <point key="canvasLocation" x="344" y="340"/>
+            <point key="canvasLocation" x="332" y="340"/>
         </view>
     </objects>
 </document>
