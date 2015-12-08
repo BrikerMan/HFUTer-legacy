@@ -78,15 +78,40 @@ extension InformationViewController:UICollectionViewDelegate {
       })
     case 4:
       Hud.showError("暂未开放")
-//      let vc = InfoBookListViewController(nib: "InfoBookListViewController")
-//      self.pushToViewController(vc)
+      //      let vc = InfoBookListViewController(nib: "InfoBookListViewController")
+      //      self.pushToViewController(vc)
     case 5:
-      runAfterLoginToEdu({ () -> () in
+      if DataEnv.eduUser.isLogin {
         let vc = InfoCalendarViewController(nib:"InfoCalendarViewController")
+        vc.schoolYark = DataEnv.eduUser.schoolYard
         self.pushToViewController(vc)
-      })
+      } else {
+        let actionSheet = UIActionSheet()
+        actionSheet.title = "请选择校区"
+        actionSheet.addButtonWithTitle("合肥校区")
+        actionSheet.addButtonWithTitle("宣城校区")
+        actionSheet.addButtonWithTitle("取消")
+        actionSheet.cancelButtonIndex = 2
+        actionSheet.delegate = self
+        actionSheet.showInView(self.view)
+      }
     default:
       break
     }
+  }
+}
+
+//MARK: - 校园选择
+extension InformationViewController:UIActionSheetDelegate {
+  func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
+    if buttonIndex == 2 { return }
+    
+    let vc = InfoCalendarViewController(nib:"InfoCalendarViewController")
+    if buttonIndex == 0 {
+      vc.schoolYark = "HF"
+    } else if buttonIndex == 1{
+      vc.schoolYark = "XC"
+    }
+    self.pushToViewController(vc)
   }
 }
