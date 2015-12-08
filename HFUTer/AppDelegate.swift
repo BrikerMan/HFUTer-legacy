@@ -9,7 +9,6 @@
 import UIKit
 import Fabric
 import Crashlytics
-
 import BRYXBanner
 
 @UIApplicationMain
@@ -23,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //初始化第三方SDK
     Fabric.with([Crashlytics.self])
+    MobClick.startWithAppkey("5580d53a67e58e3b3b0004b0", reportPolicy: BATCH, channelId: "TEST")
     
     APService.registerForRemoteNotificationTypes(2, categories: nil)
     APService.setupWithOption(launchOptions)

@@ -9,6 +9,16 @@
 import UIKit
 
 class BCEduUserNotLoginView: EEXibView{
-
-
+  
+  @IBOutlet weak var loginButton: BCBaseButton!
+  
+  override func initFromXib() {
+    super.initFromXib()
+    loginButton.updateTintColor()
+  }
+  
+  @IBAction func onLoginButtonPressed(sender: AnyObject) {
+    RootVC.showLoginToSchoolVC()
+  }
+  
 }

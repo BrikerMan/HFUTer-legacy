@@ -79,9 +79,15 @@ class PersonViewController: EEBaseFormViewController {
       }
       
       //用户详情Cell
-//      <<< PersonDetailTableRow("userDetail") {
-//        $0.hidden = "$isLogin == 'notLogin'"
-//      }
+      <<< PesonPersonalDetailCellTableViewRow("userDetail") {
+        $0.hidden = "$isLogin == 'notLogin'"
+        } .onCellSelection({ (cell, row) -> () in
+          if let person = self.form.rowByTag("userDetail") as? PesonPersonalDetailCellTableViewRow {
+            person.updateCell()
+          }
+        })
+      
+      
       +++ Section("设置")
       
       <<< SwitchRow() {
@@ -106,15 +112,16 @@ class PersonViewController: EEBaseFormViewController {
         }.cellSetup { cell, row in
           cell.imageView?.image = UIImage(named: "person_theme")
       }
-
       
+      /*
       +++ Section("研究生专用，禁止自动加载课表和成绩")
       <<< SwitchRow() {
-        $0.title = "禁止自动加载 - 暂不可用"
-        $0.value = true
-        }.cellSetup { cell, row in
-          cell.imageView?.image = UIImage(named: "person_autoload")
+      $0.title = "禁止自动加载 - 暂不可用"
+      $0.value = true
+      }.cellSetup { cell, row in
+      cell.imageView?.image = UIImage(named: "person_autoload")
       }
+      */
       
       +++ Section()
       
@@ -123,7 +130,7 @@ class PersonViewController: EEBaseFormViewController {
         $0.presentationMode = .Show(controllerProvider: ControllerProvider.Callback {
           let vc = PersonHelpViewController(nib: "PersonHelpViewController")
           vc.style = .Help
-                    vc.hidesBottomBarWhenPushed = true
+          vc.hidesBottomBarWhenPushed = true
           return vc
           }, completionCallback: { vc in vc.dismissViewControllerAnimated(true, completion: nil) })
         }.cellSetup { cell, row in
@@ -147,7 +154,7 @@ class PersonViewController: EEBaseFormViewController {
         $0.presentationMode = .Show(controllerProvider: ControllerProvider.Callback {
           let vc = PersonHelpViewController(nib: "PersonHelpViewController")
           vc.style = .PrivacyPoicy
-                    vc.hidesBottomBarWhenPushed = true
+          vc.hidesBottomBarWhenPushed = true
           return vc
           }, completionCallback: { vc in vc.dismissViewControllerAnimated(true, completion: nil) })
         }.cellSetup { cell, row in

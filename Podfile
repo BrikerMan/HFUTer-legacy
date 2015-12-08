@@ -1,6 +1,4 @@
-# Uncomment this line to define a global platform for your project
 platform :ios, '8.0'
-# Uncomment this line if you're using Swift
 use_frameworks!
 
 target 'HFUTer' do
@@ -28,7 +26,6 @@ target 'HFUTer' do
   pod 'YYModel'                           ##Dic or Json -> Model
   pod 'FMDB',   :git => 'https://github.com/ccgus/fmdb.git', :branch => 'swiftFramework'                             #sqlite封装
   pod 'Qiniu'
-  #  :git => 'https://github.com/qiniu/objc-sdk.git', :branch => 'master'
   pod 'Kanna'
   
   #调试
@@ -40,7 +37,7 @@ target 'HFUTer' do
   pod 'Crashlytics'
   pod 'YYModel'
   #测试库
-  pod 'FontAwesome.swift'
+#  pod 'FontAwesome.swift'
   pod 'ChameleonFramework/Swift'
 end
 
