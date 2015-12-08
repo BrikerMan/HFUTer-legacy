@@ -26,6 +26,8 @@
 		6B218CCF1C05977600939900 /* BCGetClassDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B218CCE1C05977600939900 /* BCGetClassDetailRequest.swift */; };
 		6B218CD21C059F2A00939900 /* BCGradesHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B218CD01C059F2A00939900 /* BCGradesHeaderCell.swift */; };
 		6B218CD31C059F2A00939900 /* BCGradesHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B218CD11C059F2A00939900 /* BCGradesHeaderCell.xib */; };
+		6B2808D01C15C08900821779 /* BCEduUserNotLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2808CF1C15C08900821779 /* BCEduUserNotLoginView.swift */; };
+		6B2808D21C15C09400821779 /* BCEduUserNotLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B2808D11C15C09400821779 /* BCEduUserNotLoginView.xib */; };
 		6B2EF5631BFEEC56003373E4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EF5611BFEEC56003373E4 /* HomeViewController.swift */; };
 		6B2EF5681BFEED9B003373E4 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EF5661BFEED9B003373E4 /* InformationViewController.swift */; };
 		6B2EF5691BFEED9B003373E4 /* InformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B2EF5671BFEED9B003373E4 /* InformationViewController.xib */; };
@@ -66,10 +68,6 @@
 		6B561CC51C02FA4F004E6D4C /* NewsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B561CC31C02FA4F004E6D4C /* NewsListTableViewCell.swift */; };
 		6B561CC61C02FA4F004E6D4C /* NewsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B561CC41C02FA4F004E6D4C /* NewsListTableViewCell.xib */; };
 		6B561CC81C03017C004E6D4C /* InfoNewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B561CC71C03017C004E6D4C /* InfoNewsDetailViewController.swift */; };
-		6B561CCA1C03064B004E6D4C /* BCEduUserNotLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B561CC91C03064B004E6D4C /* BCEduUserNotLoginView.swift */; };
-		6B561CCC1C030657004E6D4C /* BCEduUserNotLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B561CCB1C030657004E6D4C /* BCEduUserNotLoginView.xib */; };
-		6B561CCE1C0317C2004E6D4C /* PersonDetailTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B561CCD1C0317C2004E6D4C /* PersonDetailTableCell.swift */; };
-		6B561CD11C03186C004E6D4C /* PersonDetailTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B561CD01C03186C004E6D4C /* PersonDetailTableCell.xib */; };
 		6B56DBF21C1044E0007EB835 /* EECommunityMyPublishesLostAndFoundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B56DBF11C1044E0007EB835 /* EECommunityMyPublishesLostAndFoundModel.swift */; };
 		6B59393B1BFF0BD500EC4F19 /* BCGradesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5939271BFF0BD500EC4F19 /* BCGradesTableView.swift */; };
 		6B59393C1BFF0BD500EC4F19 /* BCGradesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5939281BFF0BD500EC4F19 /* BCGradesTableViewCell.swift */; };
@@ -113,6 +111,8 @@
 		6B6942661C15294C00FB71CE /* EEMyPublishedLostListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B6942641C15294C00FB71CE /* EEMyPublishedLostListTableViewCell.xib */; };
 		6B6942691C15297F00FB71CE /* EEMyLoveWallListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6942671C15297F00FB71CE /* EEMyLoveWallListCell.swift */; };
 		6B69426A1C15297F00FB71CE /* EEMyLoveWallListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B6942681C15297F00FB71CE /* EEMyLoveWallListCell.xib */; };
+		6B69426F1C153DD700FB71CE /* InfoCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B69426D1C153DD700FB71CE /* InfoCalendarViewController.swift */; };
+		6B6942701C153DD700FB71CE /* InfoCalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B69426E1C153DD700FB71CE /* InfoCalendarViewController.xib */; };
 		6B7BDB6D1BFF0F57007CEAB9 /* BCBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB6C1BFF0F57007CEAB9 /* BCBaseRequest.swift */; };
 		6B7BDB6F1BFF0F74007CEAB9 /* BCLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB6E1BFF0F74007CEAB9 /* BCLog.swift */; };
 		6B7BDB7F1BFF11ED007CEAB9 /* Base64Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB721BFF11ED007CEAB9 /* Base64Util.m */; };
@@ -228,6 +228,8 @@
 		6B218CCE1C05977600939900 /* BCGetClassDetailRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCGetClassDetailRequest.swift; sourceTree = "<group>"; };
 		6B218CD01C059F2A00939900 /* BCGradesHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCGradesHeaderCell.swift; sourceTree = "<group>"; };
 		6B218CD11C059F2A00939900 /* BCGradesHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCGradesHeaderCell.xib; sourceTree = "<group>"; };
+		6B2808CF1C15C08900821779 /* BCEduUserNotLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCEduUserNotLoginView.swift; sourceTree = "<group>"; };
+		6B2808D11C15C09400821779 /* BCEduUserNotLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCEduUserNotLoginView.xib; sourceTree = "<group>"; };
 		6B2EF54D1BFEE0D2003373E4 /* HFUTer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HFUTer-Bridging-Header.h"; sourceTree = "<group>"; };
 		6B2EF5611BFEEC56003373E4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6B2EF5661BFEED9B003373E4 /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
@@ -269,10 +271,6 @@
 		6B561CC31C02FA4F004E6D4C /* NewsListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsListTableViewCell.swift; sourceTree = "<group>"; };
 		6B561CC41C02FA4F004E6D4C /* NewsListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsListTableViewCell.xib; sourceTree = "<group>"; };
 		6B561CC71C03017C004E6D4C /* InfoNewsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoNewsDetailViewController.swift; sourceTree = "<group>"; };
-		6B561CC91C03064B004E6D4C /* BCEduUserNotLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BCEduUserNotLoginView.swift; path = ../../../../../../../Documents/BCEduUserNotLoginView.swift; sourceTree = "<group>"; };
-		6B561CCB1C030657004E6D4C /* BCEduUserNotLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BCEduUserNotLoginView.xib; path = ../../../../../../../Documents/BCEduUserNotLoginView.xib; sourceTree = "<group>"; };
-		6B561CCD1C0317C2004E6D4C /* PersonDetailTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonDetailTableCell.swift; path = ../../../../../../../Documents/PersonDetailTableCell.swift; sourceTree = "<group>"; };
-		6B561CD01C03186C004E6D4C /* PersonDetailTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PersonDetailTableCell.xib; path = ../../../../../../../Documents/PersonDetailTableCell.xib; sourceTree = "<group>"; };
 		6B56DBF11C1044E0007EB835 /* EECommunityMyPublishesLostAndFoundModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EECommunityMyPublishesLostAndFoundModel.swift; sourceTree = "<group>"; };
 		6B5939271BFF0BD500EC4F19 /* BCGradesTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCGradesTableView.swift; sourceTree = "<group>"; };
 		6B5939281BFF0BD500EC4F19 /* BCGradesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCGradesTableViewCell.swift; sourceTree = "<group>"; };
@@ -316,6 +314,8 @@
 		6B6942641C15294C00FB71CE /* EEMyPublishedLostListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EEMyPublishedLostListTableViewCell.xib; sourceTree = "<group>"; };
 		6B6942671C15297F00FB71CE /* EEMyLoveWallListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EEMyLoveWallListCell.swift; sourceTree = "<group>"; };
 		6B6942681C15297F00FB71CE /* EEMyLoveWallListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EEMyLoveWallListCell.xib; sourceTree = "<group>"; };
+		6B69426D1C153DD700FB71CE /* InfoCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCalendarViewController.swift; sourceTree = "<group>"; };
+		6B69426E1C153DD700FB71CE /* InfoCalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoCalendarViewController.xib; sourceTree = "<group>"; };
 		6B7BDB6C1BFF0F57007CEAB9 /* BCBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCBaseRequest.swift; sourceTree = "<group>"; };
 		6B7BDB6E1BFF0F74007CEAB9 /* BCLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCLog.swift; sourceTree = "<group>"; };
 		6B7BDB711BFF11ED007CEAB9 /* Base64Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Util.h; sourceTree = "<group>"; };
@@ -583,8 +583,6 @@
 			children = (
 				6BDC1F1C1BFF7450009DC139 /* BCColorChooseView.swift */,
 				6BDC1F1D1BFF7450009DC139 /* BCColorChooseView.xib */,
-				6B561CCD1C0317C2004E6D4C /* PersonDetailTableCell.swift */,
-				6B561CD01C03186C004E6D4C /* PersonDetailTableCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -673,6 +671,7 @@
 		6B561CA31C02F39E004E6D4C /* Sub */ = {
 			isa = PBXGroup;
 			children = (
+				6B69426B1C15395200FB71CE /* Calandar */,
 				6B561CA41C02F39E004E6D4C /* Books */,
 				6B561CA51C02F39E004E6D4C /* ClassDetail */,
 				6B561CA91C02F39E004E6D4C /* CourseFee */,
@@ -904,6 +903,23 @@
 			path = Request;
 			sourceTree = "<group>";
 		};
+		6B69426B1C15395200FB71CE /* Calandar */ = {
+			isa = PBXGroup;
+			children = (
+				6B69426C1C15395200FB71CE /* Controller */,
+			);
+			path = Calandar;
+			sourceTree = "<group>";
+		};
+		6B69426C1C15395200FB71CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6B69426D1C153DD700FB71CE /* InfoCalendarViewController.swift */,
+				6B69426E1C153DD700FB71CE /* InfoCalendarViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		6B7BDB701BFF11ED007CEAB9 /* Encryption */ = {
 			isa = PBXGroup;
 			children = (
@@ -1048,9 +1064,9 @@
 			children = (
 				6BEC10F91C002819008EFE73 /* BCBaseButton.swift */,
 				6BEC10FA1C002819008EFE73 /* BCTextField.swift */,
-				6B561CC91C03064B004E6D4C /* BCEduUserNotLoginView.swift */,
-				6B561CCB1C030657004E6D4C /* BCEduUserNotLoginView.xib */,
 				6B8F64501C06A733008D081C /* CustomEurekaCells.swift */,
+				6B2808CF1C15C08900821779 /* BCEduUserNotLoginView.swift */,
+				6B2808D11C15C09400821779 /* BCEduUserNotLoginView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1357,10 +1373,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B561CCC1C030657004E6D4C /* BCEduUserNotLoginView.xib in Resources */,
 				6B5F87631C05585500C80E59 /* BCCourseFeeTableViewCell.xib in Resources */,
 				6B61EB361C11865D00C475BF /* EEMyLoveWallListController.xib in Resources */,
-				6B561CD11C03186C004E6D4C /* PersonDetailTableCell.xib in Resources */,
 				6B5939451BFF0BD500EC4F19 /* BCScheduleHeaderCell.xib in Resources */,
 				6B218CD31C059F2A00939900 /* BCGradesHeaderCell.xib in Resources */,
 				6B59393D1BFF0BD500EC4F19 /* BCGradesTableViewCell.xib in Resources */,
@@ -1385,6 +1399,7 @@
 				6B218CCD1C05962500939900 /* InfoCourseDetailViewController.xib in Resources */,
 				6B69426A1C15297F00FB71CE /* EEMyLoveWallListCell.xib in Resources */,
 				6B5F875D1C05578500C80E59 /* InfoCourseFeeViewController.xib in Resources */,
+				6B6942701C153DD700FB71CE /* InfoCalendarViewController.xib in Resources */,
 				6BEC11131C003352008EFE73 /* BCLoveWallDetailTableViewCell.xib in Resources */,
 				6B218CBE1C0590FD00939900 /* InfoCourseListViewController.xib in Resources */,
 				6B218CC71C0595E800939900 /* BCClassDetailTableViewCell.xib in Resources */,
@@ -1398,6 +1413,7 @@
 				6BDC1F1F1BFF7450009DC139 /* BCColorChooseView.xib in Resources */,
 				6B59393F1BFF0BD500EC4F19 /* BCGradeViewTableViewHeader.xib in Resources */,
 				6B39F1561C06F23100A29D10 /* CommunityChooseImageCell.xib in Resources */,
+				6B2808D21C15C09400821779 /* BCEduUserNotLoginView.xib in Resources */,
 				6B2EF5691BFEED9B003373E4 /* InformationViewController.xib in Resources */,
 				6B4A1AB11C0D6B50006BD90C /* InfoBookListViewController.xib in Resources */,
 				6BEC110D1C003352008EFE73 /* BCLoveWallDetailViewController.xib in Resources */,
@@ -1536,13 +1552,13 @@
 				6B561CA11C02E32C004E6D4C /* InformationHomeCollectionViewCell.swift in Sources */,
 				6B5F87621C05585500C80E59 /* BCCourseFeeTableViewCell.swift in Sources */,
 				6B5939461BFF0BD500EC4F19 /* BCScheduleLeftCell.swift in Sources */,
-				6B561CCE1C0317C2004E6D4C /* PersonDetailTableCell.swift in Sources */,
 				6B218CC11C05925A00939900 /* BCGetClassListRequest.swift in Sources */,
 				6B561CC81C03017C004E6D4C /* InfoNewsDetailViewController.swift in Sources */,
 				6B2EF56B1BFEEDC8003373E4 /* EEBaseNavBar.swift in Sources */,
 				6B2EF5811BFEFB19003373E4 /* ColorManager.swift in Sources */,
 				6B218CC61C0595E800939900 /* BCClassDetailTableViewCell.swift in Sources */,
 				6BDD5AA41C00675400B26B9C /* BCCommunityRegisterViewController.swift in Sources */,
+				6B2808D01C15C08900821779 /* BCEduUserNotLoginView.swift in Sources */,
 				6B59395C1BFF0BE200EC4F19 /* BCGetSceduleRequest.swift in Sources */,
 				6B9211141C00240F0093BB1F /* BCMassageMyPublishModel.swift in Sources */,
 				6BEDEB681BFED5D400CDB1B1 /* EEImageCropViewController.swift in Sources */,
@@ -1563,7 +1579,6 @@
 				6B218CC31C0592BA00939900 /* ClassListModel.swift in Sources */,
 				6B7BDB821BFF11ED007CEAB9 /* GTMBase64.m in Sources */,
 				6B59394A1BFF0BD500EC4F19 /* BCShcedulesWeekEditView.swift in Sources */,
-				6B561CCA1C03064B004E6D4C /* BCEduUserNotLoginView.swift in Sources */,
 				6BC129841C06BD9F00DF3BF9 /* BCGetQiNiuTokenRequest.swift in Sources */,
 				6BBE31761C043EDC0001B2E4 /* InfoJobsListTableViewCell.swift in Sources */,
 				6B5F876A1C055A8E00C80E59 /* CourseFeeModel.swift in Sources */,
@@ -1613,6 +1628,7 @@
 				6B135C2E1C04092F0062097E /* InfoGetJobListRequest.swift in Sources */,
 				6B6942691C15297F00FB71CE /* EEMyLoveWallListCell.swift in Sources */,
 				6BEC11161C003352008EFE73 /* BCMassageLoveWallView.swift in Sources */,
+				6B69426F1C153DD700FB71CE /* InfoCalendarViewController.swift in Sources */,
 				6B39F1521C06EB5000A29D10 /* CommunitySendMassageToPublicController.swift in Sources */,
 				6B7BDB881BFF1347007CEAB9 /* BCLoginToEduRequest.swift in Sources */,
 				6B5939421BFF0BD500EC4F19 /* BCScheduleBodyCell.swift in Sources */,

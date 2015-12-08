@@ -79,9 +79,9 @@ class PersonViewController: EEBaseFormViewController {
       }
       
       //用户详情Cell
-      <<< PersonDetailTableRow("userDetail") {
-        $0.hidden = "$isLogin == 'notLogin'"
-      }
+//      <<< PersonDetailTableRow("userDetail") {
+//        $0.hidden = "$isLogin == 'notLogin'"
+//      }
       +++ Section("设置")
       
       <<< SwitchRow() {

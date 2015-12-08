@@ -12,7 +12,7 @@ class InformationViewController: EEBaseViewController {
   
   @IBOutlet weak var collectiomView: UICollectionView!
   
-  private let cellTitleAndImageList = [("校园新闻","info_news"),("兼职信息","info_jobs"),("教学班查询","info_class"),("收费查询","info_fee"),("借阅查询","info_books")]
+  private let cellTitleAndImageList = [("校园新闻","info_news"),("兼职信息","info_jobs"),("教学班查询","info_class"),("收费查询","info_fee"),("借阅查询","info_books"),("校历查询","info_calendar")]
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -27,7 +27,7 @@ class InformationViewController: EEBaseViewController {
 //MARK: - CollectionViewDataSource
 extension InformationViewController:UICollectionViewDataSource {
   func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 5
+    return 6
   }
   
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -80,6 +80,11 @@ extension InformationViewController:UICollectionViewDelegate {
       Hud.showError("暂未开放")
 //      let vc = InfoBookListViewController(nib: "InfoBookListViewController")
 //      self.pushToViewController(vc)
+    case 5:
+      runAfterLoginToEdu({ () -> () in
+        let vc = InfoCalendarViewController(nib:"InfoCalendarViewController")
+        self.pushToViewController(vc)
+      })
     default:
       break
     }
