@@ -62,8 +62,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
     APService.handleRemoteNotification(userInfo)
-    print(userInfo)
-    RootVC.addRedBundle()
     if let aps = userInfo["aps"] {
       let banner = Banner(title:nil, subtitle: aps["alert"] as? String, image: nil, backgroundColor: UIColor(red:42.8/255.0, green:162.6/255.0, blue:35.3/255.0, alpha:1.0))
       banner.dismissesOnTap = true

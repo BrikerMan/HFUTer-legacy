@@ -87,6 +87,16 @@ class PersonViewController: EEBaseFormViewController {
           }
         })
       
+      <<< ButtonRow(){
+        $0.title = "我的消息"
+        $0.presentationMode = .Show(controllerProvider: ControllerProvider.Callback {
+          let vc = PersonMassageListViewController(nib: "PersonMassageListViewController")
+          vc.navBar.navLeftButtonStyle = .Back
+          vc.hidesBottomBarWhenPushed = true
+          return vc
+        }, completionCallback: { vc in vc.dismissViewControllerAnimated(true, completion: nil) })
+      }
+      
       
       +++ Section("设置")
       

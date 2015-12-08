@@ -129,6 +129,11 @@
 		6B7BDB8C1BFF1350007CEAB9 /* BCLoginToEduViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B7BDB8A1BFF1350007CEAB9 /* BCLoginToEduViewController.xib */; };
 		6B7BDB8F1BFF196C007CEAB9 /* BCScheduleEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB8E1BFF196C007CEAB9 /* BCScheduleEditViewController.swift */; };
 		6B89AFAF1C16AD8900105792 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B89AFAD1C16AD8900105792 /* libMobClickLibrary.a */; };
+		6B89AFB21C16B52600105792 /* PersonMassageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B89AFB01C16B52600105792 /* PersonMassageListViewController.swift */; };
+		6B89AFB31C16B52600105792 /* PersonMassageListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B89AFB11C16B52600105792 /* PersonMassageListViewController.xib */; };
+		6B89AFB51C16B65000105792 /* EECommunityMassageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B89AFB41C16B65000105792 /* EECommunityMassageModel.swift */; };
+		6B89AFB81C16C0D400105792 /* PersonMassageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B89AFB61C16C0D400105792 /* PersonMassageTableViewCell.swift */; };
+		6B89AFB91C16C0D400105792 /* PersonMassageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B89AFB71C16C0D400105792 /* PersonMassageTableViewCell.xib */; };
 		6B8F64511C06A733008D081C /* CustomEurekaCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8F64501C06A733008D081C /* CustomEurekaCells.swift */; };
 		6B8F64551C06AC7C008D081C /* libPushSDK-1.8.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8F64541C06AC7C008D081C /* libPushSDK-1.8.5.a */; };
 		6B8F64571C06AC8E008D081C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8F64561C06AC8E008D081C /* CFNetwork.framework */; };
@@ -342,6 +347,11 @@
 		6B7BDB8E1BFF196C007CEAB9 /* BCScheduleEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCScheduleEditViewController.swift; sourceTree = "<group>"; };
 		6B89AFAD1C16AD8900105792 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		6B89AFAE1C16AD8900105792 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		6B89AFB01C16B52600105792 /* PersonMassageListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonMassageListViewController.swift; sourceTree = "<group>"; };
+		6B89AFB11C16B52600105792 /* PersonMassageListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonMassageListViewController.xib; sourceTree = "<group>"; };
+		6B89AFB41C16B65000105792 /* EECommunityMassageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EECommunityMassageModel.swift; sourceTree = "<group>"; };
+		6B89AFB61C16C0D400105792 /* PersonMassageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonMassageTableViewCell.swift; sourceTree = "<group>"; };
+		6B89AFB71C16C0D400105792 /* PersonMassageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonMassageTableViewCell.xib; sourceTree = "<group>"; };
 		6B8F64501C06A733008D081C /* CustomEurekaCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomEurekaCells.swift; sourceTree = "<group>"; };
 		6B8F64531C06AC7C008D081C /* APService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APService.h; sourceTree = "<group>"; };
 		6B8F64541C06AC7C008D081C /* libPushSDK-1.8.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libPushSDK-1.8.5.a"; sourceTree = "<group>"; };
@@ -582,6 +592,7 @@
 		6B2EF55A1BFEE17B003373E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6B89AFB41C16B65000105792 /* EECommunityMassageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -593,6 +604,8 @@
 				6BDC1F1D1BFF7450009DC139 /* BCColorChooseView.xib */,
 				6B77B95E1C16887400F57E15 /* PesonPersonalDetailCellTableViewCell.swift */,
 				6B77B95F1C16887400F57E15 /* PesonPersonalDetailCellTableViewCell.xib */,
+				6B89AFB61C16C0D400105792 /* PersonMassageTableViewCell.swift */,
+				6B89AFB71C16C0D400105792 /* PersonMassageTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -605,6 +618,8 @@
 				6B649B5B1C0604130028E454 /* PersonChooseThemeColorViewController.xib */,
 				6BA9B9081C0C4078003B7741 /* PersonHelpViewController.swift */,
 				6BA9B9091C0C4078003B7741 /* PersonHelpViewController.xib */,
+				6B89AFB01C16B52600105792 /* PersonMassageListViewController.swift */,
+				6B89AFB11C16B52600105792 /* PersonMassageListViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1431,6 +1446,8 @@
 				6B561CC61C02FA4F004E6D4C /* NewsListTableViewCell.xib in Resources */,
 				6B2EF5851BFEFF43003373E4 /* HomeNavBarView.xib in Resources */,
 				6BDC1F1F1BFF7450009DC139 /* BCColorChooseView.xib in Resources */,
+				6B89AFB91C16C0D400105792 /* PersonMassageTableViewCell.xib in Resources */,
+				6B89AFB31C16B52600105792 /* PersonMassageListViewController.xib in Resources */,
 				6B59393F1BFF0BD500EC4F19 /* BCGradeViewTableViewHeader.xib in Resources */,
 				6B39F1561C06F23100A29D10 /* CommunityChooseImageCell.xib in Resources */,
 				6B77B9611C16887400F57E15 /* PesonPersonalDetailCellTableViewCell.xib in Resources */,
@@ -1533,6 +1550,7 @@
 				6B8F64511C06A733008D081C /* CustomEurekaCells.swift in Sources */,
 				6BEDEB601BFED5D400CDB1B1 /* Utilities.swift in Sources */,
 				6B7BDB811BFF11ED007CEAB9 /* Encryptions.m in Sources */,
+				6B89AFB21C16B52600105792 /* PersonMassageListViewController.swift in Sources */,
 				6B61EB351C11865D00C475BF /* EEMyLoveWallListController.swift in Sources */,
 				6BD1EBE61C0448F000FF9B78 /* InfoJobDetailViewController.swift in Sources */,
 				6BA084441C100D2300E97137 /* EECommunityLoveWallModel.swift in Sources */,
@@ -1563,6 +1581,7 @@
 				6B2EF5631BFEEC56003373E4 /* HomeViewController.swift in Sources */,
 				6B1100DE1C00697600468A06 /* DataManager.swift in Sources */,
 				6BDC1F1E1BFF7450009DC139 /* BCColorChooseView.swift in Sources */,
+				6B89AFB81C16C0D400105792 /* PersonMassageTableViewCell.swift in Sources */,
 				6B561CBA1C02F62F004E6D4C /* NewsCategories.swift in Sources */,
 				6B135C2A1C04070D0062097E /* InfoJobsViewController.swift in Sources */,
 				6BEC10ED1C0027DA008EFE73 /* BCMyMassagesTableViewCell.swift in Sources */,
@@ -1596,6 +1615,7 @@
 				6B2EF5771BFEF8D6003373E4 /* DataEnvironment.swift in Sources */,
 				6B649B5C1C0604130028E454 /* PersonChooseThemeColorViewController.swift in Sources */,
 				6B59393C1BFF0BD500EC4F19 /* BCGradesTableViewCell.swift in Sources */,
+				6B89AFB51C16B65000105792 /* EECommunityMassageModel.swift in Sources */,
 				6B218CBD1C0590FD00939900 /* InfoCourseListViewController.swift in Sources */,
 				6B7BDB6D1BFF0F57007CEAB9 /* BCBaseRequest.swift in Sources */,
 				6B218CC31C0592BA00939900 /* ClassListModel.swift in Sources */,

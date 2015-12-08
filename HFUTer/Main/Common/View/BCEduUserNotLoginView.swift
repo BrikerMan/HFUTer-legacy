@@ -14,7 +14,7 @@ class BCEduUserNotLoginView: EEXibView{
   
   override func initFromXib() {
     super.initFromXib()
-    loginButton.updateTintColor()
+    loginButton.layer.borderColor = Color.primaryTintColor.CGColor
   }
   
   @IBAction func onLoginButtonPressed(sender: AnyObject) {
