@@ -17,6 +17,7 @@ class EEMyPublishedListController: EEBaseViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    navTitle = "我的发布"
     self.view.layoutIfNeeded()
     self.view.backgroundColor = Color.getGradientColor()
     self.tableView.backgroundColor = UIColor.clearColor()

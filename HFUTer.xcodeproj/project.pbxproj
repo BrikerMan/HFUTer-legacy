@@ -28,6 +28,7 @@
 		6B218CD31C059F2A00939900 /* BCGradesHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B218CD11C059F2A00939900 /* BCGradesHeaderCell.xib */; };
 		6B2808D01C15C08900821779 /* BCEduUserNotLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2808CF1C15C08900821779 /* BCEduUserNotLoginView.swift */; };
 		6B2808D21C15C09400821779 /* BCEduUserNotLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B2808D11C15C09400821779 /* BCEduUserNotLoginView.xib */; };
+		6B29A1391C170E2F005EB7B5 /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B29A1381C170E2F005EB7B5 /* PersonDetailViewController.swift */; };
 		6B2EF5631BFEEC56003373E4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EF5611BFEEC56003373E4 /* HomeViewController.swift */; };
 		6B2EF5681BFEED9B003373E4 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EF5661BFEED9B003373E4 /* InformationViewController.swift */; };
 		6B2EF5691BFEED9B003373E4 /* InformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B2EF5671BFEED9B003373E4 /* InformationViewController.xib */; };
@@ -238,6 +239,7 @@
 		6B218CD11C059F2A00939900 /* BCGradesHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCGradesHeaderCell.xib; sourceTree = "<group>"; };
 		6B2808CF1C15C08900821779 /* BCEduUserNotLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCEduUserNotLoginView.swift; sourceTree = "<group>"; };
 		6B2808D11C15C09400821779 /* BCEduUserNotLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCEduUserNotLoginView.xib; sourceTree = "<group>"; };
+		6B29A1381C170E2F005EB7B5 /* PersonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		6B2EF54D1BFEE0D2003373E4 /* HFUTer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HFUTer-Bridging-Header.h"; sourceTree = "<group>"; };
 		6B2EF5611BFEEC56003373E4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6B2EF5661BFEED9B003373E4 /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
@@ -620,6 +622,7 @@
 				6BA9B9091C0C4078003B7741 /* PersonHelpViewController.xib */,
 				6B89AFB01C16B52600105792 /* PersonMassageListViewController.swift */,
 				6B89AFB11C16B52600105792 /* PersonMassageListViewController.xib */,
+				6B29A1381C170E2F005EB7B5 /* PersonDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1629,6 +1632,7 @@
 				6B7BDB6F1BFF0F74007CEAB9 /* BCLog.swift in Sources */,
 				6B561CC11C02FA49004E6D4C /* NewsDetailModel.swift in Sources */,
 				6BEDEB671BFED5D400CDB1B1 /* EEBaseViewController.swift in Sources */,
+				6B29A1391C170E2F005EB7B5 /* PersonDetailViewController.swift in Sources */,
 				6BEC10EF1C0027DA008EFE73 /* MassageLostListView.swift in Sources */,
 				6B9211151C00240F0093BB1F /* BCMyMassageModel.swift in Sources */,
 				6B9210FD1C001F760093BB1F /* JSONNDModel.swift in Sources */,

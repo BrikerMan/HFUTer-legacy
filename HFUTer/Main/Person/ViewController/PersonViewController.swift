@@ -82,9 +82,9 @@ class PersonViewController: EEBaseFormViewController {
       <<< PesonPersonalDetailCellTableViewRow("userDetail") {
         $0.hidden = "$isLogin == 'notLogin'"
         } .onCellSelection({ (cell, row) -> () in
-          if let person = self.form.rowByTag("userDetail") as? PesonPersonalDetailCellTableViewRow {
-            person.updateCell()
-          }
+          let vc = PersonDetailViewController()
+          self.pushToViewController(vc)
+          row.updateCell()
         })
       
       <<< ButtonRow(){
@@ -95,6 +95,8 @@ class PersonViewController: EEBaseFormViewController {
           vc.hidesBottomBarWhenPushed = true
           return vc
         }, completionCallback: { vc in vc.dismissViewControllerAnimated(true, completion: nil) })
+        }.cellSetup { cell, row in
+          cell.imageView?.image = UIImage(named: "person_massage")
       }
       
       
@@ -104,7 +106,7 @@ class PersonViewController: EEBaseFormViewController {
         $0.title = "接受推送 - 暂不可用"
         $0.value = true
         }.cellSetup { cell, row in
-          cell.imageView?.image = UIImage(named: "person_login")
+          cell.imageView?.image = UIImage(named: "person_push")
       }
       
       <<< ButtonRow() { (row: ButtonRow) -> Void in

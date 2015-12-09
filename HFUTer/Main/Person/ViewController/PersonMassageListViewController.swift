@@ -19,6 +19,7 @@ class PersonMassageListViewController: EEBaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     navTitle = "我的消息"
+
     
     let nib = UINib(nibName: "PersonMassageTableViewCell", bundle: nil)
     tableView.registerNib(nib, forCellReuseIdentifier: "PersonMassageTableViewCell")

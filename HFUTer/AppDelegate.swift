@@ -39,6 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     DataEnv.loginComUser()
     PlistManager.shared().readTintColor()
     
+    UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+    
     window?.backgroundColor = UIColor.whiteColor()
     let rootViewController = rootVC
     let rootNavController = UINavigationController(rootViewController:rootViewController)

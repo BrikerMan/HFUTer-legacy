@@ -20,5 +20,4 @@ class BCEduUserNotLoginView: EEXibView{
   @IBAction func onLoginButtonPressed(sender: AnyObject) {
     RootVC.showLoginToSchoolVC()
   }
-  
 }

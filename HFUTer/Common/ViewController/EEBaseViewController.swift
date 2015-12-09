@@ -5,7 +5,6 @@
 
 import UIKit
 import SnapKit
-import FontAwesome_swift
 
 class EEBaseViewController:UIViewController {
   
