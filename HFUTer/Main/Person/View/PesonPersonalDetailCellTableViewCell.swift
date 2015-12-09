@@ -31,7 +31,7 @@ public class PesonPersonalDetailCellTableViewCell: Cell<String>,CellType {
       detailLabel.text = "\(eduUser.academy) - \(eduUser.className)"
     }
     if DataEnv.comUser.isLogin {
-      avatarImage.loadAvatar(DataEnv.comUser.avatar)
+      avatarImage.image = DataEnv.comUser.avatarImage
     }
   }
 }

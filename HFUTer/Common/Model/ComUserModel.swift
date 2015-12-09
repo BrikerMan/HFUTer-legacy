@@ -13,6 +13,11 @@ class ComUser {
   var cookie = ""
   var isLogin = false
   var avatar = ""
+  var avatarImage = UIImage(named:"avatar") {
+    didSet {
+      NotifCenter.postNotificationName(EEUserChangedAvatarNotification, object: nil)
+    }
+  }
 
 
   //详细信息

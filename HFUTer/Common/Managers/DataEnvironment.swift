@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import YYWebImage
+
 private let _SingletonASharedInstance = DataEnvironment()
 
 class DataEnvironment {
-
+  
   var eduUser:EduUser
   var comUser:ComUser
   var currentWeek = 1 {
@@ -20,7 +22,7 @@ class DataEnvironment {
       }
     }
   }
-
+  
   //单例
   class func sharedManager() -> DataEnvironment {
     return _SingletonASharedInstance
@@ -32,14 +34,14 @@ class DataEnvironment {
     comUser = PlistManager.shared().readComUser()
     self.calculateCurrentWeek()
   }
-
+  
   func saveEduUser(user:EduUser) {
     self.eduUser = user
     self.eduUser.isLogin = true
     self.eduUser.hasGetToken = true
     PlistManager.saveEduUser(self.eduUser)
   }
-
+  
   func getEduUserToken(completion:((sccess:Bool,error:String?)->())) {
     if self.eduUser.hasGetToken {
       completion(sccess: true, error: nil)
@@ -55,7 +57,7 @@ class DataEnvironment {
       }
     }
   }
-
+  
   func saveCookie(cookie:String?) {
     if let cookie = cookie {
       if cookie != "" {
@@ -65,7 +67,7 @@ class DataEnvironment {
     } else {
     }
   }
-
+  
   func loginComUser() {
     if comUser.isLogin {
       BCCommunityUserLoginRequest.login(comUser.username, password: comUser.password,
@@ -74,6 +76,18 @@ class DataEnvironment {
           if let data = response["data"] as? NSDictionary{
             if let link = data["image"] as? String {
               self.comUser.avatar = link
+              dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+                if let url = NSURL(string:"http://7xlrpg.com1.z0.glb.clouddn.com/icon/" + self.comUser.avatar),
+                  let data = NSData(contentsOfURL: url) {
+                    DataEnv.comUser.avatarImage = UIImage(data: data)
+                }
+              })
+//              let tempImageView = UIImageView()
+//              if let url = NSURL(string: ) {
+//                tempImageView.yy_setImageWithURL(url, placeholder: nil, options: .IgnoreFailedURL , completion: { (image, url, yyWebImageFromType, yyWebImageStage, error) -> Void in
+//                  self.comUser.avatarImage = image
+//                })
+//              }
             }
           }
           self.saveComUser(self.comUser)
@@ -84,11 +98,11 @@ class DataEnvironment {
       })
     }
   }
-
+  
   func readComUser() -> ComUser{
     return  PlistManager.shared().readComUser()
   }
-
+  
   func saveComUser(user:ComUser) {
     PlistManager.saveComUser(user)
     self.comUser.username = user.username
@@ -96,7 +110,7 @@ class DataEnvironment {
     self.comUser.avatar = user.avatar
     self.comUser.isLogin = true
   }
-
+  
   func handleLogOut() {
     self.eduUser = EduUser()
     self.comUser = ComUser()
@@ -113,9 +127,9 @@ class DataEnvironment {
     } else {
       from = NSTimeInterval(1440950400)
     }
-
+    
     let now = (NSDate().timeIntervalSince1970)
     self.currentWeek = Int((now - from)/(7 * 24 * 3600)) + 1
   }
-
+  
 }

@@ -25,6 +25,7 @@ class PersonViewController: EEBaseFormViewController {
       form.setValues(["isLogin":"edu"])
     }
     self.tableView?.sectionFooterHeight = 0.1
+    NotifCenter.addObserver(self, selector: "updatedAvatar", name: EEUserChangedAvatarNotification, object: nil)
   }
   
   override func didReceiveMemoryWarning() {
@@ -39,6 +40,10 @@ class PersonViewController: EEBaseFormViewController {
   
   override func onTintColorChanged() {
     super.onTintColorChanged()
+    self.tableView?.reloadData()
+  }
+  
+  @objc private func updatedAvatar() {
     self.tableView?.reloadData()
   }
   
