@@ -9,6 +9,12 @@
 import Foundation
 
 class BClog {
+  
+  static func log(info:String, file:String = __FILE__, method:String = __FUNCTION__, line: Int = __LINE__) {
+    let str = "\(file)[\(line)]-\(method):\(info)"
+    print(str)
+  }
+  
   static func info(info:String) {
     let date = NSDate(timeIntervalSinceNow: 0)
     let formatter = NSDateFormatter()
@@ -16,6 +22,7 @@ class BClog {
     let dataString = formatter.stringFromDate(date)
     let str = "[\(dataString)] " + "INFO:" + info
     print(str)
+    
   }
 
   static func error(info:String,param:[String:AnyObject]?) {
@@ -24,7 +31,9 @@ class BClog {
     formatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
     let dataString = formatter.stringFromDate(date)
     let str = "[\(dataString)] " + "ERROR:" + info + "\nParam:\(param)"
-    print(str)
+    #if DEBUG
+      print(str)
+    #endif
   }
 
   static func request(url:String,param:NSDictionary?,header:NSDictionary?) {
@@ -33,6 +42,8 @@ class BClog {
     formatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
     let dataString = formatter.stringFromDate(date)
     let str = "=====================\(dataString)=====================\n" + "REQUEST:" + url + "\nHeader:\(header)" + "\nParam:\(param)"
-    print(str)
+    #if DEBUG
+      print(str)
+    #endif
   }
 }

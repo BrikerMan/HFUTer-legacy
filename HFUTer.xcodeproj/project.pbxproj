@@ -1784,6 +1784,7 @@
 					"$(PROJECT_DIR)/HFUTer/3rdPart/JPush-iOS",
 					"$(PROJECT_DIR)/HFUTer/3rdPart/Umeng",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eliyar.hfuter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HFUTer/SupportFiles/HFUTer-Bridging-Header.h";
@@ -1808,6 +1809,7 @@
 					"$(PROJECT_DIR)/HFUTer/3rdPart/JPush-iOS",
 					"$(PROJECT_DIR)/HFUTer/3rdPart/Umeng",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eliyar.hfuter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HFUTer/SupportFiles/HFUTer-Bridging-Header.h";

@@ -22,6 +22,7 @@ func isAppFirstLaunchedForVersion(forVersion:String)->Bool{
   }
 }
 
+
 func runAfterLoginToEdu(block:()->()) {
   if DataEnv.eduUser.isLogin {
     block()
