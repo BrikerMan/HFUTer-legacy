@@ -32,8 +32,7 @@ class BCGetClassDetailRequest {
     var nameList = [String]()
     var idList = [String]()
     
-    let enc = CFStringConvertEncodingToNSStringEncoding(0x0632)
-    if let htmlString:String = NSString(data:data!, encoding: enc) as? String{
+    if let htmlString:String = NSString(data:data!, encoding: GB2312Encoding) as? String{
 
       if let doc = HTML(html: htmlString, encoding: NSUTF8StringEncoding) {
         
