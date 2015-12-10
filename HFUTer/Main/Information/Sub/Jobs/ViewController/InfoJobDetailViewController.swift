@@ -49,7 +49,7 @@ class InfoJobDetailViewController: EEBaseViewController {
       if let doc = HTML(html: htmlString, encoding: NSUTF8StringEncoding) {
         for node in doc.xpath("//*[@id='zhuce_t']/table") {
           let table = node.innerHTML ?? ""
-            let header = "<!DOCTYPE html><html><head><meta charset='utf-8'/><style>img{display:none} .jzxx_2{font-size:12px;color:#036;line-height:30px;margin:0;margin-left:10px;text-align:right;width:100px} .jzxx_1{font-size:12px;color:#1B1B1B;line-height:30px;margin:0;margin-left:10pxborder-bottom-color: #eeeeee;border-bottom-width: 1px;border-bottom-style: dotted;} .jzxx_3{font-size:14px;color:#036;line-height:25px;font-weight:600;margin:2px;margin-left:10px}</style></head><body><table>"
+            let header = "<!DOCTYPE html><html><head><meta charset='utf-8'/><style>img{display:none} .jzxx_2{font-size:12px;color:#036;line-height:30px;margin:0;margin-left:10px;text-align:right;width:60px} .jzxx_1{font-size:12px;color:#1B1B1B;line-height:30px;margin:0;margin-left:10pxborder-bottom-color: #eeeeee;border-bottom-width: 1px;border-bottom-style: dotted;} .jzxx_3{font-size:14px;color:#036;line-height:25px;font-weight:600;margin:2px;margin-left:0px;display: none}</style></head><body><table>"
           
           let footer = "</table></body></html>"
           self.htmlString = header + table + footer
