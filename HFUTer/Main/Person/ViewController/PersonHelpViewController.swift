@@ -25,7 +25,7 @@ class PersonHelpViewController: EEBaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.navBar.navLeftButtonStyle = .Back
-    
+    //TODO: 修改链接
     switch style {
     case .Help:
       navTitle = "帮助"
