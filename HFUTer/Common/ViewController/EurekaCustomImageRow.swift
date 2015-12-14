@@ -17,7 +17,7 @@ final class CustomImageRow : _CustomImageRow, RowType {
 
 }
 
-class _CustomImageRow : SelectorRow<UIImage, CustomImagePickerController>, PresenterRowType {
+class _CustomImageRow : SelectorRow<UIImage, CustomImagePickerController> {
 
   required init(tag: String?) {
     super.init(tag: tag)
