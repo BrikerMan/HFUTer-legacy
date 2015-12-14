@@ -108,8 +108,12 @@ class PersonViewController: EEBaseFormViewController {
       +++ Section("设置")
       
       <<< SwitchRow() {
-        $0.title = "接受推送 - 暂不可用"
-        $0.value = true
+        $0.title = "接受推送"
+        $0.value = DataEnv.isPushNotificationEnabled
+
+        $0.onChange({ (row) -> () in
+          DataEnv.isPushNotificationEnabled = row.cell.switchControl?.on ?? true
+        })
         }.cellSetup { cell, row in
           cell.imageView?.image = UIImage(named: "person_push")
       }

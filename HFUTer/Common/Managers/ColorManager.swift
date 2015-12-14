@@ -23,7 +23,7 @@ class ColorManager {
       let colorArray =  NSArray(ofColorsWithColorScheme: ColorScheme.Analogous, usingColor: primaryTintColor, withFlatScheme: true)
       secondaryTintColor    = colorArray[0] as! UIColor
       NSNotificationCenter.defaultCenter().postNotificationName(BCChangeTintColorNotification, object: nil, userInfo: nil)
-      PlistManager.saveTintColor(primaryTintColor)
+      PlistManager.shared().saveTintColor(primaryTintColor)
     }
   }
   

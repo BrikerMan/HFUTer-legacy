@@ -28,28 +28,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HFUTer/Main/Person/ViewController/PersonViewController.swift"
-            timestampString = "471351349.681047"
+            timestampString = "471785519.784719"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "updatedAvatar()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HFUTer/Common/Managers/DataEnvironment.swift"
-            timestampString = "471352194.657462"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "loginComUser()"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "initFormViews()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

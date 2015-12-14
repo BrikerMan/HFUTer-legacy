@@ -121,6 +121,25 @@ class PlistManager {
     return user
   }
   
+  func readSettingValueForKey(key:String) -> AnyObject? {
+    let filePath = PlistManager.getFilePath("settings.plist")
+    if let dataSource = NSDictionary(contentsOfFile: filePath), let value = dataSource[key] {
+      return value
+    } else {
+      return nil
+    }
+  }
+  
+  func saveSettingValueForKey(value:AnyObject,key:String) {
+    let filePath = PlistManager.getFilePath("settings.plist")
+    var data = NSMutableDictionary()
+    if let fileContent = NSMutableDictionary(contentsOfFile: filePath) {
+      data = fileContent
+    }
+    data.setValue(value, forKey: key)
+    data.writeToFile(filePath, atomically: true)
+  }
+  
   class func saveComUser(user:ComUser) {
     let filePath = PlistManager.getFilePath("comUser.plist")
     let dataSource:NSMutableDictionary = ["key":"value"]
@@ -135,33 +154,17 @@ class PlistManager {
     let dataSource:NSMutableArray = []
     dataSource.writeToFile(filePath, atomically: true)
   }
+
   
-  class func saveTintColor(color:UIColor) {
-    let filePath = self.getFilePath("setting.plist")
-    let colorString = color.hexString
-    
-    let dataSource = NSMutableDictionary(contentsOfFile: filePath)
-    var dataSourceNew:NSMutableDictionary = ["key":"value"]
-    
-    if let dataSource = dataSource {
-      dataSourceNew = dataSource
-      dataSourceNew.setValue(colorString, forKey: "tintColor")
-    } else {
-      dataSourceNew.setValue(colorString, forKey: "tintColor")
-    }
-    dataSourceNew.writeToFile(filePath, atomically: true)
+  func saveTintColor(color:UIColor) {
+    let colorString = color.hexString ?? "#F86366"
+    self.saveSettingValueForKey(colorString, key: "tintColor")
   }
   
   
   func readTintColor() {
-    let dataSource = readPlistFile("setting.plist")
-    var tintColor = UIColor(hexString: "#F86366", alpha: 1.0)
-    
-    if let dataSource = dataSource {
-      let colorString = (dataSource.objectForKey("tintColor") as! String)
-      tintColor = UIColor(hexString: colorString, alpha: 1.0)
-    }
-    
+    let hex = readSettingValueForKey("tintColor") as? String ?? "#F86366"
+    let tintColor = UIColor(hexString: hex, alpha: 1.0)
     Color.primaryTintColor = tintColor
   }
 }
