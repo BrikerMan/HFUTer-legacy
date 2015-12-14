@@ -94,15 +94,19 @@ class PersonViewController: EEBaseFormViewController {
       
       <<< ButtonRow(){
         $0.title = "我的消息"
-        $0.presentationMode = .Show(controllerProvider: ControllerProvider.Callback {
+        }.cellUpdate { cell, row in
+          cell.imageView?.image = UIImage(named: "person_massage")
+          cell.accessoryType = .DisclosureIndicator
+          cell.textLabel?.textColor = nil
+          cell.textLabel?.textAlignment = .Left
+      } .onCellSelection({ (cell, row) -> () in
+        runAfterLoginToCommunity({ () -> () in
           let vc = PersonMassageListViewController(nib: "PersonMassageListViewController")
           vc.navBar.navLeftButtonStyle = .Back
           vc.hidesBottomBarWhenPushed = true
-          return vc
-        }, completionCallback: { vc in vc.dismissViewControllerAnimated(true, completion: nil) })
-        }.cellSetup { cell, row in
-          cell.imageView?.image = UIImage(named: "person_massage")
-      }
+          self.pushToViewController(vc)
+        })
+      })
       
       
       +++ Section("设置")
