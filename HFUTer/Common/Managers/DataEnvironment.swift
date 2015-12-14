@@ -23,6 +23,19 @@ class DataEnvironment {
     }
   }
   
+  //控制推送的变量，外层界面只需要修改其值
+  var isPushNotificationEnabled = true {
+    didSet {
+      if DataEnv.eduUser.isLogin && isPushNotificationEnabled {
+        APService.setTags(["push"], alias: DataEnv.eduUser.username, callbackSelector: nil, object: nil)
+        PlistManager.shared().saveSettingValueForKey(true, key: "isPushNotificationEnabled")
+      } else {
+        APService.setTags(["未登录","禁止推送"], alias: "", callbackSelector: nil, object: nil)
+        PlistManager.shared().saveSettingValueForKey(false, key: "isPushNotificationEnabled")
+      }
+    }
+  }
+  
   //单例
   class func sharedManager() -> DataEnvironment {
     return _SingletonASharedInstance
@@ -32,6 +45,7 @@ class DataEnvironment {
   init() {
     eduUser = PlistManager.shared().readEduUser()
     comUser = PlistManager.shared().readComUser()
+    isPushNotificationEnabled = (PlistManager.shared().readSettingValueForKey("isPushNotificationEnabled") as? Bool) ?? true
     self.calculateCurrentWeek()
   }
   
