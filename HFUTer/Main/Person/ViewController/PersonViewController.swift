@@ -63,7 +63,6 @@ class PersonViewController: EEBaseFormViewController {
     
     form +++
       Section()
-      
       //用于刷新列表 - 显示隐藏部分cell
       <<< SegmentedRow<String>("isLogin"){
         $0.options = ["notLogin", "edu", "com"]
@@ -110,7 +109,6 @@ class PersonViewController: EEBaseFormViewController {
       
       
       +++ Section("设置")
-      
       <<< SwitchRow() {
         $0.title = "接受推送"
         $0.value = DataEnv.isPushNotificationEnabled

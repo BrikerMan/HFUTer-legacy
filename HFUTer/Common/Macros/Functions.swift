@@ -37,6 +37,7 @@ func runAfterLoginToCommunity(block:()->()) {
     if DataEnv.comUser.isLogin {
       block()
     } else {
+      Hud.showMassage("请先登录社区")
       RootVC.showLoginToCommunityVC()
     }
   } else {
