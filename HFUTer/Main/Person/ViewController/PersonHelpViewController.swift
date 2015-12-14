@@ -32,10 +32,10 @@ class PersonHelpViewController: EEBaseViewController {
       url = "http://7xlrpg.com1.z0.glb.clouddn.com/help/ios-index.html"
     case .PrivacyPoicy:
       navTitle = "隐私条款"
-      url = "http://7xlrpg.com1.z0.glb.clouddn.com/help/ios-index.html"
+      url = "http://7xlrpg.com1.z0.glb.clouddn.com/ios/privacy_policy.html"
     case .AboutUs:
       navTitle = "关于我们"
-      url = "http://7xlrpg.com1.z0.glb.clouddn.com/help/ios-index.html"
+      url = "http://7xlrpg.com1.z0.glb.clouddn.com/ios/about_us.html"
     }
     
     loadHtml()
@@ -47,7 +47,7 @@ class PersonHelpViewController: EEBaseViewController {
   
   private func loadHtml() {
     Hud.showLoading("正在加载")
-    let url = "http://7xlrpg.com1.z0.glb.clouddn.com/help/ios-index.html"
+
     BCBaseRequest.getDataFromWebRequest(url, params: nil, onFinishedBlock: { (operation) -> Void in
       if let data = operation.data, html = NSString(data: data, encoding: NSUTF8StringEncoding) as? String{
         self.webView.loadHTMLString(html, baseURL: nil)
