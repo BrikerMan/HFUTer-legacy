@@ -28,10 +28,6 @@ class PersonViewController: EEBaseFormViewController {
     NotifCenter.addObserver(self, selector: "updatedAvatar", name: EEUserChangedAvatarNotification, object: nil)
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
   
   @objc private func afterLogin() {
     form.setValues(["isLogin":"edu"])
@@ -192,7 +188,24 @@ class PersonViewController: EEBaseFormViewController {
         $0.title = "退出"
         $0.hidden = "$isLogin == 'notLogin'"
         } .onCellSelection({ (cell, row) -> () in
-          self.handeLogOut()
+          let alertView = UIAlertView()
+          alertView.title = "是否确认退出"
+          alertView.message = "同时推出教务系统和社区，退出后缓存的课表等数据将情况，自定义备注被删除。请确认是否退出。"
+          alertView.addButtonWithTitle("确认退出")
+          alertView.addButtonWithTitle("取消")
+          alertView.cancelButtonIndex = 1
+          alertView.tag = 1
+          alertView.delegate = self
+          alertView.show()
         })
+  }
+}
+
+
+extension PersonViewController:UIAlertViewDelegate {
+  func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+    if buttonIndex == 0 {
+      self.handeLogOut()
+    }
   }
 }
