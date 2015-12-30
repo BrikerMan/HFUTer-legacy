@@ -49,6 +49,12 @@ class CommunityViewController: EEBaseViewController {
     self.showOrHideActionList()
   }
   
+  override func onTintColorChanged() {
+    super.onTintColorChanged()
+    lostView.changeTintColor(nil)
+    self.scrollView.backgroundColor =  Color.getGradientColor()
+  }
+  
   //MARK:- 网络请求
   private func getDateFromServer() {
     let url = getComURL("api/lostFound/getList")
@@ -221,10 +227,6 @@ class CommunityViewController: EEBaseViewController {
     self.currentShowingPage = index
   }
   
-  override func onTintColorChanged() {
-    super.onTintColorChanged()
-    lostView.changeTintColor(nil)
-  }
   
   //MARK:- 初始化UI
   func initScrollView() {

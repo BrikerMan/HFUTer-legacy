@@ -8,6 +8,7 @@
 
 import UIKit
 import HMSegmentedControl
+import MJRefresh
 
 protocol BCScheculeViewDelegate {
   func didSelecctedAtCell(indexPath:NSIndexPath,models:[ScheduleModel]?)
@@ -17,7 +18,7 @@ protocol BCScheculeViewDelegate {
 class BCScheculeView: EEXibView {
   
   var delegate:BCScheculeViewDelegate?
-  
+  var refreshBlock:(()->Void)?
   @IBOutlet weak var collectionView: UICollectionView!
   
   private var scheduleListForShow = [ScheduleModel]()
@@ -33,6 +34,10 @@ class BCScheculeView: EEXibView {
   //MARK:- 生命周期
   override func initFromXib() {
     super.initFromXib()
+    collectionView.mj_header = MJRefreshHeader(refreshingBlock: { () -> Void in
+      self.refreshBlock?()
+    })
+    
     registerCellAndPrepareView()
     week = DataEnv.currentWeek
     showCurrentWeeksSchedule(week)
@@ -44,6 +49,7 @@ class BCScheculeView: EEXibView {
     if let week = week {
       self.week = week
     }
+
     scheduleDictForShow.removeAll()
     scheduleListForShow = ScheduleModel.readScheduleModelForWeek(self.week)
     for schedule in scheduleListForShow {
@@ -53,6 +59,7 @@ class BCScheculeView: EEXibView {
         scheduleDictForShow["\(schedule.hour)-\(schedule.day)"] = [schedule]
       }
     }
+    collectionView.mj_header.endRefreshing()
     collectionView.reloadData()
   }
   
