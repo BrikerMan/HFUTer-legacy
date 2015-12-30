@@ -231,6 +231,9 @@ class HomeViewController: EEBaseViewController {
     
     
     scheduleView = BCScheculeView()
+    scheduleView.refreshBlock = {
+      self.beginGetScheduleList(nil)
+    }
     scheduleView.delegate = self
     self.scrollView.addSubview(scheduleView)
     
@@ -242,6 +245,9 @@ class HomeViewController: EEBaseViewController {
     })
     
     gradesView = BCGradesTableView()
+    gradesView.refreshBlock = {
+      self.beginGetGradesRequest()
+    }
     self.scrollView.addSubview(gradesView)
     
     gradesView.snp_makeConstraints(closure: { (make) -> Void in

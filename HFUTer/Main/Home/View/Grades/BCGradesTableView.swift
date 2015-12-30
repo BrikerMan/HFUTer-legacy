@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MJRefresh
 
 class BCGradesTableView: UIView {
   
@@ -32,6 +33,7 @@ class BCGradesTableView: UIView {
   
   var isSetUpData = false
   var refreshBlock:(() -> Void)?
+  
   override init(frame: CGRect) {
     super.init(frame:frame)
     setUI()
@@ -50,6 +52,10 @@ class BCGradesTableView: UIView {
     tableView.dataSource = self
     tableView.delegate = self
     
+    tableView.mj_header = MJRefreshHeader(refreshingBlock: { () -> Void in
+      self.refreshBlock?()
+    })
+    
     self.addSubview(tableView)
     
   }
@@ -58,6 +64,7 @@ class BCGradesTableView: UIView {
     self.isSetUpData = true
     self.gradesBySemester = GradeModel.getGradesBySemester()
     self.semesterList = GradeModel.calculateGPA()
+    self.tableView.mj_header.endRefreshing()
     self.tableView.reloadData()
   }
   
