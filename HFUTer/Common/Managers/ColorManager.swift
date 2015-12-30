@@ -23,7 +23,7 @@ class ColorManager {
       let colorArray =  NSArray(ofColorsWithColorScheme: ColorScheme.Analogous, usingColor: primaryTintColor, withFlatScheme: true)
       secondaryTintColor    = colorArray[0] as! UIColor
       NSNotificationCenter.defaultCenter().postNotificationName(BCChangeTintColorNotification, object: nil, userInfo: nil)
-      PlistManager.saveTintColor(primaryTintColor)
+      PlistManager.shared().saveTintColor(primaryTintColor)
     }
   }
   
@@ -98,7 +98,7 @@ class ColorManager {
   
   func getGradientColor() -> UIColor {
     let frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight)
-    let color = GradientColor(.Radial, frame, [UIColor.whiteColor(),Color.primaryTintColor.ultraLight()])
+    let color = GradientColor(.Radial, frame: frame, colors: [UIColor.whiteColor(),Color.primaryTintColor.ultraLight()])
     return color
   }
   

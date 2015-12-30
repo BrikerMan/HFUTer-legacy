@@ -38,6 +38,7 @@ class InfoGetJobListRequest {
     let enc = CFStringConvertEncodingToNSStringEncoding(0x0632)
     if let htmlString:String = NSString(data:data!, encoding: enc) as? String{
       if let doc = HTML(html: htmlString, encoding: NSUTF8StringEncoding) {
+        log.info(htmlString)
         var isFirstRow = true
         for node in doc.xpath("//table/tr") {
           if !isFirstRow {

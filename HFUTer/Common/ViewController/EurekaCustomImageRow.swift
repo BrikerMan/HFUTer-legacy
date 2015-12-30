@@ -14,16 +14,17 @@ final class CustomImageRow : _CustomImageRow, RowType {
   required init(tag: String?) {
     super.init(tag: tag)
   }
+
 }
 
-class _CustomImageRow : SelectorRow<UIImage, CustomImagePickerController>, PresenterRowType {
+class _CustomImageRow : SelectorRow<UIImage, CustomImagePickerController> {
 
   required init(tag: String?) {
     super.init(tag: tag)
     presentationMode = .PresentModally(controllerProvider: ControllerProvider.Callback {
       let vc = CustomImagePickerController()
-      if tag == "cover" {
-        vc.cropSize = CGSize(width: 400, height: 200)
+      if tag == "avatar" {
+        vc.cropSize = CGSize(width: 200, height: 200)
       } else {
         vc.cropSize = CGSize(width: 400, height: 600)
       }
@@ -31,12 +32,16 @@ class _CustomImageRow : SelectorRow<UIImage, CustomImagePickerController>, Prese
       }, completionCallback: { vc in vc.dismissViewControllerAnimated(false, completion: nil) })
     self.displayValueFor = nil
   }
+  
+  
+  
 
   override func customUpdateCell() {
     super.customUpdateCell()
     cell.accessoryType = .None
     if let image = self.value {
-      let imageView = UIImageView(frame: CGRectMake(0, 0, 44, 44))
+      let imageView = UIImageView(frame: CGRectMake(0, 0, 50, 50))
+      imageView.layer.cornerRadius = 50/2
       imageView.contentMode = .ScaleAspectFill
       imageView.image = image
       imageView.clipsToBounds = true
@@ -55,15 +60,6 @@ class CustomImagePickerController : UIImagePickerController, TypedRowControllerT
   var completionCallback : ((UIViewController) -> ())?
 
   private var cropSize:CGSize!
-
-  //  init(cropSize:CGSize) {
-  //    self.cropSize = cropSize
-  //    super.init(nibName: nil, bundle: nil)
-  //  }
-
-  //  required init?(coder aDecoder: NSCoder) {
-  //      fatalError("init(coder:) has not been implemented")
-  //  }
 
   override func viewDidLoad() {
     super.viewDidLoad()

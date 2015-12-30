@@ -25,12 +25,9 @@ class PersonViewController: EEBaseFormViewController {
       form.setValues(["isLogin":"edu"])
     }
     self.tableView?.sectionFooterHeight = 0.1
+    NotifCenter.addObserver(self, selector: "updatedAvatar", name: EEUserChangedAvatarNotification, object: nil)
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
   
   @objc private func afterLogin() {
     form.setValues(["isLogin":"edu"])
@@ -39,6 +36,10 @@ class PersonViewController: EEBaseFormViewController {
   
   override func onTintColorChanged() {
     super.onTintColorChanged()
+    self.tableView?.reloadData()
+  }
+  
+  @objc private func updatedAvatar() {
     self.tableView?.reloadData()
   }
   
@@ -58,7 +59,6 @@ class PersonViewController: EEBaseFormViewController {
     
     form +++
       Section()
-      
       //用于刷新列表 - 显示隐藏部分cell
       <<< SegmentedRow<String>("isLogin"){
         $0.options = ["notLogin", "edu", "com"]
@@ -89,22 +89,29 @@ class PersonViewController: EEBaseFormViewController {
       
       <<< ButtonRow(){
         $0.title = "我的消息"
-        $0.presentationMode = .Show(controllerProvider: ControllerProvider.Callback {
+        }.cellUpdate { cell, row in
+          cell.imageView?.image = UIImage(named: "person_massage")
+          cell.accessoryType = .DisclosureIndicator
+          cell.textLabel?.textColor = nil
+          cell.textLabel?.textAlignment = .Left
+      } .onCellSelection({ (cell, row) -> () in
+        runAfterLoginToCommunity({ () -> () in
           let vc = PersonMassageListViewController(nib: "PersonMassageListViewController")
           vc.navBar.navLeftButtonStyle = .Back
           vc.hidesBottomBarWhenPushed = true
-          return vc
-        }, completionCallback: { vc in vc.dismissViewControllerAnimated(true, completion: nil) })
-        }.cellSetup { cell, row in
-          cell.imageView?.image = UIImage(named: "person_massage")
-      }
+          self.pushToViewController(vc)
+        })
+      })
       
       
       +++ Section("设置")
-      
       <<< SwitchRow() {
-        $0.title = "接受推送 - 暂不可用"
-        $0.value = true
+        $0.title = "接受推送"
+        $0.value = DataEnv.isPushNotificationEnabled
+
+        $0.onChange({ (row) -> () in
+          DataEnv.isPushNotificationEnabled = row.cell.switchControl?.on ?? true
+        })
         }.cellSetup { cell, row in
           cell.imageView?.image = UIImage(named: "person_push")
       }
@@ -181,7 +188,24 @@ class PersonViewController: EEBaseFormViewController {
         $0.title = "退出"
         $0.hidden = "$isLogin == 'notLogin'"
         } .onCellSelection({ (cell, row) -> () in
-          self.handeLogOut()
+          let alertView = UIAlertView()
+          alertView.title = "是否确认退出"
+          alertView.message = "同时推出教务系统和社区，退出后缓存的课表等数据将情况，自定义备注被删除。请确认是否退出。"
+          alertView.addButtonWithTitle("确认退出")
+          alertView.addButtonWithTitle("取消")
+          alertView.cancelButtonIndex = 1
+          alertView.tag = 1
+          alertView.delegate = self
+          alertView.show()
         })
+  }
+}
+
+
+extension PersonViewController:UIAlertViewDelegate {
+  func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+    if buttonIndex == 0 {
+      self.handeLogOut()
+    }
   }
 }

@@ -22,6 +22,7 @@ func isAppFirstLaunchedForVersion(forVersion:String)->Bool{
   }
 }
 
+
 func runAfterLoginToEdu(block:()->()) {
   if DataEnv.eduUser.isLogin {
     block()
@@ -36,6 +37,7 @@ func runAfterLoginToCommunity(block:()->()) {
     if DataEnv.comUser.isLogin {
       block()
     } else {
+      Hud.showMassage("请先登录社区")
       RootVC.showLoginToCommunityVC()
     }
   } else {

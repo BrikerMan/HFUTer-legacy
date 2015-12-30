@@ -19,7 +19,7 @@ let colorAlphaComponent:CGFloat  = 0.9
 //////////////////////////////////////////////////////////////////////////  /////////////////////////////////////////////
 //Managers
 
-let isFisrtLaunchOfThisVersion = isAppFirstLaunchedForVersion("1.60001")
+let isFisrtLaunchOfThisVersion = isAppFirstLaunchedForVersion("2.0")
 
 let Color = ColorManager.sharedManager()
 let Hud   = EEHudView.sharedManager()
@@ -48,6 +48,7 @@ let ScreenHeight                =       UIScreen.mainScreen().bounds.size.height
 let BCUserLoginNotification             = "HDUserLoginNotification"
 let BCUserLogOutNotification            = "BCUserLogOutNotification"
 let BCChangeTintColorNotification       = "BCChangeTintColorNotification"
+let EEUserChangedAvatarNotification     = "EEUserChangedAvatarNotification"
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

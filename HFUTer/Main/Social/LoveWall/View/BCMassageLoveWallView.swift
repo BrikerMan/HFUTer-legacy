@@ -61,6 +61,16 @@ class BCMassageLoveWallView: EEXibView {
     }
     self.tableView.mj_header.endRefreshing()
   }
+  
+  override func changeTintColor(notification: NSNotification?) {
+    super.changeTintColor(notification)
+    if let cells = tableView.visibleCells as? [BCMassageLoveTableViewCell] {
+      for cell in cells {
+        cell.colorfulBackView.backgroundColor  = Color.secondaryTintColor
+        cell.colorfulBaclView2.backgroundColor = Color.secondaryTintColor
+      }
+    }
+  }
 }
 
 

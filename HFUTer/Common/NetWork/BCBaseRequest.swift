@@ -110,9 +110,10 @@ class BCBaseRequest {
    - parameter response.result     result of response serialization
    */
   class func getJsonFromCommunityServerRequest(url:String ,params:[String:AnyObject], onFinishedBlock:((response:NSDictionary) -> Void)?, onFailedBlock:((reason:String?) -> Void)?,onNetErrorBlock:(() -> Void)?) {
-
+    
     let header = ["Cookie":DataEnv.comUser.cookie]
     log.request(url, param: params,header:header)
+    
     UIApplication.sharedApplication().networkActivityIndicatorVisible = true
     
     request(.POST, url, parameters: params, encoding: ParameterEncoding.URL, headers: header)

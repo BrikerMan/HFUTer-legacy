@@ -50,6 +50,7 @@ class RootViewController: UITabBarController {
 
   func showLoginToCommunityVC() {
     let vc = BCCommunitLoginViewController(nibName:"BCCommunitLoginViewController",bundle:nil)
+    vc.navBar.navLeftButtonStyle = .Back
     self.navigationController?.pushViewController(vc, animated: true)
   }
 

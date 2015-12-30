@@ -45,6 +45,22 @@ class CommunitySendMassageToPublicController: EEBaseFormViewController {
       Hud.showError("请填写20字符以上的描述")
       return false
     }
+    
+    if !isEurekaValueForKeyExist(values, rowName: "thing") {
+      Hud.showError("请填写物品名称")
+      return false
+    }
+    
+    if !isEurekaValueForKeyExist(values, rowName: "place") {
+      Hud.showError("请填写地点")
+      return false
+    }
+    
+    if !isEurekaValueForKeyExist(values, rowName: "date") {
+      Hud.showError("请选择日期")
+      return false
+    }
+    
     return true
   }
   
@@ -130,6 +146,16 @@ class CommunitySendMassageToPublicController: EEBaseFormViewController {
       params["pic"] = jsonString
     }
     
+    params["thing"] = values["thing"] as? String
+    params["place"] = values["place"] as? String
+    
+    if let date = values["date"] as? NSDate {
+      let dateFormatter = NSDateFormatter()
+      dateFormatter.dateFormat = "yyyy-mm-dd"
+      let DateInFormat = dateFormatter.stringFromDate(date)
+      params["time"] = DateInFormat + " " + ((values["time"] as? String) ?? "不确定")
+    }
+    
     BCBaseRequest.getJsonFromCommunityServerRequest(url, params: params,
       onFinishedBlock: { (response) -> Void in
         Hud.showMassage("发布成功")
@@ -141,7 +167,7 @@ class CommunitySendMassageToPublicController: EEBaseFormViewController {
         Hud.showError(NetErrorWarning)
     }
   }
-
+  
   private func initForm() {
     self.tableView?.frame = CGRectMake(0, 64, ScreenWidth, ScreenHeight-64)
     
@@ -160,6 +186,25 @@ class CommunitySendMassageToPublicController: EEBaseFormViewController {
     
     form
       +++ Section()
+      
+      <<< TextRow("thing"){
+        $0.title = "物品名称"
+      }
+      
+      <<< TextRow("place"){
+        $0.title = "地点"
+      }
+      
+      <<< DateRow("date"){
+        $0.title = "日期"
+      }
+      
+      <<< ActionSheetRow<String>("time") {
+        $0.title = "时间"
+        $0.options = ["上午", "中午", "下午", "晚上", "不确定"]
+        $0.value = "不确定"
+      }
+      
       <<< TextAreaRow("desc"){
         $0.placeholder = "请输入描述"
       }
