@@ -13,7 +13,6 @@ class PersonViewController: EEBaseFormViewController {
   
   private var colorChooseView:BCColorChooseView!
   private var colorChooseViewBack:UIView!
-  
   private var isColorChooseViewShowing = false
   
   override func viewDidLoad() {
@@ -57,6 +56,21 @@ class PersonViewController: EEBaseFormViewController {
   
   private func initFormViews() {
     
+    ButtonRow.defaultCellSetup = { cell, row in
+      cell.textLabel?.font = UIFont.systemFontOfSize(16)
+      cell.textLabel?.textColor = UIColor(hexString: "333333")
+    }
+    
+    ButtonRow.defaultCellUpdate = { cell, row in
+      cell.textLabel?.font = UIFont.systemFontOfSize(16)
+      cell.textLabel?.textColor = UIColor(hexString: "333333")
+    }
+    
+    SwitchRow.defaultCellUpdate = { cell, row in
+      cell.textLabel?.font = UIFont.systemFontOfSize(16)
+      cell.textLabel?.textColor = UIColor(hexString: "333333")
+    }
+
     form +++
       Section()
       //用于刷新列表 - 显示隐藏部分cell
@@ -92,7 +106,6 @@ class PersonViewController: EEBaseFormViewController {
         }.cellUpdate { cell, row in
           cell.imageView?.image = UIImage(named: "person_massage")
           cell.accessoryType = .DisclosureIndicator
-          cell.textLabel?.textColor = nil
           cell.textLabel?.textAlignment = .Left
       } .onCellSelection({ (cell, row) -> () in
         runAfterLoginToCommunity({ () -> () in
@@ -117,7 +130,7 @@ class PersonViewController: EEBaseFormViewController {
       }
       
       <<< ButtonRow() { (row: ButtonRow) -> Void in
-        row.title = "主题颜色选择"
+        row.title = "主题颜色"
         row.presentationMode = .Show(controllerProvider: ControllerProvider.Callback {
           let vc = PersonChooseThemeColorViewController(nib: "PersonChooseThemeColorViewController")
           vc.navBar.navLeftButtonStyle = .Back
