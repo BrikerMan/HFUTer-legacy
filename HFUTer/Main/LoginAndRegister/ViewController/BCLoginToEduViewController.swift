@@ -30,7 +30,16 @@ class BCLoginToEduViewController: EEBaseViewController {
     loginButton.layer.cornerRadius = 5
     cancelButton.layer.cornerRadius = 5
     self.loginView.backgroundColor = Color.primaryTintColor
+    
+    let tapGasture = UITapGestureRecognizer(target: self, action: "onTapGasturePressed")
+    self.view.addGestureRecognizer(tapGasture)
   }
+  
+  
+  @objc private func onTapGasturePressed() {
+    self.view.endEditing(true)
+  }
+  
   
   
   @IBAction func onLoginButtonPress(sender: AnyObject) {
