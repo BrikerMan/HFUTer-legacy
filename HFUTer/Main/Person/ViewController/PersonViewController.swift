@@ -155,7 +155,11 @@ class PersonViewController: EEBaseFormViewController {
       }
       */
       
-      +++ Section()
+      +++ Section() {
+        $0.footer = HeaderFooterView<PersonViewFooterView>(HeaderFooterProvider.Class)
+        $0.footer?.height = { 30 }
+      }
+
       
       <<< ButtonRow() {
         $0.title = "帮助 "
@@ -211,7 +215,8 @@ class PersonViewController: EEBaseFormViewController {
           alertView.delegate = self
           alertView.show()
         })
-  }
+    
+    }
 }
 
 
