@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B079D1D1C44CC0500BE3555 /* PersonViewFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B079D1C1C44CC0500BE3555 /* PersonViewFooterView.swift */; };
 		6B1100DE1C00697600468A06 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1100DD1C00697600468A06 /* DataManager.swift */; };
 		6B135C2A1C04070D0062097E /* InfoJobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B135C281C04070D0062097E /* InfoJobsViewController.swift */; };
 		6B135C2B1C04070D0062097E /* InfoJobsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B135C291C04070D0062097E /* InfoJobsViewController.xib */; };
@@ -218,6 +219,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B079D1C1C44CC0500BE3555 /* PersonViewFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonViewFooterView.swift; sourceTree = "<group>"; };
 		6B1100DD1C00697600468A06 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		6B135C281C04070D0062097E /* InfoJobsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoJobsViewController.swift; sourceTree = "<group>"; };
 		6B135C291C04070D0062097E /* InfoJobsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoJobsViewController.xib; sourceTree = "<group>"; };
@@ -608,6 +610,7 @@
 				6B77B95F1C16887400F57E15 /* PesonPersonalDetailCellTableViewCell.xib */,
 				6B89AFB61C16C0D400105792 /* PersonMassageTableViewCell.swift */,
 				6B89AFB71C16C0D400105792 /* PersonMassageTableViewCell.xib */,
+				6B079D1C1C44CC0500BE3555 /* PersonViewFooterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1628,6 +1631,7 @@
 				6BBE31761C043EDC0001B2E4 /* InfoJobsListTableViewCell.swift in Sources */,
 				6B5F876A1C055A8E00C80E59 /* CourseFeeModel.swift in Sources */,
 				6B56DBF21C1044E0007EB835 /* EECommunityMyPublishesLostAndFoundModel.swift in Sources */,
+				6B079D1D1C44CC0500BE3555 /* PersonViewFooterView.swift in Sources */,
 				6B561CB71C02F45F004E6D4C /* InfoNewsCategoriesViewController.swift in Sources */,
 				6B7BDB6F1BFF0F74007CEAB9 /* BCLog.swift in Sources */,
 				6B561CC11C02FA49004E6D4C /* NewsDetailModel.swift in Sources */,

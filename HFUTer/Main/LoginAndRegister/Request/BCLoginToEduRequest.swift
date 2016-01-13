@@ -47,6 +47,11 @@ class BCLoginToEduRequest {
           }
       }
     } else {
+      var password = user.password
+      if password.characters.count > 12 {
+        password = password[0..<12]
+      }
+      print(password)
       let params = [
         "UserStyle":"student",
         "user":user.username,

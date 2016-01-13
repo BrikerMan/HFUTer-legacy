@@ -10,6 +10,14 @@ import Foundation
 import UIKit
 
 //检查首次启动
+func getVersionString() -> String? {
+  if let version = NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String{
+    return version
+  } else {
+    return nil
+  }
+}
+
 func isAppFirstLaunchedForVersion(forVersion:String)->Bool{
   let defaults = NSUserDefaults.standardUserDefaults()
   if let _ = defaults.stringForKey("isAppAlreadyLaunchedOnce\(forVersion)"){
