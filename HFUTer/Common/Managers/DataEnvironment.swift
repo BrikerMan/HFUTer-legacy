@@ -137,9 +137,9 @@ class DataEnvironment {
   func calculateCurrentWeek() {
     var from = NSTimeInterval()
     if self.eduUser.schoolYard == "HF" {
-      from = NSTimeInterval(1442160000)
+      from = NSTimeInterval(1456070400)
     } else {
-      from = NSTimeInterval(1440950400)
+      from = NSTimeInterval(1456070400)
     }
     
     let now = (NSDate().timeIntervalSince1970)
