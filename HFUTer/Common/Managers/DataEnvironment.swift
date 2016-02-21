@@ -137,13 +137,39 @@ class DataEnvironment {
   func calculateCurrentWeek() {
     var from = NSTimeInterval()
     if self.eduUser.schoolYard == "HF" {
-      from = NSTimeInterval(1442160000)
+      from = NSTimeInterval(HFSemesterStartTime)
     } else {
-      from = NSTimeInterval(1440950400)
+      from = NSTimeInterval(XCSemesterStartTime)
     }
     
     let now = (NSDate().timeIntervalSince1970)
     self.currentWeek = Int((now - from)/(7 * 24 * 3600)) + 1
+	self.getDaysListForWeek(1)
   }
-  
+	
+	func getDaysListForWeek(week:Int) -> [String] {
+		var startData = 0
+		if self.eduUser.schoolYard == "HF" {
+			startData = (HFSemesterStartTime)
+		} else {
+			startData = (XCSemesterStartTime)
+		}
+		
+		startData = startData + ((week - 1) * 7 * 24 * 3600)
+		
+		let formatter = NSDateFormatter()
+		formatter.dateFormat = "M-d"
+		
+		var weekString:[String] = [""]
+		
+		for i in 0..<7 {
+			let day = startData + (i * 24 * 3600)
+			let timeInterval = NSTimeInterval(day)
+			let date = NSDate(timeIntervalSince1970: timeInterval)
+			let string = formatter.stringFromDate(date)
+			weekString.append(string)
+		}
+		return weekString
+	}
+	
 }
