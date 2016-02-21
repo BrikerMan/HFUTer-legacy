@@ -12,8 +12,6 @@ let communityServer = "http://hfut.cn-hangzhou.aliapp.com/"
 
 let NetErrorWarning = "网络错误，请稍候再试"
 
-
-
 let GB2312Encoding = CFStringConvertEncodingToNSStringEncoding(0x0632)
 let colorAlphaComponent:CGFloat  = 0.9
 //////////////////////////////////////////////////////////////////////////  /////////////////////////////////////////////
@@ -64,3 +62,5 @@ let AVClientListClassName               = "client_list"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 let XUEQIDAIMA = "028"
+let HFSemesterStartTime = 1456070400
+let XCSemesterStartTime = 1456070400

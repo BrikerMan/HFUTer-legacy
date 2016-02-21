@@ -59,6 +59,7 @@ class BCScheculeView: EEXibView {
         scheduleDictForShow["\(schedule.hour)-\(schedule.day)"] = [schedule]
       }
     }
+	dayNamesList = DataEnv.getDaysListForWeek(self.week)
     collectionView.mj_header.endRefreshing()
     collectionView.reloadData()
   }
@@ -136,7 +137,7 @@ extension collectionViewDataSource:UICollectionViewDataSource {
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
     if indexPath.section == 0 {
       let cell = collectionView.dequeueReusableCellWithReuseIdentifier("headCell", forIndexPath: indexPath) as! BCScheduleHeaderCell
-      cell.dayNameLabel.text = dayNamesListOriginal[indexPath.row]
+      cell.dayNameLabel.text = dayNamesListOriginal[indexPath.row] + "\n" + dayNamesList[indexPath.row]
       return cell
     } else if indexPath.row == 0 {
       let cell = collectionView.dequeueReusableCellWithReuseIdentifier("leftCell", forIndexPath: indexPath) as! BCScheduleLeftCell
