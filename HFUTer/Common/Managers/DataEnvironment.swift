@@ -48,7 +48,7 @@ class DataEnvironment {
 		eduUser = PlistManager.shared().readEduUser()
 		comUser = PlistManager.shared().readComUser()
 		isPushNotificationEnabled = (PlistManager.shared().readSettingValueForKey("isPushNotificationEnabled") as? Bool) ?? true
-		dayCount = (PlistManager.shared().readSettingValueForKey("isPushNotificationEnabled") as? Int) ?? 5
+		dayCount = (PlistManager.shared().readSettingValueForKey("dayCount") as? Int) ?? 5
 		self.calculateCurrentWeek()
 	}
 	
