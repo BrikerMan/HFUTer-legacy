@@ -215,6 +215,8 @@
 		6BEDEB691BFED5D400CDB1B1 /* EurekaCustomImageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDEB421BFED5D400CDB1B1 /* EurekaCustomImageRow.swift */; };
 		6BEDEB6A1BFED5D400CDB1B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BEDEB591BFED5D400CDB1B1 /* Assets.xcassets */; };
 		6BEDEB6B1BFED5D400CDB1B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BEDEB5A1BFED5D400CDB1B1 /* LaunchScreen.storyboard */; };
+		6BFE3C951C7C6D31003F5FD1 /* BCClassListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE3C931C7C6D31003F5FD1 /* BCClassListTableViewCell.swift */; };
+		6BFE3C961C7C6D31003F5FD1 /* BCClassListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFE3C941C7C6D31003F5FD1 /* BCClassListTableViewCell.xib */; };
 		8F7A5701879712DABC01A885 /* Pods_HFUTer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AE05215A85D2C970E8C4C3 /* Pods_HFUTer.framework */; };
 /* End PBXBuildFile section */
 
@@ -438,6 +440,8 @@
 		6BEDEB421BFED5D400CDB1B1 /* EurekaCustomImageRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EurekaCustomImageRow.swift; sourceTree = "<group>"; };
 		6BEDEB591BFED5D400CDB1B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BEDEB5A1BFED5D400CDB1B1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6BFE3C931C7C6D31003F5FD1 /* BCClassListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCClassListTableViewCell.swift; sourceTree = "<group>"; };
+		6BFE3C941C7C6D31003F5FD1 /* BCClassListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCClassListTableViewCell.xib; sourceTree = "<group>"; };
 		ADBDE39F804DB9EE6B2FD289 /* Pods-HFUTer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFUTer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HFUTer/Pods-HFUTer.debug.xcconfig"; sourceTree = "<group>"; };
 		D3C9CEE62BED633A3C469AA2 /* Pods-HFUTer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFUTer.release.xcconfig"; path = "Pods/Target Support Files/Pods-HFUTer/Pods-HFUTer.release.xcconfig"; sourceTree = "<group>"; };
 		F1AE05215A85D2C970E8C4C3 /* Pods_HFUTer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HFUTer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -748,6 +752,8 @@
 			children = (
 				6B218CC41C0595E800939900 /* BCClassDetailTableViewCell.swift */,
 				6B218CC51C0595E800939900 /* BCClassDetailTableViewCell.xib */,
+				6BFE3C931C7C6D31003F5FD1 /* BCClassListTableViewCell.swift */,
+				6BFE3C941C7C6D31003F5FD1 /* BCClassListTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1447,6 +1453,7 @@
 				6BEDEB6B1BFED5D400CDB1B1 /* LaunchScreen.storyboard in Resources */,
 				6BEC10F61C0027DA008EFE73 /* MassageMyPublishListTableViewCell.xib in Resources */,
 				6BDD5AA51C00675500B26B9C /* BCCommunityRegisterViewController.xib in Resources */,
+				6BFE3C961C7C6D31003F5FD1 /* BCClassListTableViewCell.xib in Resources */,
 				6BBE31771C043EDC0001B2E4 /* InfoJobsListTableViewCell.xib in Resources */,
 				6B5F87651C05585500C80E59 /* BCCourseFeeTableViewHeader.xib in Resources */,
 				6B561CC61C02FA4F004E6D4C /* NewsListTableViewCell.xib in Resources */,
@@ -1618,6 +1625,7 @@
 				6B6942651C15294C00FB71CE /* EEMyPublishedLostListTableViewCell.swift in Sources */,
 				6B5939441BFF0BD500EC4F19 /* BCScheduleHeaderCell.swift in Sources */,
 				6B5939551BFF0BDC00EC4F19 /* ScheduleMemoModel.swift in Sources */,
+				6BFE3C951C7C6D31003F5FD1 /* BCClassListTableViewCell.swift in Sources */,
 				6B2EF5771BFEF8D6003373E4 /* DataEnvironment.swift in Sources */,
 				6B649B5C1C0604130028E454 /* PersonChooseThemeColorViewController.swift in Sources */,
 				6B59393C1BFF0BD500EC4F19 /* BCGradesTableViewCell.swift in Sources */,
