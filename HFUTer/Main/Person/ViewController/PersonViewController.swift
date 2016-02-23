@@ -128,7 +128,22 @@ class PersonViewController: EEBaseFormViewController {
         }.cellSetup { cell, row in
           cell.imageView?.image = UIImage(named: "person_push")
       }
-      
+		
+		<<< SwitchRow() {
+			$0.title = "周末课程显示"
+			$0.value = (DataEnv.dayCount == 7)
+			
+			$0.onChange({ (row) -> () in
+				if let showWeekEnd = row.cell.switchControl?.on {
+					if showWeekEnd { DataEnv.dayCount = 7 }
+					else { DataEnv.dayCount = 5 }
+				}
+				NotifCenter.postNotificationName(EEUserChangedWeekEndSchdeuleSettingNotification, object: nil)
+			})
+			}.cellSetup { cell, row in
+				cell.imageView?.image = UIImage(named: "person_push")
+		}
+		
       <<< ButtonRow() { (row: ButtonRow) -> Void in
         row.title = "主题颜色"
         row.presentationMode = .Show(controllerProvider: ControllerProvider.Callback {

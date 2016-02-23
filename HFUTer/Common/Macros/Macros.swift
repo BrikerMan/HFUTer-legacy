@@ -48,6 +48,8 @@ let BCUserLogOutNotification            = "BCUserLogOutNotification"
 let BCChangeTintColorNotification       = "BCChangeTintColorNotification"
 let EEUserChangedAvatarNotification     = "EEUserChangedAvatarNotification"
 
+let EEUserChangedWeekEndSchdeuleSettingNotification  = "EEUserChangedWeekEndSchdeuleSettingNotification "
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //AVClassNames
