@@ -45,13 +45,17 @@ class BCScheculeView: EEXibView {
 	}
 	
 	//MARK:- 加载数据
-	func showCurrentWeeksSchedule(week:Int?) {
+	func showCurrentWeeksSchedule(var week:Int?) {
+		if week == 0 {
+			week = nil
+		}
+		
 		if let week = week {
 			self.week = week
 		}
 		
 		scheduleDictForShow.removeAll()
-		scheduleListForShow = ScheduleModel.readScheduleModelForWeek(self.week)
+		scheduleListForShow = ScheduleModel.readScheduleModelForWeek(week)
 		for schedule in scheduleListForShow {
 			if let _ = scheduleDictForShow["\(schedule.hour)-\(schedule.day)"] {
 				scheduleDictForShow["\(schedule.hour)-\(schedule.day)"]?.append(schedule)
@@ -59,7 +63,9 @@ class BCScheculeView: EEXibView {
 				scheduleDictForShow["\(schedule.hour)-\(schedule.day)"] = [schedule]
 			}
 		}
-		dayNamesList = DataEnv.getDaysListForWeek(self.week)
+		if let week = week {
+			dayNamesList = DataEnv.getDaysListForWeek(week)
+		}
 		collectionView.mj_header.endRefreshing()
 		collectionView.reloadData()
 	}
@@ -71,6 +77,10 @@ class BCScheculeView: EEXibView {
 			let week = (sender.selectedSegmentIndex)
 			self.showCurrentWeeksSchedule(week)
 		}
+	}
+	
+	func showAllCourses() {
+		showCurrentWeeksSchedule(nil)
 	}
 	
 	func changeTintColor() {
