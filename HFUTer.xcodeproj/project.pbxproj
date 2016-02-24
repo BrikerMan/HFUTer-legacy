@@ -118,7 +118,7 @@
 		6B77B9601C16887400F57E15 /* PesonPersonalDetailCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B77B95E1C16887400F57E15 /* PesonPersonalDetailCellTableViewCell.swift */; };
 		6B77B9611C16887400F57E15 /* PesonPersonalDetailCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B77B95F1C16887400F57E15 /* PesonPersonalDetailCellTableViewCell.xib */; };
 		6B7BDB6D1BFF0F57007CEAB9 /* BCBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB6C1BFF0F57007CEAB9 /* BCBaseRequest.swift */; };
-		6B7BDB6F1BFF0F74007CEAB9 /* BCLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB6E1BFF0F74007CEAB9 /* BCLog.swift */; };
+		6B7BDB6F1BFF0F74007CEAB9 /* EELog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB6E1BFF0F74007CEAB9 /* EELog.swift */; };
 		6B7BDB7F1BFF11ED007CEAB9 /* Base64Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB721BFF11ED007CEAB9 /* Base64Util.m */; };
 		6B7BDB801BFF11ED007CEAB9 /* DESEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB741BFF11ED007CEAB9 /* DESEncryption.m */; };
 		6B7BDB811BFF11ED007CEAB9 /* Encryptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDB761BFF11ED007CEAB9 /* Encryptions.m */; };
@@ -337,7 +337,7 @@
 		6B77B95E1C16887400F57E15 /* PesonPersonalDetailCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PesonPersonalDetailCellTableViewCell.swift; sourceTree = "<group>"; };
 		6B77B95F1C16887400F57E15 /* PesonPersonalDetailCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PesonPersonalDetailCellTableViewCell.xib; sourceTree = "<group>"; };
 		6B7BDB6C1BFF0F57007CEAB9 /* BCBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCBaseRequest.swift; sourceTree = "<group>"; };
-		6B7BDB6E1BFF0F74007CEAB9 /* BCLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCLog.swift; sourceTree = "<group>"; };
+		6B7BDB6E1BFF0F74007CEAB9 /* EELog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EELog.swift; sourceTree = "<group>"; };
 		6B7BDB711BFF11ED007CEAB9 /* Base64Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Util.h; sourceTree = "<group>"; };
 		6B7BDB721BFF11ED007CEAB9 /* Base64Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64Util.m; sourceTree = "<group>"; };
 		6B7BDB731BFF11ED007CEAB9 /* DESEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DESEncryption.h; sourceTree = "<group>"; };
@@ -1269,7 +1269,7 @@
 			isa = PBXGroup;
 			children = (
 				6BEDEB371BFED5D400CDB1B1 /* Utilities.swift */,
-				6B7BDB6E1BFF0F74007CEAB9 /* BCLog.swift */,
+				6B7BDB6E1BFF0F74007CEAB9 /* EELog.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1656,7 +1656,7 @@
 				6B56DBF21C1044E0007EB835 /* EECommunityMyPublishesLostAndFoundModel.swift in Sources */,
 				6B079D1D1C44CC0500BE3555 /* PersonViewFooterView.swift in Sources */,
 				6B561CB71C02F45F004E6D4C /* InfoNewsCategoriesViewController.swift in Sources */,
-				6B7BDB6F1BFF0F74007CEAB9 /* BCLog.swift in Sources */,
+				6B7BDB6F1BFF0F74007CEAB9 /* EELog.swift in Sources */,
 				6B561CC11C02FA49004E6D4C /* NewsDetailModel.swift in Sources */,
 				6BEDEB671BFED5D400CDB1B1 /* EEBaseViewController.swift in Sources */,
 				6B29A1391C170E2F005EB7B5 /* PersonDetailViewController.swift in Sources */,

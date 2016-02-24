@@ -207,11 +207,13 @@ class BCScheduleEditViewController:EEBaseFormViewController {
 					vc.hidesBottomBarWhenPushed = true
 					vc.colorChoosedBlock = {(colorDic) in
 						ColorManager.sharedManager().saveColorNameForCode(colorName: colorDic.name, code: self.model?.name)
-						NSNotificationCenter.defaultCenter().postNotificationName(EEUserChangedWeekEndSchdeuleSettingNotification, object: nil)
+						log.eventForCategoty(eventName: "更换课程背景", category: .Tool)
+						NSNotificationCenter.defaultCenter().postNotificationName(EEUserChangedWeekEndSchdeuleSettingNotification,
+							object: nil)
 					}
 					return vc
 					}, completionCallback: { vc in vc.dismissViewControllerAnimated(true, completion: nil) })
-				}
+			}
 			
 			<<< ButtonRow("weeks") {
 				$0.title = "选择课程周"

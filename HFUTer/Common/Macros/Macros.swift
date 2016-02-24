@@ -26,7 +26,7 @@ let DataEnv = DataEnvironment.sharedManager()
 
 let NotifCenter =  NSNotificationCenter.defaultCenter()
 
-typealias log = BClog
+typealias log = EELog
 
 
 let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate

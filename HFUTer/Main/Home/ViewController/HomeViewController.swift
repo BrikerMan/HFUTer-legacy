@@ -283,6 +283,7 @@ extension HomeViewController:UIActionSheetDelegate {
 extension HomeViewController:BCScheculeViewDelegate {
 	func didSelecctedAtCell(indexPath: NSIndexPath,models:[ScheduleModel]?) {
 		if let models = models {
+			log.eventForCategoty(eventName: "编辑课程", category: .Tool)
 			if models.count > 1 {
 				//如果多个课程则显示选择按钮
 				self.currentSelectedModels = models
@@ -308,6 +309,7 @@ extension HomeViewController:BCScheculeViewDelegate {
 				self.scheduleView.showCurrentWeeksSchedule(nil)
 			}
 			self.pushToViewController(vc)
+			log.eventForCategoty(eventName: "创建新课程", category: .Tool)
 		}
 	}
 }
@@ -319,6 +321,7 @@ extension HomeViewController:BCScheduleSelectViewDelegate {
 		scheduleView.showCurrentWeeksSchedule(week)
 		if week == 0 {
 			homeNavbar.titleLabel.text = "全部"
+			log.eventForCategoty(eventName: "显示全部课程", category: .Tool)
 		} else {
 			homeNavbar.titleLabel.text = "第\(week)周"
 		}
@@ -330,6 +333,9 @@ extension HomeViewController:UIScrollViewDelegate {
 	func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
 		let page = Int((scrollView.contentOffset.x+ScreenWidth/2)/ScreenWidth)
 		homeNavbar.setSwitchToIndex(page)
+		if page == 1 {
+			log.eventForCategoty(eventName: "查看成绩", category: .Info)
+		}
 	}
 }
 

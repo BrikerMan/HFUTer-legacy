@@ -75,20 +75,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    之前数据太乱。通过这个方法启动时删除以前保存的数据。
    */
   func handleFirstLaunch() {
-    let dataPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-    if let enumerator = NSFileManager.defaultManager().enumeratorAtPath(dataPath) {
-      while let fileName = enumerator.nextObject() as? String {
-        do {
-          try NSFileManager.defaultManager().removeItemAtPath("\(dataPath)/\(fileName)")
-        }
-        catch let e as NSError {
-          print(e)
-        }
-        catch {
-          print("error")
-        }
-      }
-    }
+//    let dataPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+//    if let enumerator = NSFileManager.defaultManager().enumeratorAtPath(dataPath) {
+//      while let fileName = enumerator.nextObject() as? String {
+//        do {
+//          try NSFileManager.defaultManager().removeItemAtPath("\(dataPath)/\(fileName)")
+//        }
+//        catch let e as NSError {
+//          print(e)
+//        }
+//        catch {
+//          print("error")
+//        }
+//      }
+//    }
   }
 }
 

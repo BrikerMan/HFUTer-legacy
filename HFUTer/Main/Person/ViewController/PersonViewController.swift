@@ -135,10 +135,14 @@ class PersonViewController: EEBaseFormViewController {
 				
 				$0.onChange({ (row) -> () in
 					if let showWeekEnd = row.cell.switchControl?.on {
-						if showWeekEnd { DataEnv.dayCount = 7 }
+						if showWeekEnd {
+							DataEnv.dayCount = 7
+							log.eventForCategoty(eventName: "显示周末课程", category: .Tool)
+						}
 						else { DataEnv.dayCount = 5 }
 						PlistManager.shared().saveSettingValueForKey(DataEnv.dayCount, key: "dayCount")
 					}
+					
 					NotifCenter.postNotificationName(EEUserChangedWeekEndSchdeuleSettingNotification, object: nil)
 				})
 				}.cellSetup { cell, row in
@@ -154,7 +158,9 @@ class PersonViewController: EEBaseFormViewController {
 					vc.hidesBottomBarWhenPushed = true
 					vc.colorChoosedBlock = {(colorDic) in
 						Color.primaryTintColor = colorDic.color
+						log.eventForCategoty(eventName: colorDic.name, category: .TintColor)
 					}
+					
 					return vc
 					}, completionCallback: { vc in vc.dismissViewControllerAnimated(true, completion: nil) })
 				}.cellSetup { cell, row in

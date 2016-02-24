@@ -27,6 +27,8 @@ class InfoCourseDetailViewController: EEBaseViewController {
     tableView.backgroundColor = UIColor.groupTableViewBackgroundColor()
     
     getCourseDetailRequest()
+	
+	log.eventForCategoty(eventName: "查看教学班详情", category: .Info)
   }
   
   
