@@ -24,7 +24,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBackImage" translatesAutoresizingMaskIntoConstraints="NO" id="ZVg-ia-pHl">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZVg-ia-pHl">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dRE-HA-Phw">
@@ -195,6 +195,5 @@
     </objects>
     <resources>
         <image name="login-logo" width="40" height="40"/>
-        <image name="loginBackImage" width="320" height="568"/>
     </resources>
 </document>

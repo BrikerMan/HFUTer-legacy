@@ -55,7 +55,7 @@ class HomeViewController: EEBaseViewController {
 			operation.getRequest(onFinishedBlock: { () -> Void in
 				self.scheduleList = ScheduleModel.readScheduleModelForWeek(nil)
 				Hud.dismiss()
-				self.scheduleView.showCurrentWeeksSchedule(nil)
+				self.scheduleView.showCurrentWeeksSchedule(DataEnv.currentWeek)
 				self.isGetScheduleListRequestGoing = false
 				runAfterBlock?()
 				}, onFailedBlock: { (error) -> Void in
@@ -150,7 +150,7 @@ class HomeViewController: EEBaseViewController {
 	
 	//MARK:- 处理用户状态变化
 	@objc private func afterLogin(notification:NSNotification?) {
-		self.scheduleList = ScheduleModel.readScheduleModelForWeek(nil)
+		self.scheduleList = ScheduleModel.readScheduleModelForWeek(DataEnv.currentWeek)
 		self.gradesBySemester  = GradeModel.getGradesBySemester()
 		if self.scheduleList.count == 0 {
 			self.beginGetScheduleList({ () -> Void in
@@ -271,7 +271,7 @@ extension HomeViewController:UIActionSheetDelegate {
 		let vc = BCScheduleEditViewController()
 		vc.model = currentSelectedModels[buttonIndex]
 		vc.dismissBlock = {
-			self.scheduleView.showCurrentWeeksSchedule(nil)
+			self.scheduleView.showCurrentWeeksSchedule(DataEnv.currentWeek)
 		}
 		self.pushToViewController(vc)
 	}
@@ -298,7 +298,7 @@ extension HomeViewController:BCScheculeViewDelegate {
 				let vc = BCScheduleEditViewController()
 				vc.model = models[0]
 				vc.dismissBlock = {
-					self.scheduleView.showCurrentWeeksSchedule(nil)
+					self.scheduleView.showCurrentWeeksSchedule(DataEnv.currentWeek)
 				}
 				self.pushToViewController(vc)
 			}
@@ -306,7 +306,7 @@ extension HomeViewController:BCScheculeViewDelegate {
 			//创建新课程
 			let vc = BCScheduleEditViewController()
 			vc.dismissBlock = {
-				self.scheduleView.showCurrentWeeksSchedule(nil)
+				self.scheduleView.showCurrentWeeksSchedule(DataEnv.currentWeek)
 			}
 			self.pushToViewController(vc)
 			log.eventForCategoty(eventName: "创建新课程", category: .Tool)

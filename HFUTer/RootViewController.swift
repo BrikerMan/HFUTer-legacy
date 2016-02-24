@@ -70,7 +70,7 @@ class RootViewController: UITabBarController {
 	}
 	
 	func receivedNotifNotification() {
-		delay(seconds: 2, completion: { () -> () in
+		delay(seconds: 5, completion: { () -> () in
 			dispatch_async(dispatch_get_main_queue()) { () -> Void in
 				if let notif = EENotificationManager.shared.updateOrNotifNotification {
 					let alert = EENotifView()

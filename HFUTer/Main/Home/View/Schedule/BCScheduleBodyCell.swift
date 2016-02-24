@@ -32,8 +32,8 @@ class BCScheduleBodyCell: UICollectionViewCell {
 			} else {
 				for model in models {
 					if model.name != models.last!.name {
-						className += getShortStringOf(model.name) + "/"
-						Place     += model.place + "/"
+						className += getShortStringOf(model.name) + " / "
+						Place     += model.place + " / "
 					} else {
 						className += getShortStringOf(model.name)
 						Place     += model.place

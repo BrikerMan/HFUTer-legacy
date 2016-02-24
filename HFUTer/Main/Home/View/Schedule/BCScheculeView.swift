@@ -26,9 +26,9 @@ class BCScheculeView: EEXibView {
 	
 	private var dayNamesListOriginal = ["","周一","周二","周三","周四","周五","周六","周日"]
 	private var dayNamesList = ["","","","","","",""]
-	private var timeNamesList = ["","1-2","3-4","5-6","7-8","9-1","未安排课程"]
+	private var timeNamesList = ["","1\n-\n2","3\n-\n4","5\n-\n6","7\n-\n8","9\n-\n11","未安排课程"]
 	
-	private var week   = 0
+	private var week   = 1
 	private var leftCellWidth:CGFloat = 35
 	//MARK:- 生命周期
 	override func initFromXib() {

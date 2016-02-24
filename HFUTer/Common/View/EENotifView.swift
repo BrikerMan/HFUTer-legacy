@@ -42,11 +42,11 @@ class EENotifView: EEXibView {
 	func setupWithModel(model:NotificationModel) {
 		self.model = model
 		titleLabel.text = model.title
-		dateLabel.text  = Utilities.getTimeStringFromTimeStamp(model.date)
+		dateLabel.text  = "发布日期：" + Utilities.getFullTimeStringFromTimeStamp(model.date)
 		messageLabel.text = model.message
 		
 		let height = Utilities.getLabelHeightWithFontSize(model.message, font: UIFont.systemFontOfSize(10), width: 280)
-		containViewHeight.constant = height + 105
+		containViewHeight.constant = height + 108
 		self.view?.layoutIfNeeded()
 		
 		if model.type == .Update {
