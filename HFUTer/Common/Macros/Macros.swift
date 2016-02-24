@@ -9,6 +9,7 @@
 import UIKit
 
 let communityServer = "http://hfut.cn-hangzhou.aliapp.com/"
+let notificationJsonFileURL = "http://192.168.1.121:8000/info_for_iOS.json"
 
 let NetErrorWarning = "网络错误，请稍候再试"
 
@@ -49,6 +50,11 @@ let BCChangeTintColorNotification       = "BCChangeTintColorNotification"
 let EEUserChangedAvatarNotification     = "EEUserChangedAvatarNotification"
 
 let EEUserChangedWeekEndSchdeuleSettingNotification  = "EEUserChangedWeekEndSchdeuleSettingNotification "
+
+let EEHasReceiveNotifNotification			= "EEHasReceiveNotifNotification"
+let EEHasReceiveUpdateNotification			= "EEHasReceiveUpdateNotification"
+let EEHasReceiveLoginWarningNotification		= "EEHasReceiveLoginWarningNotification"
+let EEHasReceiveOtherNotification			= "EEHasReceiveOtherNotification"
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -43,14 +43,94 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HFUTer/Common/Managers/PlistManager.swift"
-            timestampString = "477917590.957808"
+            filePath = "HFUTer/RootViewController.swift"
+            timestampString = "477977428.628847"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
-            landmarkName = "saveColorDic(_:)"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "receivedNotifNotification()"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HFUTer/RootViewController.swift"
+            timestampString = "477977429.148847"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "receivedNotifNotification()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HFUTer/RootViewController.swift"
+            timestampString = "477977429.832801"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "receivedNotifNotification()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HFUTer/RootViewController.swift"
+            timestampString = "477977437.237029"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "receivedNotifNotification()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HFUTer.RootViewController.receivedNotifNotification (HFUTer.RootViewController)() -&gt; ()"
+                  moduleName = "HFUTer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Eliyar/Desktop/HFUTer/HFUTer/HFUTer/RootViewController.swift"
+                  timestampString = "477978595.602824"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HFUTer.RootViewController.(receivedNotifNotification (HFUTer.RootViewController) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "HFUTer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Eliyar/Desktop/HFUTer/HFUTer/HFUTer/RootViewController.swift"
+                  timestampString = "477978595.602972"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

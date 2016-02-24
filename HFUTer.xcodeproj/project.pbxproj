@@ -159,6 +159,10 @@
 		6B9211151C00240F0093BB1F /* BCMyMassageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B92110B1C00240F0093BB1F /* BCMyMassageModel.swift */; };
 		6B9211171C0024FE0093BB1F /* ComUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9211161C0024FE0093BB1F /* ComUserModel.swift */; };
 		6B9211191C0025650093BB1F /* BCCommunityUserLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9211181C0025650093BB1F /* BCCommunityUserLoginRequest.swift */; };
+		6B96C18A1C7D435F0085A693 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B96C1891C7D435F0085A693 /* NotificationModel.swift */; };
+		6B96C18C1C7D48270085A693 /* EENotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B96C18B1C7D48270085A693 /* EENotificationManager.swift */; };
+		6B96C18E1C7D52090085A693 /* EENotifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B96C18D1C7D52090085A693 /* EENotifView.swift */; };
+		6B96C1901C7D52140085A693 /* EENotifView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B96C18F1C7D52140085A693 /* EENotifView.xib */; };
 		6BA084441C100D2300E97137 /* EECommunityLoveWallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA084431C100D2300E97137 /* EECommunityLoveWallModel.swift */; };
 		6BA9B90A1C0C4078003B7741 /* PersonHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA9B9081C0C4078003B7741 /* PersonHelpViewController.swift */; };
 		6BA9B90B1C0C4078003B7741 /* PersonHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BA9B9091C0C4078003B7741 /* PersonHelpViewController.xib */; };
@@ -382,6 +386,10 @@
 		6B92110B1C00240F0093BB1F /* BCMyMassageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCMyMassageModel.swift; sourceTree = "<group>"; };
 		6B9211161C0024FE0093BB1F /* ComUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComUserModel.swift; sourceTree = "<group>"; };
 		6B9211181C0025650093BB1F /* BCCommunityUserLoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCCommunityUserLoginRequest.swift; sourceTree = "<group>"; };
+		6B96C1891C7D435F0085A693 /* NotificationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+		6B96C18B1C7D48270085A693 /* EENotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EENotificationManager.swift; sourceTree = "<group>"; };
+		6B96C18D1C7D52090085A693 /* EENotifView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EENotifView.swift; sourceTree = "<group>"; };
+		6B96C18F1C7D52140085A693 /* EENotifView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EENotifView.xib; sourceTree = "<group>"; };
 		6BA084431C100D2300E97137 /* EECommunityLoveWallModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EECommunityLoveWallModel.swift; sourceTree = "<group>"; };
 		6BA9B9081C0C4078003B7741 /* PersonHelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonHelpViewController.swift; sourceTree = "<group>"; };
 		6BA9B9091C0C4078003B7741 /* PersonHelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonHelpViewController.xib; sourceTree = "<group>"; };
@@ -1234,6 +1242,7 @@
 				6B2EF5781BFEFA0B003373E4 /* PlistManager.swift */,
 				6B2EF57A1BFEFA16003373E4 /* DBManager.swift */,
 				6B1100DD1C00697600468A06 /* DataManager.swift */,
+				6B96C18B1C7D48270085A693 /* EENotificationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1243,6 +1252,7 @@
 			children = (
 				6B2EF57C1BFEFA2D003373E4 /* EduUserModel.swift */,
 				6B9211161C0024FE0093BB1F /* ComUserModel.swift */,
+				6B96C1891C7D435F0085A693 /* NotificationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1275,6 +1285,8 @@
 				6B2EF56A1BFEEDC8003373E4 /* EEBaseNavBar.swift */,
 				6B2EF56C1BFEEDD7003373E4 /* EEBaseNavBar.xib */,
 				6B4B97821C0DA88E00D08585 /* EETextView.swift */,
+				6B96C18D1C7D52090085A693 /* EENotifView.swift */,
+				6B96C18F1C7D52140085A693 /* EENotifView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1461,6 +1473,7 @@
 				6BDC1F1F1BFF7450009DC139 /* BCColorChooseView.xib in Resources */,
 				6B89AFB91C16C0D400105792 /* PersonMassageTableViewCell.xib in Resources */,
 				6B89AFB31C16B52600105792 /* PersonMassageListViewController.xib in Resources */,
+				6B96C1901C7D52140085A693 /* EENotifView.xib in Resources */,
 				6B59393F1BFF0BD500EC4F19 /* BCGradeViewTableViewHeader.xib in Resources */,
 				6B39F1561C06F23100A29D10 /* CommunityChooseImageCell.xib in Resources */,
 				6B77B9611C16887400F57E15 /* PesonPersonalDetailCellTableViewCell.xib in Resources */,
@@ -1583,8 +1596,10 @@
 				6B561C9C1C02BC97004E6D4C /* EEBaseImagesListController.swift in Sources */,
 				6B7BDB7F1BFF11ED007CEAB9 /* Base64Util.m in Sources */,
 				6B4A1AB01C0D6B50006BD90C /* InfoBookListViewController.swift in Sources */,
+				6B96C18E1C7D52090085A693 /* EENotifView.swift in Sources */,
 				6B2110391C102A410003A2C0 /* CommunityUserModel.swift in Sources */,
 				6BEDEB1E1BFED40A00CDB1B1 /* RootViewController.swift in Sources */,
+				6B96C18A1C7D435F0085A693 /* NotificationModel.swift in Sources */,
 				6BEDEB691BFED5D400CDB1B1 /* EurekaCustomImageRow.swift in Sources */,
 				6B5F87641C05585500C80E59 /* BCCourseFeeTableViewHeader.swift in Sources */,
 				6B7BDB851BFF11ED007CEAB9 /* FMDatabaseVariadic.swift in Sources */,
@@ -1659,6 +1674,7 @@
 				6B9211131C00240F0093BB1F /* BCLostAndFoundModel.swift in Sources */,
 				6B5939401BFF0BD500EC4F19 /* BCScheculeView.swift in Sources */,
 				6B59395B1BFF0BE200EC4F19 /* BCGetGradesRequest.swift in Sources */,
+				6B96C18C1C7D48270085A693 /* EENotificationManager.swift in Sources */,
 				6B2EF5791BFEFA0B003373E4 /* PlistManager.swift in Sources */,
 				6BEDEB1C1BFED40A00CDB1B1 /* AppDelegate.swift in Sources */,
 				6B9210FC1C001F760093BB1F /* JSONND.swift in Sources */,
