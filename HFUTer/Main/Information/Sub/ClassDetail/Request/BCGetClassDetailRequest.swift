@@ -14,7 +14,7 @@ class BCGetClassDetailRequest {
   var isSucces = 0
   var handledResult = [StudentModel]()
   
-  func getReques(params: NSDictionary?,onFinishedBlock:(() -> Void)?, onFailedBlock:(() -> Void)?){
+	func getReques(params: [String:AnyObject]?,onFinishedBlock:(() -> Void)?, onFailedBlock:(() -> Void)?){
     BCBaseRequest.getDataRequest(getUrl(DataEnv.eduUser.schoolYard,urlFor: "GET_CLASS_DETAIL"), params: params,
       onFinishedBlock: { (operation) -> Void in
         self.parseResult(operation.data)

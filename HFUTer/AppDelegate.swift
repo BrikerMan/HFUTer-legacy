@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //初始化第三方SDK
     Fabric.with([Crashlytics.self])
-    MobClick.startWithAppkey("5580d53a67e58e3b3b0004b0", reportPolicy: BATCH, channelId: "TEST")
+    MobClick.startWithAppkey("5580d53a67e58e3b3b0004b0", reportPolicy: BATCH, channelId: "App Store")
     
     APService.registerForRemoteNotificationTypes(2, categories: nil)
     APService.setupWithOption(launchOptions)
@@ -75,20 +75,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    之前数据太乱。通过这个方法启动时删除以前保存的数据。
    */
   func handleFirstLaunch() {
-    let dataPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-    if let enumerator = NSFileManager.defaultManager().enumeratorAtPath(dataPath) {
-      while let fileName = enumerator.nextObject() as? String {
-        do {
-          try NSFileManager.defaultManager().removeItemAtPath("\(dataPath)/\(fileName)")
-        }
-        catch let e as NSError {
-          print(e)
-        }
-        catch {
-          print("error")
-        }
-      }
-    }
+//    let dataPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+//    if let enumerator = NSFileManager.defaultManager().enumeratorAtPath(dataPath) {
+//      while let fileName = enumerator.nextObject() as? String {
+//        do {
+//          try NSFileManager.defaultManager().removeItemAtPath("\(dataPath)/\(fileName)")
+//        }
+//        catch let e as NSError {
+//          print(e)
+//        }
+//        catch {
+//          print("error")
+//        }
+//      }
+//    }
   }
 }
 

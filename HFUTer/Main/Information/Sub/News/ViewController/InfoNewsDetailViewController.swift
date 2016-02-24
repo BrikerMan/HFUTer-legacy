@@ -24,6 +24,7 @@ class InfoNewsDetailViewController: EEBaseViewController {
     navTitle = "新闻详情"
     setUI()
     beganGetDetailRequest()
+	log.eventForCategoty(eventName: "查看新闻详情", category: .Info)
   }
   
   func passNewsModel(model:NewsListModel) {

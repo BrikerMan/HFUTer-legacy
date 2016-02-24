@@ -24,6 +24,7 @@ class InfoNewsListViewController: EEBaseViewController {
     let footer = UIView()
     tableView.tableFooterView = footer
     getNewsListRequest()
+	log.eventForCategoty(eventName: "查看新闻列表", category: .Info)
   }
   
   func setupNewsCategoryModel(model:NewsCategories) {

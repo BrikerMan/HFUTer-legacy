@@ -20,8 +20,10 @@ class InfoCourseListViewController: EEBaseViewController {
     
     let footer = UIView()
     tableView.tableFooterView = footer
-    
-    tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "tableViewCell")
+	
+	let nib = UINib(nibName: "BCClassListTableViewCell", bundle: nil)
+    tableView.registerNib(nib, forCellReuseIdentifier: "tableViewCell")
+	tableView.rowHeight = 70
     tableView.backgroundColor = UIColor.groupTableViewBackgroundColor()
     beginGetClassListRquest()
   }
@@ -58,9 +60,8 @@ extension InfoCourseListViewController:UITableViewDataSource {
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("tableViewCell", forIndexPath: indexPath)
-    cell.accessoryType = .DisclosureIndicator
-    cell.textLabel?.text = self.classList[indexPath.row].name
+    let cell = tableView.dequeueReusableCellWithIdentifier("tableViewCell", forIndexPath: indexPath) as! BCClassListTableViewCell
+	cell.setupWithModel(self.classList[indexPath.row])
     return cell
   }
 }

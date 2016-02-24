@@ -47,12 +47,12 @@ class BCBaseRequest {
    - parameter onFinishedBlock: 结束闭包
    - parameter onFailedBlock:   失败闭包
    */
-  class func getDataRequest(url:String,params:NSDictionary?, onFinishedBlock:((operation:BCBaseRequest) -> Void)?, onFailedBlock:((operation:BCBaseRequest) -> Void)?) {
+  class func getDataRequest(url:String,params:[String : AnyObject]?, onFinishedBlock:((operation:BCBaseRequest) -> Void)?, onFailedBlock:((operation:BCBaseRequest) -> Void)?) {
     let action = {
       let operation = BCBaseRequest()
       UIApplication.sharedApplication().networkActivityIndicatorVisible = true
       
-      request(Method.GET, url, parameters: params as? [String : AnyObject], encoding: ParameterEncoding.URL, headers: nil)
+      request(Method.GET, url, parameters: params, encoding: ParameterEncoding.URL, headers: nil)
         .response { request, response, data, error in
           log.info("Requst:\(url)\nParams:\(params)")
           if error == nil {

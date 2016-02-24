@@ -23,6 +23,7 @@ class InfoJobDetailViewController: EEBaseViewController {
     navTitle = "兼职详情"
     webView.delegate = self
     getDataFromWeb()
+	log.eventForCategoty(eventName: "查看兼职详情", category: .Info)
   }
   
   
@@ -61,7 +62,7 @@ class InfoJobDetailViewController: EEBaseViewController {
 
 extension InfoJobDetailViewController:UIWebViewDelegate {
   func webViewDidFinishLoad(webView: UIWebView) {
-    let yourHTMLSourceCodeString = self.webView.stringByEvaluatingJavaScriptFromString("document.documentElement.outerHTML")
-    print(yourHTMLSourceCodeString)
+//    let yourHTMLSourceCodeString = self.webView.stringByEvaluatingJavaScriptFromString("document.documentElement.outerHTML")
+//    print(yourHTMLSourceCodeString)
   }
 }
