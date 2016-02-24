@@ -9,7 +9,7 @@
 import UIKit
 
 let communityServer = "http://hfut.cn-hangzhou.aliapp.com/"
-let notificationJsonFileURL = "http://192.168.1.121:8000/info_for_iOS.json"
+let notificationJsonFileURL = "https://coding.net/u/eliyar917/p/HFUTer-Settings/git/raw/master/info_for_iOS.json"
 
 let NetErrorWarning = "网络错误，请稍候再试"
 

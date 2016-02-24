@@ -57,7 +57,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="W0e-QW-147"/>
                                     </constraints>
-                                    <state key="normal" title="确认">
+                                    <state key="normal" title="知道了">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>

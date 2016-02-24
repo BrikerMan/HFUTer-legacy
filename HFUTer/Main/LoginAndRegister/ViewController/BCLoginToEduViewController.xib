@@ -10,6 +10,8 @@
                 <outlet property="cancelButton" destination="9bx-Gh-2Vl" id="eqH-L9-EaH"/>
                 <outlet property="loginButton" destination="XUE-sw-8gE" id="iB8-Jg-c7h"/>
                 <outlet property="loginView" destination="dRE-HA-Phw" id="Tzd-AI-SWW"/>
+                <outlet property="loginWarningInfo" destination="s8E-PS-vSb" id="55K-Ya-AOf"/>
+                <outlet property="loginWarningView" destination="fE5-Em-MeK" id="ONr-kc-qJy"/>
                 <outlet property="logoImage" destination="DN9-vh-xAN" id="SI6-Tq-eOT"/>
                 <outlet property="passwordField" destination="VWq-wW-gEr" id="R8z-UU-Oua"/>
                 <outlet property="schoolYardChoose" destination="3i2-C4-ff0" id="uJ2-72-UdK"/>
@@ -42,21 +44,6 @@
                                     </segments>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </segmentedControl>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VWq-wW-gEr" customClass="BCTextField" customModule="HFUTer" customModuleProvider="target">
-                                    <rect key="frame" x="10" y="86" width="300" height="30"/>
-                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="30" id="QUk-Pd-DNT"/>
-                                    </constraints>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
-                                            <color key="value" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUE-sw-8gE">
                                     <rect key="frame" x="10" y="124" width="300" height="30"/>
                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
@@ -100,6 +87,21 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </textField>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VWq-wW-gEr" customClass="BCTextField" customModule="HFUTer" customModuleProvider="target">
+                                    <rect key="frame" x="10" y="86" width="300" height="30"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="QUk-Pd-DNT"/>
+                                    </constraints>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                            <color key="value" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -135,24 +137,48 @@
                                 <action selector="onHelpButtonPressed:" destination="-1" eventType="touchUpInside" id="7Ku-fj-wnU"/>
                             </connections>
                         </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fE5-Em-MeK">
+                            <rect key="frame" x="10" y="120" width="300" height="59"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="由于学校接口更改，这几天可能会导致1.课表增加日期显示.修复新学期信息导致的崩溃问题.修复课程周显示" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8E-PS-vSb">
+                                    <rect key="frame" x="8" y="8" width="284" height="43"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" red="0.99249458092485543" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.31132119082840237" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="s8E-PS-vSb" secondAttribute="trailing" constant="8" id="KS8-lB-Udq"/>
+                                <constraint firstAttribute="bottom" secondItem="s8E-PS-vSb" secondAttribute="bottom" constant="8" id="bHg-2c-H9a"/>
+                                <constraint firstItem="s8E-PS-vSb" firstAttribute="leading" secondItem="fE5-Em-MeK" secondAttribute="leading" constant="8" id="cLb-RX-bgP"/>
+                                <constraint firstItem="s8E-PS-vSb" firstAttribute="top" secondItem="fE5-Em-MeK" secondAttribute="top" constant="8" id="nGA-04-ASd"/>
+                            </constraints>
+                        </view>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-logo" translatesAutoresizingMaskIntoConstraints="NO" id="DN9-vh-xAN">
+                            <rect key="frame" x="140" y="65" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="CPs-Uc-aov"/>
+                                <constraint firstAttribute="width" constant="40" id="ph5-d8-brz"/>
+                            </constraints>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="centerX" secondItem="mRm-x8-v75" secondAttribute="centerX" id="0bc-Yg-Dqe"/>
+                        <constraint firstItem="fE5-Em-MeK" firstAttribute="top" secondItem="dRE-HA-Phw" secondAttribute="top" constant="120" id="1G4-u4-Q26"/>
+                        <constraint firstItem="DN9-vh-xAN" firstAttribute="centerX" secondItem="dRE-HA-Phw" secondAttribute="centerX" id="3wv-uD-3TY"/>
+                        <constraint firstItem="fE5-Em-MeK" firstAttribute="centerX" secondItem="dRE-HA-Phw" secondAttribute="centerX" id="DSD-ob-9wD"/>
                         <constraint firstItem="pnV-on-jKL" firstAttribute="centerX" secondItem="dRE-HA-Phw" secondAttribute="centerX" id="Gtk-M4-9mX"/>
                         <constraint firstAttribute="centerY" secondItem="mRm-x8-v75" secondAttribute="centerY" id="HTx-oa-8Tp"/>
                         <constraint firstAttribute="trailing" secondItem="mRm-x8-v75" secondAttribute="trailing" id="HVu-Pc-0Lt"/>
                         <constraint firstItem="mRm-x8-v75" firstAttribute="leading" secondItem="dRE-HA-Phw" secondAttribute="leading" id="Pun-qM-huN"/>
+                        <constraint firstItem="fE5-Em-MeK" firstAttribute="leading" secondItem="dRE-HA-Phw" secondAttribute="leading" constant="10" id="RMN-lP-7ZV"/>
+                        <constraint firstItem="DN9-vh-xAN" firstAttribute="top" secondItem="dRE-HA-Phw" secondAttribute="top" constant="65" id="ede-EK-Ssa"/>
+                        <constraint firstAttribute="trailing" secondItem="fE5-Em-MeK" secondAttribute="trailing" constant="10" id="iCf-7u-BFL"/>
                         <constraint firstAttribute="bottom" secondItem="pnV-on-jKL" secondAttribute="bottom" id="uny-B2-tzR"/>
                     </constraints>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-logo" translatesAutoresizingMaskIntoConstraints="NO" id="DN9-vh-xAN">
-                    <rect key="frame" x="140" y="70" width="40" height="40"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="CPs-Uc-aov"/>
-                        <constraint firstAttribute="width" constant="40" id="ph5-d8-brz"/>
-                    </constraints>
-                </imageView>
             </subviews>
             <constraints>
                 <constraint firstItem="ZVg-ia-pHl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0pW-EY-Ebm"/>
@@ -161,9 +187,7 @@
                 <constraint firstItem="ZVg-ia-pHl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9o6-OU-h5n"/>
                 <constraint firstItem="dRE-HA-Phw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Xob-nT-gOt"/>
                 <constraint firstAttribute="bottom" secondItem="dRE-HA-Phw" secondAttribute="bottom" id="l8a-Yj-idG"/>
-                <constraint firstItem="DN9-vh-xAN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="m3X-kz-mth"/>
                 <constraint firstAttribute="trailing" secondItem="dRE-HA-Phw" secondAttribute="trailing" id="pEG-ps-or5"/>
-                <constraint firstAttribute="centerX" secondItem="DN9-vh-xAN" secondAttribute="centerX" id="tvW-wc-2VE"/>
                 <constraint firstItem="dRE-HA-Phw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="y2H-bI-Uxt"/>
             </constraints>
             <point key="canvasLocation" x="351" y="355"/>
