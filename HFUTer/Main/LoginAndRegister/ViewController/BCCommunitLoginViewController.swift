@@ -20,7 +20,6 @@ class BCCommunitLoginViewController: EEBaseViewController {
     passwordField.updateTintColor()
     if DataEnv.eduUser.isLogin {
       userIDField.text = DataEnv.eduUser.username
-      userIDField.enabled = false
     }
   }
   
