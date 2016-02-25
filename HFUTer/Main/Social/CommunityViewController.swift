@@ -29,6 +29,7 @@ class CommunityViewController: EEBaseViewController {
 	private var isShowingleaveContectInfoView = false
 	private var playgroundPage = 0
 	private var loveWallListPage = 0
+	private var isScrollTriggedByScrollView = false
 	
 	private var lostAndFindList = [BCLostAndFoundModel]()
 	private var loveWallModels = [EECommunityLoveWallModel]()
@@ -222,9 +223,14 @@ class CommunityViewController: EEBaseViewController {
 	}
 	
 	@objc private func runkeeperSwitchValueChanged() {
-		let index = runkeeperSwitch.selectedIndex
-		self.scrollView.setContentOffset(CGPointMake(ScreenWidth*CGFloat(index), 0), animated: true)
-		self.currentShowingPage = index
+		if !isScrollTriggedByScrollView {
+			let index = runkeeperSwitch.selectedIndex
+			self.scrollView.setContentOffset(CGPointMake(ScreenWidth*CGFloat(index), 0), animated: true)
+			self.currentShowingPage = index
+		} else {
+			isScrollTriggedByScrollView = false
+		}
+		
 	}
 	
 	
@@ -412,6 +418,7 @@ extension CommunityViewController:UIScrollViewDelegate {
 	func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
 		self.currentShowingPage = Int((scrollView.contentOffset.x)/ScreenWidth)
 		let page = Int((scrollView.contentOffset.x+ScreenWidth/2)/ScreenWidth)
+		isScrollTriggedByScrollView = true
 		runkeeperSwitch.setSelectedIndex(page, animated: true)
 	}
 }
