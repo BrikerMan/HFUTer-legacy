@@ -53,12 +53,16 @@ class BCScheduleSelectView: EEXibView {
 
 extension BCScheduleSelectView:UITableViewDataSource {
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 25
+		return 26
 	}
 	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCellWithIdentifier("BCScheduleSelectViewCell", forIndexPath: indexPath) as! BCScheduleSelectViewCell
-		cell.titleLabel.text = "第\(indexPath.row + 1)周"
+		if indexPath.row == 0 {
+			cell.titleLabel.text = "全部"
+		} else {
+			cell.titleLabel.text = "第\(indexPath.row)周"
+		}
 		return cell
 	}
 	
@@ -66,7 +70,7 @@ extension BCScheduleSelectView:UITableViewDataSource {
 
 extension BCScheduleSelectView:UITableViewDelegate {
 	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		delegate?.didSelectedOnWeek(indexPath.row+1)
+		delegate?.didSelectedOnWeek(indexPath.row)
 		tableView.deselectRowAtIndexPath(indexPath, animated: true)
 	}
 }

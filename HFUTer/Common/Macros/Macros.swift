@@ -9,6 +9,7 @@
 import UIKit
 
 let communityServer = "http://hfut.cn-hangzhou.aliapp.com/"
+let notificationJsonFileURL = "https://coding.net/u/eliyar917/p/HFUTer-Settings/git/raw/master/info_for_iOS.json"
 
 let NetErrorWarning = "网络错误，请稍候再试"
 
@@ -25,7 +26,7 @@ let DataEnv = DataEnvironment.sharedManager()
 
 let NotifCenter =  NSNotificationCenter.defaultCenter()
 
-typealias log = BClog
+typealias log = EELog
 
 
 let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -47,6 +48,13 @@ let BCUserLoginNotification             = "HDUserLoginNotification"
 let BCUserLogOutNotification            = "BCUserLogOutNotification"
 let BCChangeTintColorNotification       = "BCChangeTintColorNotification"
 let EEUserChangedAvatarNotification     = "EEUserChangedAvatarNotification"
+
+let EEUserChangedWeekEndSchdeuleSettingNotification  = "EEUserChangedWeekEndSchdeuleSettingNotification "
+
+let EEHasReceiveNotifNotification			= "EEHasReceiveNotifNotification"
+let EEHasReceiveUpdateNotification			= "EEHasReceiveUpdateNotification"
+let EEHasReceiveLoginWarningNotification		= "EEHasReceiveLoginWarningNotification"
+let EEHasReceiveOtherNotification			= "EEHasReceiveOtherNotification"
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

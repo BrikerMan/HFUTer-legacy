@@ -46,7 +46,7 @@ class Calculator {
       return 2.0
     case "及格":
       return 1.0
-    case "矿考","不及格","未考":
+    case "旷考","不及格","未考":
       return 0.0
     case "免修":
       return 0

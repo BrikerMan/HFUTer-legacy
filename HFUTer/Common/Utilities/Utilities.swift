@@ -56,8 +56,17 @@ class Utilities {
     let dateStr = formatter.stringFromDate(date)
     return dateStr
   }
-  
-  
+	
+	class func getFullTimeStringFromTimeStamp(stm:Int) -> String {
+		let timeInterval:NSTimeInterval = Double(stm)
+		let formatter = NSDateFormatter()
+		let date = NSDate(timeIntervalSince1970: timeInterval)
+		formatter.dateFormat = "yyyy-M-d HH:MM"
+		let dateStr = formatter.stringFromDate(date)
+		return dateStr
+	}
+	
+	
   class func getTimeString(stm:Int64) -> String {
     let timeInterval:NSTimeInterval = Double(stm/1000)
     let time = NSDate().timeIntervalSince1970

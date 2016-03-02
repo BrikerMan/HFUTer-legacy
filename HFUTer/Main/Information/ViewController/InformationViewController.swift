@@ -70,23 +70,28 @@ extension InformationViewController:UICollectionViewDelegate {
     case 0:
       let vc = InfoNewsCategoriesViewController(nib: "InfoNewsCategoriesViewController")
       self.pushToViewController(vc)
+		log.eventForCategoty(eventName: "查看校园新闻分类", category: .Info)
     case 1:
       let vc = InfoJobsViewController(nib: "InfoJobsViewController")
       self.pushToViewController(vc)
+		log.eventForCategoty(eventName: "查看兼职信息列表", category: .Info)
     case 2:
       runAfterLoginToEdu({ () -> () in
         let vc = InfoCourseListViewController(nib:"InfoCourseListViewController")
         self.pushToViewController(vc)
+		log.eventForCategoty(eventName: "查看教学班查询列表", category: .Info)
       })
     case 3:
       runAfterLoginToEdu({ () -> () in
         let vc = InfoCourseFeeViewController(nib:"InfoCourseFeeViewController")
         self.pushToViewController(vc)
+		log.eventForCategoty(eventName: "查看收费信息", category: .Info)
       })
     case 4:
       Hud.showError("暂未开放")
       //      let vc = InfoBookListViewController(nib: "InfoBookListViewController")
       //      self.pushToViewController(vc)
+		log.eventForCategoty(eventName: "查看借阅情况", category: .Info)
     case 5:
       if DataEnv.eduUser.isLogin {
         let vc = InfoCalendarViewController(nib:"InfoCalendarViewController")
@@ -102,6 +107,7 @@ extension InformationViewController:UICollectionViewDelegate {
         actionSheet.delegate = self
         actionSheet.showInView(self.view)
       }
+		log.eventForCategoty(eventName: "查看校历", category: .Info)
     default:
       break
     }
