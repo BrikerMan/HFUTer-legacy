@@ -98,7 +98,8 @@ class ColorManager {
 	func getGradientColor() -> UIColor {
 		//    let frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight)
 		//    let color = GradientColor(.Radial, frame: frame, colors: [UIColor.blackColor().ultraLight(),Color.primaryTintColor.ultraLight()])
-		return Color.primaryTintColor.lightenByPercentage(5)
+//		return Color.primaryTintColor.lightenByPercentage(0.5)
+        return UIColor.groupTableViewBackgroundColor()
 	}
 	
 	func getLoveWallColors(index:Int) -> UIColor{

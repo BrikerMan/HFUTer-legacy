@@ -9,6 +9,20 @@
 import Foundation
 import UIKit
 
+
+/**
+边远圆角，可以使部分缘有圆角
+用法：view.roundCorners([.TopLeft , .BottomLeft], radius: 10)
+**/
+extension UIView {
+    func roundCorners(corners:UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.CGPath
+        self.layer.mask = mask
+    }
+}
+
 //字符串截断方法
 extension String {
   func getIndexsOf(char:Character) -> [Int]{

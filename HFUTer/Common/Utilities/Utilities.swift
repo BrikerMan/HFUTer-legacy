@@ -44,13 +44,13 @@ class Utilities {
     
     //判断是否是今天昨天
     if timeInterval > todayStamp {
-      formatter.dateFormat = "HH:MM"
+      formatter.dateFormat = "hh:mm"
     } else if timeInterval > todayStamp - 86400 {
-      formatter.dateFormat = "昨天 HH:MM"
+      formatter.dateFormat = "昨天 hh:mm"
     } else if hour < 24 * 365 {
-      formatter.dateFormat = "M-d HH:MM"
+      formatter.dateFormat = "M-d hh:mm"
     } else {
-      formatter.dateFormat = "yyyy-M-d HH:MM"
+      formatter.dateFormat = "yyyy-M-d hh:mm"
     }
     
     let dateStr = formatter.stringFromDate(date)
@@ -90,13 +90,13 @@ class Utilities {
 
     //判断是否是今天昨天
     if timeInterval > todayStamp {
-      formatter.dateFormat = "HH:MM"
+      formatter.dateFormat = "hh:mm"
     } else if timeInterval > todayStamp - 86400 {
-      formatter.dateFormat = "昨天 HH:MM"
+      formatter.dateFormat = "昨天 hh:mm"
     } else if hour < 24 * 365 {
-      formatter.dateFormat = "M-d HH:MM"
+      formatter.dateFormat = "M-d hh:mm"
     } else {
-      formatter.dateFormat = "yyyy-M-d HH:MM"
+      formatter.dateFormat = "yyyy-M-d hh:mm"
     }
 
     let dateStr = formatter.stringFromDate(date)
@@ -126,13 +126,13 @@ class Utilities {
 
     //判断是否是今天昨天
     if timeInterval > todayStamp {
-      formatter.dateFormat = "今天\na h:MM"
+      formatter.dateFormat = "今天\na h:mm"
     } else if timeInterval > todayStamp - 86400 {
-      formatter.dateFormat = "昨天\na h:MM"
+      formatter.dateFormat = "昨天\na h:mm"
     } else if hour < 24 * 365 {
-      formatter.dateFormat = "M-d\na h:MM"
+      formatter.dateFormat = "M-d\na h:mm"
     } else {
-      formatter.dateFormat = "yyyy-M-d\na h:MM"
+      formatter.dateFormat = "yyyy-M-d\na h:mm"
     }
 
     let dateStr = formatter.stringFromDate(date)

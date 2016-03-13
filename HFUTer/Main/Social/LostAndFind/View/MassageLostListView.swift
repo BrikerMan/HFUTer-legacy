@@ -26,6 +26,11 @@ class MassageLostListView: EEXibView {
     super.initFromXib()
     let nib = UINib(nibName: "MassageLostTableViewCell", bundle: nil)
     tableView.registerNib(nib, forCellReuseIdentifier: "MassageLostTableViewCell")
+    
+    let newNib = UINib(nibName: "EEMessageTableViewCell", bundle: nil)
+    tableView.registerNib(newNib, forCellReuseIdentifier: "EEMessageTableViewCell")
+    
+    
     tableView.backgroundColor = UIColor.clearColor()
     self.view?.backgroundColor = UIColor.clearColor()
     self.tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: { () -> Void in
@@ -67,7 +72,7 @@ class MassageLostListView: EEXibView {
 }
 
 private typealias massageLostTableViewCellDelegate = MassageLostListView
-extension massageLostTableViewCellDelegate:MassageLostTableViewCellDelegate {
+extension massageLostTableViewCellDelegate: EEMessageTableViewCellDelegate {
   func onReplyButtonPress(index:Int) {
     delegate?.MassageLostListReplyButtonPressed(index)
   }
@@ -84,7 +89,7 @@ extension tableViewDataSourse:UITableViewDataSource {
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("MassageLostTableViewCell", forIndexPath: indexPath) as! MassageLostTableViewCell
+    let cell = tableView.dequeueReusableCellWithIdentifier("EEMessageTableViewCell", forIndexPath: indexPath) as! EEMessageTableViewCell
     cell.delegate = self
     cell.setModel(modelList[indexPath.row],index:indexPath.row)
     return cell
@@ -94,7 +99,8 @@ extension tableViewDataSourse:UITableViewDataSource {
 private typealias tableViewDelegate = MassageLostListView
 extension tableViewDelegate:UITableViewDelegate {
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-    return MassageLostTableViewCell.getHeightForModel(modelList[indexPath.row])
+//    return MassageLostTableViewCell.getHeightForModel(modelList[indexPath.row])
+    return EEMessageTableViewCell.getHeight(forModel: modelList[indexPath.row])
   }
 }
 

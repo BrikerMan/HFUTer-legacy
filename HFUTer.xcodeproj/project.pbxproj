@@ -219,6 +219,8 @@
 		6BEDEB691BFED5D400CDB1B1 /* EurekaCustomImageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDEB421BFED5D400CDB1B1 /* EurekaCustomImageRow.swift */; };
 		6BEDEB6A1BFED5D400CDB1B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BEDEB591BFED5D400CDB1B1 /* Assets.xcassets */; };
 		6BEDEB6B1BFED5D400CDB1B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BEDEB5A1BFED5D400CDB1B1 /* LaunchScreen.storyboard */; };
+		6BF41CEE1C940C0000754ADF /* EEMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF41CEC1C940C0000754ADF /* EEMessageTableViewCell.swift */; };
+		6BF41CEF1C940C0000754ADF /* EEMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF41CED1C940C0000754ADF /* EEMessageTableViewCell.xib */; };
 		6BFE3C951C7C6D31003F5FD1 /* BCClassListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFE3C931C7C6D31003F5FD1 /* BCClassListTableViewCell.swift */; };
 		6BFE3C961C7C6D31003F5FD1 /* BCClassListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BFE3C941C7C6D31003F5FD1 /* BCClassListTableViewCell.xib */; };
 		8F7A5701879712DABC01A885 /* Pods_HFUTer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AE05215A85D2C970E8C4C3 /* Pods_HFUTer.framework */; };
@@ -448,6 +450,8 @@
 		6BEDEB421BFED5D400CDB1B1 /* EurekaCustomImageRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EurekaCustomImageRow.swift; sourceTree = "<group>"; };
 		6BEDEB591BFED5D400CDB1B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BEDEB5A1BFED5D400CDB1B1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6BF41CEC1C940C0000754ADF /* EEMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EEMessageTableViewCell.swift; sourceTree = "<group>"; };
+		6BF41CED1C940C0000754ADF /* EEMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EEMessageTableViewCell.xib; sourceTree = "<group>"; };
 		6BFE3C931C7C6D31003F5FD1 /* BCClassListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCClassListTableViewCell.swift; sourceTree = "<group>"; };
 		6BFE3C941C7C6D31003F5FD1 /* BCClassListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCClassListTableViewCell.xib; sourceTree = "<group>"; };
 		ADBDE39F804DB9EE6B2FD289 /* Pods-HFUTer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HFUTer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HFUTer/Pods-HFUTer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1076,6 +1080,8 @@
 				6BEC10E41C0027DA008EFE73 /* MassageLostListView.xib */,
 				6BEC10E51C0027DA008EFE73 /* MassageLostTableViewCell.swift */,
 				6BEC10E61C0027DA008EFE73 /* MassageLostTableViewCell.xib */,
+				6BF41CEC1C940C0000754ADF /* EEMessageTableViewCell.swift */,
+				6BF41CED1C940C0000754ADF /* EEMessageTableViewCell.xib */,
 				6BEC10E71C0027DA008EFE73 /* MassageMoreActionView.swift */,
 				6BEC10E81C0027DA008EFE73 /* MassageMoreActionView.xib */,
 				6BEC10E91C0027DA008EFE73 /* MassageMyPublishListTableViewCell.swift */,
@@ -1443,6 +1449,7 @@
 				6B5939491BFF0BD500EC4F19 /* BCScheduleSelectView.xib in Resources */,
 				6B5939411BFF0BD500EC4F19 /* BCScheculeView.xib in Resources */,
 				6BEC11151C003352008EFE73 /* BCMassageLoveTableViewCell.xib in Resources */,
+				6BF41CEF1C940C0000754ADF /* EEMessageTableViewCell.xib in Resources */,
 				6BEC11171C003352008EFE73 /* BCMassageLoveWallView.xib in Resources */,
 				6B7BDB8C1BFF1350007CEAB9 /* BCLoginToEduViewController.xib in Resources */,
 				6BEC10F01C0027DA008EFE73 /* MassageLostListView.xib in Resources */,
@@ -1652,6 +1659,7 @@
 				6B59394A1BFF0BD500EC4F19 /* BCShcedulesWeekEditView.swift in Sources */,
 				6BC129841C06BD9F00DF3BF9 /* BCGetQiNiuTokenRequest.swift in Sources */,
 				6BBE31761C043EDC0001B2E4 /* InfoJobsListTableViewCell.swift in Sources */,
+				6BF41CEE1C940C0000754ADF /* EEMessageTableViewCell.swift in Sources */,
 				6B5F876A1C055A8E00C80E59 /* CourseFeeModel.swift in Sources */,
 				6B56DBF21C1044E0007EB835 /* EECommunityMyPublishesLostAndFoundModel.swift in Sources */,
 				6B079D1D1C44CC0500BE3555 /* PersonViewFooterView.swift in Sources */,
