@@ -35,7 +35,6 @@ target 'HFUTer' do
   pod 'Fabric'
   #  pod 'Answers'
   pod 'Crashlytics'
-  pod 'YYModel'
   #测试库
 #  pod 'FontAwesome.swift'
   pod 'ChameleonFramework/Swift'

@@ -24,12 +24,9 @@ class MassageLostListView: EEXibView {
   
   override func initFromXib() {
     super.initFromXib()
-    let nib = UINib(nibName: "MassageLostTableViewCell", bundle: nil)
-    tableView.registerNib(nib, forCellReuseIdentifier: "MassageLostTableViewCell")
     
     let newNib = UINib(nibName: "EEMessageTableViewCell", bundle: nil)
     tableView.registerNib(newNib, forCellReuseIdentifier: "EEMessageTableViewCell")
-    
     
     tableView.backgroundColor = UIColor.clearColor()
     self.view?.backgroundColor = UIColor.clearColor()
@@ -63,11 +60,7 @@ class MassageLostListView: EEXibView {
   
   override func changeTintColor(notification: NSNotification?) {
     super.changeTintColor(notification)
-    if let cells = tableView.visibleCells as? [MassageLostTableViewCell] {
-      for cell in cells {
-        cell.backColorView.backgroundColor  = Color.secondaryTintColor
-      }
-    }
+    
   }
 }
 

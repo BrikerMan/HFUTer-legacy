@@ -103,8 +103,8 @@ class Utilities {
     return dateStr
   }
 
-  class func getTimeStringForLoveWall(stm:Int64) -> String {
-    let timeInterval:NSTimeInterval = Double(stm/1000)
+  class func getTimeStringForLoveWall(stm:Int) -> String {
+    let timeInterval:NSTimeInterval = Double(stm)
     let time = NSDate().timeIntervalSince1970
     let formatter = NSDateFormatter()
     let date = NSDate(timeIntervalSince1970: timeInterval)
@@ -126,13 +126,13 @@ class Utilities {
 
     //判断是否是今天昨天
     if timeInterval > todayStamp {
-      formatter.dateFormat = "今天\na h:mm"
+      formatter.dateFormat = "今天\nhh:mm"
     } else if timeInterval > todayStamp - 86400 {
-      formatter.dateFormat = "昨天\na h:mm"
+      formatter.dateFormat = "昨天\nhh:mm"
     } else if hour < 24 * 365 {
-      formatter.dateFormat = "M-d\na h:mm"
+      formatter.dateFormat = "M月d\nhh:mm"
     } else {
-      formatter.dateFormat = "yyyy-M-d\na h:mm"
+      formatter.dateFormat = "yy年M月d\nhh:mm"
     }
 
     let dateStr = formatter.stringFromDate(date)

@@ -13,6 +13,12 @@
 		6B135C2B1C04070D0062097E /* InfoJobsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B135C291C04070D0062097E /* InfoJobsViewController.xib */; };
 		6B135C2E1C04092F0062097E /* InfoGetJobListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B135C2D1C04092F0062097E /* InfoGetJobListRequest.swift */; };
 		6B135C301C04121C0062097E /* InfoJobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B135C2F1C04121C0062097E /* InfoJobModel.swift */; };
+		6B169E311C95158900F8E134 /* EELoveWallTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B169E2F1C95158900F8E134 /* EELoveWallTableCell.xib */; };
+		6B169E321C95158900F8E134 /* EELoveWallTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B169E301C95158900F8E134 /* EELoveWallTableCell.swift */; };
+		6B169E351C953E9200F8E134 /* HFLoveWallHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B169E331C953E9200F8E134 /* HFLoveWallHeaderCell.swift */; };
+		6B169E361C953E9200F8E134 /* HFLoveWallHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B169E341C953E9200F8E134 /* HFLoveWallHeaderCell.xib */; };
+		6B169E391C954ABB00F8E134 /* HFLoveWallCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B169E371C954ABB00F8E134 /* HFLoveWallCommentCell.swift */; };
+		6B169E3A1C954ABB00F8E134 /* HFLoveWallCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B169E381C954ABB00F8E134 /* HFLoveWallCommentCell.xib */; };
 		6B2110361C10293F0003A2C0 /* EECommunityLoveCommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2110351C10293F0003A2C0 /* EECommunityLoveCommentModel.swift */; };
 		6B2110391C102A410003A2C0 /* CommunityUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2110381C102A410003A2C0 /* CommunityUserModel.swift */; };
 		6B218CBD1C0590FD00939900 /* InfoCourseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B218CBB1C0590FD00939900 /* InfoCourseListViewController.swift */; };
@@ -185,8 +191,6 @@
 		6BEC10EE1C0027DA008EFE73 /* BCMyMassagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BEC10E21C0027DA008EFE73 /* BCMyMassagesTableViewCell.xib */; };
 		6BEC10EF1C0027DA008EFE73 /* MassageLostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC10E31C0027DA008EFE73 /* MassageLostListView.swift */; };
 		6BEC10F01C0027DA008EFE73 /* MassageLostListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BEC10E41C0027DA008EFE73 /* MassageLostListView.xib */; };
-		6BEC10F11C0027DA008EFE73 /* MassageLostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC10E51C0027DA008EFE73 /* MassageLostTableViewCell.swift */; };
-		6BEC10F21C0027DA008EFE73 /* MassageLostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BEC10E61C0027DA008EFE73 /* MassageLostTableViewCell.xib */; };
 		6BEC10F31C0027DA008EFE73 /* MassageMoreActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC10E71C0027DA008EFE73 /* MassageMoreActionView.swift */; };
 		6BEC10F41C0027DA008EFE73 /* MassageMoreActionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BEC10E81C0027DA008EFE73 /* MassageMoreActionView.xib */; };
 		6BEC10F51C0027DA008EFE73 /* MassageMyPublishListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEC10E91C0027DA008EFE73 /* MassageMyPublishListTableViewCell.swift */; };
@@ -233,6 +237,12 @@
 		6B135C291C04070D0062097E /* InfoJobsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoJobsViewController.xib; sourceTree = "<group>"; };
 		6B135C2D1C04092F0062097E /* InfoGetJobListRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoGetJobListRequest.swift; sourceTree = "<group>"; };
 		6B135C2F1C04121C0062097E /* InfoJobModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoJobModel.swift; sourceTree = "<group>"; };
+		6B169E2F1C95158900F8E134 /* EELoveWallTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EELoveWallTableCell.xib; sourceTree = "<group>"; };
+		6B169E301C95158900F8E134 /* EELoveWallTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EELoveWallTableCell.swift; sourceTree = "<group>"; };
+		6B169E331C953E9200F8E134 /* HFLoveWallHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HFLoveWallHeaderCell.swift; sourceTree = "<group>"; };
+		6B169E341C953E9200F8E134 /* HFLoveWallHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HFLoveWallHeaderCell.xib; sourceTree = "<group>"; };
+		6B169E371C954ABB00F8E134 /* HFLoveWallCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HFLoveWallCommentCell.swift; sourceTree = "<group>"; };
+		6B169E381C954ABB00F8E134 /* HFLoveWallCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HFLoveWallCommentCell.xib; sourceTree = "<group>"; };
 		6B2110351C10293F0003A2C0 /* EECommunityLoveCommentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EECommunityLoveCommentModel.swift; sourceTree = "<group>"; };
 		6B2110381C102A410003A2C0 /* CommunityUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityUserModel.swift; sourceTree = "<group>"; };
 		6B218CBB1C0590FD00939900 /* InfoCourseListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCourseListViewController.swift; sourceTree = "<group>"; };
@@ -414,8 +424,6 @@
 		6BEC10E21C0027DA008EFE73 /* BCMyMassagesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCMyMassagesTableViewCell.xib; sourceTree = "<group>"; };
 		6BEC10E31C0027DA008EFE73 /* MassageLostListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MassageLostListView.swift; sourceTree = "<group>"; };
 		6BEC10E41C0027DA008EFE73 /* MassageLostListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MassageLostListView.xib; sourceTree = "<group>"; };
-		6BEC10E51C0027DA008EFE73 /* MassageLostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MassageLostTableViewCell.swift; sourceTree = "<group>"; };
-		6BEC10E61C0027DA008EFE73 /* MassageLostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MassageLostTableViewCell.xib; sourceTree = "<group>"; };
 		6BEC10E71C0027DA008EFE73 /* MassageMoreActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MassageMoreActionView.swift; sourceTree = "<group>"; };
 		6BEC10E81C0027DA008EFE73 /* MassageMoreActionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MassageMoreActionView.xib; sourceTree = "<group>"; };
 		6BEC10E91C0027DA008EFE73 /* MassageMyPublishListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MassageMyPublishListTableViewCell.swift; sourceTree = "<group>"; };
@@ -1078,8 +1086,6 @@
 				6BEC10E21C0027DA008EFE73 /* BCMyMassagesTableViewCell.xib */,
 				6BEC10E31C0027DA008EFE73 /* MassageLostListView.swift */,
 				6BEC10E41C0027DA008EFE73 /* MassageLostListView.xib */,
-				6BEC10E51C0027DA008EFE73 /* MassageLostTableViewCell.swift */,
-				6BEC10E61C0027DA008EFE73 /* MassageLostTableViewCell.xib */,
 				6BF41CEC1C940C0000754ADF /* EEMessageTableViewCell.swift */,
 				6BF41CED1C940C0000754ADF /* EEMessageTableViewCell.xib */,
 				6BEC10E71C0027DA008EFE73 /* MassageMoreActionView.swift */,
@@ -1160,6 +1166,12 @@
 		6BEC11051C003352008EFE73 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6B169E2F1C95158900F8E134 /* EELoveWallTableCell.xib */,
+				6B169E301C95158900F8E134 /* EELoveWallTableCell.swift */,
+				6B169E331C953E9200F8E134 /* HFLoveWallHeaderCell.swift */,
+				6B169E341C953E9200F8E134 /* HFLoveWallHeaderCell.xib */,
+				6B169E371C954ABB00F8E134 /* HFLoveWallCommentCell.swift */,
+				6B169E381C954ABB00F8E134 /* HFLoveWallCommentCell.xib */,
 				6BEC11061C003352008EFE73 /* BCLoveWallDetailTableViewCell.swift */,
 				6BEC11071C003352008EFE73 /* BCLoveWallDetailTableViewCell.xib */,
 				6BEC11081C003352008EFE73 /* BCMassageLoveTableViewCell.swift */,
@@ -1453,12 +1465,12 @@
 				6BEC11171C003352008EFE73 /* BCMassageLoveWallView.xib in Resources */,
 				6B7BDB8C1BFF1350007CEAB9 /* BCLoginToEduViewController.xib in Resources */,
 				6BEC10F01C0027DA008EFE73 /* MassageLostListView.xib in Resources */,
+				6B169E3A1C954ABB00F8E134 /* HFLoveWallCommentCell.xib in Resources */,
 				6B5939431BFF0BD500EC4F19 /* BCScheduleBodyCell.xib in Resources */,
 				6B8F64691C06AD80008D081C /* PushConfig.plist in Resources */,
 				6B561CA21C02E32C004E6D4C /* InformationHomeCollectionViewCell.xib in Resources */,
 				6BEDEB6A1BFED5D400CDB1B1 /* Assets.xcassets in Resources */,
 				6B649B5D1C0604130028E454 /* PersonChooseThemeColorViewController.xib in Resources */,
-				6BEC10F21C0027DA008EFE73 /* MassageLostTableViewCell.xib in Resources */,
 				6BD1EBE71C0448F000FF9B78 /* InfoJobDetailViewController.xib in Resources */,
 				6BA9B90B1C0C4078003B7741 /* PersonHelpViewController.xib in Resources */,
 				6B561CB81C02F45F004E6D4C /* InfoNewsCategoriesViewController.xib in Resources */,
@@ -1477,6 +1489,7 @@
 				6B5F87651C05585500C80E59 /* BCCourseFeeTableViewHeader.xib in Resources */,
 				6B561CC61C02FA4F004E6D4C /* NewsListTableViewCell.xib in Resources */,
 				6B2EF5851BFEFF43003373E4 /* HomeNavBarView.xib in Resources */,
+				6B169E361C953E9200F8E134 /* HFLoveWallHeaderCell.xib in Resources */,
 				6BDC1F1F1BFF7450009DC139 /* BCColorChooseView.xib in Resources */,
 				6B89AFB91C16C0D400105792 /* PersonMassageTableViewCell.xib in Resources */,
 				6B89AFB31C16B52600105792 /* PersonMassageListViewController.xib in Resources */,
@@ -1492,6 +1505,7 @@
 				6B5939471BFF0BD500EC4F19 /* BCScheduleLeftCell.xib in Resources */,
 				6BEC10EE1C0027DA008EFE73 /* BCMyMassagesTableViewCell.xib in Resources */,
 				6B59394B1BFF0BD500EC4F19 /* BCShcedulesWeekEditView.xib in Resources */,
+				6B169E311C95158900F8E134 /* EELoveWallTableCell.xib in Resources */,
 				6BEC10F41C0027DA008EFE73 /* MassageMoreActionView.xib in Resources */,
 				6B6942661C15294C00FB71CE /* EEMyPublishedLostListTableViewCell.xib in Resources */,
 				6B9211121C00240F0093BB1F /* CommunityViewController.xib in Resources */,
@@ -1657,11 +1671,14 @@
 				6B218CC31C0592BA00939900 /* ClassListModel.swift in Sources */,
 				6B7BDB821BFF11ED007CEAB9 /* GTMBase64.m in Sources */,
 				6B59394A1BFF0BD500EC4F19 /* BCShcedulesWeekEditView.swift in Sources */,
+				6B169E391C954ABB00F8E134 /* HFLoveWallCommentCell.swift in Sources */,
 				6BC129841C06BD9F00DF3BF9 /* BCGetQiNiuTokenRequest.swift in Sources */,
 				6BBE31761C043EDC0001B2E4 /* InfoJobsListTableViewCell.swift in Sources */,
 				6BF41CEE1C940C0000754ADF /* EEMessageTableViewCell.swift in Sources */,
 				6B5F876A1C055A8E00C80E59 /* CourseFeeModel.swift in Sources */,
 				6B56DBF21C1044E0007EB835 /* EECommunityMyPublishesLostAndFoundModel.swift in Sources */,
+				6B169E351C953E9200F8E134 /* HFLoveWallHeaderCell.swift in Sources */,
+				6B169E321C95158900F8E134 /* EELoveWallTableCell.swift in Sources */,
 				6B079D1D1C44CC0500BE3555 /* PersonViewFooterView.swift in Sources */,
 				6B561CB71C02F45F004E6D4C /* InfoNewsCategoriesViewController.swift in Sources */,
 				6B7BDB6F1BFF0F74007CEAB9 /* EELog.swift in Sources */,
@@ -1674,7 +1691,6 @@
 				6BEDEB621BFED5D400CDB1B1 /* EEImageView.swift in Sources */,
 				6BEDEB651BFED5D400CDB1B1 /* HDBaseFlatTextField.swift in Sources */,
 				6BEC11101C003352008EFE73 /* BCMassageCommentModel.swift in Sources */,
-				6BEC10F11C0027DA008EFE73 /* MassageLostTableViewCell.swift in Sources */,
 				6B5F87681C055A3600C80E59 /* BCGetCourseFeeRequest.swift in Sources */,
 				6B7BDB8B1BFF1350007CEAB9 /* BCLoginToEduViewController.swift in Sources */,
 				6B4B97831C0DA88E00D08585 /* EETextView.swift in Sources */,

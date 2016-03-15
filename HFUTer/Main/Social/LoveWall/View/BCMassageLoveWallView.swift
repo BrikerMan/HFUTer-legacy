@@ -22,7 +22,7 @@ protocol BCMassageLoveWallViewDelegate {
 class BCMassageLoveWallView: EEXibView {
   
   @IBOutlet weak var tableView: UITableView!
-  var selectedCell = BCMassageLoveTableViewCell()
+  var selectedCell = EELoveWallTableCell()
   var delegate:BCMassageLoveWallViewDelegate?
   
   private var modelList = [EECommunityLoveWallModel]()
@@ -30,8 +30,8 @@ class BCMassageLoveWallView: EEXibView {
     super.initFromXib()
     self.tableView.backgroundColor = UIColor.clearColor()
     self.view?.backgroundColor = UIColor.clearColor()
-    let nib = UINib(nibName: "BCMassageLoveTableViewCell", bundle: nil)
-    tableView.registerNib(nib, forCellReuseIdentifier: "BCMassageLoveTableViewCell")
+    let nib = UINib(nibName: "EELoveWallTableCell", bundle: nil)
+    tableView.registerNib(nib, forCellReuseIdentifier: "EELoveWallTableCell")
     
     self.tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: { () -> Void in
       self.delegate?.LoveWallViewRefresh()
@@ -81,7 +81,7 @@ extension tableViewDataSourse:UITableViewDataSource {
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("BCMassageLoveTableViewCell", forIndexPath: indexPath) as! BCMassageLoveTableViewCell
+    let cell = tableView.dequeueReusableCellWithIdentifier("EELoveWallTableCell", forIndexPath: indexPath) as! EELoveWallTableCell
     cell.setupWithModel(modelList[indexPath.row],index:indexPath.row)
     cell.selectionStyle = .None
     return cell
@@ -91,7 +91,7 @@ extension tableViewDataSourse:UITableViewDataSource {
 private typealias tableViewDelegate = BCMassageLoveWallView
 extension tableViewDelegate:UITableViewDelegate {
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    self.selectedCell = tableView.cellForRowAtIndexPath(indexPath) as! BCMassageLoveTableViewCell
+    self.selectedCell = tableView.cellForRowAtIndexPath(indexPath) as! EELoveWallTableCell
     delegate?.LoveWallViewSelectedAtCell(indexPath.row)
   }
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
