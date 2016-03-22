@@ -12,16 +12,14 @@ class BCLoveWallDetailViewController: EEBaseViewController {
     
     @IBOutlet weak var tableView:UITableView!
     @IBOutlet weak var replyViewHeight: NSLayoutConstraint!
-   
+    
     // 底部
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var commnetButton: UIButton!
     
-    @IBOutlet weak var inputFieldBackView: UIView!
     @IBOutlet weak var bottomViewButtonConstraint: NSLayoutConstraint!
-    @IBOutlet weak var commentTextField: UITextField!
     
-    @IBOutlet weak var likeCountLabel: UILabel!
     
     var isFinishedPushAnimation = false
     
@@ -43,36 +41,12 @@ class BCLoveWallDetailViewController: EEBaseViewController {
         bottomView.backgroundColor = UIColor.whiteColor()
         bottomView.alpha = 0
         
-        likeButton.layer.cornerRadius = 3
-        likeButton.layer.borderColor  = UIColor(hexString: "#dfdfdf").CGColor
-        likeButton.layer.borderWidth = 1
-        
-        inputFieldBackView.layer.cornerRadius = 3
-        inputFieldBackView.layer.borderColor  = UIColor(hexString: "#dfdfdf").CGColor
-        inputFieldBackView.layer.borderWidth = 1
-        
-        NotifCenter.addObserver(self, selector: "keyBoardWillShowOrHideAnimation:", name: UIKeyboardWillShowNotification, object: nil)
-        NotifCenter.addObserver(self, selector: "keyBoardWillShowOrHideAnimation:", name: UIKeyboardWillHideNotification, object: nil)
-        
-        likeCountLabel.text = "\(model.favoriteCount)"
-        commentTextField.delegate = self
-        
         self.getCommentList()
         
         animateStart()
     }
     
-    //MARK:- 动画
-    @objc private func keyBoardWillShowOrHideAnimation(notification:NSNotification) {
-        if let userInfo = notification.userInfo {
-            if let keyboardHeight = userInfo[UIKeyboardFrameEndUserInfoKey]?.CGRectValue.size.height {
-                self.bottomViewButtonConstraint.constant = keyboardHeight
-                UIView.animateWithDuration(0.25, animations: { () -> Void in
-                    self.view.layoutIfNeeded()
-                })
-            }
-        }
-    }
+    
     private func animateStart() {
         self.isFinishedPushAnimation = true
         self.tableView.reloadData()
@@ -103,20 +77,24 @@ class BCLoveWallDetailViewController: EEBaseViewController {
     }
     
     @IBAction func onLikeButtonPressed(sender: AnyObject) {
-        let url = "http://hfut.cn-hangzhou.aliapp.com/api/confession/good"
-        let params = [
-            "id":self.model.id
-        ]
-        BCBaseRequest.getJsonFromCommunityServerRequest(url, params: params,
-            onFinishedBlock: { (response) -> Void in
-                self.model.favorite = true
-                self.model.favoriteCount += 1
-                self.tableView.reloadData()
-            }, onFailedBlock: { (reason) -> Void in
-                Hud.showError(reason)
-            }) { () -> Void in
-                Hud.showError("网络错误，请稍候尝试")
-                
+        if !model.favorite {
+            let url = "http://hfut.cn-hangzhou.aliapp.com/api/confession/good"
+            let params = [
+                "id":self.model.id
+            ]
+            BCBaseRequest.getJsonFromCommunityServerRequest(url, params: params,
+                onFinishedBlock: { (response) -> Void in
+                    self.model.favorite = true
+                    self.model.favoriteCount += 1
+                    self.tableView.reloadData()
+                }, onFailedBlock: { (reason) -> Void in
+                    Hud.showError(reason)
+                }) { () -> Void in
+                    Hud.showError("网络错误，请稍候尝试")
+                    
+            }
+        } else {
+            Hud.showMassage("你已经赞过啦~")
         }
     }
     
@@ -144,15 +122,15 @@ class BCLoveWallDetailViewController: EEBaseViewController {
 
 
 extension BCLoveWallDetailViewController:UITextFieldDelegate {
-
-        func textFieldShouldReturn(textField: UITextField) -> Bool {
-            let text = (textField.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()))
-            if text.characters.count > 0 {
-               
-                return true
-            }
-            return false
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        let text = (textField.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()))
+        if text.characters.count > 0 {
+            
+            return true
         }
+        return false
+    }
 }
 
 extension BCLoveWallDetailViewController:BCReplyCommentControllerDelegate {

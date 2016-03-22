@@ -18,6 +18,9 @@ class HFLoveWallHeaderCell: UITableViewCell {
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var lineView: UIView!
     
+    @IBOutlet weak var commentCOunt: UILabel!
+    @IBOutlet weak var likeCount: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         avatarImageView.layer.cornerRadius = 31/2
@@ -42,6 +45,9 @@ class HFLoveWallHeaderCell: UITableViewCell {
             self.nickNameLabel.text = model.name
         }
         infoLabel.text      = model.content
+        
+        commentCOunt.text = "\(model.commentCount)"
+        likeCount.text    = "\(model.favoriteCount)"
         
         self.timeLabel.text = Utilities.getTimeStringForLoveWall(model.date_int)
     }

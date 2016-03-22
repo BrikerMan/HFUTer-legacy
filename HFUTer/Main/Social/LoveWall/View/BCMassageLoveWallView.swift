@@ -28,7 +28,7 @@ class BCMassageLoveWallView: EEXibView {
   private var modelList = [EECommunityLoveWallModel]()
   override func initFromXib() {
     super.initFromXib()
-    self.tableView.backgroundColor = UIColor.clearColor()
+    self.tableView.backgroundColor = Color.getGradientColor()
     self.view?.backgroundColor = UIColor.clearColor()
     let nib = UINib(nibName: "EELoveWallTableCell", bundle: nil)
     tableView.registerNib(nib, forCellReuseIdentifier: "EELoveWallTableCell")
