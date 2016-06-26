@@ -61,9 +61,9 @@ class EENotificationManager {
 				for item in items {
 					let model = NotificationModel.yy_modelWithJSON(item)
 					if let type = item.valueForKey("type") as? Int, modelType = NotificationType(rawValue: type) {
-						model.type = modelType
+						model!.type = modelType
 					}
-					self.notifications.append(model)
+					self.notifications.append(model!)
 				}
 			}
 			

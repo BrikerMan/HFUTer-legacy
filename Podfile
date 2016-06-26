@@ -5,7 +5,7 @@ target 'HFUTer' do
   #UI
   pod 'WSProgressHUD'                     ## 不错的Hud
   pod 'YYWebImage'                        ## 高效ImageView
-  pod 'Eureka'                            ## TableView封装
+  pod 'Eureka',   :git => 'https://github.com/xmartlabs/Eureka.git'  , :branch => 'master'                      ## TableView封装
   pod 'MJRefresh'                         ## 下拉刷新
   pod 'RKNotificationHub'                 ## 小红点
   pod 'SnapKit'                           ## AutoLayout

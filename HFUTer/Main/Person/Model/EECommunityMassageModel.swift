@@ -29,7 +29,7 @@ class EECommunityMassageModel: NSObject {
         var models = [EECommunityMassageModel]()
         if let array = response["data"] as? NSArray {
           for json in array {
-            let model = EECommunityMassageModel.yy_modelWithJSON(json)
+            let model = EECommunityMassageModel.yy_modelWithJSON(json)!
             models.append(model)
           }
           onFinishedBlock?(error:nil,models:models)

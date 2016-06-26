@@ -69,17 +69,17 @@ class PersonDetailViewController: EEBaseFormViewController {
   private func initFormView() {
     tableView?.frame = CGRectMake(0, 64, ScreenWidth, ScreenHeight-64)
     
-    CustomImageRow.defaultCellSetup = { cell, row in
-      cell.height = { 60 }
-    }
+//    CustomImageRow.defaultCellSetup = { cell, row in
+//      cell.height = { 60 }
+//    }
     
     form +++
       Section()
       
-      <<< CustomImageRow("avatar"){
-        $0.title = "修改头像"
-        $0.value = DataEnv.comUser.avatarImage
-      }
+//      <<< CustomImageRow("avatar"){
+//        $0.title = "修改头像"
+//        $0.value = DataEnv.comUser.avatarImage
+//      }
       
       <<< TextRow("email"){
         $0.title = "邮箱"

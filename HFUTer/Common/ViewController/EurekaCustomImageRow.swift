@@ -9,49 +9,49 @@
 import UIKit
 import Eureka
 import Foundation
-
-final class CustomImageRow : _CustomImageRow, RowType {
-  required init(tag: String?) {
-    super.init(tag: tag)
-  }
-
-}
-
-class _CustomImageRow : SelectorRow<UIImage, CustomImagePickerController> {
-
-  required init(tag: String?) {
-    super.init(tag: tag)
-    presentationMode = .PresentModally(controllerProvider: ControllerProvider.Callback {
-      let vc = CustomImagePickerController()
-      if tag == "avatar" {
-        vc.cropSize = CGSize(width: 200, height: 200)
-      } else {
-        vc.cropSize = CGSize(width: 400, height: 600)
-      }
-      return vc
-      }, completionCallback: { vc in vc.dismissViewControllerAnimated(false, completion: nil) })
-    self.displayValueFor = nil
-  }
-  
-  
-  
-
-  override func customUpdateCell() {
-    super.customUpdateCell()
-    cell.accessoryType = .None
-    if let image = self.value {
-      let imageView = UIImageView(frame: CGRectMake(0, 0, 50, 50))
-      imageView.layer.cornerRadius = 50/2
-      imageView.contentMode = .ScaleAspectFill
-      imageView.image = image
-      imageView.clipsToBounds = true
-      cell.accessoryView = imageView
-    }
-    else{
-      cell.accessoryView = nil
-    }
-  }
-}
+//
+//final class CustomImageRow : _CustomImageRow, RowType {
+//  required init(tag: String?) {
+//    super.init(tag: tag)
+//  }
+//
+//}
+//
+//class _CustomImageRow : SelectorRow<UIImage, CustomImagePickerController> {
+//
+//  required init(tag: String?) {
+//    super.init(tag: tag)
+//    presentationMode = .PresentModally(controllerProvider: ControllerProvider.Callback {
+//      let vc = CustomImagePickerController()
+//      if tag == "avatar" {
+//        vc.cropSize = CGSize(width: 200, height: 200)
+//      } else {
+//        vc.cropSize = CGSize(width: 400, height: 600)
+//      }
+//      return vc
+//      }, completionCallback: { vc in vc.dismissViewControllerAnimated(false, completion: nil) })
+//    self.displayValueFor = nil
+//  }
+//  
+//  
+//  
+//
+//  override func customUpdateCell() {
+//    super.customUpdateCell()
+//    cell.accessoryType = .None
+//    if let image = self.value {
+//      let imageView = UIImageView(frame: CGRectMake(0, 0, 50, 50))
+//      imageView.layer.cornerRadius = 50/2
+//      imageView.contentMode = .ScaleAspectFill
+//      imageView.image = image
+//      imageView.clipsToBounds = true
+//      cell.accessoryView = imageView
+//    }
+//    else{
+//      cell.accessoryView = nil
+//    }
+//  }
+//}
 
 
 class CustomImagePickerController : UIImagePickerController, TypedRowControllerType, UIImagePickerControllerDelegate, UINavigationControllerDelegate, EEImageCropViewControllerDelegate {

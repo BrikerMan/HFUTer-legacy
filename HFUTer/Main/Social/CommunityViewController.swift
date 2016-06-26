@@ -274,7 +274,7 @@ class CommunityViewController: EEBaseViewController {
 		runkeeperSwitch.titleColor = .whiteColor()
 		runkeeperSwitch.selectedTitleColor = Color.primaryTintColor
 		runkeeperSwitch.titleFont = UIFont.systemFontOfSize(13)
-		runkeeperSwitch.addTarget(self, action: "runkeeperSwitchValueChanged", forControlEvents: UIControlEvents.ValueChanged)
+        runkeeperSwitch.addTarget(self, action: #selector(), forControlEvents: UIControlEvents.ValueChanged)
 		self.navBar.addSubview(runkeeperSwitch)
 		self.navBar.titleLabel.hidden = true
 		

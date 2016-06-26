@@ -11,6 +11,8 @@ import Fabric
 import Crashlytics
 import BRYXBanner
 
+var communityServer         = "http://hfut.cn-hangzhou.aliapp.com/"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 	
@@ -18,12 +20,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var app:UIApplication!
 	var rootVC: RootViewController!
 	
+    
+    func updateServerURL() {
+        
+        if let host = NSUserDefaults.standardUserDefaults().stringForKey("host") {
+            communityServer = host
+        }
+        
+        BCBaseRequest.getJsonRequest(serverInfoFile, params: [:], onFinishedBlock: { (response) in
+            print(response)
+            if let host = response.valueForKey("host") as? String {
+                communityServer = "http://" + host + "/"
+                NSUserDefaults.standardUserDefaults().setValue(communityServer, forKey: "host")
+            }
+            }) { (error) in
+                
+        }
+            
+            
+            
+    }
+    
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		
 		//初始化第三方SDK
 		Fabric.with([Crashlytics.self])
 		MobClick.startWithAppkey("5580d53a67e58e3b3b0004b0", reportPolicy: BATCH, channelId: "App Store")
 		
+        updateServerURL()
+        
 		APService.registerForRemoteNotificationTypes(2, categories: nil)
 		APService.setupWithOption(launchOptions)
 		

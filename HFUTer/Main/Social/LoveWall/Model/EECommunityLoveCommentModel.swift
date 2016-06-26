@@ -33,11 +33,11 @@ class EECommunityLoveCommentModel:NSObject {
             
             if let atUserList = json["at"] as? Array<AnyObject> {
               for items in atUserList {
-                let user = CommunityUserModel.yy_modelWithJSON(items)
-                model.at = [user]
+                let user = CommunityUserModel.yy_modelWithJSON(items)!
+                model!.at = [user]
               }
             }
-            models.append(model)
+            models.append(model!)
             print(model)
           }
           onFinishedBlock?(error:nil,models:models)

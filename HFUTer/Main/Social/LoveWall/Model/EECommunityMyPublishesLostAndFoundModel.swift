@@ -45,7 +45,7 @@ class EECommunityMyPublishesLostAndFoundModel:NSObject {
         if let jsons = response["data"] as? [NSDictionary] {
           for json in jsons {
             let model = EECommunityMyPublishesLostAndFoundModel.yy_modelWithJSON(json)
-            models.append(model)
+            models.append(model!)
             print(model)
           }
           onFinishedBlock?(error:nil,models:models)

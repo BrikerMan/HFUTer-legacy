@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BCLoveWallDetailViewController" customModule="HFUTer" customModuleProvider="target">
@@ -68,7 +68,7 @@
                             </constraints>
                         </view>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconfont-zan-dark" translatesAutoresizingMaskIntoConstraints="NO" id="QGI-Pz-xRN">
-                            <rect key="frame" x="227.5" y="12" width="16" height="16"/>
+                            <rect key="frame" x="228" y="12" width="16" height="16"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="16" id="mDw-W3-vG8"/>
                                 <constraint firstAttribute="width" constant="16" id="pQe-ht-SQn"/>
